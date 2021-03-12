@@ -6,13 +6,13 @@ const fractal = module.exports = require('@frctl/fractal').create();
 const mandelbrot = require('@frctl/mandelbrot');
 
 // タイトル設定
-fractal.set('project.title', 'パーツ集');
+fractal.set('project.title', 'コンポーネント集');
 
 // 各種ファイルのディレクトリ設定
 fractal.components.set('path', path.join(__dirname, '/src/components'));
 fractal.components.set('label', 'コンポーネント');
 fractal.docs.set('path', path.join(__dirname, '/src/docs'));
-fractal.docs.set('label', 'パーツ集について');
+fractal.docs.set('label', 'コンポーネント集について');
 fractal.web.set('static.path', path.join(__dirname, '/src/public'));
 
 // カスタムオプション設定

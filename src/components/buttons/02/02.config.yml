@@ -1,11 +1,11 @@
-title: 00
-label: 00
+title: 02
+label: 02
 variants:
   - name: default
-    label: ボタン00
+    label: ボタン02
     status: ready
     # status: prototype
     # status: wip
     # hidden: true
 context:
-  text: ボタン00
+  text: ボタン02
