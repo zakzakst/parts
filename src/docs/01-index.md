@@ -3,8 +3,12 @@ title: 概要
 label: 概要
 ---
 
-This is your index page. You can edit its contents at `docs/01-index.hbs`
+## 目的
 
----
+SCSS の練習とデザインの勉強。<br>
+色々な Web ページでいいなと思ったコンポーネントをトレースして一覧できるようにする。
 
-aaa
+## 作業方法
+
+- そのままトレースするのでなく、クラス名・SCSS 変数は自分で考える
+- 参考にした Web ページは各コンポーネントの「Notes」タブに記載

@@ -16,7 +16,9 @@
       ".prettierrc": true,
       ".eslintrc.js": true,
       ".editorconfig": true,
-      ".babelrc": true
+      ".babelrc": true,
+      "docs": true,
+      "package-lock.json": true,
     },
     // 設定：TODO Highlight
     "todohighlight.keywords": [
