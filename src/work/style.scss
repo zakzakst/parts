@@ -1,2 +1,13 @@
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: inherit;
+  }
+}
+img {
+  vertical-align: bottom;
+}
+
 @import '../../node_modules/reset-css/sass/_reset.scss';
 @import '../components/**/*.scss';
