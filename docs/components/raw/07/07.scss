@@ -1,0 +1,62 @@
+$BLOCK_NAME: '.button-07';
+
+// 変数
+$color-primary: #0bcdf7;
+$color-white: #fff;
+$shadow-default: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+$transition-default: 0.2s;
+$easing-default: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  padding-left: 1.5em;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 66px;
+  color: $color-white;
+  letter-spacing: 0.25em;
+  background: $color-primary;
+  border-radius: 99em;
+  box-shadow: $shadow-default;
+  transition: transform $transition-default $easing-default;
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 21px;
+    bottom: 0;
+    display: block;
+    width: 33px;
+    height: 33px;
+    margin: auto 0;
+    content: '';
+    border: 3px solid $color-white;
+    border-radius: 50%;
+    transition: background-color $transition-default $easing-default;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      bottom: 0;
+      display: block;
+      width: 11px;
+      height: 11px;
+      margin: auto 0;
+      content: '';
+      border: solid $color-white;
+      border-width: 3px 3px 0 0;
+      transition: border-color $transition-default $easing-default;
+      transform: rotate(45deg);
+    }
+  }
+  &:hover {
+    color: $color-white;
+    transform: scale(1.05);
+  }
+  &:hover &__arrow {
+    background: $color-white;
+    &::before {
+      border-color: $color-primary;
+    }
+  }
+}
