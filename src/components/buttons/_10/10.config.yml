@@ -1,0 +1,12 @@
+title: 10
+label: 10
+variants:
+  - name: default
+    label: ボタン10
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  text: ボタン10
+  textEn: Button10

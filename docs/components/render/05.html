@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+<style>
+    :root {
+        
+        
+        
+    }
+</style>
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/white.css?cachebust=1.8.1" type="text/css">
+
+<link rel="stylesheet" href="../../settings/fractal-fix.css?cachebust=1.8.1" type="text/css">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.8.1" type="text/css">
+
+
+<title>Error rendering component 05 | コンポーネント集</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame Frame--full" id="frame">
+
+
+<div class="Error Error--render">
+    <h4 class="Error-title">Error rendering component</h4>
+    <div class="Error-message Prose">
+        <p>C:\Users\Owner\Desktop\parts\src\components\buttons_05\05.pug:9:8
+    7|         d=&quot;M 30 120 c 0 -66.2 53.8 -120 120 -120 c 66.2 0 120 53.8 120 120 c 0 66.2 -53.8 120 -120 120 c -66.2 0 -120 -53.8 -120 -120 Z&quot;
+    8|         fill=&quot;none&quot;</p>
+<blockquote>
+<p>9|       /&gt;
+--------------^
+    10|       &lt;text
+    11|         text-anchor=&quot;middle&quot;
+    12|         dy=&quot;30&quot;</p>
+</blockquote>
+<p>unexpected text &quot;&gt;
+   &quot;</p>
+
+    </div>
+    
+    <code class="Error-stack">
+        <pre>Error: C:\Users\Owner\Desktop\parts\src\components\buttons\_05\05.pug:9:8
+    7|         d="M 30 120 c 0 -66.2 53.8 -120 120 -120 c 66.2 0 120 53.8 120 120 c 0 66.2 -53.8 120 -120 120 c -66.2 0 -120 -53.8 -120 -120 Z"
+    8|         fill="none"
+  > 9|       />
+--------------^
+    10|       <text
+    11|         text-anchor="middle"
+    12|         dy="30"
+
+unexpected text ">
+   "
+    at makeError (C:\Users\Owner\Desktop\parts\node_modules\pug-error\index.js:34:13)
+    at Lexer.error (C:\Users\Owner\Desktop\parts\node_modules\pug-lexer\index.js:62:15)
+    at Lexer.fail (C:\Users\Owner\Desktop\parts\node_modules\pug-lexer\index.js:1629:10)
+    at Lexer.advance (C:\Users\Owner\Desktop\parts\node_modules\pug-lexer\index.js:1694:12)
+    at Lexer.callLexerFunction (C:\Users\Owner\Desktop\parts\node_modules\pug-lexer\index.js:1647:23)
+    at Lexer.getTokens (C:\Users\Owner\Desktop\parts\node_modules\pug-lexer\index.js:1706:12)
+    at lex (C:\Users\Owner\Desktop\parts\node_modules\pug-lexer\index.js:12:42)
+    at Object.lex (C:\Users\Owner\Desktop\parts\node_modules\pug\lib\index.js:104:9)
+    at Function.loadString [as string] (C:\Users\Owner\Desktop\parts\node_modules\pug-load\index.js:53:24)
+    at compileBody (C:\Users\Owner\Desktop\parts\node_modules\pug\lib\index.js:82:18)
+    at Object.exports.compile (C:\Users\Owner\Desktop\parts\node_modules\pug\lib\index.js:269:16)
+    at PugAdapter.render (C:\Users\Owner\Desktop\parts\node_modules\@rsm\fractal-pug-adapter\adapter.js:42:34)
+    at ComponentSource._renderVariant (C:\Users\Owner\Desktop\parts\node_modules\@frctl\fractal\src\api\components\source.js:212:30)
+    at _renderVariant.next (<anonymous>)
+    at onFulfilled (C:\Users\Owner\Desktop\parts\node_modules\co\index.js:65:19)</pre>
+    </code>
+    
+</div>
+
+
+</div>
+
+
+
+
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.8.1"></script>
+
+
+
+</body>
+</html>
