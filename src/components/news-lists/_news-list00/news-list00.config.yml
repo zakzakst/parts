@@ -1,0 +1,14 @@
+title: ニュース一覧00
+label: ニュース一覧00
+variants:
+  - name: default
+    label: ニュース一覧00
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  items:
+    - text: テキストが入ります。テキストが入ります。テキストが入ります。
+    - text: テキストが入ります。テキストが入ります。テキストが入ります。
+    - text: テキストが入ります。テキストが入ります。テキストが入ります。

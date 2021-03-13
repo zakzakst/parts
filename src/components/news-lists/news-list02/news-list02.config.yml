@@ -1,0 +1,23 @@
+title: ニュース一覧02
+label: ニュース一覧02
+variants:
+  - name: default
+    label: ニュース一覧02
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  items:
+    - link: '#'
+      category: お知らせ
+      date: 2021.01.03 Sun.
+      text: テキストが入ります。テキストが入ります。テキストが入ります。
+    - link: '#'
+      category: お知らせ
+      date: 2021.01.02 Sat.
+      text: テキストが入ります。テキストが入ります。テキストが入ります。
+    - link: '#'
+      category: お知らせ
+      date: 2021.01.01 Fri.
+      text: テキストが入ります。テキストが入ります。テキストが入ります。
