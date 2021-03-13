@@ -12,3 +12,7 @@ SCSS の練習とデザインの勉強。<br>
 
 - そのままトレースするのでなく、クラス名・SCSS 変数は自分で考える
 - 参考にした Web ページは各コンポーネントの「Notes」タブに記載
+
+## GitHub URL
+
+<a href="https://github.com/zakzakst/parts" target="_blank">https://github.com/zakzakst/parts</a>

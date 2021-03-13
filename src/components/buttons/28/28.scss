@@ -1,0 +1,70 @@
+$BLOCK_NAME: '.button-28';
+
+// 変数
+$color_primary: #1f3134;
+$color_white: #fff;
+$duration_default: 0.3s;
+$duration_slide: 0.5s;
+$easing_default: cubic-bezier(0.29, 0.8, 0.35, 1);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 265px;
+  height: 60px;
+  overflow: hidden;
+  background: $color_white;
+  border: 1px solid $color_primary;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    width: 320px;
+    height: 280px;
+    content: '';
+    border: 1px solid $color_primary;
+    transition: all $duration_slide $easing_default;
+  }
+
+  &::before {
+    top: 0;
+    left: calc(100% - 10px);
+    transform: rotate(-45deg);
+    transform-origin: left top;
+  }
+
+  &::after {
+    right: calc(100% - 10px);
+    bottom: 0;
+    transform: rotate(-45deg);
+    transform-origin: right bottom;
+  }
+
+  & > span {
+    position: relative;
+    z-index: 1;
+    font-family: YuGothic, Yu Gothic, sans-serif;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: $color_primary;
+    letter-spacing: 1.5px;
+    transition: $duration_default;
+  }
+
+  &:hover {
+    &::before {
+      background: $color_primary;
+      transform: translateX(-100%) rotate(-45deg);
+    }
+    &::after {
+      background: $color_primary;
+      transform: translateX(100%) rotate(-45deg);
+    }
+    & > span {
+      color: $color_white;
+    }
+  }
+}

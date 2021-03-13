@@ -1,0 +1,46 @@
+$BLOCK_NAME: '.button-25';
+
+// 変数
+$gradient_default: linear-gradient(70deg, #2b59d3, #1e429f);
+$duration_default: 0.4s;
+$easing_default: cubic-bezier(0.215, 0.61, 0.355, 1);
+$shadow_default: 20px 40px 60px rgba(0, 0, 0, 0.4);
+$shadow_hover: -20px 40px 60px rgba(0, 0, 0, 0.4);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  width: 260px;
+  height: 72px;
+  padding: 28px 48px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #fff;
+  letter-spacing: 0.5;
+  background: $gradient_default;
+  box-shadow: $shadow_default;
+  transition: all $duration_default $easing_default;
+  &::after {
+    position: absolute;
+    top: 0;
+    right: -28px;
+    bottom: 0;
+    display: block;
+    width: 46%;
+    height: 1px;
+    margin: auto;
+    content: '';
+    background: #ddd;
+    transition: all $duration_default $easing_default;
+  }
+  &:hover {
+    color: #fff;
+    box-shadow: $shadow_hover;
+    opacity: 0.95;
+    &::after {
+      right: 0;
+      width: 40%;
+    }
+  }
+}
