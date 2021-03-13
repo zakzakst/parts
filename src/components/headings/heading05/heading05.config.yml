@@ -1,0 +1,11 @@
+title: 見出し05
+label: 見出し05
+variants:
+  - name: default
+    label: 見出し05
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  heading: <span>ここに</span><br><span>見出しが入ります</span>

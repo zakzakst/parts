@@ -1,0 +1,30 @@
+$BLOCK_NAME: '.heading-02';
+
+// 変数
+$color_primary: #363f4d;
+$color_secondary: #777777;
+$color_border: #707070;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  font-family: 'EB Garamond', serif;
+  font-size: 30px;
+  line-height: 1.2em;
+  color: $color_primary;
+  &::before {
+    position: absolute;
+    top: 1em;
+    right: calc(100% + 16px);
+    display: block;
+    width: 100vw;
+    height: 1px;
+    content: '';
+    background: $color_border;
+  }
+  & > span {
+    display: block;
+    font-family: '游ゴシック', 'Yu Gothic', '游ゴシック体', YuGothic, sans-serif;
+    font-size: 0.45em;
+    color: $color_secondary;
+  }
+}
