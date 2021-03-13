@@ -1,0 +1,13 @@
+title: カード08
+label: カード08
+variants:
+  - name: default
+    label: カード08
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  date: 2021.1.1
+  img: https://www.dot-st.com/static/docs/jeanasis/pages/media/img/top/2021/latest_2021-spring-summer.jpg
+  title: CARD03

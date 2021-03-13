@@ -1,0 +1,15 @@
+title: カード06
+label: カード06
+variants:
+  - name: default
+    label: カード06
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  img: http://www.bodaijuen.jp/news/wp-content/uploads/2020/08/1.jpg
+  date: 2020.10.01
+  category: お知らせ
+  title: タイトルが入ります
+  text: テキストが入ります。テキストが入ります。テキストが入ります。
