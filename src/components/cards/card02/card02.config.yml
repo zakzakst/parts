@@ -1,0 +1,14 @@
+title: カード02
+label: カード02
+variants:
+  - name: default
+    label: カード02
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  tag: タグが入ります
+  img: https://www.teotoriatte.info/wp/wp-content/themes/teotoriatte/common/img/p-service/icon_01.png
+  heading: 見出しが入ります
+  text: テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。

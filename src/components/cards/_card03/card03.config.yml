@@ -1,0 +1,13 @@
+title: カード03
+label: カード03
+variants:
+  - name: default
+    label: カード03
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  img: https://fullscale.jp/wp/wp-content/uploads/2020/11/th_sennarido_pc.png
+  category: カテゴリーが入ります
+  heading: 見出しが入ります
