@@ -1,0 +1,89 @@
+$BLOCK_NAME: '.news-list-02';
+
+// 変数
+$color_primary: #ffff00;
+$color_text-primary: #000;
+$color_text-secondary: #565656;
+$color_border: #e4e4e4;
+$transition_bg: 0.5s;
+
+#{ $BLOCK_NAME } {
+  & > li {
+    border-bottom: 1px solid $color_border;
+    &:first-child {
+      border-top: 1px solid $color_border;
+    }
+  }
+  &__link {
+    position: relative;
+    display: block;
+    padding: 23px 4%;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      background: $color_primary;
+      transition: transform $transition_bg;
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+    &:hover {
+      &::before {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    color: $color_text-primary;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 21px;
+      height: 13px;
+      margin: auto;
+      content: '';
+      background: url(https://www.bebit.co.jp/assets/images/common/arrow_next_bk.svg)
+        0 center no-repeat;
+    }
+    // @include mq-md() {
+    //   display: flex;
+    //   align-items: center;
+    // }
+  }
+  &__item-date {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    & > span {
+      display: block;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: normal;
+      color: $color_text-secondary;
+    }
+    // @include mq-md() {
+    //   flex-shrink: 0;
+    //   width: 15%;
+    //   padding: 15px 0;
+    //   border-right: 1px solid $color_text-primary;
+    // }
+  }
+  &__item-text {
+    padding: 10px 5% 0 0;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    // @include mq-md() {
+    //   padding: 0 5%;
+    //   font-size: 16px;
+    // }
+  }
+}
