@@ -9,5 +9,5 @@ variants:
     # hidden: true
 context:
   date: 2021.1.1
-  img: https://www.dot-st.com/static/docs/jeanasis/pages/media/img/top/2021/latest_2021-spring-summer.jpg
+  img: https://picsum.photos/400/200
   title: CARD03

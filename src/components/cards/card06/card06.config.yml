@@ -8,7 +8,7 @@ variants:
     # status: wip
     # hidden: true
 context:
-  img: http://www.bodaijuen.jp/news/wp-content/uploads/2020/08/1.jpg
+  img: https://picsum.photos/400/200
   date: 2020.10.01
   category: お知らせ
   title: タイトルが入ります

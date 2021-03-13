@@ -1,0 +1,12 @@
+title: 見出し02
+label: 見出し02
+variants:
+  - name: default
+    label: 見出し02
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  shoulder: Heading 02
+  heading: 見出しが入ります

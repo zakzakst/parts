@@ -8,6 +8,6 @@ variants:
     # status: wip
     # hidden: true
 context:
-  img: https://kansou.co.jp/wp2020/wp-content/uploads/2020/09/main_d-680x680.png
+  img: https://picsum.photos/400/200
   date: 2021.01.01
   title: タイトルが入ります。タイトルが入ります。
