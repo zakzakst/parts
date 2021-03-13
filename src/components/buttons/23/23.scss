@@ -1,0 +1,52 @@
+$BLOCK_NAME: '.button-23';
+
+// 変数
+$color_primary: #000;
+$duration_default: 0.3s;
+$easing_default: cubic-bezier(0.08, 0.92, 0.35, 1);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  padding-left: 12px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  color: $color_primary;
+  letter-spacing: 1.5px;
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    content: '';
+    transition: all $duration_default $easing_default;
+  }
+  &::before {
+    top: 3px;
+    right: calc(100% - 8px);
+    width: 4px;
+    height: 4px;
+    border-top: 1px solid $color_primary;
+    border-right: 1px solid $color_primary;
+  }
+  &::after {
+    top: 5px;
+    right: calc(100% - 6px);
+    background: $color_primary;
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  &:hover {
+    color: $color_primary;
+    &::before {
+      width: 6px;
+      height: 6px;
+    }
+    &::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

@@ -1,0 +1,69 @@
+$BLOCK_NAME: '.button-19';
+
+// 変数
+$color_white: #fff;
+$color_black: #000;
+$easing_bg: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  max-width: 540px;
+  padding: 45px 0;
+  margin: 0 auto;
+  background: $color_black;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background: $color_white;
+    border-bottom: 6px solid $color_black;
+    transition: transform 0.3s $easing_bg;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+
+  & > span {
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    color: $color_white;
+    text-align: center;
+    letter-spacing: 4px;
+    transition: color 0.3s ease;
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 87%;
+      display: block;
+      width: 27px;
+      height: 7px;
+      margin: auto;
+      content: '';
+      background: url(https://www.dot-st.com/static/docs/jeanasis/pages/media/img/common/new/icon_arrowRight-white.png)
+        87% center no-repeat;
+      background-size: 100%;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &:hover > span {
+    color: $color_black;
+    &::after {
+      background: url(https://www.dot-st.com/static/docs/jeanasis/pages/media/img/common/new/icon_arrowRight-black.png)
+        87% center no-repeat;
+      background-size: 100%;
+    }
+  }
+}
