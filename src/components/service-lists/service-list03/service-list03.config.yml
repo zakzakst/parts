@@ -1,0 +1,14 @@
+title: サービス一覧03
+label: サービス一覧03
+variants:
+  - name: default
+    label: サービス一覧03
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  img: 'https://www.yokohama-stadium.co.jp/assets/images/icon/i-access.svg'
+  textEn: 'SERVICE LIST 03'
+  text: 'サービス一覧03'

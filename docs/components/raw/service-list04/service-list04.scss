@@ -1,0 +1,40 @@
+$BLOCK_NAME: '.service-list-04';
+
+// 変数
+$color_border: #dce0e3;
+$color_gray: #939fa8;
+
+#{ $BLOCK_NAME } {
+  display: flex;
+  padding: 35px 0;
+  border-top: 1px solid $color_border;
+
+  &__img {
+    flex-shrink: 0;
+    width: 90px;
+    padding: 8px 12px 0;
+  }
+
+  &__title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: $color_gray;
+    letter-spacing: 1.4px;
+  }
+
+  &__copy {
+    margin-top: 4px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 1.4px;
+  }
+
+  &__text {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+}
