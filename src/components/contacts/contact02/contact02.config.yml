@@ -1,0 +1,14 @@
+title: お問い合わせ02
+label: お問い合わせ02
+variants:
+  - name: default
+    label: お問い合わせ02
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  headingEn: 'CONTACT02'
+  heading: 'お問合せ02'
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
