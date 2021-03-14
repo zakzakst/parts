@@ -1,0 +1,11 @@
+title: ボタン08
+label: ボタン08
+variants:
+  - name: default
+    label: ボタン08
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  text: ボタン08

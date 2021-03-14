@@ -1,0 +1,11 @@
+title: ボタン20
+label: ボタン20
+variants:
+  - name: default
+    label: ボタン20
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  text: 20
