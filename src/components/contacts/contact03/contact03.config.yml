@@ -1,0 +1,17 @@
+title: お問い合わせ03
+label: お問い合わせ03
+variants:
+  - name: default
+    label: お問い合わせ03
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  items:
+    - link: '#'
+      img: 'https://marimo-dental.com/common2019/img/base/contactLinks_ico_contact.svg'
+      text: 'お問い合わせ03'
+    - link: '#'
+      img: 'https://marimo-dental.com/common2019/img/base/contactLinks_ico_reserve.svg'
+      text: 'お問い合わせ03'
