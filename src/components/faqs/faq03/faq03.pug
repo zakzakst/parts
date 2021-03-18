@@ -1,0 +1,12 @@
+ul.faq-03
+  each faq in faqItems
+    li.faq-03__item
+      p.faq-03__question.js-faq-03-question
+        span.faq-03__question-num Q#{ faq.num }
+        span.faq-03__question-text #{ faq.question }
+        span.faq-03__question-arrow
+          img.faq-item__arrow-img(src="https://naoshichi-kyoto.jp/images/faq/up.svg")
+      div.faq-03__answer
+        p.faq-03__answer-inner
+          span.faq-03__answer-num A#{ faq.num }
+          span.faq-03__answer-text #{ faq.answer }

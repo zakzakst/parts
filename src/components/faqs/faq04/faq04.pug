@@ -1,0 +1,8 @@
+ul.faq-04
+  each faq in faqItems
+    li.faq-04__item
+      p.faq-04__question.js-faq-04-question
+        span.faq-04__question-text #{ faq.question }
+        span.faq-04__question-icon
+      div.faq-04__answer
+        p.faq-04__answer-inner #{ faq.answer }
