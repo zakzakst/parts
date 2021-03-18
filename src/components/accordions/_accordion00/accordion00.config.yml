@@ -1,0 +1,11 @@
+title: アコーディオン00
+label: アコーディオン00
+variants:
+  - name: default
+    label: アコーディオン00
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  text: テキストが入ります。テキストが入ります。テキストが入ります。

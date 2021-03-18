@@ -1,0 +1,17 @@
+title: アコーディオン01
+label: アコーディオン01
+variants:
+  - name: default
+    label: アコーディオン01
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  accordionItems:
+    - subHeading: 'ACCORDION 01-1'
+      heading: 'アコーディオン 01-1'
+      content: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    - subHeading: 'ACCORDION 01-2'
+      heading: 'アコーディオン 01-2'
+      content: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'

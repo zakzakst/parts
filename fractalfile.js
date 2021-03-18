@@ -28,6 +28,8 @@ const options = {
   ],
   panels: [
     'html',
+    'view',
+    'context',
     'resources',
     'notes',
   ],
