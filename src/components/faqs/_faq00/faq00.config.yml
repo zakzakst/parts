@@ -1,0 +1,11 @@
+title: よくある質問00
+label: よくある質問00
+variants:
+  - name: default
+    label: よくある質問00
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  text: テキストが入ります。テキストが入ります。テキストが入ります。
