@@ -1,0 +1,12 @@
+$BLOCK_NAME: '.scroll-anim-01';
+
+#{ $BLOCK_NAME } {
+  font-size: 0;
+  opacity: 0;
+  & > span {
+    display: inline-block;
+    font-size: 40px;
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}
