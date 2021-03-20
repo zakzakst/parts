@@ -17,6 +17,7 @@
       ".eslintrc.js": true,
       ".editorconfig": true,
       ".babelrc": true,
+      "tsconfig.json": true,
       "docs": true,
       "package-lock.json": true,
     },
