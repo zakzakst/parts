@@ -1,11 +1,12 @@
-title: ボタン03
-label: ボタン03
+title: ボタン25
+label: ボタン25
 variants:
   - name: default
-    label: ボタン03
+    label: ボタン25
     status: ready
     # status: prototype
     # status: wip
     # hidden: true
 context:
-  text: ボタン03
+  link: '#'
+  text: 'BUTTON25'

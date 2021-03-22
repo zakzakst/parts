@@ -48,12 +48,10 @@ $easing_bg: cubic-bezier(0.215, 0.61, 0.355, 1);
       left: 87%;
       display: block;
       width: 27px;
-      height: 7px;
+      height: 1px;
       margin: auto;
       content: '';
-      background: url(https://www.dot-st.com/static/docs/jeanasis/pages/media/img/common/new/icon_arrowRight-white.png)
-        87% center no-repeat;
-      background-size: 100%;
+      background: $color_white;
       transition: all 0.3s ease;
     }
   }
@@ -61,9 +59,7 @@ $easing_bg: cubic-bezier(0.215, 0.61, 0.355, 1);
   &:hover > span {
     color: $color_black;
     &::after {
-      background: url(https://www.dot-st.com/static/docs/jeanasis/pages/media/img/common/new/icon_arrowRight-black.png)
-        87% center no-repeat;
-      background-size: 100%;
+      background: $color_black;
     }
   }
 }

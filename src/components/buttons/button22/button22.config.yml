@@ -8,4 +8,5 @@ variants:
     # status: wip
     # hidden: true
 context:
-  text: ボタン22
+  link: '#'
+  text: 'ボタン22'
