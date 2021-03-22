@@ -8,5 +8,5 @@ variants:
     # status: wip
     # hidden: true
 context:
-  headingEn: <span class="is-color-primary">H</span>eading <span class="is-color-secondary">0</span>6
-  heading: 見出し06
+  headingEn: '<span class="is-color-primary">H</span>eading <span class="is-color-secondary">0</span>6'
+  heading: '見出し06'

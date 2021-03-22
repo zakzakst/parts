@@ -3,6 +3,9 @@
 * {
   box-sizing: border-box;
 }
+body {
+  line-height: 1.5;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -14,6 +17,21 @@ img {
   width: 100%;
   height: auto;
   vertical-align: bottom;
+}
+
+$break_point_items: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@mixin Mq($name) {
+  @media screen and (min-width: map-get($break_point_items, $name)) {
+    @content;
+  }
 }
 
 @import '../components/**/*.scss';

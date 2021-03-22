@@ -8,4 +8,4 @@ variants:
     # status: wip
     # hidden: true
 context:
-  text: スクロールアニメーション01
+  text: 'スクロールアニメーション01'

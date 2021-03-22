@@ -8,5 +8,5 @@ variants:
     # status: wip
     # hidden: true
 context:
-  shoulder: POINT 01
-  heading: 見出しが入ります。見出しが入ります。見出しが入ります。
+  shoulder: 'POINT 01'
+  heading: '見出しが入ります。見出しが入ります。見出しが入ります。'

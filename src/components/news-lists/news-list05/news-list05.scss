@@ -9,36 +9,36 @@ $duration_default: 0.3s;
 
 #{ $BLOCK_NAME } {
   &__wrapper {
-    // @include mq-md() {
-    //   display: flex;
-    // }
+    @include Mq(md) {
+      display: flex;
+    }
   }
   &__heading {
     padding-bottom: 12px;
     font-family: 'Metrophobic', sans-serif;
     border-bottom: 1px solid $color_border;
-    // @include mq-md() {
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
-    //   padding: 0 40px 0 0;
-    //   font-size: 11px;
-    //   line-height: 1.6;
-    //   text-align: center;
-    //   border-right: 1px solid $color_border;
-    //   border-bottom: none;
-    // }
+    @include Mq(md) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 40px 0 0;
+      font-size: 11px;
+      line-height: 1.6;
+      text-align: center;
+      border-right: 1px solid $color_border;
+      border-bottom: none;
+    }
     br {
       display: none;
-      // @include mq-md() {
-      //   display: initial;
-      // }
+      @include Mq(md) {
+        display: initial;
+      }
     }
   }
   padding-top: 12px;
-  // @include mq-md() {
-  //   padding: 4px 0 4px 12px;
-  // }
+  @include Mq(md) {
+    padding: 4px 0 4px 12px;
+  }
   &__item {
     display: flex;
     flex-direction: column;
@@ -49,9 +49,9 @@ $duration_default: 0.3s;
     line-height: 1.85;
     color: $color_secondary;
     letter-spacing: 0.05em;
-    // @include mq-md() {
-    //   flex-direction: row;
-    // }
+    @include Mq(md) {
+      flex-direction: row;
+    }
     @at-root #{ $BLOCK_NAME } > li:first-child & {
       margin-top: 0;
     }
@@ -61,20 +61,20 @@ $duration_default: 0.3s;
     font-weight: normal;
     color: $color_primary;
     transition: all $duration_default;
-    // @include mq-md() {
-    //   flex-shrink: 0;
-    //   width: 115px;
-    //   padding: 0 1em;
-    //   margin-right: 40px;
-    //   font-weight: bold;
-    //   line-height: 2.1;
-    //   text-align: center;
-    //   border-radius: 20px;
-    //   @at-root #{ $BLOCK_NAME }__item:hover & {
-    //     color: $color_white;
-    //     background: $color_primary;
-    //   }
-    // }
+    @include Mq(md) {
+      flex-shrink: 0;
+      width: 115px;
+      padding: 0 1em;
+      margin-right: 40px;
+      font-weight: bold;
+      line-height: 2.1;
+      text-align: center;
+      border-radius: 20px;
+      @at-root #{ $BLOCK_NAME }__item:hover & {
+        color: $color_white;
+        background: $color_primary;
+      }
+    }
   }
   &__text {
     transition: color $duration_default;

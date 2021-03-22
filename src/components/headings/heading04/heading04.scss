@@ -10,12 +10,12 @@ $color_black: #141c36;
   font-family: 'Yu Gothic', 'YuGothic', 'ヒラギノ角ゴ Pro W3',
     'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
   font-size: 12px;
-  // @include mq-md() {
-  //   display: flex;
-  //   padding-bottom: 25px;
-  //   font-size: 14px;
-  //   align-items: baseline;
-  // }
+  @include Mq(md) {
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 25px;
+    font-size: 14px;
+  }
   &::after {
     position: absolute;
     bottom: 0;
@@ -30,10 +30,10 @@ $color_black: #141c36;
     display: block;
     font-family: 'EB Garamond', serif;
     font-size: 40px;
-    // @include mq-md() {
-    //   display: inline-block;
-    //   margin-right: 30px;
-    //   font-size: 53px;
-    // }
+    @include Mq(md) {
+      display: inline-block;
+      margin-right: 30px;
+      font-size: 53px;
+    }
   }
 }

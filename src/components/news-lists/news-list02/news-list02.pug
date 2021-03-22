@@ -1,17 +1,8 @@
-<ul class="news-list-02">
+ul.news-list-02
   each item in items
-    <li>
+    li
       a.news-list-02__link(href=item.link)
-        <dl class="news-list-02__item">
-          <dt class="news-list-02__item-date">
-            != item.category
-            <span>
-              != item.date
-            </span>
-          </dt>
-          <dd class="news-list-02__item-text">
-            != item.text
-          </dd>
-        </dl>
-    </li>
-</ul>
+        dl.news-list-02__item
+          dt.news-list-02__item-date #{ item.category }
+            span #{ item.date }
+          dd.news-list-02__item-text #{ item.text }

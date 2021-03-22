@@ -1,12 +1,6 @@
-<ul class="news-list-01">
+ul.news-list-01
   each item in items
-    <li>
+    li
       a.news-list-01__item(href=item.link)
-        <span class="news-list-01__item-date">
-          != item.date
-        </span>
-        <span class="news-list-01__item-text">
-          != item.text
-        </span>
-    </li>
-</ul>
+        span.news-list-01__item-date #{ item.date }
+        span.news-list-01__item-text #{ item.text }
