@@ -4,6 +4,7 @@ $BLOCK_NAME: '.scroll-anim-02';
 $easing_default: cubic-bezier(0.545, 0.08, 0.52, 0.975);
 
 #{ $BLOCK_NAME } {
+  max-width: 200px;
   filter: blur(10px);
   opacity: 0;
   transition-timing-function: $easing_default;

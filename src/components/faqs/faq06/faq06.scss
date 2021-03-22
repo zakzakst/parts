@@ -25,11 +25,11 @@ $duration_default: 0.4s;
     cursor: pointer;
     border-bottom: 2px solid transparent;
     transition: all $duration_default ease;
-    // @include mq-md() {
-    //   width: 24%;
-    //   padding-bottom: 5px;
-    //   font-size: 16px;
-    // }
+    @include Mq(md) {
+      width: 24%;
+      padding-bottom: 5px;
+      font-size: 16px;
+    }
     &:hover {
       color: $color_primary;
     }

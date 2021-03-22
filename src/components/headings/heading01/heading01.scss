@@ -10,12 +10,12 @@ $color_primary: #56bcb3;
   font-weight: 700;
   line-height: 1.75;
   letter-spacing: 0.16em;
-  // @include mq-md() {
-  //   padding-top: 20px;
-  //   font-size: 24px;
-  //   letter-spacing: 0.11em;
-  //   line-height: 1.67;
-  // }
+  @include Mq(md) {
+    padding-top: 20px;
+    font-size: 24px;
+    line-height: 1.67;
+    letter-spacing: 0.11em;
+  }
   &__shoulder {
     position: relative;
     display: block;
@@ -26,10 +26,10 @@ $color_primary: #56bcb3;
     line-height: 1;
     color: $color_primary;
     letter-spacing: 0.12em;
-    // @include mq-md() {
-    //   max-width: 154px;
-    //   font-size: 13px;
-    // }
+    @include Mq(md) {
+      max-width: 154px;
+      font-size: 13px;
+    }
     &::after {
       position: absolute;
       top: 0;
@@ -41,9 +41,9 @@ $color_primary: #56bcb3;
       margin: auto;
       content: '';
       background-color: $color_primary;
-      // @include mq-md() {
-      //   width: 80px;
-      // }
+      @include Mq(md) {
+        width: 80px;
+      }
     }
   }
 }

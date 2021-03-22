@@ -8,4 +8,5 @@ variants:
     # status: wip
     # hidden: true
 context:
-  heading: <span>ここに</span><br><span>見出しが入ります</span>
+  link: '#'
+  heading: '<span>ここに</span><br><span>見出しが入ります</span>'

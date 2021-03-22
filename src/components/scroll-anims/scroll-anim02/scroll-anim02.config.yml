@@ -8,4 +8,4 @@ variants:
     # status: wip
     # hidden: true
 context:
-  img: https://picsum.photos/id/237/200/300
+  img: 'https://picsum.photos/id/237/200/300'

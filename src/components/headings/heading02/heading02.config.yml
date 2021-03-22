@@ -8,5 +8,5 @@ variants:
     # status: wip
     # hidden: true
 context:
-  shoulder: Heading 02
-  heading: 見出しが入ります
+  shoulder: 'Heading 02'
+  heading: '見出しが入ります'

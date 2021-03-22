@@ -8,5 +8,5 @@ variants:
     # status: wip
     # hidden: true
 context:
-  headingEn: Heading 04
-  heading: 見出し04
+  headingEn: 'Heading 04'
+  heading: '見出し04'
