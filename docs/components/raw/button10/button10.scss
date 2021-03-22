@@ -59,9 +59,9 @@ $length_slide: 8px;
     width: 10px;
     height: 10px;
     margin: auto;
-    background: url(https://harizury.com/assets/img/cmn/arrow.svg) center
-      no-repeat;
-    background-size: contain;
+    background: $color_border;
+    border-radius: 50%;
+    transition: background-color $transition_border;
   }
   &:hover {
     border-color: $color_border_hover;
@@ -91,6 +91,9 @@ $length_slide: 8px;
       animation: button10TextSlideEnter $animation_slide forwards;
       // animation: button10TextSlideLeave $animation_slide;
     }
+  }
+  &:hover &__arrow {
+    background: $color_border_hover;
   }
 }
 

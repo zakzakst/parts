@@ -46,11 +46,7 @@ $transition_default: 0.3s;
     height: 40px;
     margin: auto;
     content: '';
-    background: url(https://ion-e-air.jp/images/icon_arrow_w@2x.png),
-      $gradient_icon;
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
-    background-size: 16px auto, 100%;
+    background: $gradient_icon;
     border-radius: 50%;
   }
   &__text {

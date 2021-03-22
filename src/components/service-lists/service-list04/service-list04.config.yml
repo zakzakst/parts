@@ -1,0 +1,15 @@
+title: サービス一覧04
+label: サービス一覧04
+variants:
+  - name: default
+    label: サービス一覧04
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  img: 'http://placehold.jp/350x350.png?text=ICON'
+  title: 'タイトルが入ります'
+  copy: 'キャッチコピーが入ります。キャッチコピーが入ります。'
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'

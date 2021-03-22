@@ -48,12 +48,10 @@ $easing_bg: cubic-bezier(0.475, 0.425, 0, 0.995);
     bottom: 0;
     display: block;
     width: 32px;
-    height: 11px;
+    height: 1px;
     margin: auto;
     content: '';
-    background: url(https://giginc.co.jp/assets/img/icon-arrow-white.png)
-      no-repeat center center;
-    background-size: contain;
+    background: rgba($color_white, 0.5);
     transition: transform 0.2s ease-out;
   }
   &:hover::after {

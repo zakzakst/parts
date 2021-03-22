@@ -48,16 +48,15 @@ $transition_bg: 0.5s;
       bottom: 0;
       display: block;
       width: 21px;
-      height: 13px;
+      height: 1px;
       margin: auto;
       content: '';
-      background: url(https://www.bebit.co.jp/assets/images/common/arrow_next_bk.svg)
-        0 center no-repeat;
+      background: $color_text-primary;
     }
-    // @include mq-md() {
-    //   display: flex;
-    //   align-items: center;
-    // }
+    @include Mq(md) {
+      display: flex;
+      align-items: center;
+    }
   }
   &__item-date {
     font-size: 12px;
@@ -70,20 +69,20 @@ $transition_bg: 0.5s;
       font-weight: normal;
       color: $color_text-secondary;
     }
-    // @include mq-md() {
-    //   flex-shrink: 0;
-    //   width: 15%;
-    //   padding: 15px 0;
-    //   border-right: 1px solid $color_text-primary;
-    // }
+    @include Mq(md) {
+      flex-shrink: 0;
+      width: 15%;
+      padding: 15px 0;
+      border-right: 1px solid $color_text-primary;
+    }
   }
   &__item-text {
     padding: 10px 5% 0 0;
     font-size: 14px;
     letter-spacing: 0.1em;
-    // @include mq-md() {
-    //   padding: 0 5%;
-    //   font-size: 16px;
-    // }
+    @include Mq(md) {
+      padding: 0 5%;
+      font-size: 16px;
+    }
   }
 }

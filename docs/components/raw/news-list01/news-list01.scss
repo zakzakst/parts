@@ -14,11 +14,11 @@ $transition_default: 0.2s;
     &:hover {
       opacity: 0.55;
     }
-    // @include mq-md() {
-    //   display: flex;
-    //   align-items: center;
-    //   padding: 5px 0;
-    // }
+    @include Mq(md) {
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+    }
   }
   &__item-date {
     position: relative;
@@ -42,23 +42,23 @@ $transition_default: 0.2s;
       background: $color_primary;
       border-radius: 50%;
     }
-    // @include mq-md() {
-    //   padding: 0 25px 0 0;
-    //   &::before {
-    //     right: 0;
-    //     left: auto;
-    //     width: 6px;
-    //     height: 6px;
-    //   }
-    // }
+    @include Mq(md) {
+      padding: 0 25px 0 0;
+      &::before {
+        right: 0;
+        left: auto;
+        width: 6px;
+        height: 6px;
+      }
+    }
   }
   &__item-text {
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    // @include mq-md() {
-    //   padding-left: 25px;
-    // }
+    @include Mq(md) {
+      padding-left: 25px;
+    }
   }
 }

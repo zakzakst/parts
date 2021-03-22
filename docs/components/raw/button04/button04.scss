@@ -2,6 +2,7 @@ $BLOCK_NAME: '.button-04';
 
 // 変数
 $color_primary: #000;
+$color_white: #fff;
 $transition_default: 0.4s;
 $transition_text: 0.5s;
 $transition_slide_text: 0.18s;
@@ -25,7 +26,7 @@ $length_slide_arrow: 8px;
     right: -5%;
     left: -5%;
     display: block;
-    height: 320%;
+    height: 420%;
     content: '';
     background: $color_primary;
     transition: transform $transition_default ease-out;
@@ -70,7 +71,8 @@ $length_slide_arrow: 8px;
       top: 0;
       right: 1px;
       bottom: 0;
-      width: 11px;
+      width: 9px;
+      height: 9px;
       border: 1px solid transparent;
       border-top-color: $color_primary;
       border-right-color: $color_primary;
@@ -78,7 +80,7 @@ $length_slide_arrow: 8px;
     }
   }
   &:hover {
-    color: #fff;
+    color: $color_white;
     &::after {
       transform: skewY(-30deg) scaleY(1);
       transform-origin: left top;
@@ -100,11 +102,11 @@ $length_slide_arrow: 8px;
   &:hover &__arrow {
     transform: translateX($length_slide_arrow);
     &::before {
-      background: #fff;
+      background: $color_white;
     }
     &::after {
-      border-top-color: #fff;
-      border-right-color: #fff;
+      border-top-color: $color_white;
+      border-right-color: $color_white;
     }
   }
 }
