@@ -3,6 +3,7 @@ $BLOCK_NAME: '.button-22';
 // 変数
 $color_primary: #eb0000;
 $color_white: #fff;
+$color_black: #000;
 
 #{ $BLOCK_NAME } {
   position: relative;
@@ -40,10 +41,9 @@ $color_white: #fff;
     bottom: 0;
     display: block;
     width: 1.5rem;
-    height: 1.5rem;
+    height: 2px;
     margin: auto;
     content: '';
-    background: url(https://www.sejuku.net/assets/images/button_arrow.svg)
-      center/contain no-repeat;
+    background: $color_black;
   }
 }
