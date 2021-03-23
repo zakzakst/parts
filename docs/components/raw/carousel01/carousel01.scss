@@ -1,0 +1,171 @@
+$BLOCK_NAME: '.carousel-01';
+
+// 変数
+$color_primary: #dd2e1e;
+$color_secondary: #b32619;
+$color_pager_line: #ea6b60;
+$color_white: #fff;
+$width_title: 180px;
+$width_pager: 40px;
+$height_pager: 40px;
+$duration_pager_line: 2.8s;
+
+#{ $BLOCK_NAME } {
+  display: flex;
+  height: 100px;
+  padding-right: 30px;
+  font-family: YakuHanJP, 'Noto Sans JP', sans-serif;
+  color: $color_white;
+  background: $color_primary;
+  & :focus {
+    outline: none;
+  }
+  &__title {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: $width_title;
+    font-weight: bold;
+    letter-spacing: 0.18em;
+    background: $color_secondary;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: calc(100% - #{$width_title + $width_pager});
+    padding: 0 40px 0 30px;
+    & > ul {
+      width: 100%;
+    }
+  }
+  &__item {
+    display: block;
+    line-height: 1.15;
+  }
+  &__item-date {
+    font-size: 12px;
+  }
+  &__item-text {
+    display: block;
+    padding-top: 8px;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &__pager {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    width: $width_pager;
+  }
+  &__pager-item {
+    & > li {
+      position: absolute;
+      display: block;
+      width: $width_pager;
+      height: $height_pager;
+      padding: 2px;
+      overflow: hidden;
+      background: $color_white;
+      border-radius: 50%;
+      opacity: 0;
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: block;
+        width: 50%;
+        content: '';
+        background: $color_pager_line;
+      }
+      &::before {
+        right: 0;
+        z-index: 1;
+        transform-origin: center left;
+      }
+      &::after {
+        left: 0;
+        transform-origin: center right;
+      }
+      &.slick-active {
+        position: relative;
+        opacity: 1;
+        &::before {
+          animation: carousel01RotateCircleRight $duration_pager_line linear
+            forwards;
+        }
+        &::after {
+          animation: carousel01RotateCircleLeft $duration_pager_line linear
+            forwards;
+        }
+        @at-root {
+          .carousel-01__items:hover + .carousel-01__pager &::before,
+          .carousel-01__items:hover + .carousel-01__pager &::after {
+            animation-play-state: paused;
+          }
+        }
+      }
+      & > button {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1;
+        color: $color_white;
+        background: $color_primary;
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        &::before {
+          content: '0';
+        }
+      }
+    }
+  }
+
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes carousel01RotateCircleRight {
+  0% {
+    background: $color_pager_line;
+    transform: rotate(0deg);
+  }
+  50% {
+    background: $color_pager_line;
+    transform: rotate(180deg);
+  }
+  50.01% {
+    background: $color_white;
+    transform: rotate(360deg);
+  }
+  100% {
+    background: $color_white;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes carousel01RotateCircleLeft {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
