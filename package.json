@@ -46,8 +46,12 @@
     "webpack-stream": "^6.1.2"
   },
   "dependencies": {
+    "@types/jquery": "^3.5.5",
     "gsap": "^3.6.0",
-    "reset-css": "^5.0.1"
+    "jquery": "^3.6.0",
+    "lightbox2": "^2.11.3",
+    "reset-css": "^5.0.1",
+    "slick-carousel": "^1.8.1"
   },
   "fractal": {
     "main": "fractalfile.js"
