@@ -1,0 +1,11 @@
+title: カルーセル00
+label: カルーセル00
+variants:
+  - name: default
+    label: カルーセル00
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  text: 'カルーセル00'

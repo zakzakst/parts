@@ -17,6 +17,15 @@ import { button12 } from '../components/buttons/button12/button12';
 button12();
 
 /**
+ * カルーセル
+ */
+import { carousel01 } from '../components/carousels/carousel01/carousel01';
+carousel01();
+
+import { carousel02 } from '../components/carousels/carousel02/carousel02';
+carousel02();
+
+/**
  * よくある質問
  */
 // import { faq01 } from '../components/faqs/faq01/faq01';
@@ -36,6 +45,18 @@ faq05();
 
 import { faq06 } from '../components/faqs/faq06/faq06';
 faq06();
+
+/**
+ * ギャラリー
+ */
+// import { gallery01 } from '../components/galleries/gallery01/gallery01';
+// gallery01();
+
+/**
+ * メニュー
+ */
+import { menu01 } from '../components/menus/menu01/menu01';
+menu01();
 
 /**
  * スクロールアニメーション
