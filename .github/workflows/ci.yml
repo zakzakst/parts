@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  fractal_build:
+    name: Fractal Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.16.1
+
+      - name: install npm
+        run: npm install
+
+      - name: scss build
+        run: gulp scssBuild
+
+      - name: install fractal
+        run: npm install -g @frctl/fractal
+
+      - name: build fractal
+        run: fractal build
+
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_branch: deploy
+          publish_dir: ./

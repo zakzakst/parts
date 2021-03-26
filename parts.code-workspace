@@ -18,7 +18,6 @@
       ".editorconfig": true,
       ".babelrc": true,
       "tsconfig.json": true,
-      "docs": true,
       "package-lock.json": true,
     },
     // 設定：TODO Highlight
