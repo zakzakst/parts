@@ -1,0 +1,12 @@
+title: ボタン32
+label: ボタン32
+variants:
+  - name: default
+    label: ボタン32
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  text: 'ボタン32'
