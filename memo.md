@@ -18,7 +18,6 @@ https://hacknote.jp/archives/29090/
 
 ### ボタン
 
-https://www.elecom.co.jp/pickup/contents/00062/
 https://www.teinei.co.jp/
 https://www.denbi.ac.jp/
 https://wrl.co.jp/
