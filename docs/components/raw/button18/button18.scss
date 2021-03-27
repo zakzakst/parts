@@ -1,0 +1,64 @@
+$BLOCK_NAME: '.button-18';
+
+// 変数
+$color_white: #fff;
+$color_black: #111;
+$shadow_default: 11px 13px 27px 6px rgba(0, 0, 0, 0.08);
+$duration_bg: 0.7s;
+$easing_bg: cubic-bezier(0.475, 0.425, 0, 0.995);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  width: 330px;
+  height: 80px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 80px;
+  color: $color_white;
+  text-align: center;
+  letter-spacing: 3.5px;
+  background: $color_black;
+  box-shadow: $shadow_default;
+  transition: color 0.2s ease-out;
+  &:hover {
+    color: $color_black;
+  }
+  &::before {
+    position: absolute;
+    bottom: -60px;
+    left: -70px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: '';
+    background: $color_white;
+    border-radius: 50%;
+    transition: $duration_bg $easing_bg;
+    transition-property: width, height;
+  }
+  &:hover::before {
+    width: 350px;
+    height: 350px;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 32px;
+    bottom: 0;
+    display: block;
+    width: 32px;
+    height: 1px;
+    margin: auto;
+    content: '';
+    background: rgba($color_white, 0.5);
+    transition: transform 0.2s ease-out;
+  }
+  &:hover::after {
+    transform: translateX(10px);
+  }
+  & > span {
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,12 @@
+title: 見出し01
+label: 見出し01
+variants:
+  - name: default
+    label: 見出し01
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  shoulder: 'POINT 01'
+  heading: '見出しが入ります。見出しが入ります。見出しが入ります。'

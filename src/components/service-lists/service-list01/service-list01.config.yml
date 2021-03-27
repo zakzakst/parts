@@ -1,0 +1,14 @@
+title: サービス一覧01
+label: サービス一覧01
+variants:
+  - name: default
+    label: サービス一覧01
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  img: 'http://placehold.jp/350x350.png?text=ICON'
+  textEn: 'SERVICE LIST 01'
+  text: 'サービス一覧01'

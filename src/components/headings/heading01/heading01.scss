@@ -1,0 +1,49 @@
+$BLOCK_NAME: '.heading-01';
+
+// 変数
+$color_primary: #56bcb3;
+
+#{ $BLOCK_NAME } {
+  padding-top: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.75;
+  letter-spacing: 0.16em;
+  @include Mq(md) {
+    padding-top: 20px;
+    font-size: 24px;
+    line-height: 1.67;
+    letter-spacing: 0.11em;
+  }
+  &__shoulder {
+    position: relative;
+    display: block;
+    max-width: 130px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    color: $color_primary;
+    letter-spacing: 0.12em;
+    @include Mq(md) {
+      max-width: 154px;
+      font-size: 13px;
+    }
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 60px;
+      height: 1px;
+      margin: auto;
+      content: '';
+      background-color: $color_primary;
+      @include Mq(md) {
+        width: 80px;
+      }
+    }
+  }
+}

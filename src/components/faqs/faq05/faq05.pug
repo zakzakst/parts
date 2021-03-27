@@ -1,0 +1,8 @@
+ul.faq-00
+  each faq in faqItems
+    li.faq-05__item
+      p.faq-05__question.js-faq-05-question
+        span.faq-05__question-category #{ faq.category }
+        span.faq-05__question-text #{ faq.question }
+      div.faq-05__answer
+        p.faq-05__answer-inner #{ faq.answer }

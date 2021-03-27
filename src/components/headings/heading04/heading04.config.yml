@@ -1,0 +1,12 @@
+title: 見出し04
+label: 見出し04
+variants:
+  - name: default
+    label: 見出し04
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  headingEn: 'Heading 04'
+  heading: '見出し04'

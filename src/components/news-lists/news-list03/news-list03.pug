@@ -1,0 +1,9 @@
+ul.news-list-03
+  each item in items
+    li
+      a.news-list-03__item(href=item.link)
+        div.news-list-03__head
+          span.news-list-03__category #{ item.category }
+          span.news-list-03__date #{ item.date }
+          span.news-list-03__week #{ item.week }
+        span.news-list-03__text #{ item.text }

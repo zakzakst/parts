@@ -1,0 +1,78 @@
+$BLOCK_NAME: '.button-17';
+
+// 変数
+$color_white: #fff;
+$color_gray: #4f4f4f;
+$color_border: #d7d7d7;
+$duration_default: 0.45s;
+$delay_dot: 0.12s;
+
+#{ $BLOCK_NAME } {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  &__icon {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    margin-left: 12px;
+    overflow: hidden;
+    border: 1px solid $color_border;
+    border-radius: 50%;
+    transition: background-color $duration_default;
+    @at-root #{ $BLOCK_NAME }:hover & {
+      background: $color_gray;
+    }
+  }
+  &__icon-dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > span {
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      margin-left: 3px;
+      background: $color_gray;
+      border-radius: 50%;
+      transition: transform $duration_default;
+      &:first-child {
+        margin-left: 0;
+      }
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          transition-delay: #{($i - 1) * $delay_dot};
+        }
+      }
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: translateY(-30px);
+      }
+    }
+  }
+  &__icon-arrow {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 7px;
+    height: 7px;
+    margin: auto;
+    border: 2px solid $color_white;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    transition: transform $duration_default;
+    transform: translateY(30px) rotate(45deg);
+    @at-root #{ $BLOCK_NAME }:hover & {
+      transform: translateY(0) rotate(45deg);
+    }
+  }
+}

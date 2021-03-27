@@ -1,0 +1,67 @@
+$BLOCK_NAME: '.button-21';
+
+// 変数
+$color_primary: #573001;
+$color_bg: #ffb65f;
+$color_white: #fff;
+$duration_default: 0.4s;
+$easing_default: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  padding-left: 48px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11.5px;
+  font-weight: 500;
+
+  &__circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 64px;
+    height: 64px;
+    content: '';
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      margin: auto;
+      content: '';
+      border-radius: 50%;
+      transition: transform $duration_default $easing_default;
+    }
+    &::before {
+      background: $color_bg;
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scale(1.05);
+      }
+    }
+    &::after {
+      z-index: 1;
+      width: 16px;
+      height: 16px;
+      background: $color_white;
+      transform: scale(0);
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__text {
+    z-index: 2;
+    transition: transform $duration_default $easing_default;
+    @at-root #{ $BLOCK_NAME }:hover & {
+      transform: translateX(5px);
+    }
+  }
+}

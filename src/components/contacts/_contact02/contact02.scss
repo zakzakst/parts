@@ -1,0 +1,164 @@
+$BLOCK_NAME: '.contact-02';
+
+// 変数
+$color_white: #fff;
+$gradient_bg: linear-gradient(45deg, #eed521, #f6ba1e 70%);
+$shadow_panel: 0 0.5rem 1rem 0 transparent;
+$shadow_panel_hover: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2);
+$duration_default: 0.3s;
+$easing_default: cubic-bezier(0.6, 0, 0.3, 1);
+$duration_icon: 0.6s;
+$easing_icon: cubic-bezier(0.4, 0, 0.1, 1);
+
+#{ $BLOCK_NAME } {
+  display: flex;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  & > li {
+    width: (100% / 3);
+    padding: 8px;
+  }
+  &__wrapper {
+    padding: 20px;
+    background: $gradient_bg;
+  }
+  &__panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    margin-bottom: 25px;
+    background: $color_white;
+    border-radius: 4px;
+    box-shadow: $shadow_panel;
+    transition: $duration_default $easing_default 0.1s;
+    transition-property: box-shadow, transform;
+    #{$BLOCK_NAME}__item:hover & {
+      box-shadow: $shadow_panel_hover;
+      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      transition-property: box-shadow, transform;
+      transform: translateY(-4px);
+    }
+  }
+  &__panel-icon {
+    position: relative;
+    display: block;
+    width: 30px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  &__panel-icon-svg {
+    width: 100%;
+    vertical-align: bottom;
+    &:nth-child(2) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-105%);
+    }
+    @at-root #{$BLOCK_NAME}__item:hover & {
+      &:nth-child(1) {
+        transition: transform $duration_icon $easing_icon 0.175s;
+        transform: translateX(105%);
+      }
+      &:nth-child(2) {
+        transition: transform $duration_icon $easing_icon 0.25s;
+        transform: translateX(0);
+      }
+    }
+    path {
+      fill: none;
+      stroke: #1a1a1a;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+      stroke-width: 1;
+    }
+  }
+  &__panel-text {
+    font-size: 0;
+    font-weight: bold;
+  }
+  &__panel-text-c {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    & > span {
+      display: inline-block;
+      font-size: 14px;
+      &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-105%);
+      }
+      @at-root #{$BLOCK_NAME}__item:hover & {
+        &:nth-child(1) {
+          transition: transform $duration_icon $easing_icon;
+          transform: translateX(105%);
+        }
+        &:nth-child(2) {
+          transition: transform $duration_icon $easing_icon;
+          transform: translateX(0);
+        }
+      }
+    }
+    @for $i from 1 to 20 {
+      @at-root #{$BLOCK_NAME}__item:hover &:nth-child(#{$i}) > span {
+        &:nth-child(1) {
+          transition-delay: #{0.02s * $i};
+        }
+        &:nth-child(2) {
+          transition-delay: #{0.02s * $i + 0.125s};
+        }
+      }
+    }
+  }
+  &__panel-arrow {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    display: block;
+    width: 10px;
+    overflow: hidden;
+  }
+  &__panel-arrow-svg {
+    width: 100%;
+    vertical-align: bottom;
+    &:nth-child(2) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-105%);
+    }
+    @at-root #{$BLOCK_NAME}__item:hover & {
+      &:nth-child(1) {
+        transition: transform $duration_icon $easing_icon;
+        transform: translateX(105%);
+      }
+      &:nth-child(2) {
+        transition: transform $duration_icon $easing_icon 0.15s;
+        transform: translateX(0);
+      }
+    }
+    path {
+      fill: none;
+      stroke: #1a1a1a;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+      stroke-width: 12;
+    }
+  }
+  &__heading {
+    margin-bottom: 17px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+}

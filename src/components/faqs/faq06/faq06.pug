@@ -1,0 +1,11 @@
+div.faq-06
+  ul.faq-06__tab
+    each faq, index in faqItems
+      li.faq-06__tab-item(data-target-index=index) #{ faq.categoryLabel }
+  div.faq-06__contents
+    each faq in faqItems
+      div.faq-06__content
+        each content in faq.contents
+          div.faq-06__content-item
+            h3.faq-06__content-question #{ content.question }
+            p.faq-06__content-answer #{ content.answer }

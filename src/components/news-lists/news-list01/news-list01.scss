@@ -1,0 +1,64 @@
+$BLOCK_NAME: '.news-list-01';
+
+// 変数
+$color_primary: #000;
+$transition_default: 0.2s;
+
+#{ $BLOCK_NAME } {
+  font-size: 13px;
+  &__item {
+    display: block;
+    padding: 4px 0;
+    color: $color_primary;
+    transition: opacity $transition_default ease-out;
+    &:hover {
+      opacity: 0.55;
+    }
+    @include Mq(md) {
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+    }
+  }
+  &__item-date {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    width: 115px;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 30px;
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 4px;
+      height: 4px;
+      margin: auto;
+      content: '';
+      background: $color_primary;
+      border-radius: 50%;
+    }
+    @include Mq(md) {
+      padding: 0 25px 0 0;
+      &::before {
+        right: 0;
+        left: auto;
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+  &__item-text {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @include Mq(md) {
+      padding-left: 25px;
+    }
+  }
+}

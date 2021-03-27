@@ -1,0 +1,49 @@
+$BLOCK_NAME: '.button-22';
+
+// 変数
+$color_primary: #eb0000;
+$color_white: #fff;
+$color_black: #000;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4.375rem 1rem 1rem;
+  overflow: hidden;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: $color_white;
+  letter-spacing: 0.04em;
+  background: $color_primary;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  &:hover {
+    color: $color_white;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -webkit-calc(100% - 54px);
+    left: calc(100% - 54px);
+    display: block;
+    width: 4rem;
+    height: 100%;
+    content: '';
+    background: $color_white;
+    transform: skewX(-10deg);
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0.9375rem;
+    bottom: 0;
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    margin: auto;
+    content: '';
+    background: $color_black;
+  }
+}

@@ -1,0 +1,35 @@
+//- TODO: SVGの部分対応する
+<svg display="none">
+  <defs>
+    <symbol id="button05__text" viewBox="0 0 300 300">
+      <path
+        id="button05__text-path"
+        d="M 30 120 c 0 -66.2 53.8 -120 120 -120 c 66.2 0 120 53.8 120 120 c 0 66.2 -53.8 120 -120 120 c -66.2 0 -120 -53.8 -120 -120 Z"
+        fill="none"
+      />
+      <text
+        text-anchor="middle"
+        dy="30"
+        font-size="30"
+      >
+        <textPath
+          href="#button05__text-path"
+          startOffset="25%"
+        >ページトップへ戻る</textPath>
+      </text>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="button-05__wrapper">
+  <a href="#" class="button-05">
+    <span class="button-05__icon icon">
+      <i class="fas fa-arrow-right"></i>
+    </span>
+  </a>
+  <div class="button-05__text">
+    <svg viewBox="0 0 300 300" width="120">
+      <use href="#button05__text"></use>
+    </svg>
+  </div>
+</div>

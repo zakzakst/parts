@@ -1,0 +1,11 @@
+title: メニュー00
+label: メニュー00
+variants:
+  - name: default
+    label: メニュー00
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  text: メニュー00

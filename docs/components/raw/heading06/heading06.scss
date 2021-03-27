@@ -1,0 +1,57 @@
+$BLOCK_NAME: '.heading-06';
+
+// 変数
+$color_primary: #009b63;
+$color_secondary: #0056a1;
+$color_black: #222;
+$radius_default: 16px;
+$width_border: 3px;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  width: 300px;
+  padding: 24px 0 40px;
+  margin-top: 48px;
+  // フォント指定
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  color: $color_black;
+  text-align: center;
+  letter-spacing: 0.1em;
+  // ボーダー指定
+  border: $width_border solid $color_primary;
+  border-top: none;
+  border-bottom-right-radius: $radius_default;
+  border-bottom-left-radius: $radius_default;
+  &::before {
+    position: absolute;
+    right: -$width_border;
+    bottom: calc(100% + 4px);
+    left: -$width_border;
+    display: block;
+    height: 20px;
+    content: '';
+    // ボーダー指定
+    border: $width_border solid $color_secondary;
+    border-bottom: none;
+    border-top-left-radius: $radius_default;
+    border-top-right-radius: $radius_default;
+    // 角度指定
+    transform: rotate(-5deg);
+    transform-origin: bottom left;
+  }
+  &__en {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: 0.05em;
+  }
+  .is-color-primary {
+    color: $color_primary;
+  }
+  .is-color-secondary {
+    color: $color_secondary;
+  }
+}

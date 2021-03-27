@@ -1,0 +1,26 @@
+title: ニュース一覧03
+label: ニュース一覧03
+variants:
+  - name: default
+    label: ニュース一覧03
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  items:
+    - link: '#'
+      category: 'LIVE/EVENT'
+      date: '2021.01.20'
+      week: '[WED]'
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    - link: '#'
+      category: 'LIVE/EVENT'
+      date: '2021.01.21'
+      week: '[THU]'
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    - link: '#'
+      category: 'LIVE/EVENT'
+      date: '2021.01.22'
+      week: '[FRI]'
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'

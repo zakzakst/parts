@@ -1,0 +1,224 @@
+$BLOCK_NAME: '.menu-01';
+
+// 変数
+$color_white: #fff;
+$color_black: #2b2b2b;
+$color_bg: #d4d4d4;
+$duration_bg: 0.7s;
+$easing_bg: cubic-bezier(0.7, 0, 0.3, 1);
+$duration_item: 0.5s;
+$easing_item: cubic-bezier(1, 0, 0, 1);
+$duration_button: 0.2s;
+$easing_button: cubic-bezier(0.7, 0, 0.3, 1);
+$duration_border: 0.5s;
+$easing_border: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+#{ $BLOCK_NAME } {
+  // メニュー
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background: $color_bg;
+    transition: transform $duration_bg $easing_bg 0.6s;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  &.is-open {
+    visibility: visible;
+    &::before {
+      transition-delay: 0s;
+      transform: scaleX(1);
+    }
+  }
+  &__items {
+    width: 320px;
+    margin: 0 auto 24px;
+    & > li {
+      margin-bottom: 24px;
+      overflow: hidden;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    display: block;
+    padding: 24px 0;
+    font-size: 19px;
+    line-height: 1;
+    transition: transform $duration_border $easing_border 0.6s;
+    transform: translateX(101%);
+    &::before,
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 1px;
+      content: '';
+      background: $color_black;
+    }
+    &::before {
+      opacity: 0.28;
+    }
+    &::after {
+      transition: transform $duration_border $easing_border;
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    @at-root #{ $BLOCK_NAME }.is-open & {
+      transition-delay: 0.4s;
+      transform: translateX(0);
+    }
+  }
+  &__item-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: $color_black;
+    transition: transform $duration_border $easing_border;
+    @at-root #{ $BLOCK_NAME }.is-open & {
+      transition-delay: 1s;
+      transform: translateX(101%);
+    }
+  }
+  // ボタン
+  &__button {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background: $color_black;
+      border: 1px solid $color_black;
+      border-radius: 50%;
+      transition: $duration_button $easing_button;
+      transition-property: background-color, transform;
+    }
+    &:hover::before {
+      background: $color_white;
+      transform: scale(1.2);
+    }
+    &.is-open:hover::before {
+      background: $color_black;
+    }
+  }
+  &__button-open {
+    position: relative;
+    z-index: 1;
+    width: 15px;
+    height: 15px;
+    @at-root #{ $BLOCK_NAME }__button.is-open & {
+      display: none;
+    }
+  }
+  &__button-open-dots {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 3px;
+    margin: auto;
+    &:nth-child(1) {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 0;
+      bottom: 0;
+    }
+    &:nth-child(3) {
+      bottom: 0;
+    }
+    & > span {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 3px;
+      height: 3px;
+      margin: auto;
+      background: $color_white;
+      transition: $duration_button $easing_button;
+      transition-property: background-color, width;
+      &:nth-child(1) {
+        left: 0;
+      }
+      &:nth-child(2) {
+        right: 0;
+        left: 0;
+      }
+      &:nth-child(3) {
+        right: 0;
+      }
+      @at-root #{ $BLOCK_NAME }__button:hover & {
+        background: $color_black;
+        &:nth-child(2) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__button-close {
+    position: relative;
+    z-index: 1;
+    display: none;
+    width: 15px;
+    height: 15px;
+    @at-root #{ $BLOCK_NAME }__button.is-open & {
+      display: block;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      height: 1px;
+      margin: auto;
+      content: '';
+      background: $color_white;
+      transition: transform $duration_button $easing_button;
+      @at-root #{ $BLOCK_NAME }__button:hover & {
+        transform: rotate(0);
+      }
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

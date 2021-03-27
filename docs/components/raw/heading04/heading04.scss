@@ -1,0 +1,39 @@
+$BLOCK_NAME: '.heading-04';
+
+// 変数
+$color_primary: #3c60c7;
+$color_black: #141c36;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  padding-bottom: 20px;
+  font-family: 'Yu Gothic', 'YuGothic', 'ヒラギノ角ゴ Pro W3',
+    'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
+  font-size: 12px;
+  @include Mq(md) {
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 25px;
+    font-size: 14px;
+  }
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 60px;
+    height: 4px;
+    content: '';
+    background: $color_primary;
+  }
+  &__en {
+    display: block;
+    font-family: 'EB Garamond', serif;
+    font-size: 40px;
+    @include Mq(md) {
+      display: inline-block;
+      margin-right: 30px;
+      font-size: 53px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../node_modules/reset-css/sass/_reset.scss';
+
+// Slick
+$slick-font-path: '/img/plugins/slick/fonts/';
+$slick-loader-path: '/img/plugins/slick/';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/slick-carousel/slick/slick-theme.scss';
+
+// lightbox2
+@import '../../node_modules/lightbox2/dist/css/lightbox.min';
+.lb-cancel {
+  background-image: url(/img/plugins/lightbox2/loading.gif);
+}
+.lb-nav a.lb-prev {
+  background-image: url(/img/plugins/lightbox2/prev.png);
+}
+.lb-nav a.lb-next {
+  background-image: url(/img/plugins/lightbox2/next.png);
+}
+.lb-data .lb-close {
+  background-image: url(/img/plugins/lightbox2/close.png);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: inherit;
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+$break_point_items: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@mixin Mq($name) {
+  @media screen and (min-width: map-get($break_point_items, $name)) {
+    @content;
+  }
+}
+
+@import '../components/**/*.scss';

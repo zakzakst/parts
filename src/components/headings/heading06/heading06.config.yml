@@ -1,0 +1,12 @@
+title: 見出し06
+label: 見出し06
+variants:
+  - name: default
+    label: 見出し06
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  headingEn: '<span class="is-color-primary">H</span>eading <span class="is-color-secondary">0</span>6'
+  heading: '見出し06'

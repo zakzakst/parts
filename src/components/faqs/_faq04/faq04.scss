@@ -1,0 +1,103 @@
+$BLOCK_NAME: '.faq-04';
+
+// 変数
+$color_primary: #d90d0d;
+$color_border: #dfdfdf;
+$color_white: #fff;
+$color_black: #222;
+$transition_default: 0.4s;
+$transition_icon: 0.3s;
+$easing_default: cubic-bezier(1, 0.15, 0.49, 0.99);
+
+#{ $BLOCK_NAME } {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  color: $color_black;
+  &__item {
+    border-bottom: 1px solid $color_border;
+    &:first-child {
+      border-top: 1px solid $color_border;
+    }
+  }
+  &__question {
+    position: relative;
+    padding: 46px 100px 46px 38px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      top: 47px;
+      left: 0;
+      font-family: 'Poppins', sans-serif;
+      content: 'Q';
+    }
+  }
+  &__question-text {
+    transition: opacity $transition_default;
+    @at-root #{ $BLOCK_NAME }__question:hover & {
+      opacity: 0.5;
+    }
+  }
+  &__question-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    overflow: hidden;
+    background: no-repeat center;
+    background-color: $color_primary;
+    background-image: url(https://www.itoki.jp/special/akimiru/img/common/icon_plus.svg);
+    background-size: 38%;
+    border: 1px solid $color_primary;
+    border-radius: 50%;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background: no-repeat center;
+      background-color: $color_white;
+      background-image: url(https://www.itoki.jp/special/akimiru/img/common/icon_plus_red.svg);
+      background-size: 38%;
+      border-radius: 50%;
+      opacity: 0;
+      transition: $transition_icon $easing_default;
+      transition-property: transform, opacity;
+      transform: translateX(-100%);
+      @at-root #{ $BLOCK_NAME }__question:hover & {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      @at-root #{ $BLOCK_NAME }__question.is-active & {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      @at-root #{ $BLOCK_NAME }__question.is-active & {
+        background-image: url(https://www.itoki.jp/special/akimiru/img/common/icon_minus_red.svg);
+      }
+    }
+  }
+  &__answer {
+    height: 0;
+    overflow: hidden;
+  }
+  &__answer-inner {
+    position: relative;
+    padding: 0 100px 46px 38px;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 1px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      content: 'A';
+    }
+  }
+}
