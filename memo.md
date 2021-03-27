@@ -19,7 +19,6 @@ https://hacknote.jp/archives/29090/
 ### ボタン
 
 https://www.teinei.co.jp/
-https://www.denbi.ac.jp/
 https://wrl.co.jp/
 https://toyoseiki-recruit.jp/
 https://www.kumon.ne.jp/job/ （検索ボタン）
