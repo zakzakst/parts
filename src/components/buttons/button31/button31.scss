@@ -1,0 +1,55 @@
+$BLOCK_NAME: '.button-31';
+
+// 変数
+$color_primary: #333;
+$color_gray: #efefef;
+$color_white: #fff;
+$duration_default: 0.3s;
+$easing_default: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 10px 0 7px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  color: $color_primary;
+  border-radius: 9999px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    z-index: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    content: '';
+    background-color: $color_gray;
+    border-radius: 9999px;
+    transition: all $duration_default $easing_default;
+  }
+
+  & > span {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 3px;
+    line-height: 1;
+    background-image: linear-gradient(180deg, #bfbfbf, #bfbfbf);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 1px;
+  }
+
+  &:hover {
+    color: $color_white;
+
+    &::before {
+      width: calc(100% + 30px);
+      background-color: $color_primary;
+      box-shadow: 0 5px 13px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
