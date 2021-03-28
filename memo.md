@@ -43,12 +43,13 @@ https://www.teinei.co.jp/
 https://ion-e-air.jp/
 https://www.karststonepaper.com/
 https://www.orikane.co.jp/
+https://wrl.co.jp/about/ （沿革部分）
 
 ### アコーディオン
 
 ### スクロールアニメーション
 
-https://tenohira.kyoto-art.ac.jp/illustration/ （ラインで囲まれた見出し、チェックマーク）
+https://tenohira.kyoto-art.ac.jp/illustration/ （チェックマーク）
 https://www.felissimo.co.jp/meisaku/ （ボタンとかのマスク？）
 https://b43.jp/ （セクション間の線が伸びる）
 https://ecopet.info/
