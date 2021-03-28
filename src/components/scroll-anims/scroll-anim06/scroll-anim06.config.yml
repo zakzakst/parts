@@ -1,0 +1,14 @@
+title: スクロールアニメーション06
+label: スクロールアニメーション06
+variants:
+  - name: default
+    label: スクロールアニメーション06
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  items:
+    - 'テキストが入ります。テキストが入ります。テキストが入ります。'
+    - 'テキストが入ります。テキストが入ります。テキストが入ります。'
+    - 'テキストが入ります。テキストが入ります。テキストが入ります。'

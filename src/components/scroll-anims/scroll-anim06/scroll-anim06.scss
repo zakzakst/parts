@@ -1,0 +1,58 @@
+$BLOCK_NAME: '.scroll-anim-06';
+
+// 変数
+$color_primary: #1c3dc7;
+$color_secondary: #dbf708;
+
+#{ $BLOCK_NAME } {
+  &__item {
+    position: relative;
+    padding-left: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $color_primary;
+    & + & {
+      margin-top: 8px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+    }
+
+    &::before {
+      top: 4px;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      background: $color_secondary;
+    }
+
+    &::after {
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 14px;
+      border-right: 2px solid $color_primary;
+      border-bottom: 2px solid $color_primary;
+      opacity: 0;
+      transition: all 0.2s ease-out;
+      transform-origin: right bottom;
+    }
+
+    @for $i from 2 through 10 {
+      &:nth-child(#{$i})::after {
+        transition-delay: #{0.5 * ($i - 1)}s;
+      }
+    }
+
+    @at-root #{ $BLOCK_NAME }.is-animated & {
+      &::after {
+        opacity: 1;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
