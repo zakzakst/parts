@@ -1,0 +1,68 @@
+$BLOCK_NAME: '.scroll-anim-05';
+
+// 変数
+$color_primary: #1c3dc7;
+$color_secondary: #dbf708;
+$color_white: #fff;
+$shadow_bg: (
+  1px 1px 0px $color_white,
+  4px 4px 0px $color_secondary,
+  1px 1px 0px inset $color_white,
+  4px 4px 0px inset $color_secondary
+);
+$shadow_text: (
+  $color_primary 1px 3px 1px,
+  $color_primary 3px 1px 1px,
+  $color_primary 2px 2px 1px,
+  $color_primary 1px -3px 1px,
+  $color_primary 3px -1px 1px,
+  $color_primary 2px -2px 1px,
+  $color_primary -1px 3px 1px,
+  $color_primary -3px 1px 1px,
+  $color_primary -2px 2px 1px,
+  $color_primary -1px -3px 1px,
+  $color_primary -3px -1px 1px,
+  $color_primary -2px -2px 1px
+);
+$duration_default: 1s;
+$easing_default: cubic-bezier(0.96, -0.37, 0, 1.26);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  padding: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  color: $color_secondary;
+  text-align: center;
+  text-shadow: $shadow_text;
+  border: 3px solid $color_primary;
+  border-radius: 9999px;
+  box-shadow: $shadow_bg;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 16px;
+    content: '';
+    background: $color_white;
+    transition: all $duration_default $easing_default;
+  }
+
+  &::before {
+    top: -6px;
+    right: 60px;
+    @at-root #{ $BLOCK_NAME }.is-animated::before {
+      right: calc(100% - 60px - 24px);
+    }
+  }
+
+  &::after {
+    bottom: -11px;
+    left: 60px;
+    @at-root #{ $BLOCK_NAME }.is-animated::after {
+      left: calc(100% - 60px - 24px);
+    }
+  }
+}
