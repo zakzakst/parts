@@ -49,7 +49,6 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
-https://tenohira.kyoto-art.ac.jp/illustration/ （チェックマーク）
 https://www.felissimo.co.jp/meisaku/ （ボタンとかのマスク？）
 https://b43.jp/ （セクション間の線が伸びる）
 https://ecopet.info/
