@@ -1,0 +1,15 @@
+title: サービス一覧05
+label: サービス一覧05
+variants:
+  - name: default
+    label: サービス一覧05
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  img: 'https://picsum.photos/400/200'
+  num: '01'
+  titleEn: 'Service05'
+  title: 'サービス05'
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
