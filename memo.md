@@ -32,8 +32,6 @@ https://amana.jp/
 
 ### ニュース一覧
 
-https://www.teinei.co.jp/
-
 ### サービス一覧
 
 ### カルーセル
