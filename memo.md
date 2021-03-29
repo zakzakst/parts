@@ -29,7 +29,6 @@ https://goodpatch.com/careers
 ### カード
 
 https://umenaka.oiwai.online/
-https://www.e-heyaspace.com/
 https://amana.jp/
 
 ### ニュース一覧
@@ -37,6 +36,8 @@ https://amana.jp/
 https://www.teinei.co.jp/
 
 ### サービス一覧
+
+https://www.e-heyaspace.com/
 
 ### カルーセル
 
