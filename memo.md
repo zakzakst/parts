@@ -27,8 +27,6 @@ https://goodpatch.com/careers
 
 ### カード
 
-https://umenaka.oiwai.online/
-
 ### ニュース一覧
 
 ### サービス一覧
