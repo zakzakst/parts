@@ -37,8 +37,6 @@ https://www.teinei.co.jp/
 
 ### サービス一覧
 
-https://www.e-heyaspace.com/
-
 ### カルーセル
 
 https://ion-e-air.jp/

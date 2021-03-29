@@ -1,0 +1,84 @@
+$BLOCK_NAME: '.service-list-05';
+
+// 変数
+$color_primary: #d7092f;
+$color_bg: #990924;
+
+#{ $BLOCK_NAME } {
+  max-width: 360px;
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+
+  &__img-wrapper {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background: $color_bg;
+      border-radius: 25px;
+      transform: translate(10px, 10px);
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  &__title-wrapper {
+    position: relative;
+    margin: 40px 0 30px;
+    font-weight: 900;
+    line-height: 1.75;
+    text-align: center;
+    letter-spacing: 1px;
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: calc(100% + 10px);
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 2px;
+      height: 60px;
+      margin: auto;
+      content: '';
+      background: $color_primary;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    margin: auto;
+    font-size: 100px;
+    line-height: 100px;
+    color: $color_primary;
+    opacity: 0.1;
+  }
+
+  &__title-en {
+    font-size: 14px;
+    color: $color_primary;
+  }
+
+  &__title {
+    margin-top: 5px;
+    font-size: 24px;
+  }
+
+  &__text {
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 2;
+  }
+}
