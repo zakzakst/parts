@@ -1,0 +1,15 @@
+title: カード09
+label: カード09
+variants:
+  - name: default
+    label: カード09
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  tag: 'カード09'
+  img: 'https://picsum.photos/400/200'
+  title: 'タイトルがはいります'
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
