@@ -1,0 +1,52 @@
+$BLOCK_NAME: '.news-list-06';
+
+// 変数
+$color_dash: #e2d2bd;
+$color_bg: #fef5e5;
+$color_date: #ac916b;
+$color_text: #5c4c2c;
+
+#{ $BLOCK_NAME } {
+  font-family: YakuHanJP, 'Noto Sans JP', sans-serif;
+
+  &__item {
+    padding: 8px 0;
+    border-bottom: 1px dashed $color_dash;
+    &:first-child {
+      border-top: 1px dashed $color_dash;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 24px 16px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px dashed transparent;
+    border-radius: 10px;
+    transition: all 0.4s;
+    &:hover {
+      background: $color_bg;
+      border: 1px dashed $color_dash;
+    }
+  }
+
+  &__date {
+    flex-shrink: 0;
+    width: 90px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $color_date;
+  }
+
+  &__text {
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color_text;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
