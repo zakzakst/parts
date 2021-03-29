@@ -1,0 +1,14 @@
+title: カード10
+label: カード10
+variants:
+  - name: default
+    label: カード10
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  img: 'https://picsum.photos/400/400'
+  title: 'カード10'
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'

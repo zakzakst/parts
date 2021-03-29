@@ -28,7 +28,6 @@ https://goodpatch.com/careers
 ### カード
 
 https://umenaka.oiwai.online/
-https://amana.jp/
 
 ### ニュース一覧
 
@@ -59,8 +58,6 @@ https://hairs.clinicplus.health/
 https://www.teinei.co.jp/faq/frequent/
 
 ### 問い合わせ
-
-https://www.ic-ryowa.com/
 
 ### フッター
 
