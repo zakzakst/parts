@@ -1,0 +1,66 @@
+$BLOCK_NAME: '.button-33';
+
+// 変数
+$color_primary: #f2bd66;
+$color_hover: #efad40;
+$color_white: #fff;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  width: 260px;
+  height: 56px;
+  overflow: hidden;
+  font-family: YakuHanJP, 'Noto Sans JP', sans-serif;
+  font-size: 17px;
+  line-height: 56px;
+  color: $color_white;
+  text-align: center;
+  background: $color_primary;
+  border-radius: 9999px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background: $color_hover;
+    border-radius: 50% 50% 0 0/100% 100% 0 0;
+    transition: transform 0.48s cubic-bezier(0.895, 0.03, 0.685, 0.22),
+      border-radius 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53) 40ms;
+    transform: scaleY(0);
+    transform-origin: center bottom;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 24px;
+    bottom: 0;
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin: auto;
+    content: '';
+    border-top: 2px solid $color_white;
+    border-right: 2px solid $color_white;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    color: $color_white;
+    &::before {
+      border-radius: 50% 50% 0 0/0 0 0 0;
+      transition: transform 0.48s cubic-bezier(0.165, 0.84, 0.44, 1),
+        border-radius 0.35s cubic-bezier(0.55, 0.085, 0.68, 0.53) 20ms;
+      transform: scaleY(1);
+    }
+  }
+
+  & > span {
+    position: relative;
+    z-index: 1;
+  }
+}
