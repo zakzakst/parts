@@ -1,0 +1,12 @@
+ul.faq-07
+  each faq in faqItems
+    li.faq-07__item
+      h3.faq-07__question.js-faq-07-question
+        i.faq-07__question-icon.fas.fa-exclamation-triangle
+        | #{ faq.question }
+      div.faq-07__answer-wrapper
+        p.faq-07__answer #{ faq.answer }
+        p.faq-07__answer-link
+          a(href=faq.link)
+            i.faq-07__answer-link-icon.fas.fa-external-link-alt
+            | #{ faq.linkText }
