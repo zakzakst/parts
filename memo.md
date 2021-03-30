@@ -52,8 +52,6 @@ https://goodpatch.com/careers
 
 ### FAQ
 
-https://www.teinei.co.jp/faq/frequent/
-
 ### 問い合わせ
 
 ### フッター
