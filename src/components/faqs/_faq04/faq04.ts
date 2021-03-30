@@ -1,4 +1,4 @@
-import { gsap } from "gsap";
+import { gsap } from 'gsap';
 
 export function faq04() {
   const items = document.getElementsByClassName('js-faq-04-question');

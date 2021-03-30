@@ -1,5 +1,5 @@
 'use strict';
-import { gsap } from "gsap";
+import { gsap } from 'gsap';
 
 export function accordion01() {
   const elList = document.getElementsByClassName('js-accordion-01');

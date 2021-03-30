@@ -52,7 +52,6 @@ https://goodpatch.com/careers
 
 ### FAQ
 
-https://hairs.clinicplus.health/
 https://www.teinei.co.jp/faq/frequent/
 
 ### 問い合わせ

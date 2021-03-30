@@ -1,0 +1,23 @@
+title: よくある質問07
+label: よくある質問07
+variants:
+  - name: default
+    label: よくある質問07
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  faqItems:
+    - question: '質問1が入ります。'
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+      link: '#'
+      linkText: '関連リンクが入ります'
+    - question: '質問2が入ります。'
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+      link: '#'
+      linkText: '関連リンクが入ります'
+    - question: '質問3が入ります。'
+      answer: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+      link: '#'
+      linkText: '関連リンクが入ります'
