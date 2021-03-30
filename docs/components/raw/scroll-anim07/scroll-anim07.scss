@@ -1,0 +1,83 @@
+$BLOCK_NAME: '.scroll-anim-07';
+
+// 変数
+$color_primary: #f6de79;
+$color_bg: #f4f4f4;
+$easing_default: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  min-height: 600px;
+  padding: 64px 0 0 64px;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+
+  &::before {
+    position: absolute;
+    top: -170px;
+    left: 22px;
+    z-index: -1;
+    width: 326px;
+    height: 200%;
+    clip-path: inset(0 0 100% 0);
+    content: '';
+    background-color: $color_bg;
+    transition: clip-path 1.5s cubic-bezier(0.475, 0.425, 0, 0.995) 0.2s;
+    transform: rotate(15deg);
+  }
+
+  &.is-animated::before {
+    clip-path: inset(0);
+  }
+
+  &__heading {
+    position: relative;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 4px;
+
+    &::before {
+      position: absolute;
+      bottom: 6px;
+      left: -24px;
+      display: block;
+      width: 8px;
+      height: 72px;
+      content: '';
+      background: $color_primary;
+      opacity: 0;
+      transition: all 0.6s $easing_default 0.2s;
+      transform: skewX(20deg) translateX(-20px);
+      transform-origin: bottom right;
+      @at-root #{ $BLOCK_NAME }.is-animated & {
+        opacity: 1;
+        transform: skewX(20deg) translateX(0);
+      }
+    }
+
+    & > span {
+      display: inline-block;
+      opacity: 0;
+      transition: all 0.4s $easing_default 0.3s;
+      transform: translateX(-10px);
+      @at-root #{ $BLOCK_NAME }.is-animated & {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 36px;
+    font-size: 14px;
+    line-height: 2;
+    opacity: 0;
+    transition: all 0.6s $easing_default 0.5s;
+    transform: translateY(10px);
+    @at-root #{ $BLOCK_NAME }.is-animated & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
