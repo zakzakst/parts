@@ -46,7 +46,6 @@ https://www.felissimo.co.jp/meisaku/ （ボタンとかのマスク？）
 https://b43.jp/ （セクション間の線が伸びる）
 https://ecopet.info/
 https://beartail.jp/
-https://giginc.co.jp/
 https://2021.qlip.co.jp/
 https://goodpatch.com/careers
 
