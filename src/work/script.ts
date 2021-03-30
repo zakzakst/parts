@@ -49,6 +49,9 @@ faq06();
 import { faq07 } from '../components/faqs/faq07/faq07';
 faq07();
 
+import { faq08 } from '../components/faqs/faq08/faq08';
+faq08();
+
 /**
  * ギャラリー
  */

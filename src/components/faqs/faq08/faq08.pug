@@ -1,0 +1,10 @@
+ul.faq-08
+  each faq in faqItems
+    li.faq-08__item
+      h3.faq-08__question.js-faq-08-question
+        span.faq-08__question-icon Q
+        | #{ faq.question }
+        span.faq-08__question-toggle
+      div.faq-08__answer-wrapper
+        div.faq-08__answer
+          div.faq-08__answer-content !{ faq.answer }
