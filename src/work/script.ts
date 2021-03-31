@@ -87,3 +87,6 @@ scrollAnim06();
 
 import { scrollAnim07 } from '../components/scroll-anims/scroll-anim07/scroll-anim07';
 scrollAnim07();
+
+import { scrollAnim08 } from '../components/scroll-anims/scroll-anim08/scroll-anim08';
+scrollAnim08();

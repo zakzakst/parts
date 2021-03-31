@@ -1,0 +1,26 @@
+title: スクロールアニメーション08
+label: スクロールアニメーション08
+variants:
+  - name: default
+    label: スクロールアニメーション08
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  linkItems:
+    - img: 'https://picsum.photos/id/1010/200/300'
+      link: '#'
+      text: '2020'
+    - img: 'https://picsum.photos/id/1011/200/300'
+      link: '#'
+      text: '2019'
+    - img: 'https://picsum.photos/id/1012/200/300'
+      link: '#'
+      text: '2018'
+    - img: 'https://picsum.photos/id/1013/200/300'
+      link: '#'
+      text: '2017'
+    - img: 'https://picsum.photos/id/1014/200/300'
+      link: '#'
+      text: '2016'
