@@ -18,7 +18,6 @@ https://hacknote.jp/archives/29090/
 
 ### ボタン
 
-https://wrl.co.jp/
 https://www.kumon.ne.jp/job/ （検索ボタン）
 https://www.atamisekaie.jp/
 https://goodpatch.com/careers
@@ -26,6 +25,8 @@ https://goodpatch.com/careers
 ### 見出し
 
 ### カード
+
+https://junni.co.jp/
 
 ### ニュース一覧
 
