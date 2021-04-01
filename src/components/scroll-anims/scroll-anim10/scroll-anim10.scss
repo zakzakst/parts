@@ -1,0 +1,29 @@
+$BLOCK_NAME: '.scroll-anim-10';
+
+// 変数
+$duration_default: 1.8s;
+$easing_default: cubic-bezier(0.25, 1, 0.5, 1);
+
+#{ $BLOCK_NAME } {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 200px;
+  font-style: italic;
+  font-weight: 700;
+
+  & span {
+    display: inline-block;
+    opacity: 0;
+    transition: all $duration_default $easing_default;
+    transform: translate(80px, 80px) matrix(0.43, 0.72, 0.63, 0.59, 0, 0);
+    @for $i from 1 to 20 {
+      &:nth-child(#{$i}) {
+        transition-delay: #{100 * $i}ms;
+      }
+    }
+  }
+
+  &.is-animated span {
+    opacity: 1;
+    transform: translate(0, 0) matrix(1, 0, 0, 1, 0, 0);
+  }
+}
