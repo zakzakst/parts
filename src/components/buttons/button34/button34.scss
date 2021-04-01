@@ -1,0 +1,104 @@
+$BLOCK_NAME: '.button-34';
+
+// 変数
+$color_black: #121314;
+$color_white: #fff;
+$color_gray: #eae6e4;
+$duration_default: 0.2s;
+$duration_arrow: 0.4s;
+$easing_default: cubic-bezier(0.55, 0.05, 0.22, 0.99);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: inline-block;
+  padding-right: 75px;
+  font-size: 20px;
+  line-height: 60px;
+  color: $color_black;
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    content: '';
+    border: 1px solid $color_gray;
+    border-radius: 50%;
+    &:hover {
+      border-color: $color_black;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background: $color_black;
+      border-radius: 50%;
+      transition: transform $duration_default $easing_default;
+      transform: scale(0);
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  &__arrow {
+    color: $color_black;
+    animation: button34ArrowOut $duration_default forwards;
+    @at-root #{ $BLOCK_NAME }:hover & {
+      animation: button34ArrowIn $duration_default forwards;
+    }
+  }
+}
+
+@keyframes button34ArrowIn {
+  0% {
+    opacity: 1;
+    transform: translate(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(0);
+  }
+  51% {
+    color: $color_white;
+    opacity: 0;
+    transform: translate(-30px);
+  }
+  100% {
+    color: $color_white;
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes button34ArrowOut {
+  0% {
+    color: $color_white;
+    opacity: 1;
+    transform: translate(0);
+  }
+  50% {
+    color: $color_white;
+    opacity: 0;
+    transform: translate(0);
+  }
+  51% {
+    opacity: 0;
+    transform: translate(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
