@@ -1,0 +1,49 @@
+$BLOCK_NAME: '.scroll-anim-09';
+
+// 変数
+$duration_default: 0.3s;
+$easing_default: cubic-bezier(0.63, 0.32, 0.35, 0.63);
+
+#{ $BLOCK_NAME } {
+  @include Mq(md) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  &__text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0;
+    transition: all $duration_default $easing_default;
+    transform: translate(0, 40px);
+    @for $i from 2 through 10 {
+      &:nth-child(#{$i}) {
+        transition-delay: #{0.4 + 0.1 * ($i - 1)}s;
+      }
+    }
+    @include Mq(md) {
+      font-size: 16px;
+      text-align: inherit;
+      word-break: keep-all;
+      white-space: nowrap;
+      writing-mode: vertical-rl;
+      transform: translate(-40px, 0);
+    }
+
+    & + & {
+      margin-top: 24px;
+      @include Mq(md) {
+        margin-top: 0;
+        margin-right: 24px;
+      }
+    }
+
+    @at-root #{ $BLOCK_NAME }.is-animated & {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+}

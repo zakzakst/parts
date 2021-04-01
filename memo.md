@@ -18,7 +18,6 @@ https://hacknote.jp/archives/29090/
 
 ### ボタン
 
-https://www.kumon.ne.jp/job/ （検索ボタン）
 https://www.atamisekaie.jp/
 https://goodpatch.com/careers
 
