@@ -18,7 +18,6 @@ https://hacknote.jp/archives/29090/
 
 ### ボタン
 
-https://www.atamisekaie.jp/
 https://goodpatch.com/careers
 
 ### 見出し
