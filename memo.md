@@ -76,7 +76,6 @@ https://enjin-dash.com/about/index.html
 ### その他
 
 https://www.felissimo.co.jp/felicycle/ （ご利用のご注意）
-https://lavie-enfant.com/ （下のほうのセクション背景の sticky）
 https://www.atamisekaie.jp/
 https://tango-creation.jp/
 https://www.snowsand.jp/
