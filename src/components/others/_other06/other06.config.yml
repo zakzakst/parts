@@ -1,0 +1,9 @@
+title: その他06
+label: その他06
+variants:
+  - name: default
+    label: その他06
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true

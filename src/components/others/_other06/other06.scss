@@ -1,0 +1,26 @@
+$BLOCK_NAME: '.other-06';
+
+// 変数
+$color_primary: #000032;
+
+#{ $BLOCK_NAME } {
+  &__wrapper {
+    padding: 16px;
+    background: $color_primary;
+  }
+
+  width: 450px;
+  height: 150px;
+  background-image: url(https://adacotech.co.jp/wp-content/themes/adacotech2020/images/top_hero_sign_animation.png);
+  transform: scale(0.5);
+  animation: other06Anim 0.6s steps(23) forwards;
+}
+
+@keyframes other06Anim {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -10350px 0;
+  }
+}
