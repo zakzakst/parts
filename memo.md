@@ -78,5 +78,4 @@ https://enjin-dash.com/about/index.html
 
 https://www.atamisekaie.jp/
 https://www.snowsand.jp/ （見出しのドットアンダーライン動く、右下追従カード）
-https://adacotech.co.jp/
 http://www.ney.co.jp/ （ページ遷移）
