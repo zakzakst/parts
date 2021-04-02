@@ -1,0 +1,93 @@
+$BLOCK_NAME: '.other-05';
+
+// 変数
+$color_primary: #006ebb;
+$color_secondary: #feda00;
+$color_white: #fff;
+$color_border: linear-gradient(
+  -45deg,
+  $color_white 25%,
+  $color_secondary 25%,
+  $color_secondary 50%,
+  $color_white 50%,
+  $color_white 75%,
+  $color_secondary 75%,
+  $color_secondary
+);
+
+#{ $BLOCK_NAME } {
+  &__wrapper {
+    padding: 80px 30px;
+    font-family: 'Kiwi Maru', serif;
+    background: $color_primary;
+  }
+
+  &__heading {
+    font-size: 28px;
+    color: $color_white;
+    text-align: center;
+  }
+
+  position: relative;
+  padding: 100px 64px;
+  margin-top: 52px;
+  background: $color_white;
+  &::before,
+  &::after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 18px;
+    content: '';
+    background: $color_border;
+    background-size: 48px 48px;
+    will-change: animation;
+    animation: other05BorderSlide 20s linear 0s infinite;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+
+  &__subHeading {
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: $color_primary;
+    border-bottom: 2px dotted $color_primary;
+  }
+
+  &__list {
+    & > li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 18px;
+      color: $color_primary;
+      & + li {
+        margin-top: 12px;
+      }
+      &::before {
+        position: absolute;
+        top: 12px;
+        left: 2px;
+        display: block;
+        width: 5px;
+        height: 5px;
+        content: '';
+        background: $color_primary;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@keyframes other05BorderSlide {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
