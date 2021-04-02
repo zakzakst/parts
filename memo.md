@@ -18,6 +18,7 @@ https://hacknote.jp/archives/29090/
 
 ### ボタン
 
+https://www.tau.ac.jp/opencampus/ （メニューボタン）
 https://goodpatch.com/careers
 
 ### 見出し
@@ -75,9 +76,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
-https://www.felissimo.co.jp/felicycle/ （ご利用のご注意）
 https://www.atamisekaie.jp/
-https://www.snowsand.jp/
+https://www.snowsand.jp/ （見出しのドットアンダーライン動く、右下追従カード）
 https://adacotech.co.jp/
-http://www.ney.co.jp/
-https://www.tau.ac.jp/opencampus/
+http://www.ney.co.jp/ （ページ遷移）
