@@ -77,7 +77,6 @@ https://enjin-dash.com/about/index.html
 
 https://www.felissimo.co.jp/felicycle/ （ご利用のご注意）
 https://www.atamisekaie.jp/
-https://tango-creation.jp/
 https://www.snowsand.jp/
 https://adacotech.co.jp/
 http://www.ney.co.jp/

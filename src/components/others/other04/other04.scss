@@ -1,0 +1,43 @@
+$BLOCK_NAME: '.other-04';
+
+// 変数
+$color_black: #000;
+$color_gray: #969696;
+$color_bg: linear-gradient(
+  to right,
+  $color_gray 0,
+  $color_gray 45%,
+  $color_black 46%,
+  $color_black 100%
+);
+$duration_default: 1.8s;
+$easing_default: cubic-bezier(0.23, 1, 0.32, 1);
+
+#{ $BLOCK_NAME } {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: transparent;
+  background: $color_bg;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 320% 100%;
+  transition: background-position $duration_default $easing_default;
+
+  &:hover {
+    color: transparent;
+    background-position: 0 0;
+  }
+
+  &__sub-text {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  &__text {
+    display: block;
+    font-size: 32px;
+  }
+}
