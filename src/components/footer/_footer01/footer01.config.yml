@@ -1,0 +1,11 @@
+title: フッター01
+label: フッター01
+variants:
+  - name: default
+    label: フッター01
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'

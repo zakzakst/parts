@@ -1,0 +1,58 @@
+$BLOCK_NAME: '.button-36';
+
+// 変数
+$color_border: #eaeaea;
+$color_white: #fff;
+$color_bar: #aaa;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  width: 120px;
+  height: 120px;
+  background: $color_white;
+  border: 1px solid $color_border;
+
+  & > span {
+    position: absolute;
+    left: 39px;
+    display: block;
+    height: 1px;
+    background: $color_bar;
+    transition: all 200ms ease;
+    &:nth-child(1) {
+      top: 46px;
+      width: 42px;
+    }
+    &:nth-child(2) {
+      top: 59px;
+      width: 30px;
+    }
+    &:nth-child(3) {
+      top: 72px;
+      width: 22px;
+    }
+  }
+
+  &:hover > span {
+    animation: button36MenuAnim 0.5s ease-in-out 0s infinite alternate;
+    &:nth-child(1) {
+      animation-delay: -0.5s;
+    }
+    &:nth-child(2) {
+      animation-delay: -0.25s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0;
+    }
+  }
+}
+
+@keyframes button36MenuAnim {
+  from {
+    width: 22px;
+  }
+  to {
+    width: 42px;
+  }
+}
