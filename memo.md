@@ -18,7 +18,6 @@ https://hacknote.jp/archives/29090/
 
 ### ボタン
 
-https://www.tau.ac.jp/opencampus/ （メニューボタン）
 https://goodpatch.com/careers
 
 ### 見出し
@@ -53,10 +52,6 @@ https://goodpatch.com/careers
 
 ### フッター
 
-https://www.e-heyaspace.com/
-https://www.ic-ryowa.com/
-https://goodpatch.com/careers
-https://mamezoudesign.com/
 https://oromo.co.jp/
 http://a-dot.co.jp/
 
