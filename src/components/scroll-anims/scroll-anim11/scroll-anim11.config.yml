@@ -1,0 +1,11 @@
+title: スクロールアニメーション11
+label: スクロールアニメーション11
+variants:
+  - name: default
+    label: スクロールアニメーション11
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  text: 'SCROLL'
