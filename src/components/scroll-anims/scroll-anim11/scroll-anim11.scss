@@ -1,0 +1,50 @@
+$BLOCK_NAME: '.scroll-anim-11';
+
+// 変数
+$color_primary: #027e7e;
+$gradient_primary: linear-gradient(-45deg, #33b7b9, #006d75);
+$duration_default: 0.6s;
+$duration_clip: 1.5s;
+$easing_default: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+@mixin textStyle() {
+  font-size: 30px;
+  font-weight: bold;
+  color: $color_primary;
+  background: $gradient_primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#{ $BLOCK_NAME } {
+  opacity: 0;
+  transition: all $duration_default $easing_default;
+  transform: translateX(15px);
+
+  &::before {
+    @include textStyle();
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: attr(data-text);
+    opacity: 0.25;
+  }
+
+  & > span {
+    @include textStyle();
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+    transition: all $duration_clip $easing_default;
+  }
+
+  &.is-animated {
+    opacity: 1;
+    transform: translateX(0);
+    & > span {
+      clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    }
+  }
+}
