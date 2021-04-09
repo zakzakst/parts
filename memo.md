@@ -71,5 +71,4 @@ https://enjin-dash.com/about/index.html
 ### その他
 
 https://www.atamisekaie.jp/
-https://www.snowsand.jp/ （右下追従カード）
 http://www.ney.co.jp/ （ページ遷移）
