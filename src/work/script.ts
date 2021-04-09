@@ -65,6 +65,12 @@ import { menu01 } from '../components/menus/menu01/menu01';
 menu01();
 
 /**
+ * その他
+ */
+import { other08 } from '../components/others/other08/other08';
+other08();
+
+/**
  * スクロールアニメーション
  */
 import { scrollAnim01 } from '../components/scroll-anims/scroll-anim01/scroll-anim01';
