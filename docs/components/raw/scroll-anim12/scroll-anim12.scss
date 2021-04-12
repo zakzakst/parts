@@ -1,0 +1,32 @@
+$BLOCK_NAME: '.scroll-anim-12';
+
+// 変数
+$color_primary: #1e2432;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: inline-block;
+  color: $color_primary;
+
+  &__text {
+    font-size: 0;
+    & > span {
+      display: inline-block;
+      font-size: 60px;
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  }
+
+  &__border {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 4px;
+    background: $color_primary;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}
