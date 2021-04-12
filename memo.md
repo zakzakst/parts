@@ -43,7 +43,6 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
-http://overpass.studiovoila.com/ （大見出し）
 https://www.felissimo.co.jp/meisaku/ （ボタンとかのマスク？）
 https://b43.jp/ （セクション間の線が伸びる）
 https://goodpatch.com/careers
