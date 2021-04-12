@@ -1,0 +1,10 @@
+$BLOCK_NAME: '.scroll-anim-13';
+
+#{ $BLOCK_NAME } {
+  overflow: hidden;
+
+  &__heading {
+    font-size: 60px;
+    transform: translateX(100%);
+  }
+}
