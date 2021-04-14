@@ -18,6 +18,7 @@ https://hacknote.jp/archives/29090/
 
 ### ボタン
 
+https://where.inc/
 https://goodpatch.com/careers
 
 ### 見出し
@@ -43,6 +44,7 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
+https://where.inc/ （セクションの色が変わる）
 https://www.felissimo.co.jp/meisaku/ （ボタンとかのマスク？）
 https://b43.jp/ （セクション間の線が伸びる）
 https://goodpatch.com/careers
@@ -72,5 +74,6 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://sencraneservice.com/ （ななめのスライド画像）
 https://www.atamisekaie.jp/
 http://www.ney.co.jp/ （ページ遷移）

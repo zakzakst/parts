@@ -59,6 +59,12 @@ faq08();
 // gallery01();
 
 /**
+ * 見出し
+ */
+import { heading07 } from '../components/headings/heading07/heading07';
+heading07();
+
+/**
  * メニュー
  */
 import { menu01 } from '../components/menus/menu01/menu01';
