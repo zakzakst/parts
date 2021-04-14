@@ -1,0 +1,53 @@
+$BLOCK_NAME: '.heading-07';
+
+// 変数
+$color_primary: #000;
+$duration_default: 0.6s;
+$duration_border: 1s;
+$easing_default: cubic-bezier(0.65, 0, 0.35, 1);
+
+#{ $BLOCK_NAME } {
+  display: flex;
+  flex-direction: column;
+  color: $color_primary;
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    height: 86px;
+    margin-right: auto;
+    overflow: hidden;
+    font-size: 80px;
+    font-weight: bold;
+
+    &::before {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      content: '';
+      background: $color_primary;
+      transition: transform $duration_border $easing_default;
+      transform: scaleX(0);
+      transform-origin: left;
+      @at-root #{ $BLOCK_NAME }.is-animated & {
+        transform: scaleX(1);
+      }
+    }
+
+    & + & {
+      margin-top: 16px;
+    }
+
+    & > span {
+      position: relative;
+      display: inline-block;
+      transition: transform $duration_default $easing_default;
+      transform: translateY(100%);
+      @at-root #{ $BLOCK_NAME }.is-animated & {
+        transform: translateY(0);
+      }
+    }
+  }
+}
