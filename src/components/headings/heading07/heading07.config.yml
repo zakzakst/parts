@@ -1,0 +1,12 @@
+title: 見出し07
+label: 見出し07
+variants:
+  - name: default
+    label: 見出し07
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  text1: '見出しが'
+  text2: '入ります'

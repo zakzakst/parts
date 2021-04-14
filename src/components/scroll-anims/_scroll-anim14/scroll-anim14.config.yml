@@ -1,0 +1,13 @@
+title: スクロールアニメーション14
+label: スクロールアニメーション14
+variants:
+  - name: default
+    label: スクロールアニメーション14
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  num: '14'
+  tag1: '#テキストが入ります'
+  tag2: '#テキストが入ります'
