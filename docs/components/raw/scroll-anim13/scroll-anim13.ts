@@ -14,13 +14,14 @@ class Anim13 {
   headingEl: HTMLElement;
   constructor(elId: string) {
     this.el = document.getElementById(elId);
-    this.headingEl = this.el.querySelector('.scroll-anim-13__heading');
+    this.headingEl = this.el?.querySelector('.scroll-anim-13__heading') || null;
   }
 
   /**
    * 初期化
    */
   init(): void {
+    if (!this.el) return;
     this.scrollHandler();
   }
 

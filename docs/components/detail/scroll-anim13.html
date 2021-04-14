@@ -285,13 +285,14 @@ gsap.registerPlugin(ScrollTrigger);
   headingEl: HTMLElement;
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">elId: <span class="hljs-built_in">string</span></span>)</span> {
     <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.getElementById(elId);
-    <span class="hljs-built_in">this</span>.headingEl = <span class="hljs-built_in">this</span>.el.querySelector(<span class="hljs-string">&#x27;.scroll-anim-13__heading&#x27;</span>);
+    <span class="hljs-built_in">this</span>.headingEl = <span class="hljs-built_in">this</span>.el?.querySelector(<span class="hljs-string">&#x27;.scroll-anim-13__heading&#x27;</span>) || <span class="hljs-literal">null</span>;
   }
 
   <span class="hljs-comment">/**
    * 初期化
    */</span>
   init(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.el) <span class="hljs-keyword">return</span>;
     <span class="hljs-built_in">this</span>.scrollHandler();
   }
 
@@ -326,7 +327,7 @@ gsap.registerPlugin(ScrollTrigger);
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">848 Bytes</span>
+                    <span class="Meta-value">884 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -1376,6 +1377,32 @@ gsap.registerPlugin(ScrollTrigger);
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="button36.html" data-role="tree-link" data-pjax data-handle="button36">
                 <span>ボタン36</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button37.html" data-role="tree-link" data-pjax data-handle="button37">
+                <span>ボタン37</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3027,6 +3054,8 @@ gsap.registerPlugin(ScrollTrigger);
                 Back
             </button>
         </div>
+        
+    
         
     
         
