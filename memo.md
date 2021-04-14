@@ -18,7 +18,6 @@ https://hacknote.jp/archives/29090/
 
 ### ボタン
 
-https://where.inc/
 https://goodpatch.com/careers
 
 ### 見出し
