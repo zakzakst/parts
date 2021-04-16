@@ -1,0 +1,23 @@
+title: サービス一覧06
+label: サービス一覧06
+variants:
+  - name: default
+    label: サービス一覧06
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  items:
+    - link: '#'
+      icon: 'https://picsum.photos/id/1000/160/160'
+      heading: '見出しが入ります'
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
+    - link: '#'
+      icon: 'https://picsum.photos/id/1001/160/160'
+      heading: '見出しが入ります'
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
+    - link: '#'
+      icon: 'https://picsum.photos/id/1002/160/160'
+      heading: '見出しが入ります'
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。'

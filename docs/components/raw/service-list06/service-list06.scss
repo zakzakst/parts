@@ -1,0 +1,126 @@
+$BLOCK_NAME: '.service-list-06';
+
+// 変数
+$color_text: #687086;
+$color_bg_white: #fff;
+$color_bg_gray: #f7f9fb;
+$duration_default: 0.5s;
+$easing_default: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easing_opacity: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+#{ $BLOCK_NAME } {
+  display: flex;
+
+  &__item {
+    position: relative;
+    display: block;
+    padding: 48px 48px 72px;
+    &:hover {
+      z-index: 1;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    transition: transform $duration_default $easing_default;
+    @at-root #{ $BLOCK_NAME }__item:hover & {
+      transform: translateY(-24px);
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    margin-top: 16px;
+    font-size: 24px;
+  }
+
+  &__text {
+    margin-top: 16px;
+    font-size: 14px;
+    color: $color_text;
+    opacity: 0;
+    transition: opacity $duration_default $easing_default;
+    @at-root #{ $BLOCK_NAME }__item:hover & {
+      opacity: 1;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 36px;
+    bottom: 36px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: all $duration_default $easing_default;
+    @at-root #{ $BLOCK_NAME } > li:nth-child(odd) & {
+      background: $color_bg_white;
+    }
+    @at-root #{ $BLOCK_NAME } > li:nth-child(even) & {
+      background: $color_bg_gray;
+    }
+    @at-root #{ $BLOCK_NAME }__item:hover & {
+      background: $color_bg_gray;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    transition: all $duration_default $easing_default;
+    @at-root #{ $BLOCK_NAME } > li:nth-child(odd) & {
+      background: $color_bg_gray;
+    }
+    @at-root #{ $BLOCK_NAME } > li:nth-child(even) & {
+      background: $color_bg_white;
+    }
+    @at-root #{ $BLOCK_NAME } > li #{ $BLOCK_NAME }__item:hover & {
+      background: $color_bg_white;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.05);
+      transform: scale(1.05);
+      transform-origin: bottom center;
+    }
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      display: block;
+      width: 230%;
+      height: 230%;
+      content: '';
+      border-radius: 50%;
+      transition: all $duration_default $easing_default,
+        opacity $duration_default $easing_opacity;
+      transform: translate(-50%, 50%) scale(0);
+      @at-root #{ $BLOCK_NAME } > li:nth-child(odd) & {
+        background: $color_bg_white;
+      }
+      @at-root #{ $BLOCK_NAME } > li:nth-child(even) & {
+        background: $color_bg_gray;
+      }
+      @at-root #{ $BLOCK_NAME } > li #{ $BLOCK_NAME }__item:hover & {
+        opacity: 0;
+        transform: translate(-50%, 50%) scale(1);
+      }
+    }
+  }
+}

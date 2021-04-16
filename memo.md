@@ -30,8 +30,6 @@ https://junni.co.jp/
 
 ### サービス一覧
 
-http://overpass.studiovoila.com/
-
 ### カルーセル
 
 https://ion-e-air.jp/
