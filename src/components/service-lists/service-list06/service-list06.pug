@@ -1,0 +1,12 @@
+ul.service-list-06
+  each item in items
+    li
+      a.service-list-06__item(href=item.link)
+        div.service-list-06__content
+          div.service-list-06__icon
+            img(src=item.icon, width=160, height=160)
+          h3.service-list-06__heading #{ item.heading }
+          p.service-list-06__text #{ item.text }
+        div.service-list-06__arrow
+          i.fas.fa-long-arrow-alt-right
+        div.service-list-06__bg
