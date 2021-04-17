@@ -189,15 +189,15 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-a6a43a186d985c1e965d6f41639eb99a-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre><span class="hljs-selector-tag">ul</span><span class="hljs-selector-class">.news-list-03</span>
+        <pre>ul.<span class="hljs-keyword">new</span><span class="hljs-type">s</span>-list<span class="hljs-number">-03</span>
   each item <span class="hljs-keyword">in</span> items
-    <span class="hljs-selector-tag">li</span>
-      <span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.news-list-03__item</span>(href=item.link)
-        <span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.news-list-03__head</span>
-          <span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.news-list-03__category</span> #{ item<span class="hljs-selector-class">.category</span> }
-          <span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.news-list-03__date</span> #{ item<span class="hljs-selector-class">.date</span> }
-          <span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.news-list-03__week</span> #{ item<span class="hljs-selector-class">.week</span> }
-        <span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.news-list-03__text</span> #{ item<span class="hljs-selector-class">.text</span> }</pre>
+    li
+      a.<span class="hljs-keyword">new</span><span class="hljs-type">s</span>-list<span class="hljs-number">-03</span>__item(href=item.link)
+        .<span class="hljs-keyword">new</span><span class="hljs-type">s</span>-list<span class="hljs-number">-03</span>__head
+          span.<span class="hljs-keyword">new</span><span class="hljs-type">s</span>-list<span class="hljs-number">-03</span>__category <span class="hljs-meta">#{ item.category }</span>
+          span.<span class="hljs-keyword">new</span><span class="hljs-type">s</span>-list<span class="hljs-number">-03</span>__date <span class="hljs-meta">#{ item.date }</span>
+          span.<span class="hljs-keyword">new</span><span class="hljs-type">s</span>-list<span class="hljs-number">-03</span>__week <span class="hljs-meta">#{ item.week }</span>
+        span.<span class="hljs-keyword">new</span><span class="hljs-type">s</span>-list<span class="hljs-number">-03</span>__text <span class="hljs-meta">#{ item.text }</span></pre>
     </code>
 </div>
 
@@ -2924,6 +2924,32 @@
         </li>
         
     
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="scroll-anim15.html" data-role="tree-link" data-pjax data-handle="scroll-anim15">
+                <span>スクロールアニメーション15</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
                 </ul>
             </li>
@@ -3128,6 +3154,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         

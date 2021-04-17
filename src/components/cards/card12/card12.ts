@@ -24,6 +24,8 @@ class Card12 {
 
   /**
    * 円要素の位置設定
+   * @param el マウスイン／アウトした要素
+   * @param event イベントオブジェクト
    */
   setCirclePos(el: HTMLElement, event: MouseEvent): void {
     const circleEl = <HTMLElement>el.querySelector(this.circleSelector);

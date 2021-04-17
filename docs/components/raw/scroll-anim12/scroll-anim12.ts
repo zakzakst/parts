@@ -1,7 +1,7 @@
 'use strict';
 
 import { gsap } from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export const scrollAnim12 = () => {
@@ -73,7 +73,7 @@ class Anim12 {
   scrollHandler(): void {
     ScrollTrigger.create({
       trigger: this.el,
-      start: "top 70%",
+      start: 'top 70%',
       onEnter: self => {
         this.scrollAnim();
         self.kill();

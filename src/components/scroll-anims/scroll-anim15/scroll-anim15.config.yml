@@ -1,0 +1,11 @@
+title: スクロールアニメーション15
+label: スクロールアニメーション15
+variants:
+  - name: default
+    label: スクロールアニメーション15
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  img: 'https://picsum.photos/id/1000/400/200'
