@@ -8,6 +8,7 @@ variants:
     # status: wip
     # hidden: true
 context:
-  img: https://fullscale.jp/wp/wp-content/uploads/2020/11/th_sennarido_pc.png
-  category: カテゴリーが入ります
-  heading: 見出しが入ります
+  link: '#'
+  img: 'https://picsum.photos/id/1000/400/200'
+  category: 'カテゴリーが入ります'
+  heading: '見出しが入ります'

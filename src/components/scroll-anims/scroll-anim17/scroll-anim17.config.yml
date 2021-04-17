@@ -1,0 +1,17 @@
+title: スクロールアニメーション17
+label: スクロールアニメーション17
+variants:
+  - name: default
+    label: スクロールアニメーション17
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  items:
+    - link: '#'
+      text: 'リンク1'
+    - link: '#'
+      text: 'リンク2'
+    - link: '#'
+      text: 'リンク3'
