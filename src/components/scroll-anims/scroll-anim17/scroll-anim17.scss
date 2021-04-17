@@ -1,0 +1,18 @@
+$BLOCK_NAME: '.scroll-anim-17';
+
+// 変数
+$duration_default: 0.5s;
+
+#{ $BLOCK_NAME } {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  font-size: 12px;
+  transition: $duration_default;
+
+  &.is-hide {
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

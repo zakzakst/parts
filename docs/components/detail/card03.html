@@ -171,12 +171,10 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-ac3b2e7e15ec1d7dfad157fd0d17d17f-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03__img&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://fullscale.jp/wp/wp-content/uploads/2020/11/th_sennarido_pc.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03__img&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://picsum.photos/id/1000/400/200&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03__category&quot;</span>&gt;</span>カテゴリーが入ります<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03__heading&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03__heading-inner&quot;</span>&gt;</span>見出しが入ります<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03__heading&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03__heading-inner&quot;</span>&gt;</span>見出しが入ります<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
         
     </code>
@@ -185,20 +183,13 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-ac3b2e7e15ec1d7dfad157fd0d17d17f-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre>//- TODO: ホバーの挙動対応する
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03__img&quot;</span>&gt;</span>
-    img(src=img, alt=&quot;&quot;)
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03__category&quot;</span>&gt;</span>
-    != category
-  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03__heading&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-03__heading-inner&quot;</span>&gt;</span>
-      != heading
-    <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
+        <pre><span class="hljs-comment">//- <span class="hljs-doctag">TODO:</span> ホバーの挙動対応する</span>
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.card-03</span>(href=link)
+  <span class="hljs-selector-class">.card-03__img</span>
+    <span class="hljs-selector-tag">img</span>(<span class="hljs-attribute">src</span>=img, alt=<span class="hljs-string">&#x27;&#x27;</span>)
+  <span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.card-03__category</span> #{ category }
+  <span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.card-03__heading</span>
+    <span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.card-03__heading-inner</span> #{ heading }</pre>
     </code>
 </div>
 
@@ -208,7 +199,8 @@
         
             
             <pre>{
-  <span class="hljs-attr">&quot;img&quot;</span>: <span class="hljs-string">&quot;https://fullscale.jp/wp/wp-content/uploads/2020/11/th_sennarido_pc.png&quot;</span>,
+  <span class="hljs-attr">&quot;link&quot;</span>: <span class="hljs-string">&quot;#&quot;</span>,
+  <span class="hljs-attr">&quot;img&quot;</span>: <span class="hljs-string">&quot;https://picsum.photos/id/1000/400/200&quot;</span>,
   <span class="hljs-attr">&quot;category&quot;</span>: <span class="hljs-string">&quot;カテゴリーが入ります&quot;</span>,
   <span class="hljs-attr">&quot;heading&quot;</span>: <span class="hljs-string">&quot;見出しが入ります&quot;</span>
 }</pre>
@@ -1523,6 +1515,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card06.html" data-role="tree-link" data-pjax data-handle="card06">
                 <span>カード06</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card07.html" data-role="tree-link" data-pjax data-handle="card07">
+                <span>カード07</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2924,6 +2942,32 @@
         </li>
         
     
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="scroll-anim17.html" data-role="tree-link" data-pjax data-handle="scroll-anim17">
+                <span>スクロールアニメーション17</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
                 </ul>
             </li>
@@ -3128,6 +3172,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         

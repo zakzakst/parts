@@ -172,7 +172,7 @@
     <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;news-list-05__wrapper&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;news-list-05__heading&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>T<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>O<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>P<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>I<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>C<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>S<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;news-list-05__heading&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>T<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>O<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>P<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>I<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>C<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>S<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;news-list-05&quot;</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;news-list-05__item&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;news-list-05__date&quot;</span>&gt;</span>2021.01.01<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;news-list-05__text&quot;</span>&gt;</span>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;news-list-05__item&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;news-list-05__date&quot;</span>&gt;</span>2021.01.02<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;news-list-05__text&quot;</span>&gt;</span>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
@@ -188,7 +188,7 @@
     <code class="Code Code--lang-jade hljs">
         <pre><span class="hljs-selector-class">.news-list-05__wrapper</span>
   <span class="hljs-selector-tag">h3</span><span class="hljs-selector-class">.news-list-05__heading</span>
-    <span class="hljs-selector-tag">span</span> T&lt;br&gt;O&lt;br&gt;P&lt;br&gt;I&lt;br&gt;C&lt;br&gt;S
+    <span class="hljs-selector-tag">span</span> T#<span class="hljs-selector-attr">[br]</span>O#<span class="hljs-selector-attr">[br]</span>P#<span class="hljs-selector-attr">[br]</span>I#<span class="hljs-selector-attr">[br]</span>C#<span class="hljs-selector-attr">[br]</span>S
   <span class="hljs-selector-tag">ul</span><span class="hljs-selector-class">.news-list-05</span>
     each item <span class="hljs-keyword">in</span> items
       <span class="hljs-selector-tag">li</span>
@@ -1603,6 +1603,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card07.html" data-role="tree-link" data-pjax data-handle="card07">
+                <span>カード07</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card08.html" data-role="tree-link" data-pjax data-handle="card08">
                 <span>カード08</span>
                 
@@ -2980,6 +3006,32 @@
         </li>
         
     
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="scroll-anim17.html" data-role="tree-link" data-pjax data-handle="scroll-anim17">
+                <span>スクロールアニメーション17</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
                 </ul>
             </li>
@@ -3184,6 +3236,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         

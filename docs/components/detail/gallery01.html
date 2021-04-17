@@ -171,9 +171,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-4eb00afeb353c497b0ceab2356cfcbf8-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg&quot;</span> <span class="hljs-attr">data-lightbox</span>=<span class="hljs-string">&quot;roadtrip&quot;</span>&gt;</span>Image #1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://lokeshdhakar.com/projects/lightbox2/images/thumb-2.jpg&quot;</span> <span class="hljs-attr">data-lightbox</span>=<span class="hljs-string">&quot;roadtrip&quot;</span>&gt;</span>Image #2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg&quot;</span> <span class="hljs-attr">data-lightbox</span>=<span class="hljs-string">&quot;roadtrip&quot;</span>&gt;</span>Image #3<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg&quot;</span> <span class="hljs-attr">data-lightbox</span>=<span class="hljs-string">&quot;roadtrip&quot;</span>&gt;</span>Image #1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://lokeshdhakar.com/projects/lightbox2/images/thumb-2.jpg&quot;</span> <span class="hljs-attr">data-lightbox</span>=<span class="hljs-string">&quot;roadtrip&quot;</span>&gt;</span>Image #2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg&quot;</span> <span class="hljs-attr">data-lightbox</span>=<span class="hljs-string">&quot;roadtrip&quot;</span>&gt;</span>Image #3<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -181,12 +179,11 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-4eb00afeb353c497b0ceab2356cfcbf8-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre><span class="hljs-regexp">//</span>- .gallery-<span class="hljs-number">01</span>
-
-<span class="hljs-regexp">//</span>- lightbox2の挙動確認に利用（上書きして大丈夫）
-&lt;a href=<span class="hljs-string">&quot;https://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg&quot;</span> data-lightbox=<span class="hljs-string">&quot;roadtrip&quot;</span>&gt;Image <span class="hljs-comment">#1&lt;/a&gt;</span>
-&lt;a href=<span class="hljs-string">&quot;https://lokeshdhakar.com/projects/lightbox2/images/thumb-2.jpg&quot;</span> data-lightbox=<span class="hljs-string">&quot;roadtrip&quot;</span>&gt;Image <span class="hljs-comment">#2&lt;/a&gt;</span>
-&lt;a href=<span class="hljs-string">&quot;https://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg&quot;</span> data-lightbox=<span class="hljs-string">&quot;roadtrip&quot;</span>&gt;Image <span class="hljs-comment">#3&lt;/a&gt;</span></pre>
+        <pre>//- .gallery<span class="hljs-number">-01</span>
+<span class="hljs-comment">
+//- lightbox2の挙動確認に利用（上書きして大丈夫）</span>
+<span class="hljs-keyword">each</span> <span class="hljs-keyword">item</span> <span class="hljs-keyword">in</span> <span class="hljs-keyword">items</span>
+  <span class="hljs-keyword">a</span>(href=<span class="hljs-keyword">item</span>.img, data-lightbox=<span class="hljs-string">&#x27;roadtrip&#x27;</span>) <span class="hljs-comment">#{ item.text }</span></pre>
     </code>
 </div>
 
@@ -196,7 +193,20 @@
         
             
             <pre>{
-  <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;ギャラリー01&quot;</span>
+  <span class="hljs-attr">&quot;items&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;img&quot;</span>: <span class="hljs-string">&quot;https://lokeshdhakar.com/projects/lightbox2/images/thumb-1.jpg&quot;</span>,
+      <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;Image #1&quot;</span>
+    },
+    {
+      <span class="hljs-attr">&quot;img&quot;</span>: <span class="hljs-string">&quot;https://lokeshdhakar.com/projects/lightbox2/images/thumb-2.jpg&quot;</span>,
+      <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;Image #2&quot;</span>
+    },
+    {
+      <span class="hljs-attr">&quot;img&quot;</span>: <span class="hljs-string">&quot;https://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg&quot;</span>,
+      <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;Image #3&quot;</span>
+    }
+  ]
 }</pre>
             
         
@@ -1515,6 +1525,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="card06.html" data-role="tree-link" data-pjax data-handle="card06">
                 <span>カード06</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card07.html" data-role="tree-link" data-pjax data-handle="card07">
+                <span>カード07</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -2916,6 +2952,32 @@
         </li>
         
     
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="scroll-anim17.html" data-role="tree-link" data-pjax data-handle="scroll-anim17">
+                <span>スクロールアニメーション17</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
                 </ul>
             </li>
@@ -3120,6 +3182,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         
