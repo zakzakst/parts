@@ -24,8 +24,6 @@ https://goodpatch.com/careers
 
 ### カード
 
-https://junni.co.jp/
-
 ### ニュース一覧
 
 ### サービス一覧
