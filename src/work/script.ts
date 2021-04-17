@@ -126,3 +126,6 @@ scrollAnim13();
 
 import { scrollAnim15 } from '../components/scroll-anims/scroll-anim15/scroll-anim15';
 scrollAnim15();
+
+import { scrollAnim16 } from '../components/scroll-anims/scroll-anim16/scroll-anim16';
+scrollAnim16();
