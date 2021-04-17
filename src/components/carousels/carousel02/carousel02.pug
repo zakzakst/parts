@@ -1,16 +1,16 @@
-div.carousel-02
-  div.carousel-02__items#js-carousel-02-items
+.carousel-02
+  .carousel-02__items#js-carousel-02-items
     ul
       each item in items
         li
           a.carousel-02__item(href=item.link)
-            div.carousel-02__item-img
+            .carousel-02__item-img
               img(src=item.img, width=item.width, height=item.height alt="")
             p.carousel-02__item-date #{ item.date }
             p.carousel-02__item-text #{ item.text }
-  div.carousel-02__foot
-    div.carousel-02__buttons
+  .carousel-02__foot
+    .carousel-02__buttons
       a.carousel-02__button.carousel-02__button--prev#js-carousel-02-button-prev(href="#") &lt;
       a.carousel-02__button.carousel-02__button--next#js-carousel-02-button-next(href="#") &gt;
-    div.carousel-02__indicator-base
-      div.carousel-02__indicator#js-carousel-02-indicator
+    .carousel-02__indicator-base
+      .carousel-02__indicator#js-carousel-02-indicator

@@ -1,0 +1,25 @@
+$BLOCK_NAME: '.scroll-anim-15';
+
+// 変数
+$offset_bg: 72px;
+
+#{ $BLOCK_NAME } {
+  &__img-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: -$offset_bg;
+    left: 0;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
