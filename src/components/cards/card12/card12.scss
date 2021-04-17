@@ -1,0 +1,79 @@
+$BLOCK_NAME: '.card-12';
+
+// 変数
+$color_white: #fff;
+$color_black: #000;
+$duration_text: 0.4s;
+$duration_circle: 1s;
+
+#{ $BLOCK_NAME } {
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    & > li {
+      width: 30%;
+    }
+  }
+
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px;
+  overflow: hidden;
+  font-family: '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro',
+    'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
+  color: $color_black;
+  background: $color_white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: $duration_text;
+  &:hover {
+    color: $color_white;
+  }
+
+  &__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    content: '';
+    background: $color_black;
+    border-radius: 50%;
+    transition: width $duration_circle, height $duration_circle;
+    transform: translate3d(-50%, -50%, 0);
+    will-change: left, top;
+    @at-root #{ $BLOCK_NAME }:hover & {
+      width: 1000px;
+      height: 1000px;
+    }
+  }
+
+  &__img {
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__category {
+    margin-top: 8px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  &__text {
+    flex-grow: 1;
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  &__date {
+    margin-top: 48px;
+    font-weight: bold;
+  }
+}
