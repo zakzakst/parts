@@ -1,0 +1,26 @@
+$BLOCK_NAME: '.scroll-anim-16';
+
+// 変数
+$color_bg_white: #fff;
+$color_bg_black: #272727;
+$color_text_white: #fff;
+$color_text_black: #1c1c1c;
+$duration_default: 0.5s;
+
+#{ $BLOCK_NAME } {
+  color: $color_text_black;
+  background: $color_bg_white;
+  transition: $duration_default;
+
+  &.is-animated {
+    color: $color_text_white;
+    background: $color_bg_black;
+  }
+
+  &__content {
+    padding: 24px;
+    & > p + p {
+      margin-top: 8px;
+    }
+  }
+}
