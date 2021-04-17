@@ -17,6 +17,12 @@ import { button12 } from '../components/buttons/button12/button12';
 button12();
 
 /**
+ * カード
+ */
+import { card12 } from '../components/cards/card12/card12';
+card12();
+
+/**
  * カルーセル
  */
 import { carousel01 } from '../components/carousels/carousel01/carousel01';
