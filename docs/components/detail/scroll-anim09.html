@@ -171,8 +171,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-35913a6609cf588f142b2596316b1bac-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 500px&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-09 js-scroll-anim-09&quot;</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-09 js-scroll-anim-09&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-09__text&quot;</span>&gt;</span>1 テキストが入ります。テキストが入ります。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>テキストが入ります。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-09__text&quot;</span>&gt;</span>2 テキストが入ります。テキストが入ります。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>テキストが入ります。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-09__text&quot;</span>&gt;</span>3 テキストが入ります。テキストが入ります。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>テキストが入ります。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -183,8 +182,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-09__text&quot;</span>&gt;</span>8 テキストが入ります。テキストが入ります。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>テキストが入ります。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-09__text&quot;</span>&gt;</span>9 テキストが入ります。テキストが入ります。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>テキストが入ります。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-09__text&quot;</span>&gt;</span>10 テキストが入ります。テキストが入ります。<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>テキストが入ります。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 500px&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -192,11 +190,9 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-35913a6609cf588f142b2596316b1bac-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre><span class="hljs-selector-tag">div</span>(style=<span class="hljs-string">&#x27;height: 500px&#x27;</span>)
-<span class="hljs-selector-class">.scroll-anim-09</span><span class="hljs-selector-class">.js-scroll-anim-09</span>
-  <span class="hljs-selector-tag">-</span> <span class="hljs-selector-tag">for</span> (var x = <span class="hljs-number">0</span>; x &lt; <span class="hljs-number">10</span>; x++)
-    <span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.scroll-anim-09__text</span> #{ <span class="hljs-selector-tag">x</span> + <span class="hljs-selector-tag">1</span> } !{ <span class="hljs-selector-tag">text</span> }
-<span class="hljs-selector-tag">div</span>(style=<span class="hljs-string">&#x27;height: 500px&#x27;</span>)</pre>
+        <pre>.<span class="hljs-keyword">scroll-anim-09.js-scroll-anim-09</span>
+  - for (var x = <span class="hljs-number">0</span><span class="hljs-comment">; x &lt; 10; x++)</span>
+    p.<span class="hljs-keyword">scroll-anim-09__text </span><span class="hljs-comment">#{ x + 1 } !{ text }</span></pre>
     </code>
 </div>
 
@@ -3261,6 +3257,12 @@ gsap.registerPlugin(ScrollTrigger);
                 Back
             </button>
         </div>
+        
+    
+        
+    
+        
+    
         
     
         

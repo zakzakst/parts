@@ -7,5 +7,6 @@ variants:
     # status: prototype
     # status: wip
     # hidden: true
+preview: '@preview-scroll'
 context:
   text: 'スクロールアニメーション03'

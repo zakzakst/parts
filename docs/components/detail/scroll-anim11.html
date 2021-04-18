@@ -171,9 +171,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-db20fa0d488509098cb83dd0713866f8-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 500px&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-11 js-scroll-anim-11&quot;</span> <span class="hljs-attr">data-text</span>=<span class="hljs-string">&quot;SCROLL&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>SCROLL<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height: 500px&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-11 js-scroll-anim-11&quot;</span> <span class="hljs-attr">data-text</span>=<span class="hljs-string">&quot;SCROLL&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>SCROLL<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -181,10 +179,8 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-db20fa0d488509098cb83dd0713866f8-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre><span class="hljs-selector-tag">div</span>(style=<span class="hljs-string">&#x27;height: 500px&#x27;</span>)
-<span class="hljs-selector-tag">h2</span><span class="hljs-selector-class">.scroll-anim-11</span><span class="hljs-selector-class">.js-scroll-anim-11</span>(data-text=text)
-  <span class="hljs-selector-tag">span</span> #{ <span class="hljs-selector-tag">text</span> }
-<span class="hljs-selector-tag">div</span>(style=<span class="hljs-string">&#x27;height: 500px&#x27;</span>)</pre>
+        <pre><span class="hljs-selector-tag">h2</span><span class="hljs-selector-class">.scroll-anim-11</span><span class="hljs-selector-class">.js-scroll-anim-11</span>(data-text=text)
+  <span class="hljs-selector-tag">span</span> #{ text }</pre>
     </code>
 </div>
 
@@ -3250,6 +3246,12 @@ gsap.registerPlugin(ScrollTrigger);
                 Back
             </button>
         </div>
+        
+    
+        
+    
+        
+    
         
     
         

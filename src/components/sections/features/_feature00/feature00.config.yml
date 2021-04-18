@@ -1,0 +1,12 @@
+title: 特長00
+label: 特長00
+variants:
+  - name: default
+    label: 特長00
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-section'
+context:
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'

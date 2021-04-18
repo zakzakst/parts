@@ -7,6 +7,7 @@ variants:
     # status: prototype
     # status: wip
     # hidden: true
+preview: '@preview-scroll'
 context:
   linkItems:
     - img: 'https://picsum.photos/id/1010/200/300'
