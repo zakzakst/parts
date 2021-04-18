@@ -48,7 +48,6 @@ https://wrl.co.jp/about/ （沿革部分）
 ### スクロールアニメーション
 
 https://www.felissimo.co.jp/meisaku/ （ボタンとかのマスク？）
-https://b43.jp/ （セクション間の線が伸びる）
 https://goodpatch.com/careers
 
 ### FAQ
@@ -76,6 +75,18 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://season.a2care-anatc.com/kahun/ （スクロールを促すバー）
+https://www.otemae.ac.jp/opencampus/university/ （トップの人物が流れる部分）
 https://sencraneservice.com/ （ななめのスライド画像）
 https://www.atamisekaie.jp/
 http://www.ney.co.jp/ （ページ遷移）
+
+### セクション
+
+https://plus-d.co.jp/plus-xs/ （特長・強み）
+https://cells-academy.com/ （特長・強み）
+https://www.kose.co.jp/esprique/ （事例）
+https://koncent.net/masknoie/ （○○ について）
+https://www.otemae.ac.jp/opencampus/university/ （サービス ※どんな学部がある？）
+https://www.mizuno.jp/baseball/products/lightrevo.aspx （○○ について ※「軽量維新」と「グリーンライト」の部分）
+https://b43.jp/ （特長・強み ※セクション間の線が伸びる）
