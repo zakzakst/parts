@@ -1,0 +1,12 @@
+title: 問題・悩み00
+label: 問題・悩み00
+variants:
+  - name: default
+    label: 問題・悩み00
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-section'
+context:
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
