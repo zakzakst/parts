@@ -1,0 +1,31 @@
+$BLOCK_NAME: '.button-38';
+
+// 変数
+$color_white: #fff;
+$color_black: #000;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  padding: 24px 48px;
+  color: $color_black;
+  background: $color_white;
+  border: 1px solid $color_black;
+
+  &__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 0;
+    content: '';
+    background: $color_white;
+    border-radius: 50%;
+    mix-blend-mode: exclusion;
+    transform: translate(-50%, -50%);
+    @at-root #{ $BLOCK_NAME }.is-hover & {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
