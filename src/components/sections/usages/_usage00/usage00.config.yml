@@ -1,0 +1,12 @@
+title: 使い方00
+label: 使い方00
+variants:
+  - name: default
+    label: 使い方00
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-section'
+context:
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
