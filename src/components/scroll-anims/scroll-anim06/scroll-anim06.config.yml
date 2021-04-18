@@ -7,6 +7,7 @@ variants:
     # status: prototype
     # status: wip
     # hidden: true
+preview: '@preview-scroll'
 context:
   items:
     - 'テキストが入ります。テキストが入ります。テキストが入ります。'
