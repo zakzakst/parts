@@ -24,8 +24,6 @@ https://qiita.com/hiro0218/items/7ac41f58891d96951fa1
 
 ### ボタン
 
-https://goodpatch.com/careers
-
 ### 見出し
 
 ### カード
@@ -38,6 +36,7 @@ https://www.themeum.com/product/tutor-lms/ （LP のスクリーンショット�
 
 ### カルーセル
 
+https://goodpatch.com/careers （スライド）
 https://ion-e-air.jp/
 https://www.karststonepaper.com/
 https://www.orikane.co.jp/

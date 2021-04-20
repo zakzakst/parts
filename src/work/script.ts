@@ -19,6 +19,9 @@ button12();
 import { button38 } from '../components/buttons/button38/button38';
 button38();
 
+// import { button39 } from '../components/buttons/button39/button39';
+// button39();
+
 /**
  * カード
  */
