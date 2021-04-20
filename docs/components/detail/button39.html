@@ -370,7 +370,7 @@
   textNum: <span class="hljs-built_in">number</span>;
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">elId: <span class="hljs-built_in">string</span></span>)</span> {
     <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.getElementById(elId);
-    <span class="hljs-built_in">this</span>.textEl = <span class="hljs-built_in">this</span>.el.querySelector(<span class="hljs-string">&#x27;.button-39__text-text&#x27;</span>);
+    <span class="hljs-built_in">this</span>.textEl = <span class="hljs-built_in">this</span>.el.querySelector(<span class="hljs-string">&#x27;.button-39__text-text&#x27;</span>) || <span class="hljs-literal">null</span>;
     <span class="hljs-built_in">this</span>.texts = [
       <span class="hljs-string">&#x27;ボタン39&#x27;</span>,
       <span class="hljs-string">&#x27;Button39&#x27;</span>,
@@ -3359,6 +3359,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         
