@@ -7,14 +7,17 @@ accordion01();
 /**
  * ボタン
  */
-import { button04 } from '../components/buttons/button04/button04';
+import { button04 } from '../components/buttons/1_30/button04/button04';
 button04();
 
-import { button10 } from '../components/buttons/button10/button10';
+import { button10 } from '../components/buttons/1_30/button10/button10';
 button10();
 
-import { button12 } from '../components/buttons/button12/button12';
+import { button12 } from '../components/buttons/1_30/button12/button12';
 button12();
+
+import { button38 } from '../components/buttons/button38/button38';
+button38();
 
 /**
  * カード
