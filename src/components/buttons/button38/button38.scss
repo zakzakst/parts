@@ -6,7 +6,8 @@ $color_black: #000;
 
 #{ $BLOCK_NAME } {
   position: relative;
-  padding: 24px 48px;
+  padding: 36px 48px;
+  overflow: hidden;
   color: $color_black;
   background: $color_white;
   border: 1px solid $color_black;
@@ -22,10 +23,27 @@ $color_black: #000;
     background: $color_white;
     border-radius: 50%;
     mix-blend-mode: exclusion;
+    transition: width 0.3s, height 0.3s;
     transform: translate(-50%, -50%);
     @at-root #{ $BLOCK_NAME }.is-hover & {
-      width: 32px;
-      height: 32px;
+      width: 60px;
+      height: 60px;
     }
+    @at-root #{ $BLOCK_NAME }.is-hover.is-clicked & {
+      animation: button38Circle 1s forwards;
+    }
+  }
+}
+
+@keyframes button38Circle {
+  90% {
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
 }
