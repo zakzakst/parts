@@ -1,0 +1,12 @@
+title: ボタン39
+label: ボタン39
+variants:
+  - name: default
+    label: ボタン39
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  text: 'ボタン39'
