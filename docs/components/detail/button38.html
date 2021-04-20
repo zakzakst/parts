@@ -233,7 +233,8 @@
 
 #{ <span class="hljs-variable">$BLOCK_NAME</span> } {
   <span class="hljs-attribute">position</span>: relative;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">24px</span> <span class="hljs-number">48px</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">36px</span> <span class="hljs-number">48px</span>;
+  <span class="hljs-attribute">overflow</span>: hidden;
   <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color_black</span>;
   <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color_white</span>;
   <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">$color_black</span>;
@@ -249,11 +250,28 @@
     <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color_white</span>;
     <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
     mix-blend-mode: exclusion;
+    <span class="hljs-attribute">transition</span>: width <span class="hljs-number">0.3s</span>, height <span class="hljs-number">0.3s</span>;
     <span class="hljs-attribute">transform</span>: translate(-<span class="hljs-number">50%</span>, -<span class="hljs-number">50%</span>);
     <span class="hljs-keyword">@at-root</span> #{ <span class="hljs-variable">$BLOCK_NAME</span> }<span class="hljs-selector-class">.is-hover</span> &amp; {
-      <span class="hljs-attribute">width</span>: <span class="hljs-number">32px</span>;
-      <span class="hljs-attribute">height</span>: <span class="hljs-number">32px</span>;
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">60px</span>;
+      <span class="hljs-attribute">height</span>: <span class="hljs-number">60px</span>;
     }
+    <span class="hljs-keyword">@at-root</span> #{ <span class="hljs-variable">$BLOCK_NAME</span> }<span class="hljs-selector-class">.is-hover</span><span class="hljs-selector-class">.is-clicked</span> &amp; {
+      <span class="hljs-attribute">animation</span>: button38Circle <span class="hljs-number">1s</span> forwards;
+    }
+  }
+}
+
+<span class="hljs-keyword">@keyframes</span> button38Circle {
+  90% {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">400px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">400px</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+  }
+  100% {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
   }
 }
 </pre>
@@ -272,7 +290,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">609 Bytes</span>
+                    <span class="Meta-value">947 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -287,6 +305,8 @@
                             <code class="Code Code--lang-TypeScript FileBrowser-code hljs">
                                 <pre><span class="hljs-meta">&#x27;use strict&#x27;</span>;
 
+<span class="hljs-keyword">import</span> { gsap } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;gsap&#x27;</span>;
+
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> button38 = <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">const</span> button = <span class="hljs-keyword">new</span> Button38(<span class="hljs-string">&#x27;js-button-38&#x27;</span>);
   button.init();
@@ -295,9 +315,13 @@
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Button38</span> </span>{
   <span class="hljs-attr">els</span>: HTMLCollectionOf&lt;Element&gt;;
   circleSelector: <span class="hljs-built_in">string</span>;
+  hover: <span class="hljs-built_in">Boolean</span>;
+  clicked: <span class="hljs-built_in">Boolean</span>;
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">className: <span class="hljs-built_in">string</span></span>)</span> {
     <span class="hljs-built_in">this</span>.els = <span class="hljs-built_in">document</span>.getElementsByClassName(className);
     <span class="hljs-built_in">this</span>.circleSelector = <span class="hljs-string">&#x27;.button-38__circle&#x27;</span>;
+    <span class="hljs-built_in">this</span>.hover = <span class="hljs-literal">false</span>;
+    <span class="hljs-built_in">this</span>.clicked = <span class="hljs-literal">false</span>;
   }
 
   <span class="hljs-comment">/**
@@ -307,22 +331,35 @@
     <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.els.length) <span class="hljs-keyword">return</span>;
     <span class="hljs-built_in">this</span>.onEnterHandler();
     <span class="hljs-built_in">this</span>.onLeaveHandler();
+    <span class="hljs-built_in">this</span>.onMoveHandler();
+    <span class="hljs-built_in">this</span>.onClickHandler();
   }
 
   <span class="hljs-comment">/**
    * 円要素の位置設定
    * <span class="hljs-doctag">@param </span>el マウスイン／アウトした要素
    * <span class="hljs-doctag">@param </span>event イベントオブジェクト
+   * <span class="hljs-doctag">@param </span>smooth スムーズに移動させる
    */</span>
-  setCirclePos(el: HTMLElement, <span class="hljs-attr">event</span>: MouseEvent): <span class="hljs-built_in">void</span> {
+  setCirclePos(el: HTMLElement, <span class="hljs-attr">event</span>: MouseEvent, <span class="hljs-attr">smooth</span>: <span class="hljs-built_in">Boolean</span> = <span class="hljs-literal">false</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// クリック済の場合、処理を終了</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.clicked) <span class="hljs-keyword">return</span>;
     <span class="hljs-keyword">const</span> circleEl = &lt;HTMLElement&gt;el.querySelector(<span class="hljs-built_in">this</span>.circleSelector);
     <span class="hljs-keyword">const</span> clientRect = el.getBoundingClientRect();
     <span class="hljs-comment">// 要素内におけるカーソル位置を取得</span>
     <span class="hljs-keyword">const</span> x = event.pageX - (clientRect.left + <span class="hljs-built_in">window</span>.pageXOffset);
     <span class="hljs-keyword">const</span> y = event.pageY - (clientRect.top + <span class="hljs-built_in">window</span>.pageYOffset);
     <span class="hljs-comment">// 要素の位置を設定</span>
-    circleEl.style.left = x + <span class="hljs-string">&#x27;px&#x27;</span>;
-    circleEl.style.top = y + <span class="hljs-string">&#x27;px&#x27;</span>;
+    <span class="hljs-keyword">if</span> (smooth) {
+      gsap.to(circleEl, {
+        <span class="hljs-attr">duration</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">left</span>: x,
+        <span class="hljs-attr">top</span>: y,
+      });
+    } <span class="hljs-keyword">else</span> {
+      circleEl.style.left = x + <span class="hljs-string">&#x27;px&#x27;</span>;
+      circleEl.style.top = y + <span class="hljs-string">&#x27;px&#x27;</span>;
+    }
   }
 
   <span class="hljs-comment">/**
@@ -330,8 +367,9 @@
    */</span>
   onEnterHandler(): <span class="hljs-built_in">void</span> {
     [...this.els].forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
-      el.addEventListener(<span class="hljs-string">&#x27;mouseover&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+      el.addEventListener(<span class="hljs-string">&#x27;mouseenter&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
         <span class="hljs-built_in">this</span>.setCirclePos(&lt;HTMLElement&gt;el, &lt;MouseEvent&gt;e);
+        el.classList.add(<span class="hljs-string">&#x27;is-hover&#x27;</span>);
       });
     });
   }
@@ -341,8 +379,35 @@
    */</span>
   onLeaveHandler(): <span class="hljs-built_in">void</span> {
     [...this.els].forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
-      el.addEventListener(<span class="hljs-string">&#x27;mouseout&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+      el.addEventListener(<span class="hljs-string">&#x27;mouseleave&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;test&#x27;</span>);
         <span class="hljs-built_in">this</span>.setCirclePos(&lt;HTMLElement&gt;el, &lt;MouseEvent&gt;e);
+        el.classList.remove(<span class="hljs-string">&#x27;is-hover&#x27;</span>, <span class="hljs-string">&#x27;is-clicked&#x27;</span>);
+        <span class="hljs-comment">// クリック済フラグを初期化</span>
+        <span class="hljs-built_in">this</span>.clicked = <span class="hljs-literal">false</span>;
+      });
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * カーソル移動時の処理
+   */</span>
+  onMoveHandler(): <span class="hljs-built_in">void</span> {
+    [...this.els].forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
+      el.addEventListener(<span class="hljs-string">&#x27;mousemove&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+        <span class="hljs-built_in">this</span>.setCirclePos(&lt;HTMLElement&gt;el, &lt;MouseEvent&gt;e, <span class="hljs-literal">true</span>);
+      });
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * クリック時の処理
+   */</span>
+  onClickHandler(): <span class="hljs-built_in">void</span> {
+    [...this.els].forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
+      el.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+        el.classList.add(<span class="hljs-string">&#x27;is-clicked&#x27;</span>);
+        <span class="hljs-built_in">this</span>.clicked = <span class="hljs-literal">true</span>;
       });
     });
   }
@@ -363,7 +428,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.6 KB</span>
+                    <span class="Meta-value">2.8 KB</span>
                 </li>
             </ul>
         </div>
