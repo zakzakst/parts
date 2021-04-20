@@ -12,7 +12,7 @@ class Button39 {
   textNum: number;
   constructor(elId: string) {
     this.el = document.getElementById(elId);
-    this.textEl = this.el.querySelector('.button-39__text-text');
+    this.textEl = this.el.querySelector('.button-39__text-text') || null;
     this.texts = [
       'ボタン39',
       'Button39',
