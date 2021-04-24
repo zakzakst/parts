@@ -1,0 +1,15 @@
+title: スクロールアニメーション18
+label: スクロールアニメーション18
+variants:
+  - name: default
+    label: スクロールアニメーション18
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-plain'
+context:
+  sliderItems:
+    - img: 'https://picsum.photos/id/1000/800/400'
+    - img: 'https://picsum.photos/id/1001/800/400'
+    - img: 'https://picsum.photos/id/1002/800/400'
