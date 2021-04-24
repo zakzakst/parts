@@ -48,7 +48,7 @@ module.exports = {
       new TerserPlugin({
         test: /\.js$/,
         terserOptions: {
-          compress: {drop_console: true},
+          // compress: {drop_console: true},
         },
       }),
     ],
