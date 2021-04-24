@@ -1,0 +1,15 @@
+.scroll-anim-18-kv#js-scroll-anim-18
+  .scroll-anim-18-kv__slider
+    each item in sliderItems
+      .scroll-anim-18-kv__slider-item
+        .scroll-anim-18-kv__img-wrapper
+          img.scroll-anim-18-kv__img(src=item.img, alt='')
+.scroll-anim-18-header
+  nav
+    ul.scroll-anim-18-header__nav
+      - for (var i = 1; i <= 3; i++)
+        li
+          a.scroll-anim-18-header__nav-item(href='#') 項目#{ i }
+  a.scroll-anim-18-header__btn(href='#') ボタン
+div(style='height: 1000px; padding: 16px')
+  p テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。

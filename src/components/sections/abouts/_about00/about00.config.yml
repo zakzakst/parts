@@ -7,6 +7,6 @@ variants:
     # status: prototype
     # status: wip
     # hidden: true
-preview: '@preview-section'
+preview: '@preview-plain'
 context:
   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
