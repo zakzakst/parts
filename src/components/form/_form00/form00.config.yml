@@ -1,0 +1,11 @@
+title: フォーム00
+label: フォーム00
+variants:
+  - name: default
+    label: フォーム00
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  text: フォーム00

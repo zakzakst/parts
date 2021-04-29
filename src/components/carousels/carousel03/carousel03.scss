@@ -1,0 +1,81 @@
+$BLOCK_NAME: '.carousel-03';
+
+// 変数
+$color_primary: #d31619;
+$color_white: #fff;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 32px);
+
+  &__item-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  &__item {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    z-index: 1;
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    font-size: 24px;
+    color: $color_white;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      background: $color_primary;
+    }
+  }
+
+  &__catch {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    font-size: 18px;
+    color: $color_primary;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      content: '';
+      background: $color_white;
+    }
+  }
+}

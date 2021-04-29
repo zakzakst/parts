@@ -1,0 +1,11 @@
+ul.carousel-03#js-carousel-03
+  each item in carouselItems
+    li.carousel-03__item-wrapper
+      a.carousel-03__item(href=item.link)
+        div.carousel-03__bg(style='background-image: url(' + item.img + ')')
+        div.carousel-03__text
+          h2.carousel-03__title
+            span #{ item.title }
+          br
+          p.carousel-03__catch
+            span #{ item.catch }
