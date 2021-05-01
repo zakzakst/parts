@@ -1,0 +1,16 @@
+.menu-02#js-menu-02
+  a.menu-02__btn(href='#')
+    .menu-02__icon
+      .menu-02__icon-bar
+      .menu-02__icon-bar
+      .menu-02__icon-bar
+  .menu-02__content
+    .menu-02__bg
+      .menu-02__bg-item
+      .menu-02__bg-item
+      .menu-02__bg-item
+      .menu-02__bg-item
+    .menu-02__links
+      each link in links
+        li
+          a.menu-02__link(href=link.link) #{ link.text }
