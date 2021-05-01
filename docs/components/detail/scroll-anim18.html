@@ -493,6 +493,7 @@ gsap.registerPlugin(ScrollTrigger);
   offsetParallax: <span class="hljs-built_in">number</span>;
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">elId: <span class="hljs-built_in">string</span></span>)</span> {
     <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.getElementById(elId);
+    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.el) <span class="hljs-keyword">return</span>;
     <span class="hljs-built_in">this</span>.sliderEl = <span class="hljs-built_in">this</span>.el.querySelector(<span class="hljs-string">&#x27;.scroll-anim-18-kv__slider&#x27;</span>);
     <span class="hljs-built_in">this</span>.sliderItemEls = <span class="hljs-built_in">this</span>.sliderEl.querySelectorAll(<span class="hljs-string">&#x27;.scroll-anim-18-kv__slider-item&#x27;</span>);
     <span class="hljs-built_in">this</span>.imgLoadedNum = <span class="hljs-number">0</span>;
@@ -502,6 +503,7 @@ gsap.registerPlugin(ScrollTrigger);
   }
 
   <span class="hljs-function"><span class="hljs-title">init</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.el) <span class="hljs-keyword">return</span>;
     <span class="hljs-built_in">this</span>.parallax();
     <span class="hljs-built_in">this</span>.onLoadHandler();
   }
@@ -2088,6 +2090,32 @@ gsap.registerPlugin(ScrollTrigger);
         </li>
         
     
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="carousel03.html" data-role="tree-link" data-pjax data-handle="carousel03">
+                <span>カルーセル03</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
                 </ul>
             </li>
@@ -3524,6 +3552,10 @@ gsap.registerPlugin(ScrollTrigger);
                 Back
             </button>
         </div>
+        
+    
+        
+    
         
     
         
