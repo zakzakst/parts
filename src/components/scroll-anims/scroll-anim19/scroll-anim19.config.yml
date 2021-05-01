@@ -1,0 +1,48 @@
+title: スクロールアニメーション19
+label: スクロールアニメーション19
+variants:
+  - name: default
+    label: スクロールアニメーション19
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-scroll'
+context:
+  items:
+    - img: 'https://picsum.photos/id/1000/400/200'
+      imgModal: 'https://picsum.photos/id/1000/800/400'
+      title: 'Image 1'
+    - img: 'https://picsum.photos/id/1001/400/200'
+      imgModal: 'https://picsum.photos/id/1001/800/400'
+      title: 'Image 2'
+    - img: 'https://picsum.photos/id/1002/400/200'
+      imgModal: 'https://picsum.photos/id/1002/800/400'
+      title: 'Image 3'
+    - img: 'https://picsum.photos/id/1003/400/200'
+      imgModal: 'https://picsum.photos/id/1003/800/400'
+      title: 'Image 4'
+    - img: 'https://picsum.photos/id/1004/400/200'
+      imgModal: 'https://picsum.photos/id/1004/800/400'
+      title: 'Image 5'
+    - img: 'https://picsum.photos/id/1005/400/200'
+      imgModal: 'https://picsum.photos/id/1005/800/400'
+      title: 'Image 6'
+    - img: 'https://picsum.photos/id/1006/400/200'
+      imgModal: 'https://picsum.photos/id/1006/800/400'
+      title: 'Image 7'
+    - img: 'https://picsum.photos/id/1012/400/200'
+      imgModal: 'https://picsum.photos/id/1012/800/400'
+      title: 'Image 8'
+    - img: 'https://picsum.photos/id/1008/400/200'
+      imgModal: 'https://picsum.photos/id/1008/800/400'
+      title: 'Image 9'
+    - img: 'https://picsum.photos/id/1009/400/200'
+      imgModal: 'https://picsum.photos/id/1009/800/400'
+      title: 'Image 10'
+    - img: 'https://picsum.photos/id/1010/400/200'
+      imgModal: 'https://picsum.photos/id/1010/800/400'
+      title: 'Image 11'
+    - img: 'https://picsum.photos/id/1011/400/200'
+      imgModal: 'https://picsum.photos/id/1011/800/400'
+      title: 'Image 12'

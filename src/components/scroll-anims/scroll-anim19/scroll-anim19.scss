@@ -1,0 +1,35 @@
+$BLOCK_NAME: '.scroll-anim-19';
+
+// 変数
+$duration_default: 0.7s;
+
+#{ $BLOCK_NAME } {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > li {
+    width: 50%;
+    opacity: 0;
+    @include Mq(md) {
+      width: calc(100% / 3);
+    }
+    @include Mq(lg) {
+      width: 25%;
+    }
+  }
+
+  &__item {
+    display: block;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    filter: grayscale(1);
+    transition: all $duration_default;
+    @at-root #{ $BLOCK_NAME }__item:hover & {
+      filter: grayscale(0);
+      transform: scale(1.1);
+    }
+  }
+}
