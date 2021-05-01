@@ -1,0 +1,54 @@
+$BLOCK_NAME: '.scroll-anim-20';
+
+// 変数
+$color_black: #000;
+$duration_default: 0.7s;
+$delay_default: 0.3s;
+$easing_default: cubic-bezier(0.19, 1, 0.22, 1);
+
+#{ $BLOCK_NAME } {
+  @include Mq(md) {
+    display: flex;
+  }
+
+  &__item {
+    max-width: 360px;
+    padding: 8px;
+    margin: 0 auto;
+    @include Mq(md) {
+      width: calc(100% / 3);
+    }
+  }
+
+  &__img-path {
+    fill: none;
+    stroke: $color_black;
+    stroke-opacity: 0;
+    stroke-width: 4px;
+  }
+
+  &__img-icon {
+    fill: $color_black;
+    fill-opacity: 0;
+  }
+
+  &__heading {
+    font-size: 32px;
+    font-weight: bold;
+    text-anchor: start;
+    fill: $color_black;
+    fill-opacity: 0;
+  }
+
+  &__text {
+    overflow: hidden;
+    & > span {
+      display: inline-block;
+      transition: transform $duration_default $delay_default $easing_default;
+      transform: translateY(100%);
+    }
+    &.is-animated > span {
+      transform: translateY(0);
+    }
+  }
+}
