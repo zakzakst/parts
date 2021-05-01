@@ -1,0 +1,24 @@
+$BLOCK_NAME: '.scroll-anim-21';
+
+#{ $BLOCK_NAME } {
+  @include Mq(md) {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    @include Mq(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__number {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
