@@ -1,0 +1,19 @@
+title: メニュー02
+label: メニュー02
+variants:
+  - name: default
+    label: メニュー02
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  links:
+    - link: '#'
+      text: 'LINK 01'
+    - link: '#'
+      text: 'LINK 02'
+    - link: '#'
+      text: 'LINK 03'
+    - link: '#'
+      text: 'LINK 04'
