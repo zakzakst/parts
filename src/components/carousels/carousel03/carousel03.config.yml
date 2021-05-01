@@ -1,0 +1,23 @@
+title: カルーセル03
+label: カルーセル03
+variants:
+  - name: default
+    label: カルーセル03
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  carouselItems:
+    - link: '#'
+      img: 'https://picsum.photos/id/1000/800/400'
+      title: 'TITLE1'
+      catch: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    - link: '#'
+      img: 'https://picsum.photos/id/1001/800/400'
+      title: 'TITLE2'
+      catch: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    - link: '#'
+      img: 'https://picsum.photos/id/1002/800/400'
+      title: 'TITLE3'
+      catch: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'

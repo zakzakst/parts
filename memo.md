@@ -24,6 +24,8 @@ https://qiita.com/hiro0218/items/7ac41f58891d96951fa1
 
 ### ボタン
 
+https://www.keyence.co.jp/company/
+
 ### 見出し
 
 ### カード
@@ -44,7 +46,21 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
+数字カウント、グラフ、SVG、既存のパーツ
+https://hotaru-personalized.com/
+https://brand.studysapuri.jp/
+https://swissdent.creative-nights.com/
+
 ### FAQ
+
+### フォーム
+
+https://www.aur.co.jp/contact/
+https://saga-hirakawaya.jp/brand/contact/
+
+### ギャリー
+
+https://www.smbc-gp.co.jp/stera/
 
 ### 問い合わせ
 
@@ -55,6 +71,7 @@ http://a-dot.co.jp/
 
 ### メニュー
 
+https://savilerowprojects.com/
 https://www.qlip.co.jp/
 https://www.snowsand.jp/
 https://www.asnova.co.jp/
@@ -69,6 +86,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://www.otemon-jh.ed.jp/o-drive/ （バズキーワード）
 https://www2.mejiro.ac.jp/univ/mejinavi2021/ （両サイドのスライド）
 https://book.mynavi.jp/webpro-free/ （背景のアニメーション）
 https://season.a2care-anatc.com/kahun/ （スクロールを促すバー）

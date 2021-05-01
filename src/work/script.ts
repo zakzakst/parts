@@ -37,6 +37,9 @@ carousel01();
 import { carousel02 } from '../components/carousels/carousel02/carousel02';
 carousel02();
 
+import { carousel03 } from '../components/carousels/carousel03/carousel03';
+carousel03();
+
 /**
  * よくある質問
  */
