@@ -3,6 +3,20 @@ $BLOCK_NAME: '.carousel-03';
 // 変数
 $color_primary: #d31619;
 $color_white: #fff;
+$duration_default: 1s;
+$easing_default: cubic-bezier(0.55, 0.05, 0.22, 0.99);
+@mixin clipTransition($delay: 0) {
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: clip-path $duration_default $easing_default #{$delay + 's'};
+  transform: translateZ(0);
+  will-change: clip-path;
+  @at-root #{ $BLOCK_NAME }__item-wrapper.is-current & {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  @at-root #{ $BLOCK_NAME }__item-wrapper.is-next & {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
 
 #{ $BLOCK_NAME } {
   position: relative;
@@ -16,13 +30,28 @@ $color_white: #fff;
     bottom: 0;
     left: 0;
     overflow: hidden;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition: clip-path $duration_default ease 0s;
+    transform: translateZ(0);
+    &.is-current,
+    &.is-next {
+      clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+    &.is-next {
+      z-index: 2;
+      &.is-current {
+        z-index: 1;
+      }
+    }
   }
 
   &__item {
     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: block;
-    width: 100%;
-    height: 100%;
   }
 
   &__bg {
@@ -32,8 +61,15 @@ $color_white: #fff;
     bottom: 0;
     left: 0;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: center center;
     background-size: cover;
+    transition: transform 5s 0s;
+    @at-root #{ $BLOCK_NAME }__item-wrapper.is-active & {
+      transform: scale(1.1);
+    }
+    @at-root #{ $BLOCK_NAME }__item-wrapper.is-next & {
+      transform: scale(1.1);
+    }
   }
 
   &__text {
@@ -49,6 +85,7 @@ $color_white: #fff;
     padding: 10px;
     font-size: 24px;
     color: $color_white;
+    @include clipTransition(1);
     &::before {
       position: absolute;
       top: 0;
@@ -59,6 +96,9 @@ $color_white: #fff;
       content: '';
       background: $color_primary;
     }
+    & > span {
+      @include clipTransition(2);
+    }
   }
 
   &__catch {
@@ -67,6 +107,7 @@ $color_white: #fff;
     padding: 10px;
     font-size: 18px;
     color: $color_primary;
+    @include clipTransition(1);
     &::before {
       position: absolute;
       top: 0;
@@ -76,6 +117,9 @@ $color_white: #fff;
       z-index: -1;
       content: '';
       background: $color_white;
+    }
+    & > span {
+      @include clipTransition(2);
     }
   }
 }

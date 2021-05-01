@@ -19,6 +19,7 @@ class Anim18 {
   offsetParallax: number;
   constructor(elId: string) {
     this.el = document.getElementById(elId);
+    if (!this.el) return;
     this.sliderEl = this.el.querySelector('.scroll-anim-18-kv__slider');
     this.sliderItemEls = this.sliderEl.querySelectorAll('.scroll-anim-18-kv__slider-item');
     this.imgLoadedNum = 0;
@@ -28,6 +29,7 @@ class Anim18 {
   }
 
   init() {
+    if (!this.el) return;
     this.parallax();
     this.onLoadHandler();
   }
