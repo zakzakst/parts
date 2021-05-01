@@ -24,8 +24,6 @@ https://qiita.com/hiro0218/items/7ac41f58891d96951fa1
 
 ### ボタン
 
-https://www.keyence.co.jp/company/
-
 ### 見出し
 
 ### カード

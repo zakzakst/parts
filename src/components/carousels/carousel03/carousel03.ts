@@ -30,16 +30,21 @@ class Carousel03 {
 
   /**
    * スライド
-   * @param index アニメーションさせるスライドの番号
+   * @param first 初期表示であるか
    */
-  slide(index: number): void {
+  slide(first: Boolean = false): void {
     [...this.itemEls].forEach(el => {
       if (el.classList.contains('is-current')) {
         el.classList.remove('is-current');
         el.classList.remove('is-next');
       }
     });
-    const current = this.currentIndex;
+    let current;
+    if (first) {
+      current = this.itemEls.length - 1;
+    } else {
+      current = this.currentIndex;
+    }
     const next = current >= this.itemEls.length - 1 ? 0 : current + 1;
     const currentEl = this.itemEls[current];
     const nextEl = this.itemEls[next];
@@ -48,7 +53,7 @@ class Carousel03 {
     // 次のスライドをアニメーションさせる
     setTimeout(() => {
       this.currentIndex = next;
-      this.slide(this.currentIndex);
+      this.slide();
     }, this.slideTime);
   }
 
@@ -75,6 +80,6 @@ class Carousel03 {
   startSlide(): void {
     // 全ての画像の読み込みが完了していない場合、処理を終了
     if (this.loadedImg !== this.itemEls.length) return;
-    this.slide(this.currentIndex);
+    this.slide(true);
   }
 }
