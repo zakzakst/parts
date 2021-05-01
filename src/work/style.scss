@@ -39,6 +39,9 @@ img {
   height: auto;
   vertical-align: bottom;
 }
+li {
+  list-style: none;
+}
 
 $break_point_items: (
   xs: 0,

@@ -1,0 +1,115 @@
+$BLOCK_NAME: '.menu-02';
+
+// 変数
+$color_primary: #00bfa6;
+$color_white: #fff;
+$color_black: #4a4a4a;
+$duration_default: 0.5s;
+
+#{ $BLOCK_NAME } {
+  &__btn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 48px;
+    background: $color_primary;
+  }
+
+  &__icon {
+    position: relative;
+    transform: translateY(-2px);
+  }
+
+  &__icon-bar {
+    position: absolute;
+    left: -15px;
+    width: 30px;
+    height: 2px;
+    background: $color_white;
+    transition: all $duration_default;
+    transform-origin: center center;
+    @at-root #{ $BLOCK_NAME }__btn:hover & {
+      background: $color_black;
+    }
+    &:nth-child(1) {
+      top: -10px;
+      @at-root #{ $BLOCK_NAME }__btn.is-active & {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+    &:nth-child(2) {
+      top: 0;
+      @at-root #{ $BLOCK_NAME }__btn.is-active & {
+        opacity: 0;
+      }
+    }
+    &:nth-child(3) {
+      top: 10px;
+      @at-root #{ $BLOCK_NAME }__btn.is-active & {
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+  }
+
+  &__bg-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: $color_primary;
+    transform-origin: right;
+    &:nth-child(1) {
+      left: 0;
+    }
+    &:nth-child(2) {
+      left: 25%;
+    }
+    &:nth-child(3) {
+      left: 50%;
+    }
+    &:nth-child(4) {
+      left: 75%;
+    }
+  }
+
+  &__links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 300px;
+    transform: translate(-50%, -50%);
+  }
+
+  &__link {
+    display: block;
+    padding: 6px;
+    font-size: 24px;
+    font-weight: bold;
+    color: $color_white;
+    text-align: center;
+    opacity: 0;
+    transition: color $duration_default;
+    transform: translateX(-20px);
+    &:hover {
+      color: $color_black;
+    }
+  }
+}
