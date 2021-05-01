@@ -7,16 +7,16 @@ accordion01();
 /**
  * ボタン
  */
-import { button04 } from '../components/buttons/1_30/button04/button04';
+import { button04 } from '../components/buttons/1_20/button04/button04';
 button04();
 
-import { button10 } from '../components/buttons/1_30/button10/button10';
+import { button10 } from '../components/buttons/1_20/button10/button10';
 button10();
 
-import { button12 } from '../components/buttons/1_30/button12/button12';
+import { button12 } from '../components/buttons/1_20/button12/button12';
 button12();
 
-import { button38 } from '../components/buttons/button38/button38';
+import { button38 } from '../components/buttons/21_40/button38/button38';
 button38();
 
 // import { button39 } from '../components/buttons/button39/button39';
@@ -94,56 +94,56 @@ other08();
 /**
  * スクロールアニメーション
  */
-import { scrollAnim01 } from '../components/scroll-anims/scroll-anim01/scroll-anim01';
+import { scrollAnim01 } from '../components/scroll-anims/1_20/scroll-anim01/scroll-anim01';
 scrollAnim01();
 
-import { scrollAnim02 } from '../components/scroll-anims/scroll-anim02/scroll-anim02';
+import { scrollAnim02 } from '../components/scroll-anims/1_20/scroll-anim02/scroll-anim02';
 scrollAnim02();
 
-import { scrollAnim03 } from '../components/scroll-anims/scroll-anim03/scroll-anim03';
+import { scrollAnim03 } from '../components/scroll-anims/1_20/scroll-anim03/scroll-anim03';
 scrollAnim03();
 
-import { scrollAnim04 } from '../components/scroll-anims/scroll-anim04/scroll-anim04';
+import { scrollAnim04 } from '../components/scroll-anims/1_20/scroll-anim04/scroll-anim04';
 scrollAnim04();
 
-import { scrollAnim05 } from '../components/scroll-anims/scroll-anim05/scroll-anim05';
+import { scrollAnim05 } from '../components/scroll-anims/1_20/scroll-anim05/scroll-anim05';
 scrollAnim05();
 
-import { scrollAnim06 } from '../components/scroll-anims/scroll-anim06/scroll-anim06';
+import { scrollAnim06 } from '../components/scroll-anims/1_20/scroll-anim06/scroll-anim06';
 scrollAnim06();
 
-import { scrollAnim07 } from '../components/scroll-anims/scroll-anim07/scroll-anim07';
+import { scrollAnim07 } from '../components/scroll-anims/1_20/scroll-anim07/scroll-anim07';
 scrollAnim07();
 
-import { scrollAnim08 } from '../components/scroll-anims/scroll-anim08/scroll-anim08';
+import { scrollAnim08 } from '../components/scroll-anims/1_20/scroll-anim08/scroll-anim08';
 scrollAnim08();
 
-import { scrollAnim09 } from '../components/scroll-anims/scroll-anim09/scroll-anim09';
+import { scrollAnim09 } from '../components/scroll-anims/1_20/scroll-anim09/scroll-anim09';
 scrollAnim09();
 
-import { scrollAnim10 } from '../components/scroll-anims/scroll-anim10/scroll-anim10';
+import { scrollAnim10 } from '../components/scroll-anims/1_20/scroll-anim10/scroll-anim10';
 scrollAnim10();
 
-import { scrollAnim11 } from '../components/scroll-anims/scroll-anim11/scroll-anim11';
+import { scrollAnim11 } from '../components/scroll-anims/1_20/scroll-anim11/scroll-anim11';
 scrollAnim11();
 
-import { scrollAnim12 } from '../components/scroll-anims/scroll-anim12/scroll-anim12';
+import { scrollAnim12 } from '../components/scroll-anims/1_20/scroll-anim12/scroll-anim12';
 scrollAnim12();
 
-import { scrollAnim13 } from '../components/scroll-anims/scroll-anim13/scroll-anim13';
+import { scrollAnim13 } from '../components/scroll-anims/1_20/scroll-anim13/scroll-anim13';
 scrollAnim13();
 
-import { scrollAnim15 } from '../components/scroll-anims/scroll-anim15/scroll-anim15';
+import { scrollAnim15 } from '../components/scroll-anims/1_20/scroll-anim15/scroll-anim15';
 scrollAnim15();
 
-import { scrollAnim16 } from '../components/scroll-anims/scroll-anim16/scroll-anim16';
+import { scrollAnim16 } from '../components/scroll-anims/1_20/scroll-anim16/scroll-anim16';
 scrollAnim16();
 
-import { scrollAnim17 } from '../components/scroll-anims/scroll-anim17/scroll-anim17';
+import { scrollAnim17 } from '../components/scroll-anims/1_20/scroll-anim17/scroll-anim17';
 scrollAnim17();
 
-import { scrollAnim18 } from '../components/scroll-anims/scroll-anim18/scroll-anim18';
+import { scrollAnim18 } from '../components/scroll-anims/1_20/scroll-anim18/scroll-anim18';
 scrollAnim18();
 
-import { scrollAnim19 } from '../components/scroll-anims/scroll-anim19/scroll-anim19';
+import { scrollAnim19 } from '../components/scroll-anims/1_20/scroll-anim19/scroll-anim19';
 scrollAnim19();
