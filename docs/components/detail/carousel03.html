@@ -460,16 +460,21 @@
 
   <span class="hljs-comment">/**
    * スライド
-   * <span class="hljs-doctag">@param </span>index アニメーションさせるスライドの番号
+   * <span class="hljs-doctag">@param </span>first 初期表示であるか
    */</span>
-  slide(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
+  slide(first: <span class="hljs-built_in">Boolean</span> = <span class="hljs-literal">false</span>): <span class="hljs-built_in">void</span> {
     [...this.itemEls].forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
       <span class="hljs-keyword">if</span> (el.classList.contains(<span class="hljs-string">&#x27;is-current&#x27;</span>)) {
         el.classList.remove(<span class="hljs-string">&#x27;is-current&#x27;</span>);
         el.classList.remove(<span class="hljs-string">&#x27;is-next&#x27;</span>);
       }
     });
-    <span class="hljs-keyword">const</span> current = <span class="hljs-built_in">this</span>.currentIndex;
+    <span class="hljs-keyword">let</span> current;
+    <span class="hljs-keyword">if</span> (first) {
+      current = <span class="hljs-built_in">this</span>.itemEls.length - <span class="hljs-number">1</span>;
+    } <span class="hljs-keyword">else</span> {
+      current = <span class="hljs-built_in">this</span>.currentIndex;
+    }
     <span class="hljs-keyword">const</span> next = current &gt;= <span class="hljs-built_in">this</span>.itemEls.length - <span class="hljs-number">1</span> ? <span class="hljs-number">0</span> : current + <span class="hljs-number">1</span>;
     <span class="hljs-keyword">const</span> currentEl = <span class="hljs-built_in">this</span>.itemEls[current];
     <span class="hljs-keyword">const</span> nextEl = <span class="hljs-built_in">this</span>.itemEls[next];
@@ -478,7 +483,7 @@
     <span class="hljs-comment">// 次のスライドをアニメーションさせる</span>
     <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
       <span class="hljs-built_in">this</span>.currentIndex = next;
-      <span class="hljs-built_in">this</span>.slide(<span class="hljs-built_in">this</span>.currentIndex);
+      <span class="hljs-built_in">this</span>.slide();
     }, <span class="hljs-built_in">this</span>.slideTime);
   }
 
@@ -505,7 +510,7 @@
   startSlide(): <span class="hljs-built_in">void</span> {
     <span class="hljs-comment">// 全ての画像の読み込みが完了していない場合、処理を終了</span>
     <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.loadedImg !== <span class="hljs-built_in">this</span>.itemEls.length) <span class="hljs-keyword">return</span>;
-    <span class="hljs-built_in">this</span>.slide(<span class="hljs-built_in">this</span>.currentIndex);
+    <span class="hljs-built_in">this</span>.slide(<span class="hljs-literal">true</span>);
   }
 }
 </pre>
@@ -524,7 +529,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.2 KB</span>
+                    <span class="Meta-value">2.3 KB</span>
                 </li>
             </ul>
         </div>
@@ -1646,6 +1651,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="button38.html" data-role="tree-link" data-pjax data-handle="button38">
                 <span>ボタン38</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button40.html" data-role="tree-link" data-pjax data-handle="button40">
+                <span>ボタン40</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -3505,6 +3536,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         
