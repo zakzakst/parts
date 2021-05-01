@@ -1,0 +1,24 @@
+title: スクロールアニメーション21
+label: スクロールアニメーション21
+variants:
+  - name: default
+    label: スクロールアニメーション21
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-scroll'
+context:
+  items:
+    - heading: 'プロジェクト'
+      count: 123
+      unit: '件以上'
+    - heading: '顧客満足度'
+      count: 70
+      unit: '%'
+    - heading: '現在のプロジェクト'
+      count: 15
+      unit: '件'
+    - heading: '経験年数'
+      count: 5
+      unit: '年'
