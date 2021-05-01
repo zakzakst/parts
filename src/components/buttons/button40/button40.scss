@@ -1,0 +1,61 @@
+$BLOCK_NAME: '.button-40';
+
+// 変数
+$color_primary: #e7153f;
+$color_white: #fff;
+$color_black: #2b2f38;
+$color_gray: #f6f6f6;
+$duration_default: 0.5s;
+$duration_easing: cubic-bezier(0.18, 0.06, 0.23, 1);
+
+#{ $BLOCK_NAME } {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 20px 0;
+  font-size: 14px;
+  color: $color_black;
+  border-top: 2px solid rgba($color_black, 0.05);
+  border-bottom: 2px solid rgba($color_black, 0.05);
+  transition: color $duration_default $duration_easing;
+  &:hover {
+    color: $color_primary;
+  }
+
+  &__icon {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    background: $color_gray;
+    border-radius: 50%;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background: $color_primary;
+      border-radius: 50%;
+      transition: transform $duration_default $duration_easing;
+      transform: scale(0.1);
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scale(1);
+      }
+    }
+    & > svg {
+      z-index: 1;
+      color: $color_white;
+      transition: transform $duration_default $duration_easing;
+      transform: scale(0);
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transition-delay: 0.2s;
+        transform: scale(1);
+      }
+    }
+  }
+}
