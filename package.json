@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.13.10",
     "@frctl/fractal": "^1.5.4",
     "@rsm/fractal-pug-adapter": "^0.5.0",
+    "@types/snapsvg": "^0.5.0",
     "babel-loader": "^8.2.2",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
@@ -51,7 +52,8 @@
     "jquery": "^3.6.0",
     "lightbox2": "^2.11.3",
     "reset-css": "^5.0.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "snapsvg": "^0.5.1"
   },
   "fractal": {
     "main": "fractalfile.js"
