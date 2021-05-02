@@ -20,6 +20,13 @@
 */
 
 /*!
+ * Chart.js v3.2.1
+ * https://www.chartjs.org
+ * (c) 2021 Chart.js Contributors
+ * Released under the MIT License
+ */
+
+/*!
  * GSAP 3.6.0
  * https://greensock.com
  *
