@@ -171,8 +171,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-776f933e4ca33c0db7b328b12da5bd2b-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/snapsvg@0.5.1/dist/snap.svg.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-20&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-scroll-anim-20&quot;</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-20&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-scroll-anim-20&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-20__item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-20__img&quot;</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">&quot;0 0 300 270&quot;</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-20__img-path&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;path-01&quot;</span> <span class="hljs-attr">d</span>=<span class="hljs-string">&quot;M79.289,79.289c39.027,-39.026 102.395,-39.026 141.422,0c39.026,39.027 39.026,102.395 0,141.422c-39.027,39.026 -102.395,39.026 -141.422,0c-39.026,-39.027 -39.026,-102.395 0,-141.422Z&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">g</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;scroll-anim-20__img-icon&quot;</span>&gt;</span>
@@ -219,8 +218,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-776f933e4ca33c0db7b328b12da5bd2b-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/snapsvg@0.5.1/dist/snap.svg.min.js&quot;&gt;&lt;/script&gt;
-.scroll-anim<span class="hljs-string">-20</span>#js-scroll-anim<span class="hljs-string">-20</span>
+        <pre>.scroll-anim<span class="hljs-string">-20</span>#js-scroll-anim<span class="hljs-string">-20</span>
   .scroll-anim<span class="hljs-string">-20</span>__item
     svg.scroll-anim<span class="hljs-string">-20</span>__img(viewBox=&#x27;0 0 300 270&#x27;)
       path.scroll-anim<span class="hljs-string">-20</span>__img-path#path<span class="hljs-string">-01</span>(d=&#x27;M79.289,79.289c39.027,<span class="hljs-string">-39</span>.026 102.395,<span class="hljs-string">-39</span>.026 141.422,0c39.026,39.027 39.026,102.395 0,141.422c<span class="hljs-string">-39</span>.027,39.026 <span class="hljs-string">-102</span>.395,39.026 <span class="hljs-string">-141</span>.422,0c<span class="hljs-string">-39</span>.026,<span class="hljs-string">-39</span>.027 <span class="hljs-string">-39</span>.026,<span class="hljs-string">-102</span>.395 0,<span class="hljs-string">-141</span>.422Z&#x27;)
@@ -384,7 +382,8 @@
                             <code class="Code Code--lang-TypeScript FileBrowser-code hljs">
                                 <pre><span class="hljs-meta">&#x27;use strict&#x27;</span>;
 
-<span class="hljs-comment">// import Snap from &#x27;snapsvg&#x27;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;snapsvg-cjs&#x27;</span>;
+<span class="hljs-keyword">declare</span> <span class="hljs-keyword">const</span> Snap: <span class="hljs-built_in">any</span>;
 <span class="hljs-keyword">import</span> { gsap } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;gsap&#x27;</span>;
 <span class="hljs-keyword">import</span> { ScrollTrigger } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;gsap/ScrollTrigger&#x27;</span>;
 gsap.registerPlugin(ScrollTrigger);
@@ -3502,6 +3501,32 @@ gsap.registerPlugin(ScrollTrigger);
         </li>
         
     
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="scroll-anim24.html" data-role="tree-link" data-pjax data-handle="scroll-anim24">
+                <span>スクロールアニメーション24</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
                 </ul>
             </li>
@@ -3706,6 +3731,8 @@ gsap.registerPlugin(ScrollTrigger);
                 Back
             </button>
         </div>
+        
+    
         
     
         

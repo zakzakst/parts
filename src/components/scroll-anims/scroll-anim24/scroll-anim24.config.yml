@@ -1,0 +1,21 @@
+title: スクロールアニメーション24
+label: スクロールアニメーション24
+variants:
+  - name: default
+    label: スクロールアニメーション24
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-scroll'
+context:
+  items:
+    - url: 'https://picsum.photos/id/1000/400/400'
+      heading: '見出し01'
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    - url: 'https://picsum.photos/id/1001/400/400'
+      heading: '見出し02'
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+    - url: 'https://picsum.photos/id/1002/400/400'
+      heading: '見出し03'
+      text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'

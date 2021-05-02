@@ -1,0 +1,13 @@
+.scroll-anim-24#js-scroll-anim-24
+  each item, index in items
+    .scroll-anim-24__item.js-scroll-anim-24
+      .scroll-anim-24__img
+        svg(viewBox='0 0 300 300', preserveAspectRatio='xMidYMid slice')
+          defs
+            mask.scroll-anim-24__img-mask(id='mask' + index)
+              path.scroll-anim-24__img-mask-base(d='M 0 150 l 150 -150 l 150 150 l -150 150 l -150 -150 Z')
+          foreignObject.scroll-anim-24__img-img-wrapper(width='300', height='300', mask='url(#mask' + index + ')')
+            .scroll-anim-24__img-img(style='background-image: url(' + item.url + ');')
+      .scroll-anim-24__content
+        .scroll-anim-24__heading #{ item.heading }
+        .scroll-anim-24__text #{ item.text }

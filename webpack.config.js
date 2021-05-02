@@ -11,7 +11,7 @@ module.exports = {
     extensions: [
       '.js',
       '.ts',
-    ]
+    ],
   },
   output: {
     path: `${__dirname}/dist/js`,
@@ -41,7 +41,7 @@ module.exports = {
           }
         ]
       },
-    ]
+    ],
   },
   optimization: {
     minimize: true,

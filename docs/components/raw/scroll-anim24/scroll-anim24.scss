@@ -1,0 +1,57 @@
+$BLOCK_NAME: '.scroll-anim-24';
+
+// 変数
+$duration_default: 0.5s;
+$duration_delay: 0.5s;
+
+#{ $BLOCK_NAME } {
+  &__item {
+    display: flex;
+    align-items: center;
+    & + & {
+      margin-top: 24px;
+    }
+  }
+
+  &__img {
+    flex-shrink: 0;
+    width: 25%;
+  }
+
+  &__img-img {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &__content {
+    width: 75%;
+    padding: 24px;
+    padding-left: 48px;
+  }
+
+  &__heading {
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all $duration_default $duration_delay;
+    transform: translateX(-20px);
+    @at-root #{ $BLOCK_NAME }__item.is-animated & {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__text {
+    margin-top: 8px;
+    font-size: 16px;
+    opacity: 0;
+    transition: all $duration_default $duration_delay;
+    transform: translateX(-20px);
+    @at-root #{ $BLOCK_NAME }__item.is-animated & {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

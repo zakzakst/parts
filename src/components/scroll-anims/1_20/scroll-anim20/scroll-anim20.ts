@@ -1,6 +1,7 @@
 'use strict';
 
-// import Snap from 'snapsvg'
+import 'snapsvg-cjs';
+declare const Snap: any;
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);

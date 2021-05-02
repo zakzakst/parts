@@ -32,6 +32,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sass-glob": "^1.1.0",
+    "imports-loader": "^2.0.0",
     "prettier": "^2.2.1",
     "pug": "^3.0.2",
     "stylelint": "^13.12.0",
@@ -53,7 +54,8 @@
     "lightbox2": "^2.11.3",
     "reset-css": "^5.0.1",
     "slick-carousel": "^1.8.1",
-    "snapsvg": "^0.5.1"
+    "snapsvg": "^0.5.1",
+    "snapsvg-cjs": "0.0.6"
   },
   "fractal": {
     "main": "fractalfile.js"
