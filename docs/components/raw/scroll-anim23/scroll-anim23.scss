@@ -1,0 +1,72 @@
+$BLOCK_NAME: '.scroll-anim-23';
+
+// 変数
+$duration_default: 0.5s;
+
+#{ $BLOCK_NAME } {
+  @include Mq(md) {
+    display: flex;
+  }
+
+  &__bg {
+    position: sticky;
+    top: 0;
+    display: none;
+    @include Mq(md) {
+      display: block;
+      width: 50%;
+      height: 100vh;
+    }
+  }
+
+  &__bg-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    transition: opacity $duration_default;
+    &.is-active {
+      opacity: 1;
+    }
+    & > img {
+      width: 100%;
+      max-width: 400px;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__items {
+    @include Mq(md) {
+      width: 50%;
+    }
+  }
+
+  &__item {
+    & + & {
+      margin-top: 48px;
+    }
+  }
+
+  &__img {
+    max-width: 400px;
+    margin: 0 auto 16px;
+    @include Mq(md) {
+      display: none;
+    }
+  }
+
+  &__heading {
+    font-size: 24px;
+  }
+
+  &__content {
+    margin-top: 8px;
+  }
+}
