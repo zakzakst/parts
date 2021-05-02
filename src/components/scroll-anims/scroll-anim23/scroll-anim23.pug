@@ -1,0 +1,12 @@
+.scroll-anim-23#js-scroll-anim-23
+  .scroll-anim-23__bg
+    each item in items
+      .scroll-anim-23__bg-img
+        img(src=item.img)
+  .scroll-anim-23__items
+    each item in items
+      .scroll-anim-23__item
+        .scroll-anim-23__img
+          img(src=item.spImg)
+        .scroll-anim-23__heading #{ item.heading }
+        .scroll-anim-23__content !{ item.content }
