@@ -23,6 +23,9 @@ https://qiita.com/hiro0218/items/7ac41f58891d96951fa1
 ・snapsvg and requirejs, Cannot read property 'on' of undefined`
 https://stackoverflow.com/questions/36304565/snapsvg-and-requirejs-cannot-read-property-on-of-undefined
 
+・Chart.js Integration
+https://www.chartjs.org/docs/latest/getting-started/integration.html
+
 ## 未作成
 
 ### ボタン
@@ -87,6 +90,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://greensock.com/forums/topic/12253-number-animation/ （文字のランダム表示）
 https://www.otemon-jh.ed.jp/o-drive/ （バズキーワード）
 https://www2.mejiro.ac.jp/univ/mejinavi2021/ （両サイドのスライド）
 https://book.mynavi.jp/webpro-free/ （背景のアニメーション）
