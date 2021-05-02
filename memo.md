@@ -20,6 +20,9 @@ https://qiita.com/ichimonji_haji/items/4eff56ec19c5cfc61468
 ・猫でもわかるスクロールイベントパフォーマンス改善ポイント 2018
 https://qiita.com/hiro0218/items/7ac41f58891d96951fa1
 
+・snapsvg and requirejs, Cannot read property 'on' of undefined`
+https://stackoverflow.com/questions/36304565/snapsvg-and-requirejs-cannot-read-property-on-of-undefined
+
 ## 未作成
 
 ### ボタン
