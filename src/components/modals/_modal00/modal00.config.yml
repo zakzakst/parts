@@ -1,11 +1,11 @@
-title: ギャラリー00
-label: ギャラリー00
+title: モーダル00
+label: モーダル00
 variants:
   - name: default
-    label: ギャラリー00
+    label: モーダル00
     status: ready
     # status: prototype
     # status: wip
     # hidden: true
 context:
-  text: ギャラリー00
+  text: モーダル00

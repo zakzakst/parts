@@ -50,7 +50,7 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
-数字カウント、グラフ、SVG、既存のパーツ
+https://b-risk.jp/blog/2021/02/luxy/ （luxy.js 使ってみる）
 https://hotaru-personalized.com/
 https://brand.studysapuri.jp/
 https://swissdent.creative-nights.com/
@@ -62,9 +62,7 @@ https://swissdent.creative-nights.com/
 https://www.aur.co.jp/contact/
 https://saga-hirakawaya.jp/brand/contact/
 
-### ギャリー
-
-https://www.smbc-gp.co.jp/stera/
+### モーダル
 
 ### 問い合わせ
 

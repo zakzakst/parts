@@ -1,0 +1,15 @@
+title: モーダル01
+label: モーダル01
+variants:
+  - name: default
+    label: モーダル01
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  heading: '見出しが入ります'
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  img: 'https://picsum.photos/id/1000/400/200'
+  width: 400
+  height: 200
