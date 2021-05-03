@@ -1,24 +1,24 @@
 @import '../../node_modules/reset-css/sass/_reset.scss';
 
 // Slick
-$slick-font-path: '/img/plugins/slick/fonts/';
-$slick-loader-path: '/img/plugins/slick/';
+$slick-font-path: '/parts/img/plugins/slick/fonts/';
+$slick-loader-path: '/parts/img/plugins/slick/';
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 @import '../../node_modules/slick-carousel/slick/slick-theme.scss';
 
 // lightbox2
 @import '../../node_modules/lightbox2/dist/css/lightbox.min';
 .lb-cancel {
-  background-image: url(/img/plugins/lightbox2/loading.gif);
+  background-image: url(/parts/img/plugins/lightbox2/loading.gif);
 }
 .lb-nav a.lb-prev {
-  background-image: url(/img/plugins/lightbox2/prev.png);
+  background-image: url(/parts/img/plugins/lightbox2/prev.png);
 }
 .lb-nav a.lb-next {
-  background-image: url(/img/plugins/lightbox2/next.png);
+  background-image: url(/parts/img/plugins/lightbox2/next.png);
 }
 .lb-data .lb-close {
-  background-image: url(/img/plugins/lightbox2/close.png);
+  background-image: url(/parts/img/plugins/lightbox2/close.png);
 }
 
 * {
