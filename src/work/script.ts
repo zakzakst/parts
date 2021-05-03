@@ -89,6 +89,12 @@ import { modal01 } from '../components/modals/modal01/modal01';
 modal01();
 
 /**
+ * 開始アニメーション
+ */
+import { startAnim01 } from '../components/start-anims/start-anim01/start-anim01';
+startAnim01();
+
+/**
  * その他
  */
 import { other08 } from '../components/others/other08/other08';
