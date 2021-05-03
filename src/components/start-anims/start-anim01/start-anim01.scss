@@ -1,0 +1,51 @@
+$BLOCK_NAME: '.start-anim-01';
+
+// 変数
+$color_primary: #333;
+$color_progress_bg: #666;
+$color_progress_val: #fff;
+$color_white: #fff;
+$duration_default: 0.3s;
+
+#{ $BLOCK_NAME } {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: $color_primary;
+
+  &__content {
+    width: 100%;
+  }
+
+  &__text {
+    margin-bottom: 8px;
+    color: $color_white;
+    text-align: center;
+  }
+
+  &__progress {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background: $color_progress_bg;
+  }
+
+  &__progress-val {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: $color_progress_val;
+    transition: width $duration_default;
+  }
+}

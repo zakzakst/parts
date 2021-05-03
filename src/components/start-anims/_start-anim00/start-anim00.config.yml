@@ -1,0 +1,11 @@
+title: 開始アニメーション00
+label: 開始アニメーション00
+variants:
+  - name: default
+    label: 開始アニメーション00
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
