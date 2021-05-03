@@ -30,6 +30,8 @@ https://www.chartjs.org/docs/latest/getting-started/integration.html
 
 ### ボタン
 
+https://enjin-dash.com/
+
 ### 見出し
 
 ### カード
@@ -57,6 +59,8 @@ https://swissdent.creative-nights.com/
 
 ### FAQ
 
+https://dm-creation.jp/
+
 ### フォーム
 
 https://www.aur.co.jp/contact/
@@ -81,7 +85,7 @@ https://www.uzabase.com/jp/investors/
 https://majime.jp/
 https://factfashion.jp/
 
-### オープンアニメーション
+### 開始アニメーション
 
 https://s-y-n.jp/
 https://enjin-dash.com/about/index.html
