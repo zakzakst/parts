@@ -68,12 +68,6 @@ import { faq08 } from '../components/faqs/faq08/faq08';
 faq08();
 
 /**
- * ギャラリー
- */
-// import { gallery01 } from '../components/galleries/gallery01/gallery01';
-// gallery01();
-
-/**
  * 見出し
  */
 import { heading07 } from '../components/headings/heading07/heading07';
@@ -87,6 +81,12 @@ menu01();
 
 import { menu02 } from '../components/menus/menu02/menu02';
 menu02();
+
+/**
+ * モーダル
+ */
+import { modal01 } from '../components/modals/modal01/modal01';
+modal01();
 
 /**
  * その他
