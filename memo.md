@@ -42,6 +42,7 @@ https://enjin-dash.com/
 
 ### カルーセル
 
+https://schoo.jp/
 https://goodpatch.com/careers （スライド）
 https://ion-e-air.jp/
 https://www.karststonepaper.com/
@@ -58,8 +59,6 @@ https://brand.studysapuri.jp/
 https://swissdent.creative-nights.com/
 
 ### FAQ
-
-https://dm-creation.jp/
 
 ### フォーム
 

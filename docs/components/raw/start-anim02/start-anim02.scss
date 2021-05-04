@@ -1,0 +1,74 @@
+$BLOCK_NAME: '.start-anim-02';
+
+// 変数
+$color_primary: #00bfa6;
+$color_white: #fff;
+
+#{ $BLOCK_NAME } {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &__bg-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 26%;
+    background: $color_primary;
+    &:nth-child(1) {
+      right: 75%;
+    }
+    &:nth-child(2) {
+      right: 50%;
+    }
+    &:nth-child(3) {
+      right: 25%;
+    }
+    &:nth-child(4) {
+      right: 0;
+    }
+  }
+
+  &__content {
+    z-index: 1;
+    font-size: 0;
+    text-align: center;
+    letter-spacing: 1.5px;
+    & > span {
+      display: inline-block;
+      font-size: 36px;
+      font-weight: bold;
+      color: $color_white;
+      animation: startAnim02Loading 3s infinite;
+      @for $i from 1 through 10 {
+        &:nth-child(#{ $i }) {
+          animation-delay: #{0.15s * ($i - 1)};
+        }
+      }
+    }
+  }
+}
+
+@keyframes startAnim02Loading {
+  0% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-16px);
+  }
+  40% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
