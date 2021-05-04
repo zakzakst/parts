@@ -94,6 +94,9 @@ modal01();
 import { startAnim01 } from '../components/start-anims/start-anim01/start-anim01';
 startAnim01();
 
+import { startAnim02 } from '../components/start-anims/start-anim02/start-anim02';
+startAnim02();
+
 /**
  * その他
  */
