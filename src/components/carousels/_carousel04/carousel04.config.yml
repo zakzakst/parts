@@ -1,0 +1,18 @@
+title: カルーセル04
+label: カルーセル04
+variants:
+  - name: default
+    label: カルーセル04
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  item:
+    link: '#'
+    img: 'https://picsum.photos/id/1000/400/200'
+    category: 'CATEGORY'
+    date: '2021.00.00UP'
+    title: 'タイトルが入ります'
+    editorSub: '著者情報'
+    editor: '山田太郎'
