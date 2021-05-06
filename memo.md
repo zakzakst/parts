@@ -91,7 +91,6 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
-https://greensock.com/forums/topic/12253-number-animation/ （文字のランダム表示）
 https://www.otemon-jh.ed.jp/o-drive/ （バズキーワード）
 https://www2.mejiro.ac.jp/univ/mejinavi2021/ （両サイドのスライド）
 https://book.mynavi.jp/webpro-free/ （背景のアニメーション）
