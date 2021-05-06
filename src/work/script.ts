@@ -102,3 +102,6 @@ startAnim02();
  */
 import { other08 } from '../components/others/other08/other08';
 other08();
+
+import { other09 } from '../components/others/other09/other09';
+other09();
