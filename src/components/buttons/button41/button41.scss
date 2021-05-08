@@ -1,0 +1,59 @@
+$BLOCK_NAME: '.button-41';
+
+// 変数
+$color_white: #fff;
+$color_black: #000;
+$gradient_bg: linear-gradient(
+  135deg,
+  #ff9600 16%,
+  #f637a7 32%,
+  #8e00c7 50%,
+  #4e1ef2 68%,
+  #00b5e7 84%
+);
+$duration_default: 0.3s;
+
+#{ $BLOCK_NAME } {
+  display: block;
+  width: 336px;
+  height: 78px;
+  padding: 2px;
+  font-size: 22px;
+  background: $gradient_bg;
+  border-radius: 9999px;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: $color_white;
+    text-align: center;
+    background: rgba($color_black, 0.85);
+    border-radius: 9999px;
+    transition: $duration_default;
+    @at-root #{ $BLOCK_NAME }:hover & {
+      color: rgba($color_white, 0.6);
+      background: rgba($color_black, 0.6);
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    width: 8px;
+    height: 8px;
+    margin: auto;
+    border-top: 1px solid $color_white;
+    border-right: 1px solid $color_white;
+    transition: $duration_default;
+    transform: rotate(45deg);
+    @at-root #{ $BLOCK_NAME }:hover & {
+      right: 10px;
+    }
+  }
+}

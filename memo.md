@@ -36,12 +36,15 @@ https://enjin-dash.com/
 
 ### カード
 
+https://www.napla.co.jp/recruit/newgrads/
+
 ### ニュース一覧
 
 ### サービス一覧
 
 ### カルーセル
 
+https://www.napla.co.jp/recruit/newgrads/
 https://schoo.jp/
 https://goodpatch.com/careers （スライド）
 https://ion-e-air.jp/
@@ -53,6 +56,7 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
+https://www.napla.co.jp/recruit/newgrads/ （見出し）
 https://b-risk.jp/blog/2021/02/luxy/ （luxy.js 使ってみる）
 https://hotaru-personalized.com/
 https://brand.studysapuri.jp/
