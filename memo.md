@@ -36,6 +36,7 @@ https://enjin-dash.com/
 
 ### カード
 
+https://sakuramachi-kumamoto.jp/
 https://www.napla.co.jp/recruit/newgrads/
 
 ### ニュース一覧
