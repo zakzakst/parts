@@ -58,7 +58,6 @@ https://wrl.co.jp/about/ （沿革部分）
 ### スクロールアニメーション
 
 https://www.napla.co.jp/recruit/newgrads/ （見出し）
-https://b-risk.jp/blog/2021/02/luxy/ （luxy.js 使ってみる）
 https://hotaru-personalized.com/
 https://brand.studysapuri.jp/
 https://swissdent.creative-nights.com/
