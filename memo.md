@@ -36,7 +36,6 @@ https://enjin-dash.com/
 
 ### カード
 
-https://www.angelhome.co.jp/
 https://sakuramachi-kumamoto.jp/
 https://www.napla.co.jp/recruit/newgrads/
 
