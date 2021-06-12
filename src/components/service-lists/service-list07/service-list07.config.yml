@@ -1,0 +1,16 @@
+title: サービス一覧07
+label: サービス一覧07
+variants:
+  - name: default
+    label: サービス一覧07
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  number: '01'
+  img: 'https://picsum.photos/id/1000/400/300'
+  heading: '見出しが入ります'
+  subHeading: 'サブ見出しが入ります'
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
+  link: '#'

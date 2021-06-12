@@ -44,8 +44,6 @@ https://www.napla.co.jp/recruit/newgrads/
 
 ### サービス一覧
 
-https://www.sun-top.jp/
-
 ### カルーセル
 
 https://www.napla.co.jp/recruit/newgrads/
@@ -60,7 +58,7 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
-https://www.angelhome.co.jp/ （COMPANY部分）
+https://www.angelhome.co.jp/ （COMPANY 部分）
 https://www.napla.co.jp/recruit/newgrads/ （見出し）
 https://hotaru-personalized.com/
 https://brand.studysapuri.jp/
