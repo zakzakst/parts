@@ -36,9 +36,6 @@ https://enjin-dash.com/
 
 ### カード
 
-https://sakuramachi-kumamoto.jp/
-https://www.napla.co.jp/recruit/newgrads/
-
 ### ニュース一覧
 
 ### サービス一覧
@@ -58,7 +55,7 @@ https://wrl.co.jp/about/ （沿革部分）
 ### スクロールアニメーション
 
 https://www.angelhome.co.jp/ （COMPANY 部分）
-https://www.napla.co.jp/recruit/newgrads/ （見出し）
+https://www.napla.co.jp/recruit/newgrads/ （見出し、カード）
 https://hotaru-personalized.com/
 https://brand.studysapuri.jp/
 https://swissdent.creative-nights.com/
