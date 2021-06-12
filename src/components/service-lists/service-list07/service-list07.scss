@@ -1,0 +1,101 @@
+$BLOCK_NAME: '.service-list-07';
+
+// 変数
+$color_primary: #101757;
+$color_secondary: #68a4d5;
+$color_white: #fff;
+$color_gray: #e8e9ed;
+$color_sub_heading: #174d91;
+$color_text: #84899c;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  max-width: 480px;
+  padding-top: 40px;
+
+  &__number {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-family: 'Lora', serif;
+    font-size: 80px;
+    line-height: 1;
+    color: $color_secondary;
+  }
+
+  &__img {
+    padding-right: 60px;
+  }
+
+  &__content {
+    position: relative;
+    padding: 30px;
+    margin: -100px 0 0 60px;
+    background: $color_white;
+  }
+
+  &__heading {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 2;
+  }
+
+  &__sub-heading {
+    font-size: 14px;
+    color: $color_sub_heading;
+  }
+
+  &__text {
+    padding: 10px 0 10px 15px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: $color_text;
+    border-left: solid 6px $color_gray;
+  }
+
+  &__button-wrapper {
+    margin-top: 20px;
+  }
+
+  &__button {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px 8px 36px;
+    font-family: 'Lora', serif;
+    color: $color_white;
+    background: $color_primary;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: block;
+      content: '';
+    }
+    &::before {
+      left: 20px;
+      height: 0;
+      margin: auto;
+      border: 6px solid transparent;
+      border-left-color: $color_white;
+    }
+    &::after {
+      right: 0;
+      left: 0;
+      border: 1px solid $color_white;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      color: $color_white;
+      &::after {
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        opacity: 1;
+      }
+    }
+  }
+}
