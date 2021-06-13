@@ -1,0 +1,13 @@
+title: スクロールアニメーション26
+label: スクロールアニメーション26
+variants:
+  - name: default
+    label: スクロールアニメーション26
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-scroll'
+context:
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
+  link: '#'
