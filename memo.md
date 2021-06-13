@@ -30,11 +30,11 @@ https://www.chartjs.org/docs/latest/getting-started/integration.html
 
 ### ボタン
 
-https://enjin-dash.com/
-
 ### 見出し
 
 ### カード
+
+https://pogg-sweetpotatopie.com/
 
 ### ニュース一覧
 
@@ -54,7 +54,8 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
-https://www.angelhome.co.jp/ （COMPANY 部分）
+https://pogg-sweetpotatopie.com/
+https://enjin-dash.com/ （Member 部分）
 https://www.napla.co.jp/recruit/newgrads/ （見出し、カード）
 https://hotaru-personalized.com/
 https://brand.studysapuri.jp/
@@ -93,6 +94,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://pogg-sweetpotatopie.com/ （kv にある最新ニュースのホバー挙動）
 https://www.otemon-jh.ed.jp/o-drive/ （バズキーワード）
 https://www2.mejiro.ac.jp/univ/mejinavi2021/ （両サイドのスライド）
 https://book.mynavi.jp/webpro-free/ （背景のアニメーション）
