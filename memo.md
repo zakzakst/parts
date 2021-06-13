@@ -55,7 +55,6 @@ https://wrl.co.jp/about/ （沿革部分）
 ### スクロールアニメーション
 
 https://pogg-sweetpotatopie.com/
-https://enjin-dash.com/ （Member 部分）
 https://www.napla.co.jp/recruit/newgrads/ （見出し、カード）
 https://hotaru-personalized.com/
 https://brand.studysapuri.jp/

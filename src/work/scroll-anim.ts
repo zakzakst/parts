@@ -72,3 +72,6 @@ scrollAnim24();
 
 import { scrollAnim25 } from '../components/scroll-anims/scroll-anim25/scroll-anim25';
 scrollAnim25();
+
+import { scrollAnim26 } from '../components/scroll-anims/scroll-anim26/scroll-anim26';
+scrollAnim26();
