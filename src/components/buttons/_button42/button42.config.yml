@@ -1,0 +1,12 @@
+title: ボタン42
+label: ボタン42
+variants:
+  - name: default
+    label: ボタン42
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  text: 'Contact'

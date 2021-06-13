@@ -1,0 +1,122 @@
+$BLOCK_NAME: '.button-42';
+
+// 変数
+$color_primary: #ffd800;
+$color_secondary: #151d35;
+$color_shine: rgb(0, 62, 146);
+$color_white: #fff;
+$shadow_default: 5px 5px 20px rgba(0, 18, 109, 0.2);
+$transition_default: 0.3s;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 110px;
+  overflow: hidden;
+  background: $color_secondary;
+  box-shadow: $shadow_default;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    display: block;
+    content: '';
+    transform: skewX(30deg);
+    animation: button42Shine 2.5s ease-in-out infinite;
+  }
+  &::before {
+    width: 100px;
+    background: rgba($color_shine, 0.3);
+    animation-delay: 1s;
+  }
+  &::after {
+    width: 40px;
+    background: rgba($color_shine, 0.5);
+    animation-delay: 1.1s;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 10;
+    display: block;
+    padding: 0 56px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: $color_primary;
+    text-align: center;
+    letter-spacing: 0.08em;
+    transition: $transition_default;
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      margin: auto;
+      content: '';
+      border-color: transparent transparent transparent $color_white;
+      border-style: solid;
+      border-width: 8px 0 8px 32px;
+      transition: transform $transition_default;
+    }
+    @at-root #{ $BLOCK_NAME }:hover & {
+      color: $color_secondary;
+      &::before {
+        transform: translateX(8px);
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: $color_primary;
+    transition: transform $transition_default;
+    transform: scaleX(0);
+    transform-origin: right;
+    @at-root #{ $BLOCK_NAME }:hover & {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 2px;
+    bottom: -68px;
+    z-index: 2;
+    width: 120px;
+    height: 68px;
+    content: '';
+    background: url(https://enjin-dash.com/wp-content/themes/enjin-dash/img/top/contact_hover.svg)
+      no-repeat;
+    background-size: contain;
+    transition: $transition_default;
+    @at-root #{ $BLOCK_NAME }:hover & {
+      bottom: 0;
+    }
+  }
+}
+
+@keyframes button42Shine {
+  0% {
+    left: -100px;
+  }
+  50% {
+    left: 590px;
+  }
+  100% {
+    left: 590px;
+  }
+}
