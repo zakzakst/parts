@@ -9,4 +9,4 @@ variants:
     # hidden: true
 context:
   link: '#'
-  text: 'ボタン43'
+  text: 'BUTTON 43'

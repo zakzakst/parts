@@ -171,7 +171,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-8f184e9021d686bf7bd4032b9de1bd21-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button-43&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>ボタン43<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button-43&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>BUTTON 43<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -179,7 +179,8 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-8f184e9021d686bf7bd4032b9de1bd21-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre>a.button-43<span class="hljs-params">(<span class="hljs-attr">href</span>=link)</span> <span class="hljs-comment">#{ text }</span></pre>
+        <pre><span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.button-43</span>(href=link)
+  <span class="hljs-selector-tag">span</span> #{ <span class="hljs-selector-tag">text</span> }</pre>
     </code>
 </div>
 
@@ -190,7 +191,7 @@
             
             <pre>{
   <span class="hljs-attr">&quot;link&quot;</span>: <span class="hljs-string">&quot;#&quot;</span>,
-  <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;ボタン43&quot;</span>
+  <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;BUTTON 43&quot;</span>
 }</pre>
             
         
@@ -230,9 +231,74 @@
 <span class="hljs-variable">$color_secondary_light</span>: <span class="hljs-number">#f5f4f3</span>;
 <span class="hljs-variable">$color_white</span>: <span class="hljs-number">#fff</span>;
 <span class="hljs-variable">$color_black</span>: <span class="hljs-number">#1a1a1a</span>;
+<span class="hljs-variable">$shadow_default</span>: <span class="hljs-number">8px</span> <span class="hljs-number">13px</span> <span class="hljs-number">15px</span> rgba(<span class="hljs-number">141</span>, <span class="hljs-number">135</span>, <span class="hljs-number">132</span>, <span class="hljs-number">0.18</span>);
+<span class="hljs-variable">$shadow_hover</span>: <span class="hljs-number">0</span> <span class="hljs-number">7px</span> <span class="hljs-number">15px</span> rgba(<span class="hljs-number">95</span>, <span class="hljs-number">20</span>, <span class="hljs-number">78</span>, <span class="hljs-number">0.3</span>);
+<span class="hljs-variable">$duration_default</span>: <span class="hljs-number">0.5s</span>;
 
 #{ <span class="hljs-variable">$BLOCK_NAME</span> } {
-  <span class="hljs-comment">//</span>
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">274px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">74px</span>;
+  <span class="hljs-attribute">overflow</span>: hidden;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">74px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color_black</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">letter-spacing</span>: <span class="hljs-number">1px</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$color_white</span>;
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow_default</span>;
+  <span class="hljs-attribute">transition</span>: box-shadow <span class="hljs-variable">$duration_default</span>, color <span class="hljs-variable">$duration_default</span>;
+  &amp;<span class="hljs-selector-pseudo">::before</span> {
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">margin</span>: auto;
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&#x27;&#x27;</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color_primary</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-variable">$duration_default</span>;
+    <span class="hljs-attribute">transform</span>: scale(<span class="hljs-number">0</span>);
+  }
+  &amp;<span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$color_white</span>;
+    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-variable">$shadow_hover</span>;
+    &amp;<span class="hljs-selector-pseudo">::before</span> {
+      <span class="hljs-attribute">transform</span>: scale(<span class="hljs-number">30</span>);
+    }
+  }
+
+  &amp; &gt; <span class="hljs-selector-tag">span</span> {
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">12px</span>;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-variable">$duration_default</span>;
+    <span class="hljs-attribute">transform</span>: translateX(-<span class="hljs-number">16px</span>);
+    &amp;<span class="hljs-selector-pseudo">::before</span> {
+      <span class="hljs-attribute">position</span>: absolute;
+      <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+      <span class="hljs-attribute">left</span>: <span class="hljs-number">100%</span>;
+      <span class="hljs-attribute">display</span>: block;
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">32px</span>;
+      <span class="hljs-attribute">height</span>: <span class="hljs-number">1px</span>;
+      <span class="hljs-attribute">margin</span>: auto;
+      <span class="hljs-attribute">content</span>: <span class="hljs-string">&#x27;&#x27;</span>;
+      <span class="hljs-attribute">background</span>: <span class="hljs-variable">$color_black</span>;
+      <span class="hljs-attribute">transition</span>: opacity <span class="hljs-variable">$duration_default</span>;
+    }
+    <span class="hljs-keyword">@at-root</span> #{ <span class="hljs-variable">$BLOCK_NAME</span> }<span class="hljs-selector-pseudo">:hover</span> &gt; <span class="hljs-selector-tag">span</span> {
+      <span class="hljs-attribute">transform</span>: translateX(<span class="hljs-number">0</span>);
+      &amp;<span class="hljs-selector-pseudo">::before</span> {
+        <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+      }
+    }
+  }
 }
 </pre>
                             </code>
@@ -250,7 +316,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">205 Bytes</span>
+                    <span class="Meta-value">1.7 KB</span>
                 </li>
             </ul>
         </div>
