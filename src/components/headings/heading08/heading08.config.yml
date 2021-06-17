@@ -1,0 +1,11 @@
+title: 見出し08
+label: 見出し08
+variants:
+  - name: default
+    label: 見出し08
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  num: '01'
