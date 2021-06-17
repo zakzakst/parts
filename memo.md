@@ -32,6 +32,8 @@ https://www.chartjs.org/docs/latest/getting-started/integration.html
 
 ### 見出し
 
+http://www.d1meisei.co.jp/ （大見出しと一覧アイコンがある見出し両方）
+
 ### カード
 
 ### ニュース一覧
