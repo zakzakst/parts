@@ -36,6 +36,8 @@ https://www.azusasekkei.co.jp/
 
 ### カード
 
+https://eltes-si.co.jp/
+
 ### ニュース一覧
 
 ### サービス一覧
