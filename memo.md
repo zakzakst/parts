@@ -44,6 +44,7 @@ https://eltes-si.co.jp/
 
 ### カルーセル
 
+https://careers.denso.com/
 https://www.napla.co.jp/recruit/newgrads/
 https://schoo.jp/
 https://goodpatch.com/careers （スライド）
