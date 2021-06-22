@@ -30,12 +30,11 @@ https://www.chartjs.org/docs/latest/getting-started/integration.html
 
 ### ボタン
 
-https://www.azusasekkei.co.jp/
-
 ### 見出し
 
 ### カード
 
+https://www.aur.co.jp/
 https://eltes-si.co.jp/
 
 ### ニュース一覧
@@ -44,6 +43,7 @@ https://eltes-si.co.jp/
 
 ### カルーセル
 
+https://www.nissan-global.com/JP/PLANT/
 https://careers.denso.com/
 https://www.napla.co.jp/recruit/newgrads/
 https://schoo.jp/
@@ -97,6 +97,7 @@ https://enjin-dash.com/about/index.html
 ### その他
 
 https://www.otemon-jh.ed.jp/o-drive/ （バズキーワード）
+https://shunbin.jp/ （グラフ）
 https://www2.mejiro.ac.jp/univ/mejinavi2021/ （両サイドのスライド）
 https://book.mynavi.jp/webpro-free/ （背景のアニメーション）
 https://season.a2care-anatc.com/kahun/ （スクロールを促すバー）

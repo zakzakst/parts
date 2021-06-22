@@ -1,0 +1,64 @@
+$BLOCK_NAME: '.button-44';
+
+// 変数
+$color_primary: #44c0ed;
+$color_black: #333;
+$color_border: #555;
+$height_button: 60px;
+$duration_default: 0.2s;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  width: 260px;
+  height: $height_button;
+  padding: 0 60px 0 20px;
+  font-size: 14px;
+  line-height: $height_button;
+  color: $color_black;
+  border-top: 1px solid $color_border;
+  border-bottom: 1px solid $color_border;
+  transition: color $duration_default;
+  &::before {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    bottom: -1px;
+    z-index: 1;
+    display: block;
+    width: 60px;
+    content: '';
+    border-top: 1px solid $color_primary;
+    border-bottom: 1px solid $color_primary;
+    transition: width $duration_default;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 24px;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    content: '';
+    border-top: 1px solid $color_primary;
+    border-right: 1px solid $color_primary;
+    transition: right $duration_default;
+    transform: rotate(45deg);
+  }
+  & > span {
+    position: relative;
+    z-index: 2;
+  }
+  &:hover {
+    color: $color_primary;
+    &::before {
+      width: 100%;
+    }
+    &::after {
+      right: 14px;
+    }
+  }
+}
