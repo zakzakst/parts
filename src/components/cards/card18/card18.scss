@@ -1,0 +1,121 @@
+$BLOCK_NAME: '.card-18';
+
+// 変数
+$color_primary: #1a2e45;
+$color_white: #fff;
+$easing_default: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    padding: 32px 0;
+    font-family: '游ゴシック', YuGothic, sans-serif;
+    color: $color_primary;
+  }
+
+  &__num {
+    font-family: 'Oswald', sans-serif;
+    font-size: 74px;
+    font-weight: 700;
+  }
+
+  &__title {
+    margin-top: 24px;
+    & > span {
+      position: relative;
+      display: inline-block;
+      padding-right: 30px;
+      overflow: hidden;
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 34px;
+      letter-spacing: 0.2em;
+      background: $color_white;
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        content: '';
+        background: $color_primary;
+        transform: scaleX(0);
+        @at-root #{ $BLOCK_NAME }:hover & {
+          animation: card18TextMaskIn 0.3s $easing_default forwards alternate,
+            card18TextMaskOut 0.4s $easing_default 0.5s forwards alternate;
+        }
+      }
+    }
+  }
+
+  &__title-en {
+    margin-top: 4px;
+    & > span {
+      position: relative;
+      display: inline-block;
+      padding-right: 30px;
+      overflow: hidden;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.26em;
+      background: $color_white;
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        content: '';
+        background: $color_primary;
+        transform: scaleX(0);
+        @at-root #{ $BLOCK_NAME }:hover & {
+          animation: card18TextMaskIn 0.3s $easing_default 0.1s forwards
+              alternate,
+            card18TextMaskOut 0.4s $easing_default 0.5s forwards alternate;
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 200px;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+@keyframes card18TextMaskIn {
+  0% {
+    transform: scaleX(0);
+    transform-origin: top left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: top left;
+  }
+}
+
+@keyframes card18TextMaskOut {
+  0% {
+    transform: scaleX(1);
+    transform-origin: top right;
+  }
+  100% {
+    transform: scaleX(0);
+    transform-origin: top right;
+  }
+}

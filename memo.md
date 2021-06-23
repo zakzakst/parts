@@ -34,8 +34,6 @@ https://www.chartjs.org/docs/latest/getting-started/integration.html
 
 ### カード
 
-https://eltes-si.co.jp/
-
 ### ニュース一覧
 
 ### サービス一覧
