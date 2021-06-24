@@ -1,0 +1,124 @@
+$BLOCK_NAME: '.contact-04';
+
+// 変数
+$color_white: #fff;
+$color_black: #171717;
+$gradient_bg: linear-gradient(135deg, #0066b8 0%, #7e2b6e 50%, #ed9a30 100%);
+$duration_default: 0.3s;
+
+#{ $BLOCK_NAME } {
+  display: block;
+  padding: 48px 16px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: $color_white;
+  background: $gradient_bg;
+  background-size: 200% 200%;
+  animation: contact04BgAnim 10s ease infinite;
+  &:hover {
+    color: $color_white;
+  }
+
+  &__heading {
+    line-height: 1;
+  }
+
+  &__heading-en {
+    display: inline-block;
+    margin-right: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  &__text {
+    margin-top: 32px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 2;
+    & > span {
+      position: relative;
+      display: inline-block;
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        height: 1px;
+        content: '';
+        background: $color_white;
+        transition: transform $duration_default;
+        transform: scaleX(0);
+        transform-origin: left;
+        @at-root #{ $BLOCK_NAME }:hover & {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  &__button-icon {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    margin-left: 24px;
+    background: rgba($color_white, 0.1);
+    border: 1px solid rgba($color_white, 0.3);
+    border-radius: 50%;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      margin: auto;
+      content: '';
+    }
+    &::before {
+      left: 2px;
+      z-index: 1;
+      width: 0;
+      height: 0;
+      border-color: transparent transparent transparent $color_white;
+      border-style: solid;
+      border-width: 3px 0 3px 9px;
+      transition: border-color $duration_default;
+      @at-root #{ $BLOCK_NAME }:hover & {
+        border-color: transparent transparent transparent $color_black;
+      }
+    }
+    &::after {
+      width: 56px;
+      height: 56px;
+      background: $color_white;
+      border-radius: 50%;
+      transition: transform $duration_default;
+      transform: scale(0);
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@keyframes contact04BgAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

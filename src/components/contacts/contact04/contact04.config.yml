@@ -1,0 +1,15 @@
+title: お問い合わせ04
+label: お問い合わせ04
+variants:
+  - name: default
+    label: お問い合わせ04
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  headingEn: 'CONTACT'
+  heading: 'お問い合わせ'
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
+  buttonText: 'お問い合わせフォーム'

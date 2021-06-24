@@ -40,7 +40,6 @@ https://www.chartjs.org/docs/latest/getting-started/integration.html
 
 ### カルーセル
 
-https://www.nissan-global.com/JP/PLANT/
 https://careers.denso.com/
 https://www.napla.co.jp/recruit/newgrads/
 https://schoo.jp/
