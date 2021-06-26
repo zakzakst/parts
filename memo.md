@@ -28,6 +28,15 @@ https://www.chartjs.org/docs/latest/getting-started/integration.html
 
 ## 未作成
 
+### ヒーロー
+
+https://www.e-heyaspace.com/about/
+
+### フッター
+
+https://oromo.co.jp/
+http://a-dot.co.jp/
+
 ### ボタン
 
 ### 見出し
@@ -70,11 +79,6 @@ https://saga-hirakawaya.jp/brand/contact/
 ### モーダル
 
 ### 問い合わせ
-
-### フッター
-
-https://oromo.co.jp/
-http://a-dot.co.jp/
 
 ### メニュー
 
