@@ -1,0 +1,39 @@
+$BLOCK_NAME: '.button-45';
+
+// 変数
+$color_primary: #1d8f59;
+$color_white: #fff;
+$duration_default: 0.5s;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  width: 180px;
+  height: 52px;
+  padding: 15px 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1;
+  color: $color_primary;
+  text-align: center;
+  border: 1px solid $color_primary;
+  transition: $duration_default;
+  &::before {
+    position: absolute;
+    top: -2px;
+    left: -1px;
+    width: 19px;
+    height: 52px;
+    content: '';
+    content: url(https://miyamariken.co.jp/img/common/btn_g.svg);
+  }
+
+  &:hover {
+    color: $color_white;
+    background: $color_primary;
+    &::before {
+      content: url(https://miyamariken.co.jp/img/common/btn_w.svg);
+    }
+  }
+}
