@@ -53,6 +53,7 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
+https://www.mcplas.co.jp/
 https://pogg-sweetpotatopie.com/
 https://www.napla.co.jp/recruit/newgrads/ （見出し、カード）
 https://hotaru-personalized.com/
@@ -92,6 +93,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://school.dhw.co.jp/p/cgvfx-lp/1708dhw/ （履修科目）
 https://www.otemon-jh.ed.jp/o-drive/ （バズキーワード）
 https://shunbin.jp/ （グラフ）
 https://www2.mejiro.ac.jp/univ/mejinavi2021/ （両サイドのスライド）
