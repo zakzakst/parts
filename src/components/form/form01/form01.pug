@@ -1,2 +1,13 @@
 .form-01
-  input.form-01__input-01(type='text')
+  div.form-01__field
+    input.form-01__input(type='text')
+  div.form-01__field
+    textarea.form-01__textarea(rows='10')
+  div.form-01__field
+    select.form-01__select
+      - for (var i = 0; i < 10; i++)
+        option 項目#{i + 1}
+  //- div.form-01__field
+  //-   input.form-01__radio(type='radio')
+  //- div.form-01__field
+  //-   input.form-01__checkbox(type='checkbox')
