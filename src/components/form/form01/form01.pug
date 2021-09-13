@@ -7,7 +7,9 @@
     select.form-01__select
       - for (var i = 0; i < 10; i++)
         option 項目#{i + 1}
-  //- div.form-01__field
-  //-   input.form-01__radio(type='radio')
+  div.form-01__field
+    label.form-01__radio(for='form-01-radio')
+      input.form-01__radio(type='radio', id='form-01-radio')
+      | ラジオボタン01
   //- div.form-01__field
   //-   input.form-01__checkbox(type='checkbox')
