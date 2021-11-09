@@ -8,11 +8,13 @@ export const utility01 = () => {
 class Utility01 {
   el: HTMLElement;
   cookieKey: String;
-  cookieMaxAge: Number;
+  cookieMaxAge: number;
+  animSpeed: number;
   constructor() {
     this.el = document.createElement('div');
     this.cookieKey = 'cookie-check';
-    this.cookieMaxAge = 180; // 秒数
+    this.cookieMaxAge = 2592000; // 30（日） * 24（時間） * 60（分） * 60（秒）
+    this.animSpeed = 300; // ミリ秒
   }
 
   /**
@@ -73,6 +75,7 @@ class Utility01 {
    * 確認フォームを表示
    */
   showForm(): void {
+    // 要素の作成
     const markup = `
       <div class="utility-01">
         <p class="utility-01__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<p>
@@ -83,16 +86,23 @@ class Utility01 {
       <div>
     `;
     this.el.insertAdjacentHTML('beforeend', markup);
+    this.el.style.transition = `${this.animSpeed}ms`;
     this.onClickForm();
+    // 要素の挿入
     document.body.appendChild(this.el);
-    // TODO: フォーム表示のアニメーション
+    setTimeout(() => {
+      this.el.classList.add('is-animated');
+    }, 40);
   }
 
   /**
    * 確認フォームを非表示
    */
   hideForm(): void {
-    // TODO: フォーム非表示の処理
+    this.el.classList.remove('is-animated');
+    setTimeout(() => {
+      document.body.removeChild(this.el);
+    }, this.animSpeed);
   }
 
   /**
