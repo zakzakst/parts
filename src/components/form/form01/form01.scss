@@ -1,0 +1,32 @@
+$BLOCK_NAME: '.form-01';
+
+// 変数
+$color_primary: #000;
+$color_secondary: #f00;
+$radius_default: 8px;
+$shadow_default: 0 0 8px rgba($color_secondary, 0.3);
+$duration_default: 0.4s;
+
+#{ $BLOCK_NAME } {
+  &__field {
+    max-width: 480px;
+    & + & {
+      margin-top: 16px;
+    }
+  }
+
+  &__input,
+  &__textarea,
+  &__select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid $color_primary;
+    border-radius: $radius_default;
+    transition: box-shadow $duration_default;
+    &:focus {
+      border-color: $color_secondary;
+      outline: none;
+      box-shadow: $shadow_default;
+    }
+  }
+}
