@@ -236,11 +236,13 @@
   <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">12px</span> <span class="hljs-number">24px</span> rgba(<span class="hljs-number">#000</span>, <span class="hljs-number">0.2</span>);
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">visibility</span>: hidden;
-  <span class="hljs-attribute">transition</span>: <span class="hljs-number">0.3s</span>;
+  <span class="hljs-attribute">transition</span>: inherit;
+  <span class="hljs-attribute">transform</span>: translateY(<span class="hljs-number">24px</span>);
 
   <span class="hljs-keyword">@at-root</span> .is-animated &gt; #{ <span class="hljs-variable">$BLOCK_NAME</span> } {
     <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
     <span class="hljs-attribute">visibility</span>: visible;
+    <span class="hljs-attribute">transform</span>: translateY(<span class="hljs-number">0</span>);
   }
 }
 </pre>
@@ -259,7 +261,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">383 Bytes</span>
+                    <span class="Meta-value">449 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -282,11 +284,13 @@
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Utility01</span> </span>{
   <span class="hljs-attr">el</span>: HTMLElement;
   cookieKey: <span class="hljs-built_in">String</span>;
-  cookieMaxAge: <span class="hljs-built_in">Number</span>;
+  cookieMaxAge: <span class="hljs-built_in">number</span>;
+  animSpeed: <span class="hljs-built_in">number</span>;
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&#x27;div&#x27;</span>);
     <span class="hljs-built_in">this</span>.cookieKey = <span class="hljs-string">&#x27;cookie-check&#x27;</span>;
-    <span class="hljs-built_in">this</span>.cookieMaxAge = <span class="hljs-number">180</span>; <span class="hljs-comment">// 秒数</span>
+    <span class="hljs-built_in">this</span>.cookieMaxAge = <span class="hljs-number">2592000</span>; <span class="hljs-comment">// 30（日） * 24（時間） * 60（分） * 60（秒）</span>
+    <span class="hljs-built_in">this</span>.animSpeed = <span class="hljs-number">300</span>; <span class="hljs-comment">// ミリ秒</span>
   }
 
   <span class="hljs-comment">/**
@@ -347,6 +351,7 @@
    * 確認フォームを表示
    */</span>
   showForm(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// 要素の作成</span>
     <span class="hljs-keyword">const</span> markup = <span class="hljs-string">`
       &lt;div class=&quot;utility-01&quot;&gt;
         &lt;p class=&quot;utility-01__text&quot;&gt;テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。&lt;p&gt;
@@ -357,16 +362,23 @@
       &lt;div&gt;
     `</span>;
     <span class="hljs-built_in">this</span>.el.insertAdjacentHTML(<span class="hljs-string">&#x27;beforeend&#x27;</span>, markup);
+    <span class="hljs-built_in">this</span>.el.style.transition = <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">this</span>.animSpeed}</span>ms`</span>;
     <span class="hljs-built_in">this</span>.onClickForm();
+    <span class="hljs-comment">// 要素の挿入</span>
     <span class="hljs-built_in">document</span>.body.appendChild(<span class="hljs-built_in">this</span>.el);
-    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> フォーム表示のアニメーション</span>
+    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-built_in">this</span>.el.classList.add(<span class="hljs-string">&#x27;is-animated&#x27;</span>);
+    }, <span class="hljs-number">40</span>);
   }
 
   <span class="hljs-comment">/**
    * 確認フォームを非表示
    */</span>
   hideForm(): <span class="hljs-built_in">void</span> {
-    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> フォーム非表示の処理</span>
+    <span class="hljs-built_in">this</span>.el.classList.remove(<span class="hljs-string">&#x27;is-animated&#x27;</span>);
+    <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-built_in">document</span>.body.removeChild(<span class="hljs-built_in">this</span>.el);
+    }, <span class="hljs-built_in">this</span>.animSpeed);
   }
 
   <span class="hljs-comment">/**
@@ -404,7 +416,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.3 KB</span>
+                    <span class="Meta-value">3.7 KB</span>
                 </li>
             </ul>
         </div>

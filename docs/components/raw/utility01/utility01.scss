@@ -13,10 +13,12 @@ $BLOCK_NAME: '.utility-01';
   box-shadow: 0 -12px 24px rgba(#000, 0.2);
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s;
+  transition: inherit;
+  transform: translateY(24px);
 
   @at-root .is-animated > #{ $BLOCK_NAME } {
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
   }
 }
