@@ -13,7 +13,7 @@ class Utility01 {
   constructor() {
     this.el = document.createElement('div');
     this.cookieKey = 'cookie-check';
-    this.cookieMaxAge = 180; // 30（日） * 24（時間） * 60（分） * 60（秒）
+    this.cookieMaxAge = 2592000; // 30（日） * 24（時間） * 60（分） * 60（秒）
     this.animSpeed = 300; // ミリ秒
   }
 
