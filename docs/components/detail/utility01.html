@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.2" type="text/css">
 
 
-<title>汎用パーツ01 | コンポーネント集</title>
+<title>クッキー情報取得確認 | コンポーネント集</title>
 
 </head>
 <body>
@@ -70,7 +70,7 @@
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/utility01.html" title="Preview">
-            汎用パーツ01
+            クッキー情報取得確認
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -171,7 +171,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-e05599d9fe3dcd07c7acbb1a39ce7cff-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-01&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -179,7 +179,8 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-e05599d9fe3dcd07c7acbb1a39ce7cff-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre></pre>
+        <pre><span class="hljs-regexp">//</span>- ※fractalで他のパーツとJSを共有している関係上記載。サイト全体で有効にする想定のため、本来は不要
+<span class="hljs-comment">#js-utility-01</span></pre>
     </code>
 </div>
 
@@ -297,6 +298,10 @@
    * 初期化
    */</span>
   init(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// <span class="hljs-doctag">NOTE:</span> 対応する要素がない場合、処理を終了</span>
+    <span class="hljs-comment">// ※fractalで他のパーツとJSを共有している関係上記載。サイト全体で有効にする想定のため、本来は不要</span>
+    <span class="hljs-keyword">const</span> el = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-01&#x27;</span>);
+    <span class="hljs-keyword">if</span> (!el) <span class="hljs-keyword">return</span>;
     <span class="hljs-comment">// クッキーが有効でない場合、処理を終了</span>
     <span class="hljs-keyword">if</span> (!navigator.cookieEnabled) <span class="hljs-keyword">return</span>;
     <span class="hljs-built_in">this</span>.onLoad();
@@ -416,7 +421,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">3.7 KB</span>
+                    <span class="Meta-value">4 KB</span>
                 </li>
             </ul>
         </div>
@@ -430,8 +435,9 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-e05599d9fe3dcd07c7acbb1a39ce7cff-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <h2 id="参考">参考</h2>
-<p><a href="" target="_blank"></a></p>
+        <p>クッキーで情報を取得していることをユーザーに確認する際のスクリプト。</p>
+<p>「同意します」ボタンをクリックすると、クッキーを発行する。<br>
+JS で設定した期間中は再度アクセスしても要素が表示されなくなる。</p>
 
         
     </div>
@@ -4249,7 +4255,33 @@
         
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="utility01">
-                <span>汎用パーツ01</span>
+                <span>クッキー情報取得確認</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="utility02.html" data-role="tree-link" data-pjax data-handle="utility02">
+                <span>汎用パーツ02</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -4297,6 +4329,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         
