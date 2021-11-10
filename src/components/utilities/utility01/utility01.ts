@@ -21,6 +21,10 @@ class Utility01 {
    * 初期化
    */
   init(): void {
+    // NOTE: 対応する要素がない場合、処理を終了
+    // ※fractalで他のパーツとJSを共有している関係上記載。サイト全体で有効にする想定のため、本来は不要
+    const el = document.getElementById('js-utility-01');
+    if (!el) return;
     // クッキーが有効でない場合、処理を終了
     if (!navigator.cookieEnabled) return;
     this.onLoad();

@@ -1,8 +1,8 @@
-title: クッキー情報取得確認
-label: クッキー情報取得確認
+title: 汎用パーツ02
+label: 汎用パーツ02
 variants:
   - name: default
-    label: 汎用パーツ01
+    label: 汎用パーツ02
     status: ready
     # status: prototype
     # status: wip
