@@ -122,4 +122,3 @@ https://www2.mejiro.ac.jp/univ/mejinavi2021/ （使い方 ※入学手続き）
 ### 汎用パーツ
 
 入力予測
-初期モーダルバナー表示
