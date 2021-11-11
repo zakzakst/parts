@@ -1,1 +1,18 @@
 .utility-02#js-utility-02
+  .p-2.content.has-text-centered
+    .field
+      .control
+        label.checkbox
+          input#js-utility-02-checkbox.utility-02__checkbox(type='checkbox')
+          a.js-utility-02-modal-open.utility-02__link(href=link) 利用規約
+          | に同意します
+    p
+      button#js-utility-02-button.button.is-primary(disabled) 申し込む
+.modal#js-utility-02-modal
+  .modal-background.js-utility-02-modal-close
+  .modal-card
+    header.modal-card-head
+      p.modal-card-title 利用規約
+      button.js-utility-02-modal-close.delete(aria-label='close')
+    section.modal-card-body
+      p !{ text }
