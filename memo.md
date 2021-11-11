@@ -118,3 +118,8 @@ https://www.otemae.ac.jp/opencampus/university/ （サービス ※どんな学�
 https://www.mizuno.jp/baseball/products/lightrevo.aspx （○○ について ※「軽量維新」と「グリーンライト」の部分）
 https://b43.jp/ （特長・強み ※セクション間の線が伸びる）
 https://www2.mejiro.ac.jp/univ/mejinavi2021/ （使い方 ※入学手続き）
+
+### 汎用パーツ
+
+入力予測
+初期モーダルバナー表示

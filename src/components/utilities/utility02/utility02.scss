@@ -3,5 +3,13 @@ $BLOCK_NAME: '.utility-02';
 // 変数
 
 #{ $BLOCK_NAME } {
-  //
+  &__checkbox {
+    display: inline-block;
+    margin-right: 4px;
+  }
+
+  &__link {
+    color: #00f;
+    text-decoration: underline;
+  }
 }
