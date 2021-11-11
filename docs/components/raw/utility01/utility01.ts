@@ -81,13 +81,13 @@ class Utility01 {
   showForm(): void {
     // 要素の作成
     const markup = `
-      <div class="utility-01">
-        <p class="utility-01__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<p>
-        <div class="utility-01__buttons">
-          <button class="utility-01__button --is-agree">同意します</button>
-          <button class="utility-01__button --is-disagree">同意しません</button>
+      <div class="utility-01 has-background-white p-2 content">
+        <p class="is-size-7">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        <div class="buttons are-small">
+          <button class="js-agree button is-primary">同意します</button>
+          <button class="js-disagree button is-primary is-inverted">同意しません</button>
         </div>
-      <div>
+      </div>
     `;
     this.el.insertAdjacentHTML('beforeend', markup);
     this.el.style.transition = `${this.animSpeed}ms`;
@@ -116,12 +116,12 @@ class Utility01 {
     this.el.addEventListener('click', e => {
       const targetEl = <HTMLElement>e.target;
       // 同意するボタンがクリックされた場合
-      if (targetEl.classList.contains('--is-agree')) {
+      if (targetEl.classList.contains('js-agree')) {
         this.setCheckState(true);
         this.hideForm();
       }
       // 同意しないボタンがクリックされた場合
-      if (targetEl.classList.contains('--is-disagree')) {
+      if (targetEl.classList.contains('js-disagree')) {
         this.setCheckState(false);
         alert('同意しない場合の処理を実行（ページ遷移など）');
       }

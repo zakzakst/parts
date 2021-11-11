@@ -231,8 +231,6 @@
   <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
-  <span class="hljs-attribute">padding</span>: <span class="hljs-number">12px</span>;
-  <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
   <span class="hljs-attribute">z-index</span>: <span class="hljs-number">9999</span>;
   <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> -<span class="hljs-number">12px</span> <span class="hljs-number">24px</span> rgba(<span class="hljs-number">#000</span>, <span class="hljs-number">0.2</span>);
   <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
@@ -262,7 +260,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">449 Bytes</span>
+                    <span class="Meta-value">410 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -358,13 +356,13 @@
   showForm(): <span class="hljs-built_in">void</span> {
     <span class="hljs-comment">// 要素の作成</span>
     <span class="hljs-keyword">const</span> markup = <span class="hljs-string">`
-      &lt;div class=&quot;utility-01&quot;&gt;
-        &lt;p class=&quot;utility-01__text&quot;&gt;テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。&lt;p&gt;
-        &lt;div class=&quot;utility-01__buttons&quot;&gt;
-          &lt;button class=&quot;utility-01__button --is-agree&quot;&gt;同意します&lt;/button&gt;
-          &lt;button class=&quot;utility-01__button --is-disagree&quot;&gt;同意しません&lt;/button&gt;
+      &lt;div class=&quot;utility-01 has-background-white p-2 content&quot;&gt;
+        &lt;p class=&quot;is-size-7&quot;&gt;テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。&lt;/p&gt;
+        &lt;div class=&quot;buttons are-small&quot;&gt;
+          &lt;button class=&quot;js-agree button is-primary&quot;&gt;同意します&lt;/button&gt;
+          &lt;button class=&quot;js-disagree button is-primary is-inverted&quot;&gt;同意しません&lt;/button&gt;
         &lt;/div&gt;
-      &lt;div&gt;
+      &lt;/div&gt;
     `</span>;
     <span class="hljs-built_in">this</span>.el.insertAdjacentHTML(<span class="hljs-string">&#x27;beforeend&#x27;</span>, markup);
     <span class="hljs-built_in">this</span>.el.style.transition = <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">this</span>.animSpeed}</span>ms`</span>;
@@ -393,12 +391,12 @@
     <span class="hljs-built_in">this</span>.el.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
       <span class="hljs-keyword">const</span> targetEl = &lt;HTMLElement&gt;e.target;
       <span class="hljs-comment">// 同意するボタンがクリックされた場合</span>
-      <span class="hljs-keyword">if</span> (targetEl.classList.contains(<span class="hljs-string">&#x27;--is-agree&#x27;</span>)) {
+      <span class="hljs-keyword">if</span> (targetEl.classList.contains(<span class="hljs-string">&#x27;js-agree&#x27;</span>)) {
         <span class="hljs-built_in">this</span>.setCheckState(<span class="hljs-literal">true</span>);
         <span class="hljs-built_in">this</span>.hideForm();
       }
       <span class="hljs-comment">// 同意しないボタンがクリックされた場合</span>
-      <span class="hljs-keyword">if</span> (targetEl.classList.contains(<span class="hljs-string">&#x27;--is-disagree&#x27;</span>)) {
+      <span class="hljs-keyword">if</span> (targetEl.classList.contains(<span class="hljs-string">&#x27;js-disagree&#x27;</span>)) {
         <span class="hljs-built_in">this</span>.setCheckState(<span class="hljs-literal">false</span>);
         alert(<span class="hljs-string">&#x27;同意しない場合の処理を実行（ページ遷移など）&#x27;</span>);
       }
@@ -421,7 +419,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4 KB</span>
+                    <span class="Meta-value">4.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -4281,7 +4279,7 @@ JS で設定した期間中は再度アクセスしても要素が表示され�
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="utility02.html" data-role="tree-link" data-pjax data-handle="utility02">
-                <span>汎用パーツ02</span>
+                <span>利用規約確認</span>
                 
 
 <div class="Status Status--unlabelled">

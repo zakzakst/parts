@@ -9,7 +9,6 @@ class Utility00 {
   el: HTMLElement;
   constructor(elId: string) {
     this.el = document.getElementById(elId);
-    if (!this.el) return;
   }
 
   /**
