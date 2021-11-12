@@ -14,7 +14,7 @@ class Utility00 {
   /**
    * 初期化
    */
-  init() {
+  init(): void {
     if (!this.el) return;
     console.log('utility 00');
   }

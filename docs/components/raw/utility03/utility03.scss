@@ -3,5 +3,15 @@ $BLOCK_NAME: '.utility-03';
 // 変数
 
 #{ $BLOCK_NAME } {
-  //
+  &__content {
+    max-width: 256px;
+  }
+
+  &__banner {
+    display: block;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }

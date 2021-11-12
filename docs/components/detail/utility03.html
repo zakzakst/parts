@@ -181,7 +181,14 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-3fedd4501fc1867243c58dcf117c1a33-panel-view">
     <code class="Code Code--lang-jade hljs">
         <pre><span class="hljs-regexp">//</span> ※fractalで他のパーツとJSを共有している関係上記載。サイト全体で有効にする想定のため、本来は不要
-<span class="hljs-comment">#js-utility-03</span></pre>
+<span class="hljs-comment">#js-utility-03</span>
+  <span class="hljs-regexp">//</span>- .modal.is-active
+  <span class="hljs-regexp">//</span>-   .modal-background
+  <span class="hljs-regexp">//</span>-   .modal-content
+  <span class="hljs-regexp">//</span>-     a.utility-<span class="hljs-number">03</span>__banner(href=<span class="hljs-string">&#x27;#&#x27;</span>)
+  <span class="hljs-regexp">//</span>-       .image.is-square
+  <span class="hljs-regexp">//</span>-         img(src=<span class="hljs-string">&#x27;https://bulma.io/images/placeholders/256x256.png&#x27;</span>)
+  <span class="hljs-regexp">//</span>-   button.modal-close.is-large(aria-label=<span class="hljs-string">&#x27;close&#x27;</span>)</pre>
     </code>
 </div>
 
@@ -334,7 +341,17 @@
 <span class="hljs-comment">// 変数</span>
 
 #{ <span class="hljs-variable">$BLOCK_NAME</span> } {
-  <span class="hljs-comment">//</span>
+  &amp;__content {
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">256px</span>;
+  }
+
+  &amp;__banner {
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">transition</span>: <span class="hljs-number">0.3s</span>;
+    &amp;<span class="hljs-selector-pseudo">:hover</span> {
+      <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.7</span>;
+    }
+  }
 }
 </pre>
                             </code>
@@ -352,7 +369,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">73 Bytes</span>
+                    <span class="Meta-value">220 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -370,23 +387,97 @@
 <span class="hljs-keyword">import</span> { U_COOKIE } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;./utilities&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> utility03 = <span class="hljs-function">() =&gt;</span> {
-  <span class="hljs-keyword">const</span> utility = <span class="hljs-keyword">new</span> Utility03(<span class="hljs-string">&#x27;js-utility-03&#x27;</span>);
+  <span class="hljs-keyword">const</span> utility = <span class="hljs-keyword">new</span> Utility03();
   utility.init();
 }
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Utility03</span> </span>{
   <span class="hljs-attr">el</span>: HTMLElement;
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">elId: <span class="hljs-built_in">string</span></span>)</span> {
-    <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.getElementById(elId);
+  cookieKey: <span class="hljs-built_in">string</span>;
+  cookieMaxAge: <span class="hljs-built_in">number</span>;
+  bannerLink: <span class="hljs-built_in">string</span>;
+  bannerImg: <span class="hljs-built_in">string</span>;
+  bannerCloseEls: HTMLCollection;
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&#x27;div&#x27;</span>);
+    <span class="hljs-built_in">this</span>.cookieKey = <span class="hljs-string">&#x27;utility-03&#x27;</span>;
+    <span class="hljs-built_in">this</span>.cookieMaxAge = <span class="hljs-number">2592000</span>; <span class="hljs-comment">// 30（日） * 24（時間） * 60（分） * 60（秒）</span>
+    <span class="hljs-built_in">this</span>.bannerLink = <span class="hljs-string">&#x27;#&#x27;</span>;
+    <span class="hljs-built_in">this</span>.bannerImg = <span class="hljs-string">&#x27;https://bulma.io/images/placeholders/256x256.png&#x27;</span>;
+    <span class="hljs-built_in">this</span>.bannerCloseEls = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">&#x27;js-utility-03-banner-close&#x27;</span>);
   }
 
   <span class="hljs-comment">/**
    * 初期化
    */</span>
-  <span class="hljs-function"><span class="hljs-title">init</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.el) <span class="hljs-keyword">return</span>;
-    <span class="hljs-built_in">console</span>.log(U_COOKIE.getAll());
-    U_COOKIE.clear(<span class="hljs-string">&#x27;test&#x27;</span>);
+  init(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// <span class="hljs-doctag">NOTE:</span> 対応する要素がない場合、処理を終了</span>
+    <span class="hljs-comment">// ※fractalで他のパーツとJSを共有している関係上記載。サイト全体で有効にする想定のため、本来は不要</span>
+    <span class="hljs-keyword">const</span> el = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-03&#x27;</span>);
+    <span class="hljs-keyword">if</span> (!el) <span class="hljs-keyword">return</span>;
+    <span class="hljs-comment">// クッキーが有効でない場合、処理を終了</span>
+    <span class="hljs-keyword">if</span> (!navigator.cookieEnabled) <span class="hljs-keyword">return</span>;
+    <span class="hljs-built_in">this</span>.onLoad();
+  }
+
+  <span class="hljs-comment">/**
+   * ロード完了時のイベント設定
+   */</span>
+  onLoad(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">window</span>.onload = <span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-keyword">const</span> checkCookie = U_COOKIE.get(<span class="hljs-built_in">this</span>.cookieKey);
+      <span class="hljs-comment">// 未チェックの場合、チェックフォームを表示</span>
+      <span class="hljs-keyword">if</span> (!checkCookie) {
+        <span class="hljs-built_in">this</span>.showBanner();
+      }
+    };
+  }
+
+  <span class="hljs-comment">/**
+   * バナーを表示
+   */</span>
+   showBanner(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// 要素の作成</span>
+    <span class="hljs-keyword">const</span> markup = <span class="hljs-string">`
+      &lt;div class=&quot;modal is-active&quot;&gt;
+        &lt;div class=&quot;js-utility-03-banner-close modal-background&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;modal-content utility-03__content&quot;&gt;
+          &lt;a class=&quot;utility-03__banner&quot; href=&quot;<span class="hljs-subst">${<span class="hljs-built_in">this</span>.bannerLink}</span>&quot;&gt;
+            &lt;div class=&quot;image is-square&quot;&gt;
+              &lt;img src=&quot;<span class="hljs-subst">${<span class="hljs-built_in">this</span>.bannerImg}</span>&quot; /&gt;
+            &lt;/div&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;js-utility-03-banner-close modal-close is-large&quot; aria-label=&quot;close&quot;&gt;&lt;/button&gt;
+      &lt;/div&gt;
+    `</span>;
+    <span class="hljs-built_in">this</span>.el.insertAdjacentHTML(<span class="hljs-string">&#x27;beforeend&#x27;</span>, markup);
+    <span class="hljs-comment">// 要素の挿入</span>
+    <span class="hljs-built_in">document</span>.body.appendChild(<span class="hljs-built_in">this</span>.el);
+    <span class="hljs-built_in">this</span>.onClickBannerClose();
+  }
+
+  <span class="hljs-comment">/**
+   * バナーを非表示
+   */</span>
+  hideBanner(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// <span class="hljs-doctag">NOTE:</span> maxAgeの引数を設定しない場合、セッション中のみクッキーを保持</span>
+    U_COOKIE.set(<span class="hljs-built_in">this</span>.cookieKey, <span class="hljs-string">&#x27;true&#x27;</span>);
+    <span class="hljs-comment">// U_COOKIE.set(this.cookieKey, &#x27;true&#x27;, this.cookieMaxAge);</span>
+    <span class="hljs-built_in">document</span>.body.removeChild(<span class="hljs-built_in">this</span>.el);
+  }
+
+  <span class="hljs-comment">/**
+   * バナー非表示要素クリック時のイベント設定
+   */</span>
+  onClickBannerClose():<span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.bannerCloseEls.length) <span class="hljs-keyword">return</span>;
+    [...this.bannerCloseEls].forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
+      el.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+        e.preventDefault();
+        <span class="hljs-built_in">this</span>.hideBanner();
+      });
+    });
   }
 }
 </pre>
@@ -405,7 +496,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">435 Bytes</span>
+                    <span class="Meta-value">2.9 KB</span>
                 </li>
             </ul>
         </div>
@@ -419,8 +510,8 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-3fedd4501fc1867243c58dcf117c1a33-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <h2 id="参考">参考</h2>
-<p><a href="" target="_blank"></a></p>
+        <p>サイトアクセス時にバナーを表示するスクリプト。</p>
+<p>一度非表示にされると、設定した期間中はページ遷移してもバナーが表示されない。</p>
 
         
     </div>
