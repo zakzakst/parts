@@ -9,3 +9,6 @@ utility02();
 
 import { utility03 } from '../components/utilities/utility03/utility03';
 utility03();
+
+import { utility04 } from '../components/utilities/utility04/utility04';
+utility04();
