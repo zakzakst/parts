@@ -12,7 +12,7 @@ class Utility01 {
   animSpeed: number;
   constructor() {
     this.el = document.createElement('div');
-    this.cookieKey = 'cookie-check';
+    this.cookieKey = 'utility-01';
     this.cookieMaxAge = 2592000; // 30（日） * 24（時間） * 60（分） * 60（秒）
     this.animSpeed = 300; // ミリ秒
   }
