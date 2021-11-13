@@ -30,7 +30,6 @@ class Utility05 {
       // ローカル環境の場合
       this.dataUrl = '/data/utility05.json';
     }
-    console.log(location.origin);
     this.data = null;
   }
 
