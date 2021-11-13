@@ -21,7 +21,7 @@ class Utility04 {
     this.el = document.getElementById(elId);
     this.inputEl = <HTMLInputElement>document.getElementById('js-utility-04-input');
     this.recommendEl = document.getElementById('js-utility-04-recommend');
-    if (location.origin === 'https://zakzakst.github.io/') {
+    if (location.origin === 'https://zakzakst.github.io') {
       // GitHubの場合
       this.recommendItemsUrl = '/parts/data/utility04.json';
     } else {
