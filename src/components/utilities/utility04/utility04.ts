@@ -5,23 +5,6 @@ export const utility04 = () => {
   utility.init();
 }
 
-const recItems = [
-  {text: '明日', hiragana: 'あした'},
-  {text: '朝ごはん', hiragana: 'あさごはん'},
-  {text: '雨', hiragana: 'あめ'},
-  {text: 'アンチテーゼ', hiragana: 'あんちてーぜ'},
-  {text: '秋', hiragana: 'あき'},
-  {text: 'アルフォート', hiragana: 'あるふぉーと'},
-  {text: '餡蜜', hiragana: 'あんみつ'},
-  {text: '空き缶', hiragana: 'あきかん'},
-
-  {text: '今', hiragana: 'いま'},
-  {text: '一生', hiragana: 'いっしょう'},
-  {text: '一緒', hiragana: 'いっしょ'},
-  {text: '色々', hiragana: 'いろいろ'},
-  {text: '色鉛筆', hiragana: 'いろえんぴつ'}
-];
-
 type RecItem = {
   text: string,
   hiragana: string,
@@ -31,12 +14,20 @@ class Utility04 {
   el: HTMLElement;
   inputEl: HTMLInputElement;
   recommendEl: HTMLElement;
+  recommendItemsUrl: string;
   recommendItems: RecItem[];
   recommendMaxNum: number;
   constructor(elId: string) {
     this.el = document.getElementById(elId);
     this.inputEl = <HTMLInputElement>document.getElementById('js-utility-04-input');
     this.recommendEl = document.getElementById('js-utility-04-recommend');
+    if (location.origin === 'https://zakzakst.github.io/') {
+      // GitHubの場合
+      this.recommendItemsUrl = '/parts/data/utility04.json';
+    } else {
+      // ローカル環境の場合
+      this.recommendItemsUrl = '/data/utility04.json';
+    }
     this.recommendItems = [];
     this.recommendMaxNum = 3;
   }
@@ -44,12 +35,33 @@ class Utility04 {
   /**
    * 初期化
    */
-  init(): void {
+  async init(): Promise<void> {
     if (!this.el) return;
-    this.recommendItems = recItems;
+    this.recommendItems = await this.loadRecommendItems();
+    if (!this.recommendItems.length) return;
     this.onInputFrom();
     this.onBlurFrom();
     this.onClickRecommend();
+  }
+
+  /**
+   * レコメンド文言を読み込み
+   * @returns レコメンド文言の配列を返すPromiseオブジェクト
+   */
+  loadRecommendItems(): Promise<RecItem[]> {
+    return new Promise(resolve => {
+      fetch(this.recommendItemsUrl)
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          resolve(data);
+        })
+        .catch(error => {
+          console.log(error);
+          resolve([]);
+        });
+    });
   }
 
   /**
@@ -119,7 +131,7 @@ class Utility04 {
       setTimeout(() => {
         e.preventDefault();
         this.hideRecommend();
-      }, 100);
+      }, 400);
     });
   }
 
