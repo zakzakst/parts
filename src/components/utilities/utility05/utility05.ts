@@ -23,13 +23,14 @@ class Utility05 {
     this.prefectureId = '';
     this.districtId = '';
     this.townId = '';
-    if (location.origin === 'https://zakzakst.github.io/') {
+    if (location.origin === 'https://zakzakst.github.io') {
       // GitHubの場合
       this.dataUrl = '/parts/data/utility05.json';
     } else {
       // ローカル環境の場合
       this.dataUrl = '/data/utility05.json';
     }
+    console.log(location.origin);
     this.data = null;
   }
 
