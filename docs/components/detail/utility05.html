@@ -292,33 +292,6 @@
   utility.init();
 }
 
-<span class="hljs-keyword">const</span> items = {
-  <span class="hljs-string">&#x27;01&#x27;</span>: {
-    <span class="hljs-string">&#x27;id&#x27;</span>: <span class="hljs-string">&#x27;01&#x27;</span>,
-    <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;東京&#x27;</span>,
-    <span class="hljs-string">&#x27;dists&#x27;</span>: {
-      <span class="hljs-string">&#x27;01&#x27;</span>: {
-        <span class="hljs-string">&#x27;id&#x27;</span>: <span class="hljs-string">&#x27;01&#x27;</span>,
-        <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;練馬区&#x27;</span>,
-        <span class="hljs-string">&#x27;towns&#x27;</span>: {
-          <span class="hljs-string">&#x27;01&#x27;</span>: {<span class="hljs-string">&#x27;id&#x27;</span>: <span class="hljs-string">&#x27;01&#x27;</span>, <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;氷川台&#x27;</span>},
-          <span class="hljs-string">&#x27;02&#x27;</span>: {<span class="hljs-string">&#x27;id&#x27;</span>: <span class="hljs-string">&#x27;02&#x27;</span>, <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;平和台&#x27;</span>},
-        }
-      },
-      <span class="hljs-string">&#x27;02&#x27;</span>: {
-        <span class="hljs-string">&#x27;id&#x27;</span>: <span class="hljs-string">&#x27;02&#x27;</span>,
-        <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;板橋区&#x27;</span>,
-        <span class="hljs-string">&#x27;towns&#x27;</span>: {},
-      },
-    }
-  },
-  <span class="hljs-string">&#x27;02&#x27;</span>: {
-    <span class="hljs-string">&#x27;id&#x27;</span>: <span class="hljs-string">&#x27;02&#x27;</span>,
-    <span class="hljs-string">&#x27;label&#x27;</span>: <span class="hljs-string">&#x27;埼玉県&#x27;</span>,
-    <span class="hljs-string">&#x27;dists&#x27;</span>: {},
-  },
-};
-
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Utility05</span> </span>{
   <span class="hljs-attr">el</span>: HTMLElement;
   prefectureEl: HTMLSelectElement;
@@ -337,13 +310,14 @@
     <span class="hljs-built_in">this</span>.prefectureId = <span class="hljs-string">&#x27;&#x27;</span>;
     <span class="hljs-built_in">this</span>.districtId = <span class="hljs-string">&#x27;&#x27;</span>;
     <span class="hljs-built_in">this</span>.townId = <span class="hljs-string">&#x27;&#x27;</span>;
-    <span class="hljs-keyword">if</span> (location.origin === <span class="hljs-string">&#x27;https://zakzakst.github.io/&#x27;</span>) {
+    <span class="hljs-keyword">if</span> (location.origin === <span class="hljs-string">&#x27;https://zakzakst.github.io&#x27;</span>) {
       <span class="hljs-comment">// GitHubの場合</span>
       <span class="hljs-built_in">this</span>.dataUrl = <span class="hljs-string">&#x27;/parts/data/utility05.json&#x27;</span>;
     } <span class="hljs-keyword">else</span> {
       <span class="hljs-comment">// ローカル環境の場合</span>
       <span class="hljs-built_in">this</span>.dataUrl = <span class="hljs-string">&#x27;/data/utility05.json&#x27;</span>;
     }
+    <span class="hljs-built_in">console</span>.log(location.origin);
     <span class="hljs-built_in">this</span>.data = <span class="hljs-literal">null</span>;
   }
 
@@ -545,7 +519,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">6.2 KB</span>
+                    <span class="Meta-value">5.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -559,11 +533,7 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-f80171c482a55cb1603744bd157d9d5a-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <h2 id="参考">参考</h2>
-<ul>
-<li><a href="https://s-ishizaki.sakura.ne.jp/practice/05_search_form/">https://s-ishizaki.sakura.ne.jp/practice/05_search_form/</a></li>
-<li><a href="https://s-ishizaki.sakura.ne.jp/practice/05_search_form/js/index.js">https://s-ishizaki.sakura.ne.jp/practice/05_search_form/js/index.js</a></li>
-</ul>
+        <p>JSON データを取得して入力制限するスクリプト。</p>
 
         
     </div>
@@ -4505,6 +4475,32 @@
         </li>
         
     
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="utility06.html" data-role="tree-link" data-pjax data-handle="utility06">
+                <span>料金計算フォーム</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
 
                 </ul>
             </li>
@@ -4533,6 +4529,8 @@
                 Back
             </button>
         </div>
+        
+    
         
     
         
