@@ -5,33 +5,6 @@ export const utility05 = () => {
   utility.init();
 }
 
-const items = {
-  '01': {
-    'id': '01',
-    'label': '東京',
-    'dists': {
-      '01': {
-        'id': '01',
-        'label': '練馬区',
-        'towns': {
-          '01': {'id': '01', 'label': '氷川台'},
-          '02': {'id': '02', 'label': '平和台'},
-        }
-      },
-      '02': {
-        'id': '02',
-        'label': '板橋区',
-        'towns': {},
-      },
-    }
-  },
-  '02': {
-    'id': '02',
-    'label': '埼玉県',
-    'dists': {},
-  },
-};
-
 class Utility05 {
   el: HTMLElement;
   prefectureEl: HTMLSelectElement;

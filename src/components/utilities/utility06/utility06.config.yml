@@ -1,0 +1,12 @@
+title: 料金計算フォーム
+label: 料金計算フォーム
+variants:
+  - name: default
+    label: 汎用パーツ06
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-utilities'
+# context:
+#   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
