@@ -1,0 +1,36 @@
+{
+  "menus": [
+    {
+      "id": "menu_01",
+      "label": "プレーン",
+      "price": 1000
+    },
+    {
+      "id": "menu_02",
+      "label": "マルゲリータ",
+      "price": 1500
+    },
+    {
+      "id": "menu_03",
+      "label": "モッツァレラピザ",
+      "price": 1800
+    }
+  ],
+  "toppings": [
+    {
+      "id": "topping_01",
+      "label": "追加チーズ",
+      "price": 300
+    },
+    {
+      "id": "topping_02",
+      "label": "コーン",
+      "price": 200
+    },
+    {
+      "id": "topping_03",
+      "label": "サラミ",
+      "price": 400
+    }
+  ]
+}
