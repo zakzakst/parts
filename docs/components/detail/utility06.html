@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.2" type="text/css">
 
 
-<title>料金計算フォーム | コンポーネント集</title>
+<title>注文フォーム | コンポーネント集</title>
 
 </head>
 <body>
@@ -70,7 +70,7 @@
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/utility06.html" title="Preview">
-            料金計算フォーム
+            注文フォーム
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -171,7 +171,19 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-1e44bcb1a186fed52ffe2178be43609a-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;utility-06&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-06&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;utility-06 p-2&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-06&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-06-orders&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;js-utility-06-order-add button is-fullwidth is-primary is-outlined mt-4&quot;</span>&gt;</span>注文を追加<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;js-utility-06-order-submit button is-fullwidth is-info mt-4&quot;</span>&gt;</span>注文する<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-06-modal&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;js-utility-06-modal-close modal-background&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-card&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-card-head&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-card-title&quot;</span>&gt;</span>トッピング追加<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;js-utility-06-modal-close delete&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-card-body&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-06-modal-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-card-foot&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button is-primary&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-06-modal-submit&quot;</span>&gt;</span>決定<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;js-utility-06-modal-close button&quot;</span>&gt;</span>閉じる<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -179,7 +191,22 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-1e44bcb1a186fed52ffe2178be43609a-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre>#js-utility<span class="hljs-string">-06</span>.utility<span class="hljs-string">-06</span></pre>
+        <pre><span class="hljs-selector-id">#js-utility-06</span><span class="hljs-selector-class">.utility-06</span><span class="hljs-selector-class">.p-2</span>
+  <span class="hljs-selector-id">#js-utility-06-orders</span>
+  <span class="hljs-selector-tag">button</span><span class="hljs-selector-class">.js-utility-06-order-add</span><span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.is-fullwidth</span><span class="hljs-selector-class">.is-primary</span><span class="hljs-selector-class">.is-outlined</span><span class="hljs-selector-class">.mt-4</span> 注文を追加
+  <span class="hljs-selector-tag">button</span><span class="hljs-selector-class">.js-utility-06-order-submit</span><span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.is-fullwidth</span><span class="hljs-selector-class">.is-info</span><span class="hljs-selector-class">.mt-4</span> 注文する
+
+<span class="hljs-comment">//- モーダル</span>
+<span class="hljs-selector-id">#js-utility-06-modal</span><span class="hljs-selector-class">.modal</span>
+  <span class="hljs-selector-class">.js-utility-06-modal-close</span><span class="hljs-selector-class">.modal-background</span>
+  <span class="hljs-selector-class">.modal-card</span>
+    <span class="hljs-selector-tag">header</span><span class="hljs-selector-class">.modal-card-head</span>
+      <span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.modal-card-title</span> トッピング追加
+      <span class="hljs-selector-tag">button</span><span class="hljs-selector-class">.js-utility-06-modal-close</span><span class="hljs-selector-class">.delete</span>(aria-label=<span class="hljs-string">&#x27;close&#x27;</span>)
+    section<span class="hljs-selector-id">#js-utility-06-modal-body</span><span class="hljs-selector-class">.modal-card-body</span>
+    <span class="hljs-selector-tag">footer</span><span class="hljs-selector-class">.modal-card-foot</span>
+      button<span class="hljs-selector-id">#js-utility-06-modal-submit</span><span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.is-primary</span> 決定
+      <span class="hljs-selector-tag">button</span><span class="hljs-selector-class">.js-utility-06-modal-close</span><span class="hljs-selector-class">.button</span> 閉じる</pre>
     </code>
 </div>
 
@@ -226,7 +253,12 @@
 <span class="hljs-comment">// 変数</span>
 
 #{ <span class="hljs-variable">$BLOCK_NAME</span> } {
-  <span class="hljs-comment">//</span>
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">600px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+
+  &amp;__order + &amp;__order {
+    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">12px</span>;
+  }
 }
 </pre>
                             </code>
@@ -244,7 +276,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">73 Bytes</span>
+                    <span class="Meta-value">162 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -260,22 +292,318 @@
                                 <pre><span class="hljs-meta">&#x27;use strict&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> utility06 = <span class="hljs-function">() =&gt;</span> {
-  <span class="hljs-keyword">const</span> utility = <span class="hljs-keyword">new</span> Utility06(<span class="hljs-string">&#x27;js-utility-06&#x27;</span>);
+  <span class="hljs-keyword">const</span> utility = <span class="hljs-keyword">new</span> Utility06();
   utility.init();
 }
 
+<span class="hljs-keyword">type</span> Menu = {
+  <span class="hljs-attr">id</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">label</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">price</span>: <span class="hljs-built_in">number</span>,
+};
+
+<span class="hljs-keyword">type</span> Topping = {
+  <span class="hljs-attr">id</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">label</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">price</span>: <span class="hljs-built_in">number</span>,
+};
+
+<span class="hljs-keyword">type</span> Order = {
+  <span class="hljs-attr">menu</span>: Menu,
+  <span class="hljs-attr">toppings</span>: Topping[],
+};
+
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Utility06</span> </span>{
   <span class="hljs-attr">el</span>: HTMLElement;
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">elId: <span class="hljs-built_in">string</span></span>)</span> {
-    <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.getElementById(elId);
+  orders: Order[];
+  ordersEl: HTMLElement;
+  orderAddEls: HTMLCollection;
+  orderSubmitEls: HTMLCollection;
+  modalEl: HTMLElement;
+  modalTargetIndex: <span class="hljs-built_in">number</span>;
+  modalBodyEl: HTMLElement;
+  modalSubmitEl: HTMLElement;
+  modalCloseEls: HTMLCollection;
+  dataUrl: <span class="hljs-built_in">string</span>;
+  data: {<span class="hljs-attr">menus</span>: Menu[], <span class="hljs-attr">toppings</span>: Topping[]};
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-06&#x27;</span>);
+    <span class="hljs-built_in">this</span>.orders = [];
+    <span class="hljs-built_in">this</span>.ordersEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-06-orders&#x27;</span>);
+    <span class="hljs-built_in">this</span>.orderAddEls = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">&#x27;js-utility-06-order-add&#x27;</span>);
+    <span class="hljs-built_in">this</span>.orderSubmitEls = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">&#x27;js-utility-06-order-submit&#x27;</span>);
+    <span class="hljs-built_in">this</span>.modalEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-06-modal&#x27;</span>);
+    <span class="hljs-built_in">this</span>.modalTargetIndex = <span class="hljs-literal">null</span>;
+    <span class="hljs-built_in">this</span>.modalBodyEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-06-modal-body&#x27;</span>);
+    <span class="hljs-built_in">this</span>.modalSubmitEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-06-modal-submit&#x27;</span>);
+    <span class="hljs-built_in">this</span>.modalCloseEls = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">&#x27;js-utility-06-modal-close&#x27;</span>);
+    <span class="hljs-keyword">if</span> (location.origin === <span class="hljs-string">&#x27;https://zakzakst.github.io&#x27;</span>) {
+      <span class="hljs-comment">// GitHubの場合</span>
+      <span class="hljs-built_in">this</span>.dataUrl = <span class="hljs-string">&#x27;/parts/data/utility06.json&#x27;</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// ローカル環境の場合</span>
+      <span class="hljs-built_in">this</span>.dataUrl = <span class="hljs-string">&#x27;/data/utility06.json&#x27;</span>;
+    }
+    <span class="hljs-built_in">this</span>.data = {
+      <span class="hljs-attr">menus</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">toppings</span>: <span class="hljs-literal">null</span>,
+    };
   }
 
   <span class="hljs-comment">/**
    * 初期化
    */</span>
-  init(): <span class="hljs-built_in">void</span> {
+  <span class="hljs-keyword">async</span> init(): <span class="hljs-built_in">Promise</span>&lt;<span class="hljs-built_in">void</span>&gt; {
     <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.el) <span class="hljs-keyword">return</span>;
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;utility 06&#x27;</span>);
+    <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.loadData();
+    <span class="hljs-built_in">this</span>.data.menus = data.menus;
+    <span class="hljs-built_in">this</span>.data.toppings = data.toppings;
+    <span class="hljs-built_in">this</span>.modalInit();
+    <span class="hljs-comment">// 注文関連のイベント設定</span>
+    <span class="hljs-built_in">this</span>.onClickOrderAdd();
+    <span class="hljs-built_in">this</span>.onClickOrderSubmit();
+    <span class="hljs-built_in">this</span>.onClickOrders();
+    <span class="hljs-built_in">this</span>.onChangeOrderMenu();
+    <span class="hljs-comment">// モーダル関連のイベント設定</span>
+    <span class="hljs-built_in">this</span>.onClickModalSubmit();
+    <span class="hljs-built_in">this</span>.onClickModalClose();
+    <span class="hljs-comment">// 初期表示のため、注文を追加</span>
+    <span class="hljs-built_in">this</span>.orderAdd();
+  }
+
+  <span class="hljs-comment">/**
+   * データを読み込み
+   */</span>
+  loadData(): <span class="hljs-built_in">Promise</span>&lt;<span class="hljs-built_in">any</span>&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> {
+      fetch(<span class="hljs-built_in">this</span>.dataUrl)
+        .then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
+          <span class="hljs-keyword">return</span> res.json();
+        })
+        .then(<span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> {
+          resolve(data);
+        })
+        .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> {
+          <span class="hljs-built_in">console</span>.log(error);
+          resolve({});
+        });
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * 注文を追加
+   */</span>
+  orderAdd(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">let</span> menuSelects = <span class="hljs-string">&#x27;&#x27;</span>;
+    <span class="hljs-built_in">this</span>.data.menus.forEach(<span class="hljs-function"><span class="hljs-params">menu</span> =&gt;</span> {
+      menuSelects += <span class="hljs-string">`&lt;option value=&quot;<span class="hljs-subst">${menu.id}</span>&quot;&gt;<span class="hljs-subst">${menu.label}</span>&lt;/option&gt;`</span>;
+    });
+    <span class="hljs-keyword">const</span> markup = <span class="hljs-string">`
+      &lt;div class=&quot;utility-06__order card&quot;&gt;
+        &lt;div class=&quot;card-content&quot;&gt;
+          &lt;div class=&quot;content&quot;&gt;
+            &lt;div class=&quot;field is-horizontal&quot;&gt;
+              &lt;div class=&quot;field-label is-normal&quot;&gt;
+                &lt;label class=&quot;label&quot;&gt;メニュー&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;field-body&quot;&gt;
+                &lt;div class=&quot;control&quot;&gt;
+                  &lt;div class=&quot;select&quot;&gt;
+                    &lt;select&gt;<span class="hljs-subst">${menuSelects}</span>&lt;/select&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;field is-horizontal&quot;&gt;
+              &lt;div class=&quot;field-label&quot;&gt;
+                &lt;label class=&quot;label&quot;&gt;トッピング&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;field-body is-narrow&quot;&gt;
+                &lt;div class=&quot;control&quot;&gt;
+                  &lt;p class=&quot;js-utility-06-order-topping-text&quot;&gt;なし&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;card-footer-item --add&quot;&gt;トッピング追加&lt;/a&gt;
+          &lt;a href=&quot;#&quot; class=&quot;card-footer-item --delete&quot;&gt;削除&lt;/a&gt;
+        &lt;/footer&gt;
+      &lt;/div&gt;
+    `</span>;
+    <span class="hljs-built_in">this</span>.ordersEl.insertAdjacentHTML(<span class="hljs-string">&#x27;beforeend&#x27;</span>, markup);
+    <span class="hljs-built_in">this</span>.orders.push({
+      <span class="hljs-attr">menu</span>: <span class="hljs-built_in">this</span>.data.menus[<span class="hljs-number">0</span>],
+      <span class="hljs-attr">toppings</span>: [],
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * 注文を削除
+   * <span class="hljs-doctag">@param </span>targetIndex 削除する注文のインデックス
+   */</span>
+  orderDelete(targetIndex: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// 対象のHTML・配列要素を削除</span>
+    <span class="hljs-built_in">this</span>.orders.splice(targetIndex, <span class="hljs-number">1</span>);
+    <span class="hljs-built_in">this</span>.ordersEl.children[targetIndex].remove();
+    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.orders.length) {
+      <span class="hljs-built_in">this</span>.orderAdd();
+    }
+  }
+
+  <span class="hljs-comment">/**
+   * モーダル初期化
+   */</span>
+  modalInit(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.data.toppings.forEach(<span class="hljs-function">(<span class="hljs-params">topping: Topping</span>) =&gt;</span> {
+      <span class="hljs-keyword">const</span> markup = <span class="hljs-string">`&lt;label class=&quot;checkbox mr-4&quot;&gt;&lt;input type=&quot;checkbox&quot; value=&quot;<span class="hljs-subst">${topping.id}</span>&quot;&gt;<span class="hljs-subst">${topping.label}</span>&lt;/label&gt;`</span>;
+      <span class="hljs-built_in">this</span>.modalBodyEl.insertAdjacentHTML(<span class="hljs-string">&#x27;beforeend&#x27;</span>, markup);
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * モーダルを表示
+   * <span class="hljs-doctag">@param </span>targetIndex モーダルを表示する注文のインデックス
+   */</span>
+  modalOpen(targetIndex: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.modalTargetIndex = targetIndex;
+    <span class="hljs-comment">// 対応する注文のトッピング情報を反映</span>
+    <span class="hljs-keyword">const</span> targetToppings = <span class="hljs-built_in">this</span>.orders[<span class="hljs-built_in">this</span>.modalTargetIndex].toppings;
+    targetToppings.forEach(<span class="hljs-function"><span class="hljs-params">topping</span> =&gt;</span> {
+      <span class="hljs-keyword">const</span> toppingEl = &lt;HTMLInputElement&gt;<span class="hljs-built_in">this</span>.modalBodyEl.querySelector(<span class="hljs-string">`input[value=&#x27;<span class="hljs-subst">${topping.id}</span>&#x27;]`</span>);
+      toppingEl.checked = <span class="hljs-literal">true</span>;
+    });
+    <span class="hljs-built_in">this</span>.modalEl.classList.add(<span class="hljs-string">&#x27;is-active&#x27;</span>);
+  }
+
+  <span class="hljs-comment">/**
+   * モーダルを非表示
+   */</span>
+  modalClose(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.modalEl.classList.remove(<span class="hljs-string">&#x27;is-active&#x27;</span>);
+    <span class="hljs-comment">// チェックボックスをクリア</span>
+    <span class="hljs-keyword">const</span> checkboxEls = <span class="hljs-built_in">this</span>.modalBodyEl.getElementsByTagName(<span class="hljs-string">&#x27;input&#x27;</span>);
+    [...checkboxEls].forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
+      el.checked = <span class="hljs-literal">false</span>;
+    });
+    <span class="hljs-built_in">this</span>.modalTargetIndex = <span class="hljs-literal">null</span>;
+  }
+
+  <span class="hljs-comment">/**
+   * モーダルで選択されているトッピングを取得
+   * <span class="hljs-doctag">@returns </span>選択されているトッピングの情報
+   */</span>
+  getModalSelectToppings(): {<span class="hljs-attr">text</span>: <span class="hljs-built_in">string</span>, <span class="hljs-attr">items</span>: Topping[]} {
+    <span class="hljs-keyword">const</span> selectVals: <span class="hljs-built_in">string</span>[] = [];
+    <span class="hljs-keyword">const</span> checkboxEls = <span class="hljs-built_in">this</span>.modalBodyEl.getElementsByTagName(<span class="hljs-string">&#x27;input&#x27;</span>);
+    [...checkboxEls].forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
+      <span class="hljs-keyword">if</span> (el.checked) {
+        selectVals.push(el.value);
+      }
+    });
+    <span class="hljs-keyword">const</span> selectItems = <span class="hljs-built_in">this</span>.data.toppings.filter(<span class="hljs-function"><span class="hljs-params">topping</span> =&gt;</span> {
+      <span class="hljs-keyword">return</span> selectVals.indexOf(topping.id) !== -<span class="hljs-number">1</span>
+    });
+    <span class="hljs-keyword">const</span> selectLabels = selectItems.map(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> {
+      <span class="hljs-keyword">return</span> item.label;
+    });
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-attr">text</span>: selectLabels.join(<span class="hljs-string">&#x27; ／ &#x27;</span>),
+      <span class="hljs-attr">items</span>: selectItems,
+    };
+  }
+
+  <span class="hljs-comment">/**
+   * 注文を追加ボタンクリック時のイベント設定
+   */</span>
+  onClickOrderAdd(): <span class="hljs-built_in">void</span> {
+    [...this.orderAddEls].forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
+      el.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+        e.preventDefault();
+        <span class="hljs-built_in">this</span>.orderAdd();
+      });
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * 注文するボタンクリック時のイベント設定
+   */</span>
+  onClickOrderSubmit(): <span class="hljs-built_in">void</span> {
+    [...this.orderSubmitEls].forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
+      el.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+        e.preventDefault();
+        <span class="hljs-keyword">let</span> ordersPrice = <span class="hljs-number">0</span>;
+        <span class="hljs-built_in">this</span>.orders.forEach(<span class="hljs-function"><span class="hljs-params">order</span> =&gt;</span> {
+          <span class="hljs-keyword">let</span> orderPrice = order.menu.price;
+          order.toppings.forEach(<span class="hljs-function"><span class="hljs-params">topping</span> =&gt;</span> {
+            orderPrice += topping.price;
+          });
+          ordersPrice += orderPrice;
+        });
+        alert(<span class="hljs-string">`合計料金は<span class="hljs-subst">${ordersPrice}</span>円です。`</span>);
+      });
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * 注文カードクリック時のイベント設定
+   */</span>
+  onClickOrders(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.ordersEl.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+      <span class="hljs-keyword">const</span> target = &lt;HTMLElement&gt;e.target;
+      <span class="hljs-keyword">const</span> targetOrderEl = target.closest(<span class="hljs-string">&#x27;.utility-06__order&#x27;</span>);
+      <span class="hljs-keyword">const</span> targetOrderIndex = [...this.ordersEl.children].indexOf(targetOrderEl);
+      <span class="hljs-keyword">if</span> (target.classList.contains(<span class="hljs-string">&#x27;--add&#x27;</span>)) {
+        <span class="hljs-built_in">this</span>.modalOpen(targetOrderIndex);
+      }
+      <span class="hljs-keyword">if</span> (target.classList.contains(<span class="hljs-string">&#x27;--delete&#x27;</span>)) {
+        <span class="hljs-built_in">this</span>.orderDelete(targetOrderIndex);
+      }
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * 注文メニュー変更時のイベント設定
+   */</span>
+  onChangeOrderMenu(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.ordersEl.addEventListener(<span class="hljs-string">&#x27;change&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+      <span class="hljs-keyword">const</span> target = &lt;HTMLInputElement&gt;e.target;
+      <span class="hljs-keyword">const</span> targetOrderEl = target.closest(<span class="hljs-string">&#x27;.utility-06__order&#x27;</span>);
+      <span class="hljs-keyword">const</span> targetOrderIndex = [...this.ordersEl.children].indexOf(targetOrderEl);
+      <span class="hljs-keyword">const</span> menuId = target.value;
+      <span class="hljs-keyword">const</span> menuItem = <span class="hljs-built_in">this</span>.data.menus.find(<span class="hljs-function"><span class="hljs-params">menu</span> =&gt;</span> {
+        <span class="hljs-keyword">return</span> menu.id === menuId;
+      });
+      <span class="hljs-built_in">this</span>.orders[targetOrderIndex].menu = menuItem;
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * モーダル決定ボタンクリック時のイベント設定
+   */</span>
+  onClickModalSubmit(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.modalSubmitEl.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+      e.preventDefault();
+      <span class="hljs-keyword">const</span> selectToppings = <span class="hljs-built_in">this</span>.getModalSelectToppings();
+      <span class="hljs-keyword">const</span> targetOrderEl = <span class="hljs-built_in">this</span>.ordersEl.children[<span class="hljs-built_in">this</span>.modalTargetIndex];
+      <span class="hljs-keyword">const</span> targetToppingTextEl = targetOrderEl.getElementsByClassName(<span class="hljs-string">&#x27;js-utility-06-order-topping-text&#x27;</span>);
+      targetToppingTextEl[<span class="hljs-number">0</span>].textContent = selectToppings.text;
+      <span class="hljs-built_in">this</span>.orders[<span class="hljs-built_in">this</span>.modalTargetIndex].toppings = selectToppings.items;
+      <span class="hljs-built_in">this</span>.modalClose();
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * モーダルを閉じる要素クリック時のイベント設定
+   */</span>
+  onClickModalClose(): <span class="hljs-built_in">void</span> {
+    [...this.modalCloseEls].forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
+      el.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+        e.preventDefault();
+        <span class="hljs-built_in">this</span>.modalClose();
+      });
+    });
   }
 }
 </pre>
@@ -294,7 +622,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">364 Bytes</span>
+                    <span class="Meta-value">9.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -4256,7 +4584,7 @@
         
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="utility06">
-                <span>料金計算フォーム</span>
+                <span>注文フォーム</span>
                 
 
 <div class="Status Status--unlabelled">

@@ -3,5 +3,10 @@ $BLOCK_NAME: '.utility-06';
 // 変数
 
 #{ $BLOCK_NAME } {
-  //
+  max-width: 600px;
+  margin: 0 auto;
+
+  &__order + &__order {
+    margin-top: 12px;
+  }
 }

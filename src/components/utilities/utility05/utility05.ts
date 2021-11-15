@@ -36,7 +36,7 @@ class Utility05 {
   /**
    * 初期化
    */
-   async init(): Promise<void> {
+  async init(): Promise<void> {
     if (!this.el) return;
     this.data = await this.loadData();
     if (!Object.keys(this.data).length) return;
