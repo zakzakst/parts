@@ -4,9 +4,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
-    // NOTE: 作業用に一時コメントアウト
-    // 'script': './src/work/script.ts',
-    // 'scroll-anim': './src/work/scroll-anim.ts',
+    'script': './src/work/script.ts',
+    'scroll-anim': './src/work/scroll-anim.ts',
     'utilities': './src/work/utilities.ts',
   },
   resolve: {
