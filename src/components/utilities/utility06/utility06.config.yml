@@ -1,5 +1,5 @@
-title: 料金計算フォーム
-label: 料金計算フォーム
+title: 注文フォーム
+label: 注文フォーム
 variants:
   - name: default
     label: 汎用パーツ06
