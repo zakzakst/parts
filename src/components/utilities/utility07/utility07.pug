@@ -7,27 +7,30 @@
     p.js-utility-07-success.help.is-hidden.is-success 正しく入力されています。
     p.js-utility-07-danger.help.is-hidden.is-danger
 
-  //- // ヨミガナ（必須、全角カタカナ判定、文字数制限）
-  //- .field
-  //-   label.label ヨミガナ
-  //-   .control
-  //-     input.input.is-success(type='text', placeholder='ヤマダ　タロウ')
-  //-   p.help.is-success バリデーション文言
-  //-   p.help.is-danger バリデーション文言
+  // ヨミガナ（必須、全角カタカナ判定、文字数制限）
+  .field#js-utility-07-yomigana
+    label.label ヨミガナ
+    .control
+      input.js-utility-07-input.input(type='text', placeholder='ヤマダ　タロウ')
+    p.js-utility-07-success.help.is-hidden.is-success 正しく入力されています。
+    p.js-utility-07-danger.help.is-hidden.is-danger
 
-  //- // メールアドレス（必須、メール書式判定）
-  //- .field
-  //-   label.label メールアドレス
-  //-   .control
-  //-     input.input.is-danger(type='email', placeholder='sample@mail.com')
-  //-   p.help.is-success バリデーション文言
-  //-   p.help.is-danger バリデーション文言
+  // メールアドレス（必須、メール書式判定）
+  .field#js-utility-07-mail
+    label.label メールアドレス
+    .control
+      input.js-utility-07-input.input(type='email', placeholder='sample@mail.com')
+    p.js-utility-07-success.help.is-hidden.is-success 正しく入力されています。
+    p.js-utility-07-danger.help.is-hidden.is-danger
 
-  //- // お問い合わせ内容（文字数制限）
-  //- .field
-  //-   label.label お問い合わせ内容
-  //-   .control
-  //-     textarea.textarea.is-danger(placeholder='例：利用料金の内容について など')
-  //-   p.help.is-success バリデーション文言
-  //-   p.help.is-danger バリデーション文言
-  //-   p.help.has-text-right 100/400
+  // お問い合わせ内容（文字数制限）
+  .field#js-utility-07-contact
+    label.label お問い合わせ内容
+    .control
+      textarea.js-utility-07-input.textarea(placeholder='例：利用料金の内容について など')
+    p.js-utility-07-success.help.is-hidden.is-success 正しく入力されています。
+    p.js-utility-07-danger.help.is-hidden.is-danger
+    p.help.has-text-right
+      span#js-utility-07-contact-current
+      | /
+      span#js-utility-07-contact-max
