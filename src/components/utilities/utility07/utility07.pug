@@ -1,0 +1,33 @@
+#js-utility-07.utility-07.p-2
+  // 名前（必須、全角判定、文字数制限）
+  .field#js-utility-07-name
+    label.label 名前
+    .control
+      input.js-utility-07-input.input(type='text', placeholder='山田　太郎')
+    p.js-utility-07-success.help.is-hidden.is-success 正しく入力されています。
+    p.js-utility-07-danger.help.is-hidden.is-danger
+
+  //- // ヨミガナ（必須、全角カタカナ判定、文字数制限）
+  //- .field
+  //-   label.label ヨミガナ
+  //-   .control
+  //-     input.input.is-success(type='text', placeholder='ヤマダ　タロウ')
+  //-   p.help.is-success バリデーション文言
+  //-   p.help.is-danger バリデーション文言
+
+  //- // メールアドレス（必須、メール書式判定）
+  //- .field
+  //-   label.label メールアドレス
+  //-   .control
+  //-     input.input.is-danger(type='email', placeholder='sample@mail.com')
+  //-   p.help.is-success バリデーション文言
+  //-   p.help.is-danger バリデーション文言
+
+  //- // お問い合わせ内容（文字数制限）
+  //- .field
+  //-   label.label お問い合わせ内容
+  //-   .control
+  //-     textarea.textarea.is-danger(placeholder='例：利用料金の内容について など')
+  //-   p.help.is-success バリデーション文言
+  //-   p.help.is-danger バリデーション文言
+  //-   p.help.has-text-right 100/400
