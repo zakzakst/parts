@@ -1,0 +1,36 @@
+#js-utility-07.utility-07.p-2
+  // 名前（必須、全角判定、文字数制限）
+  .field#js-utility-07-name
+    label.label 名前
+    .control
+      input.js-utility-07-input.input(type='text', placeholder='山田　太郎')
+    p.js-utility-07-success.help.is-hidden.is-success 正しく入力されています。
+    p.js-utility-07-danger.help.is-hidden.is-danger
+
+  // ヨミガナ（必須、全角カタカナ判定、文字数制限）
+  .field#js-utility-07-yomigana
+    label.label ヨミガナ
+    .control
+      input.js-utility-07-input.input(type='text', placeholder='ヤマダ　タロウ')
+    p.js-utility-07-success.help.is-hidden.is-success 正しく入力されています。
+    p.js-utility-07-danger.help.is-hidden.is-danger
+
+  // メールアドレス（必須、メール書式判定）
+  .field#js-utility-07-mail
+    label.label メールアドレス
+    .control
+      input.js-utility-07-input.input(type='email', placeholder='sample@mail.com')
+    p.js-utility-07-success.help.is-hidden.is-success 正しく入力されています。
+    p.js-utility-07-danger.help.is-hidden.is-danger
+
+  // お問い合わせ内容（文字数制限）
+  .field#js-utility-07-contact
+    label.label お問い合わせ内容
+    .control
+      textarea.js-utility-07-input.textarea(placeholder='例：利用料金の内容について など')
+    p.js-utility-07-success.help.is-hidden.is-success 正しく入力されています。
+    p.js-utility-07-danger.help.is-hidden.is-danger
+    p.help.has-text-right
+      span#js-utility-07-contact-current
+      | /
+      span#js-utility-07-contact-max
