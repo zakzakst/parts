@@ -1,0 +1,12 @@
+title: 汎用パーツ08
+label: 汎用パーツ08
+variants:
+  - name: default
+    label: 汎用パーツ08
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-utilities'
+# context:
+#   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
