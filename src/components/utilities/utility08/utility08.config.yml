@@ -3,9 +3,9 @@ label: カウントダウンタイマー
 variants:
   - name: default
     label: 汎用パーツ08
-    status: ready
+    # status: ready
     # status: prototype
-    # status: wip
+    status: wip
     # hidden: true
 preview: '@preview-utilities'
 # context:
