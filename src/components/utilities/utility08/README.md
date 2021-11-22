@@ -1,3 +1,1 @@
-## 参考
-
-<a href="https://notes.sharesl.net/articles/1923/" target="_blank">https://notes.sharesl.net/articles/1923/</a>
+入力された目標日時に向けてカウントダウンを行うスクリプト。
