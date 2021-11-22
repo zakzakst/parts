@@ -171,7 +171,9 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-e4c7774a019f81ad0cd66b30b6cfa45e-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;utility-08&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;utility-08&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08-input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08-start&quot;</span>&gt;</span>カウントダウン開始<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08-stop&quot;</span>&gt;</span>カウントダウン中止<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08-text&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -179,7 +181,11 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-e4c7774a019f81ad0cd66b30b6cfa45e-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre>#js-utility<span class="hljs-string">-08</span>.utility<span class="hljs-string">-08</span></pre>
+        <pre><span class="hljs-selector-id">#js-utility-08</span><span class="hljs-selector-class">.utility-08</span>
+  <span class="hljs-selector-tag">input</span><span class="hljs-selector-id">#js-utility-08-input</span>(type=<span class="hljs-string">&#x27;text&#x27;</span>)
+  <span class="hljs-selector-tag">button</span><span class="hljs-selector-id">#js-utility-08-start</span><span class="hljs-selector-class">.button</span> カウントダウン開始
+  <span class="hljs-selector-tag">button</span><span class="hljs-selector-id">#js-utility-08-stop</span><span class="hljs-selector-class">.button</span> カウントダウン中止
+  <span class="hljs-selector-tag">p</span><span class="hljs-selector-id">#js-utility-08-text</span></pre>
     </code>
 </div>
 
@@ -259,6 +265,9 @@
                             <code class="Code Code--lang-TypeScript FileBrowser-code hljs">
                                 <pre><span class="hljs-meta">&#x27;use strict&#x27;</span>;
 
+<span class="hljs-keyword">import</span> flatpickr <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;flatpickr&#x27;</span>;
+<span class="hljs-keyword">import</span> { Japanese } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;flatpickr/dist/l10n/ja.js&#x27;</span>;
+
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> utility08 = <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">const</span> utility = <span class="hljs-keyword">new</span> Utility08();
   utility.init();
@@ -266,8 +275,20 @@
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Utility08</span> </span>{
   <span class="hljs-attr">el</span>: HTMLElement;
+  inputEl: HTMLInputElement;
+  startEl: HTMLElement;
+  stopEl: HTMLElement;
+  textEl: HTMLElement;
+  targetDate: <span class="hljs-built_in">Date</span>;
+  timer: <span class="hljs-built_in">any</span>;
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-08&#x27;</span>);
+    <span class="hljs-built_in">this</span>.inputEl = &lt;HTMLInputElement&gt;<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-08-input&#x27;</span>);
+    <span class="hljs-built_in">this</span>.startEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-08-start&#x27;</span>);
+    <span class="hljs-built_in">this</span>.stopEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-08-stop&#x27;</span>);
+    <span class="hljs-built_in">this</span>.textEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-08-text&#x27;</span>);
+    <span class="hljs-built_in">this</span>.targetDate = <span class="hljs-literal">null</span>;
+    <span class="hljs-built_in">this</span>.timer = <span class="hljs-literal">null</span>;
   }
 
   <span class="hljs-comment">/**
@@ -275,7 +296,132 @@
    */</span>
   init(): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.el) <span class="hljs-keyword">return</span>;
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;utility 08&#x27;</span>);
+    <span class="hljs-built_in">this</span>.inputInit();
+    <span class="hljs-built_in">this</span>.onClickStart();
+    <span class="hljs-built_in">this</span>.onClickStop();
+  }
+
+  <span class="hljs-comment">/**
+   * 日時入力の初期化
+   */</span>
+  inputInit(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+    flatpickr(<span class="hljs-built_in">this</span>.inputEl, {
+      <span class="hljs-attr">locale</span> : Japanese,
+      <span class="hljs-attr">dateFormat</span> : <span class="hljs-string">&#x27;Y年m月d日（D）H:i&#x27;</span>,
+      <span class="hljs-attr">defaultDate</span> : now,
+      <span class="hljs-attr">minDate</span>: now,
+      <span class="hljs-attr">enableTime</span>: <span class="hljs-literal">true</span>,
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * カウントダウン開始
+   */</span>
+  countDown(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> remainTime = <span class="hljs-built_in">this</span>.getRemainTime();
+    <span class="hljs-keyword">if</span> (!remainTime) {
+      <span class="hljs-built_in">this</span>.countDownFinish();
+      <span class="hljs-built_in">this</span>.timer = <span class="hljs-literal">null</span>;
+      <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-comment">// カウントダウン文字列を設定</span>
+    <span class="hljs-built_in">this</span>.countDownSetText(remainTime.d, remainTime.h, remainTime.m, remainTime.s);
+    <span class="hljs-comment">// 1秒後にカウントダウンを実行</span>
+    <span class="hljs-built_in">this</span>.timer = <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-built_in">this</span>.countDown();
+    }, <span class="hljs-number">1000</span>);
+  }
+
+  <span class="hljs-comment">/**
+   * 残り時間を取得
+   * <span class="hljs-doctag">@returns </span>残り時間の数値のオブジェクト
+   */</span>
+  getRemainTime(): { <span class="hljs-attr">d</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">h</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">m</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">s</span>: <span class="hljs-built_in">number</span> } | <span class="hljs-literal">null</span> {
+    <span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+    <span class="hljs-comment">// 現在日時と目標日時の秒数差分を計算</span>
+    <span class="hljs-keyword">const</span> diff = <span class="hljs-built_in">this</span>.targetDate.getTime() - now.getTime();
+    <span class="hljs-comment">// 目標日時を過ぎている場合、nullを返す</span>
+    <span class="hljs-keyword">if</span> (diff &lt;= <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+    }
+    <span class="hljs-comment">// 差分から残り日時の数値を計算</span>
+    <span class="hljs-keyword">const</span> d = <span class="hljs-built_in">Math</span>.floor(diff / (<span class="hljs-number">24</span> * <span class="hljs-number">60</span> * <span class="hljs-number">60</span> * <span class="hljs-number">1000</span>));
+    <span class="hljs-keyword">const</span> h = <span class="hljs-built_in">Math</span>.floor(diff % (<span class="hljs-number">24</span> * <span class="hljs-number">60</span> * <span class="hljs-number">60</span> * <span class="hljs-number">1000</span>) / (<span class="hljs-number">60</span> * <span class="hljs-number">60</span> * <span class="hljs-number">1000</span>));
+    <span class="hljs-keyword">const</span> m = <span class="hljs-built_in">Math</span>.floor(diff % (<span class="hljs-number">60</span> * <span class="hljs-number">60</span> * <span class="hljs-number">1000</span>) / (<span class="hljs-number">60</span> * <span class="hljs-number">1000</span>));
+    <span class="hljs-keyword">const</span> s = <span class="hljs-built_in">Math</span>.floor(diff % (<span class="hljs-number">60</span> * <span class="hljs-number">1000</span>) / <span class="hljs-number">1000</span>);
+    <span class="hljs-keyword">return</span> { d, h, m, s };
+  }
+
+  <span class="hljs-comment">/**
+   * カウントダウン文字列を設定
+   * <span class="hljs-doctag">@param </span>day 残りの日
+   * <span class="hljs-doctag">@param </span>hour 残りの時間
+   * <span class="hljs-doctag">@param </span>minute 残りの分
+   * <span class="hljs-doctag">@param </span>second 残りの秒
+   */</span>
+  countDownSetText(day: <span class="hljs-built_in">number</span>, <span class="hljs-attr">hour</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">minute</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">second</span>: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.textEl.innerText = <span class="hljs-string">`<span class="hljs-subst">${day}</span>日 <span class="hljs-subst">${hour}</span>時間 <span class="hljs-subst">${minute}</span>分 <span class="hljs-subst">${second}</span>秒`</span>;
+  }
+
+  <span class="hljs-comment">/**
+   * カウントダウンを完了
+   */</span>
+  countDownFinish(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// 完了メッセージを表示</span>
+    <span class="hljs-built_in">this</span>.textEl.innerText = <span class="hljs-string">&#x27;カウントダウンが完了しました&#x27;</span>;
+    <span class="hljs-comment">// 目標日時をクリア</span>
+    <span class="hljs-built_in">this</span>.targetDate = <span class="hljs-literal">null</span>;
+    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> 各種要素の有効無効設定</span>
+  }
+
+  <span class="hljs-comment">/**
+   * 開始ボタンクリック時のイベント設定
+   */</span>
+  onClickStart(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.startEl.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-comment">// 入力されている日時から目標日時を設定</span>
+      <span class="hljs-keyword">const</span> inputVal = <span class="hljs-built_in">this</span>.inputEl.value;
+      <span class="hljs-keyword">const</span> year = <span class="hljs-built_in">Number</span>(inputVal.substring(<span class="hljs-number">0</span>, <span class="hljs-number">4</span>));
+      <span class="hljs-keyword">const</span> month = <span class="hljs-built_in">Number</span>(inputVal.substring(<span class="hljs-number">5</span>, <span class="hljs-number">7</span>)) - <span class="hljs-number">1</span>;
+      <span class="hljs-keyword">const</span> day = <span class="hljs-built_in">Number</span>(inputVal.substring(<span class="hljs-number">8</span>, <span class="hljs-number">10</span>));
+      <span class="hljs-keyword">const</span> hour = <span class="hljs-built_in">Number</span>(inputVal.substring(<span class="hljs-number">14</span>, <span class="hljs-number">16</span>));
+      <span class="hljs-keyword">const</span> minute = <span class="hljs-built_in">Number</span>(inputVal.substring(<span class="hljs-number">17</span>, <span class="hljs-number">19</span>));
+      <span class="hljs-built_in">this</span>.targetDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(
+        year,
+        month,
+        day,
+        hour,
+        minute
+      );
+      <span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.targetDate.getTime() &gt; now.getTime()) {
+        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> 各種要素の有効無効設定</span>
+        <span class="hljs-comment">// 未来の日付が設定されている場合、カウントダウンを開始</span>
+        <span class="hljs-built_in">this</span>.countDown();
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// 未来の日付が設定されていない場合、処理を終了</span>
+        alert(<span class="hljs-string">&#x27;カウントダウンの目標日時は未来の時間を設定してください。&#x27;</span>);
+        <span class="hljs-keyword">return</span>;
+      }
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * 中止ボタンクリック時のイベント設定
+   */</span>
+  onClickStop(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.stopEl.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-comment">// タイマーを停止</span>
+      <span class="hljs-built_in">clearTimeout</span>(<span class="hljs-built_in">this</span>.timer);
+      <span class="hljs-built_in">this</span>.timer = <span class="hljs-literal">null</span>;
+      <span class="hljs-comment">// 中止メッセージを表示</span>
+      <span class="hljs-keyword">const</span> remainTime = <span class="hljs-built_in">this</span>.getRemainTime();
+      <span class="hljs-built_in">this</span>.textEl.innerText = <span class="hljs-string">`残り<span class="hljs-subst">${remainTime.d}</span>日 <span class="hljs-subst">${remainTime.h}</span>時間 <span class="hljs-subst">${remainTime.m}</span>分 <span class="hljs-subst">${remainTime.s}</span>秒の時点でカウントダウンを中止しました`</span>;
+      <span class="hljs-comment">// 目標日時をクリア</span>
+      <span class="hljs-built_in">this</span>.targetDate = <span class="hljs-literal">null</span>;
+      <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> 各種要素の有効無効設定</span>
+    });
   }
 }
 </pre>
@@ -294,7 +440,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">348 Bytes</span>
+                    <span class="Meta-value">5 KB</span>
                 </li>
             </ul>
         </div>
@@ -309,7 +455,7 @@
     <div class="Prose Prose--condensed">
         
         <h2 id="参考">参考</h2>
-<p><a href="" target="_blank"></a></p>
+<p><a href="https://notes.sharesl.net/articles/1923/" target="_blank">https://notes.sharesl.net/articles/1923/</a></p>
 
         
     </div>
