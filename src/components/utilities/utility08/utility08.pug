@@ -1,5 +1,10 @@
-#js-utility-08.utility-08
-  input#js-utility-08-input(type='text')
-  button#js-utility-08-start.button カウントダウン開始
-  button#js-utility-08-stop.button カウントダウン中止
-  p#js-utility-08-text
+#js-utility-08.utility-08.p-2
+  .field
+    .control
+      input#js-utility-08-input.input(type='text', placeholder='Text input')
+  .field.is-grouped.is-grouped-centered
+    .control
+      button#js-utility-08-start.button.is-primary(disabled) 開始
+    .control
+      button#js-utility-08-stop.button.is-danger(disabled) 中止
+  p#js-utility-08-text.mt-4.has-text-centered.is-size-3
