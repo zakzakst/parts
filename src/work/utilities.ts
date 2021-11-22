@@ -21,3 +21,6 @@ utility06();
 
 import { utility07 } from '../components/utilities/utility07/utility07';
 utility07();
+
+import { utility09 } from '../components/utilities/utility09/utility09';
+utility09();

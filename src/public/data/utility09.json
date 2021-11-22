@@ -1,0 +1,66 @@
+{
+  "head": [
+    {
+      "key": "name",
+      "label": "データ名",
+      "sortable": true
+    },
+    {
+      "key": "type",
+      "label": "タイプ",
+      "sortable": true
+    },
+    {
+      "key": "price",
+      "label": "価格",
+      "sortable": true
+    },
+    {
+      "key": "number",
+      "label": "在庫数",
+      "sortable": false
+    },
+    {
+      "key": "remarks",
+      "label": "その他",
+      "sortable": false
+    }
+  ],
+  "body": [
+    {
+      "name": "リンゴ",
+      "type": "fruit",
+      "price": 9000,
+      "number": 1,
+      "remarks": ""
+    },
+    {
+      "name": "オレンジ",
+      "type": "fruit",
+      "price": 4000,
+      "number": 4,
+      "remarks": "テスト"
+    },
+    {
+      "name": "トマト",
+      "type": "vegetable",
+      "price": 4000,
+      "number": 14,
+      "remarks": "テスト"
+    },
+    {
+      "name": "トウモロコシ",
+      "type": "vegetable",
+      "price": 120,
+      "number": 4,
+      "remarks": "テスト"
+    },
+    {
+      "name": "バナナ",
+      "type": "fruit",
+      "price": 3000,
+      "number": 3,
+      "remarks": "テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。"
+    }
+  ]
+}
