@@ -171,8 +171,15 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-e4c7774a019f81ad0cd66b30b6cfa45e-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;utility-08&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08-input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08-start&quot;</span>&gt;</span>カウントダウン開始<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08-stop&quot;</span>&gt;</span>カウントダウン中止<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08-text&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;utility-08 p-2&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;control&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08-input&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Text input&quot;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field is-grouped is-grouped-centered&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;control&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button is-primary&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08-start&quot;</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">&quot;disabled&quot;</span>&gt;</span>開始<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;control&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button is-danger&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08-stop&quot;</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">&quot;disabled&quot;</span>&gt;</span>中止<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mt-4 has-text-centered is-size-3&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-08-text&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -181,11 +188,16 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-e4c7774a019f81ad0cd66b30b6cfa45e-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre><span class="hljs-selector-id">#js-utility-08</span><span class="hljs-selector-class">.utility-08</span>
-  <span class="hljs-selector-tag">input</span><span class="hljs-selector-id">#js-utility-08-input</span>(type=<span class="hljs-string">&#x27;text&#x27;</span>)
-  <span class="hljs-selector-tag">button</span><span class="hljs-selector-id">#js-utility-08-start</span><span class="hljs-selector-class">.button</span> カウントダウン開始
-  <span class="hljs-selector-tag">button</span><span class="hljs-selector-id">#js-utility-08-stop</span><span class="hljs-selector-class">.button</span> カウントダウン中止
-  <span class="hljs-selector-tag">p</span><span class="hljs-selector-id">#js-utility-08-text</span></pre>
+        <pre><span class="hljs-selector-id">#js-utility-08</span><span class="hljs-selector-class">.utility-08</span><span class="hljs-selector-class">.p-2</span>
+  <span class="hljs-selector-class">.field</span>
+    <span class="hljs-selector-class">.control</span>
+      input<span class="hljs-selector-id">#js-utility-08-input</span><span class="hljs-selector-class">.input</span>(type=<span class="hljs-string">&#x27;text&#x27;</span>, placeholder=<span class="hljs-string">&#x27;Text input&#x27;</span>)
+  <span class="hljs-selector-class">.field</span><span class="hljs-selector-class">.is-grouped</span><span class="hljs-selector-class">.is-grouped-centered</span>
+    <span class="hljs-selector-class">.control</span>
+      button<span class="hljs-selector-id">#js-utility-08-start</span><span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.is-primary</span>(disabled) 開始
+    <span class="hljs-selector-class">.control</span>
+      button<span class="hljs-selector-id">#js-utility-08-stop</span><span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.is-danger</span>(disabled) 中止
+  p<span class="hljs-selector-id">#js-utility-08-text</span><span class="hljs-selector-class">.mt-4</span><span class="hljs-selector-class">.has-text-centered</span>.is-size-<span class="hljs-number">3</span></pre>
     </code>
 </div>
 
@@ -276,16 +288,16 @@
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Utility08</span> </span>{
   <span class="hljs-attr">el</span>: HTMLElement;
   inputEl: HTMLInputElement;
-  startEl: HTMLElement;
-  stopEl: HTMLElement;
+  startEl: HTMLButtonElement;
+  stopEl: HTMLButtonElement;
   textEl: HTMLElement;
   targetDate: <span class="hljs-built_in">Date</span>;
   timer: <span class="hljs-built_in">any</span>;
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-08&#x27;</span>);
     <span class="hljs-built_in">this</span>.inputEl = &lt;HTMLInputElement&gt;<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-08-input&#x27;</span>);
-    <span class="hljs-built_in">this</span>.startEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-08-start&#x27;</span>);
-    <span class="hljs-built_in">this</span>.stopEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-08-stop&#x27;</span>);
+    <span class="hljs-built_in">this</span>.startEl = &lt;HTMLButtonElement&gt;<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-08-start&#x27;</span>);
+    <span class="hljs-built_in">this</span>.stopEl = &lt;HTMLButtonElement&gt;<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-08-stop&#x27;</span>);
     <span class="hljs-built_in">this</span>.textEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-08-text&#x27;</span>);
     <span class="hljs-built_in">this</span>.targetDate = <span class="hljs-literal">null</span>;
     <span class="hljs-built_in">this</span>.timer = <span class="hljs-literal">null</span>;
@@ -312,7 +324,9 @@
       <span class="hljs-attr">defaultDate</span> : now,
       <span class="hljs-attr">minDate</span>: now,
       <span class="hljs-attr">enableTime</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">minuteIncrement</span>: <span class="hljs-number">1</span>,
     });
+    <span class="hljs-built_in">this</span>.startEl.disabled = <span class="hljs-literal">null</span>;
   }
 
   <span class="hljs-comment">/**
@@ -361,7 +375,7 @@
    * <span class="hljs-doctag">@param </span>second 残りの秒
    */</span>
   countDownSetText(day: <span class="hljs-built_in">number</span>, <span class="hljs-attr">hour</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">minute</span>: <span class="hljs-built_in">number</span>, <span class="hljs-attr">second</span>: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
-    <span class="hljs-built_in">this</span>.textEl.innerText = <span class="hljs-string">`<span class="hljs-subst">${day}</span>日 <span class="hljs-subst">${hour}</span>時間 <span class="hljs-subst">${minute}</span>分 <span class="hljs-subst">${second}</span>秒`</span>;
+    <span class="hljs-built_in">this</span>.textEl.innerText = <span class="hljs-string">`残り <span class="hljs-subst">${day}</span>日 <span class="hljs-subst">${hour}</span>時間 <span class="hljs-subst">${minute}</span>分 <span class="hljs-subst">${second}</span>秒`</span>;
   }
 
   <span class="hljs-comment">/**
@@ -372,7 +386,8 @@
     <span class="hljs-built_in">this</span>.textEl.innerText = <span class="hljs-string">&#x27;カウントダウンが完了しました&#x27;</span>;
     <span class="hljs-comment">// 目標日時をクリア</span>
     <span class="hljs-built_in">this</span>.targetDate = <span class="hljs-literal">null</span>;
-    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> 各種要素の有効無効設定</span>
+    <span class="hljs-built_in">this</span>.startEl.disabled = <span class="hljs-literal">null</span>;
+    <span class="hljs-built_in">this</span>.stopEl.disabled = <span class="hljs-literal">true</span>;
   }
 
   <span class="hljs-comment">/**
@@ -396,7 +411,8 @@
       );
       <span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
       <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.targetDate.getTime() &gt; now.getTime()) {
-        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> 各種要素の有効無効設定</span>
+        <span class="hljs-built_in">this</span>.startEl.disabled = <span class="hljs-literal">true</span>;
+        <span class="hljs-built_in">this</span>.stopEl.disabled = <span class="hljs-literal">null</span>;
         <span class="hljs-comment">// 未来の日付が設定されている場合、カウントダウンを開始</span>
         <span class="hljs-built_in">this</span>.countDown();
       } <span class="hljs-keyword">else</span> {
@@ -417,10 +433,11 @@
       <span class="hljs-built_in">this</span>.timer = <span class="hljs-literal">null</span>;
       <span class="hljs-comment">// 中止メッセージを表示</span>
       <span class="hljs-keyword">const</span> remainTime = <span class="hljs-built_in">this</span>.getRemainTime();
-      <span class="hljs-built_in">this</span>.textEl.innerText = <span class="hljs-string">`残り<span class="hljs-subst">${remainTime.d}</span>日 <span class="hljs-subst">${remainTime.h}</span>時間 <span class="hljs-subst">${remainTime.m}</span>分 <span class="hljs-subst">${remainTime.s}</span>秒の時点でカウントダウンを中止しました`</span>;
+      <span class="hljs-built_in">this</span>.textEl.innerHTML = <span class="hljs-string">`残り <span class="hljs-subst">${remainTime.d}</span>日 <span class="hljs-subst">${remainTime.h}</span>時間 <span class="hljs-subst">${remainTime.m}</span>分 <span class="hljs-subst">${remainTime.s}</span>秒で&lt;br&gt;カウントダウンを中止しました`</span>;
       <span class="hljs-comment">// 目標日時をクリア</span>
       <span class="hljs-built_in">this</span>.targetDate = <span class="hljs-literal">null</span>;
-      <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> 各種要素の有効無効設定</span>
+      <span class="hljs-built_in">this</span>.startEl.disabled = <span class="hljs-literal">null</span>;
+      <span class="hljs-built_in">this</span>.stopEl.disabled = <span class="hljs-literal">true</span>;
     });
   }
 }
@@ -440,7 +457,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">5 KB</span>
+                    <span class="Meta-value">5.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -454,8 +471,7 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-e4c7774a019f81ad0cd66b30b6cfa45e-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <h2 id="参考">参考</h2>
-<p><a href="https://notes.sharesl.net/articles/1923/" target="_blank">https://notes.sharesl.net/articles/1923/</a></p>
+        <p>入力された目標日時に向けてカウントダウンを行うスクリプト。</p>
 
         
     </div>

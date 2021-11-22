@@ -11,16 +11,16 @@ export const utility08 = () => {
 class Utility08 {
   el: HTMLElement;
   inputEl: HTMLInputElement;
-  startEl: HTMLElement;
-  stopEl: HTMLElement;
+  startEl: HTMLButtonElement;
+  stopEl: HTMLButtonElement;
   textEl: HTMLElement;
   targetDate: Date;
   timer: any;
   constructor() {
     this.el = document.getElementById('js-utility-08');
     this.inputEl = <HTMLInputElement>document.getElementById('js-utility-08-input');
-    this.startEl = document.getElementById('js-utility-08-start');
-    this.stopEl = document.getElementById('js-utility-08-stop');
+    this.startEl = <HTMLButtonElement>document.getElementById('js-utility-08-start');
+    this.stopEl = <HTMLButtonElement>document.getElementById('js-utility-08-stop');
     this.textEl = document.getElementById('js-utility-08-text');
     this.targetDate = null;
     this.timer = null;
@@ -47,7 +47,9 @@ class Utility08 {
       defaultDate : now,
       minDate: now,
       enableTime: true,
+      minuteIncrement: 1,
     });
+    this.startEl.disabled = null;
   }
 
   /**
@@ -96,7 +98,7 @@ class Utility08 {
    * @param second 残りの秒
    */
   countDownSetText(day: number, hour: number, minute: number, second: number): void {
-    this.textEl.innerText = `${day}日 ${hour}時間 ${minute}分 ${second}秒`;
+    this.textEl.innerText = `残り ${day}日 ${hour}時間 ${minute}分 ${second}秒`;
   }
 
   /**
@@ -107,7 +109,8 @@ class Utility08 {
     this.textEl.innerText = 'カウントダウンが完了しました';
     // 目標日時をクリア
     this.targetDate = null;
-    // TODO: 各種要素の有効無効設定
+    this.startEl.disabled = null;
+    this.stopEl.disabled = true;
   }
 
   /**
@@ -131,7 +134,8 @@ class Utility08 {
       );
       const now = new Date();
       if (this.targetDate.getTime() > now.getTime()) {
-        // TODO: 各種要素の有効無効設定
+        this.startEl.disabled = true;
+        this.stopEl.disabled = null;
         // 未来の日付が設定されている場合、カウントダウンを開始
         this.countDown();
       } else {
@@ -152,10 +156,11 @@ class Utility08 {
       this.timer = null;
       // 中止メッセージを表示
       const remainTime = this.getRemainTime();
-      this.textEl.innerText = `残り${remainTime.d}日 ${remainTime.h}時間 ${remainTime.m}分 ${remainTime.s}秒の時点でカウントダウンを中止しました`;
+      this.textEl.innerHTML = `残り ${remainTime.d}日 ${remainTime.h}時間 ${remainTime.m}分 ${remainTime.s}秒で<br>カウントダウンを中止しました`;
       // 目標日時をクリア
       this.targetDate = null;
-      // TODO: 各種要素の有効無効設定
+      this.startEl.disabled = null;
+      this.stopEl.disabled = true;
     });
   }
 }
