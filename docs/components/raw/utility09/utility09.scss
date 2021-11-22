@@ -1,0 +1,79 @@
+$BLOCK_NAME: '.utility-09';
+
+// 変数
+$width_min: 240px;
+$width_max: 360px;
+$c_icon: #000;
+
+#{ $BLOCK_NAME } {
+  & table {
+    table-layout: fixed;
+    min-width: 100%;
+  }
+
+  & tr {
+    word-wrap: break-word;
+    word-break: keep-all;
+  }
+
+  &__head-th {
+    position: relative;
+  }
+
+  &__head-th[data-key='remarks'] {
+    min-width: $width_min;
+    max-width: $width_max;
+  }
+
+  &__head-icon {
+    position: absolute;
+    display: none;
+    top: 0;
+    bottom: 0;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    margin: auto;
+    transition: opacity 0.5s;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
+    &::before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: block;
+      width: 0;
+      height: 0;
+      margin: auto;
+      content: '';
+      border: solid transparent;
+      border-width: 6px 4px;
+    }
+    &.--asc {
+      transform: translateY(-6px);
+      &::before {
+        bottom: 0;
+        border-bottom-color: $c_icon;
+      }
+    }
+    &.--desc {
+      transform: translateY(6px);
+      &::before {
+        top: 0;
+        border-top-color: $c_icon;
+      }
+    }
+    @at-root #{ $BLOCK_NAME }__head-th[data-sortable='true'] & {
+      display: block;
+    }
+  }
+
+  & tbody td[data-key='remarks'] {
+    min-width: $width_min;
+    max-width: $width_max;
+    word-wrap: normal;
+    word-break: break-all;
+  }
+}
