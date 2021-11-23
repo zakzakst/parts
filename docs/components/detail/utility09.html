@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.2" type="text/css">
 
 
-<title>汎用パーツ09 | コンポーネント集</title>
+<title>表組データ並び替え | コンポーネント集</title>
 
 </head>
 <body>
@@ -70,7 +70,7 @@
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/utility09.html" title="Preview">
-            汎用パーツ09
+            表組データ並び替え
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -349,6 +349,8 @@
 
 <span class="hljs-keyword">type</span> dataKeys = <span class="hljs-string">&#x27;name&#x27;</span> | <span class="hljs-string">&#x27;type&#x27;</span> | <span class="hljs-string">&#x27;price&#x27;</span> | <span class="hljs-string">&#x27;number&#x27;</span> | <span class="hljs-string">&#x27;remarks&#x27;</span>
 
+<span class="hljs-keyword">type</span> orderType = <span class="hljs-string">&#x27;asc&#x27;</span> | <span class="hljs-string">&#x27;desc&#x27;</span>
+
 <span class="hljs-keyword">type</span> headData = {
   <span class="hljs-attr">key</span>: dataKeys,
   <span class="hljs-attr">label</span>: <span class="hljs-built_in">string</span>,
@@ -467,21 +469,20 @@
    * <span class="hljs-doctag">@param </span>key 並べ替え対象のデータ
    * <span class="hljs-doctag">@param </span>order 並べ替え方法
    */</span>
-  dataCurrentUpdate(key: dataKeys, <span class="hljs-attr">order</span>: <span class="hljs-string">&#x27;asc&#x27;</span> | <span class="hljs-string">&#x27;desc&#x27;</span>): <span class="hljs-built_in">void</span> {
-    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> dscとascの処理分岐</span>
+  dataCurrentUpdate(key: dataKeys, <span class="hljs-attr">order</span>: orderType): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> orderVal = order === <span class="hljs-string">&#x27;asc&#x27;</span> ? <span class="hljs-number">1</span> : -<span class="hljs-number">1</span>;
     <span class="hljs-keyword">const</span> newData: tableData = <span class="hljs-built_in">JSON</span>.parse(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-built_in">this</span>.data));
     newData.body.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
       <span class="hljs-keyword">let</span> result = <span class="hljs-number">0</span>;
       <span class="hljs-keyword">if</span> (a[key] &lt; b[key]) {
-        result = -<span class="hljs-number">1</span>;
+        result = -<span class="hljs-number">1</span> * orderVal;
       } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (a[key] &gt; b[key]) {
-        result = <span class="hljs-number">1</span>;
+        result = <span class="hljs-number">1</span> * orderVal;
       }
       <span class="hljs-keyword">return</span> result;
     });
     <span class="hljs-built_in">this</span>.dataCurrent = newData;
     <span class="hljs-built_in">this</span>.bodySet();
-    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> 要素のスタイル反映</span>
   }
 
   <span class="hljs-comment">/**
@@ -490,10 +491,21 @@
   onClickHead(): <span class="hljs-built_in">void</span> {
     <span class="hljs-built_in">this</span>.headEl.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
       <span class="hljs-keyword">const</span> target = &lt;HTMLElement&gt;e.target;
-      <span class="hljs-keyword">const</span> targetKey = &lt;dataKeys&gt;target.dataset.key;
-      <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> その他など並び替え処理をしないものの分岐実装</span>
-      <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> クリックされた要素のソート情報の取得</span>
-      <span class="hljs-built_in">this</span>.dataCurrentUpdate(targetKey, <span class="hljs-string">&#x27;asc&#x27;</span>);
+      <span class="hljs-comment">// 並び替えアイコン以外がクリックされた場合、処理を終了</span>
+      <span class="hljs-keyword">if</span> (!target.classList.contains(<span class="hljs-string">&#x27;utility-09__head-icon&#x27;</span>)) <span class="hljs-keyword">return</span>;
+      <span class="hljs-comment">// 並び替えの種類を取得</span>
+      <span class="hljs-keyword">let</span> orderType: orderType = <span class="hljs-literal">null</span>;
+      <span class="hljs-keyword">if</span> (target.classList.contains(<span class="hljs-string">&#x27;--asc&#x27;</span>)) {
+        orderType = <span class="hljs-string">&#x27;asc&#x27;</span>;
+      }
+      <span class="hljs-keyword">if</span> (target.classList.contains(<span class="hljs-string">&#x27;--desc&#x27;</span>)) {
+        orderType = <span class="hljs-string">&#x27;desc&#x27;</span>;
+      }
+      <span class="hljs-comment">// 対象データのキー名を取得</span>
+      <span class="hljs-keyword">const</span> targetHeadEl = &lt;HTMLElement&gt;target.closest(<span class="hljs-string">&#x27;.utility-09__head-th&#x27;</span>);
+      <span class="hljs-keyword">const</span> targetKey = &lt;dataKeys&gt;targetHeadEl.dataset.key;
+      <span class="hljs-comment">// 並び替えを実行</span>
+      <span class="hljs-built_in">this</span>.dataCurrentUpdate(targetKey, orderType);
     });
   }
 }
@@ -513,7 +525,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4.1 KB</span>
+                    <span class="Meta-value">4.5 KB</span>
                 </li>
             </ul>
         </div>
@@ -527,8 +539,8 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-ebc0db313b2c260bf756445c7a9bbf7e-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <h2 id="参考">参考</h2>
-<p><a href="" target="_blank"></a></p>
+        <p>JSON データ（ <a href="https://zakzakst.github.io/parts/data/utility09.json">https://zakzakst.github.io/parts/data/utility09.json</a> ）を取得して<br>
+表組を表示・データ並び替えするスクリプト。</p>
 
         
     </div>
@@ -4554,7 +4566,7 @@
         
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="utility09">
-                <span>汎用パーツ09</span>
+                <span>表組データ並び替え</span>
                 
 
 <div class="Status Status--unlabelled">
