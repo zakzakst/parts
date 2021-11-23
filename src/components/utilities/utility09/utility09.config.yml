@@ -1,11 +1,11 @@
-title: 汎用パーツ09
-label: 汎用パーツ09
+title: 表組データ並び替え
+label: 表組データ並び替え
 variants:
   - name: default
     label: 汎用パーツ09
-    # status: ready
+    status: ready
     # status: prototype
-    status: wip
+    # status: wip
     # hidden: true
 preview: '@preview-utilities'
 # context:

@@ -7,6 +7,8 @@ export const utility09 = () => {
 
 type dataKeys = 'name' | 'type' | 'price' | 'number' | 'remarks'
 
+type orderType = 'asc' | 'desc'
+
 type headData = {
   key: dataKeys,
   label: string,
@@ -125,21 +127,20 @@ class Utility09 {
    * @param key 並べ替え対象のデータ
    * @param order 並べ替え方法
    */
-  dataCurrentUpdate(key: dataKeys, order: 'asc' | 'desc'): void {
-    // TODO: dscとascの処理分岐
+  dataCurrentUpdate(key: dataKeys, order: orderType): void {
+    const orderVal = order === 'asc' ? 1 : -1;
     const newData: tableData = JSON.parse(JSON.stringify(this.data));
     newData.body.sort((a, b) => {
       let result = 0;
       if (a[key] < b[key]) {
-        result = -1;
+        result = -1 * orderVal;
       } else if (a[key] > b[key]) {
-        result = 1;
+        result = 1 * orderVal;
       }
       return result;
     });
     this.dataCurrent = newData;
     this.bodySet();
-    // TODO: 要素のスタイル反映
   }
 
   /**
@@ -148,10 +149,21 @@ class Utility09 {
   onClickHead(): void {
     this.headEl.addEventListener('click', e => {
       const target = <HTMLElement>e.target;
-      const targetKey = <dataKeys>target.dataset.key;
-      // TODO: その他など並び替え処理をしないものの分岐実装
-      // TODO: クリックされた要素のソート情報の取得
-      this.dataCurrentUpdate(targetKey, 'asc');
+      // 並び替えアイコン以外がクリックされた場合、処理を終了
+      if (!target.classList.contains('utility-09__head-icon')) return;
+      // 並び替えの種類を取得
+      let orderType: orderType = null;
+      if (target.classList.contains('--asc')) {
+        orderType = 'asc';
+      }
+      if (target.classList.contains('--desc')) {
+        orderType = 'desc';
+      }
+      // 対象データのキー名を取得
+      const targetHeadEl = <HTMLElement>target.closest('.utility-09__head-th');
+      const targetKey = <dataKeys>targetHeadEl.dataset.key;
+      // 並び替えを実行
+      this.dataCurrentUpdate(targetKey, orderType);
     });
   }
 }
