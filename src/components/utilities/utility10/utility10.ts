@@ -120,7 +120,7 @@ class Utility10 {
    * @param uid 商品UID
    */
   showItemDetail(uid: string): void {
-    // TODO: 詳細表示
+    // TODO: 詳細表示の実装
     console.log(uid);
   }
 
@@ -151,4 +151,8 @@ class Utility10 {
       this.showItemDetail(uid);
     });
   }
+
+  // TODO:
+  // 商品をカートに入れる処理
+  // 現在選択している商品のデータ保持と表示
 }

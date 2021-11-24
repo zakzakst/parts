@@ -1,3 +1,2 @@
-## 参考
-
-<a href="" target="_blank"></a>
+検索フォームに入力されたキーワードに対応するデータを JSON データ（ https://zakzakst.github.io/parts/data/utility10.json ）から取得して<br>
+ショッピングカートを表示するスクリプト。
