@@ -1,0 +1,68 @@
+[
+  {
+    "uid": "product01",
+    "name": "フェイスタオル",
+    "price": 1000,
+    "tags": [
+      ""
+    ],
+    "detail": "",
+    "imgUrl": "",
+    "thumbUrl": ""
+  },
+  {
+    "uid": "product02",
+    "name": "バスタオル",
+    "price": 2000,
+    "tags": [
+      ""
+    ],
+    "detail": "",
+    "imgUrl": "",
+    "thumbUrl": ""
+  },
+  {
+    "uid": "product03",
+    "name": "バスマット",
+    "price": 1800,
+    "tags": [
+      "新商品"
+    ],
+    "detail": "",
+    "imgUrl": "",
+    "thumbUrl": ""
+  },
+  {
+    "uid": "product04",
+    "name": "ハンカチ",
+    "price": 0,
+    "tags": [
+      ""
+    ],
+    "detail": "",
+    "imgUrl": "",
+    "thumbUrl": ""
+  },
+  {
+    "uid": "product05",
+    "name": "ハンドソープ",
+    "price": 0,
+    "tags": [
+      "新商品"
+    ],
+    "detail": "",
+    "imgUrl": "",
+    "thumbUrl": ""
+  },
+  {
+    "uid": "product05",
+    "name": "ボディソープ",
+    "price": 0,
+    "tags": [
+      ""
+    ],
+    "detail": "",
+    "imgUrl": "",
+    "thumbUrl": ""
+  }
+]

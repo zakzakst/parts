@@ -1,5 +1,5 @@
-title: 商品検索
-label: 商品検索
+title: ショッピングカート
+label: ショッピングカート
 variants:
   - name: default
 preview: '@preview-utilities'
