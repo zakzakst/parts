@@ -2,11 +2,10 @@ title: 汎用パーツ00
 label: 汎用パーツ00
 variants:
   - name: default
-    label: 汎用パーツ00
-    status: ready
-    # status: prototype
-    # status: wip
-    # hidden: true
 preview: '@preview-utilities'
+status: ready
+# status: prototype
+# status: wip
+# hidden: true
 # context:
 #   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
