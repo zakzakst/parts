@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="../../themes/mandelbrot/css/highlight.css?cachebust=1.9.2" type="text/css">
 
 
-<title>商品検索 | コンポーネント集</title>
+<title>ショッピングカート | コンポーネント集</title>
 
 </head>
 <body>
@@ -70,7 +70,7 @@
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/utility10.html" title="Preview">
-            商品検索
+            ショッピングカート
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -171,7 +171,13 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-57df671b319062885ccff537955aefa8-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;utility-10&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-10&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;utility-10 p-2&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-10&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field has-addons&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;control&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;input&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-10-form&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;例：&quot;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;control&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button is-primary&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-10-form-btn&quot;</span>&gt;</span>検索<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-10-items&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -179,7 +185,13 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-57df671b319062885ccff537955aefa8-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre>#js-utility<span class="hljs-string">-10</span>.utility<span class="hljs-string">-10</span></pre>
+        <pre><span class="hljs-selector-id">#js-utility-10</span><span class="hljs-selector-class">.utility-10</span><span class="hljs-selector-class">.p-2</span>
+  <span class="hljs-selector-class">.field</span><span class="hljs-selector-class">.has-addons</span>
+    <span class="hljs-selector-class">.control</span>
+      input<span class="hljs-selector-id">#js-utility-10-form</span><span class="hljs-selector-class">.input</span>(type=<span class="hljs-string">&#x27;text&#x27;</span>, placeholder=<span class="hljs-string">&#x27;例：&#x27;</span>)
+    <span class="hljs-selector-class">.control</span>
+      button<span class="hljs-selector-id">#js-utility-10-form-btn</span><span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.is-primary</span> 検索
+  #js-utility-<span class="hljs-number">10</span>-items</pre>
     </code>
 </div>
 
@@ -264,10 +276,34 @@
   utility.init();
 }
 
+<span class="hljs-keyword">type</span> Product = {
+  <span class="hljs-attr">uid</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">price</span>: <span class="hljs-built_in">number</span>,
+  <span class="hljs-attr">tags</span>: <span class="hljs-built_in">string</span>[],
+  <span class="hljs-attr">detail</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">imgUrl</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">thumbUrl</span>: <span class="hljs-built_in">string</span>,
+}
+
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Utility10</span> </span>{
   <span class="hljs-attr">el</span>: HTMLElement;
+  formEl: HTMLInputElement;
+  formBtnEl: HTMLElement;
+  itemsEl: HTMLElement;
+  searchUrl: <span class="hljs-built_in">string</span>;
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-10&#x27;</span>);
+    <span class="hljs-built_in">this</span>.formEl = &lt;HTMLInputElement&gt;<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-10-form&#x27;</span>);
+    <span class="hljs-built_in">this</span>.formBtnEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-10-form-btn&#x27;</span>);
+    <span class="hljs-built_in">this</span>.itemsEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-10-items&#x27;</span>);
+    <span class="hljs-keyword">if</span> (location.origin === <span class="hljs-string">&#x27;https://zakzakst.github.io&#x27;</span>) {
+      <span class="hljs-comment">// GitHubの場合</span>
+      <span class="hljs-built_in">this</span>.searchUrl = <span class="hljs-string">&#x27;/parts/data/utility10.json&#x27;</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// ローカル環境の場合</span>
+      <span class="hljs-built_in">this</span>.searchUrl = <span class="hljs-string">&#x27;/data/utility10.json&#x27;</span>;
+    }
   }
 
   <span class="hljs-comment">/**
@@ -275,8 +311,121 @@
    */</span>
   init(): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.el) <span class="hljs-keyword">return</span>;
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;utility 10&#x27;</span>);
+    <span class="hljs-built_in">this</span>.onClickFormBtn();
+    <span class="hljs-built_in">this</span>.onClickItems();
   }
+
+  <span class="hljs-comment">/**
+   * 検索結果データの取得
+   * <span class="hljs-doctag">@param </span>keyword 検索キーワード
+   * <span class="hljs-doctag">@returns </span>検索にヒットした商品データ
+   */</span>
+  getSearchResult(keyword: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">Promise</span>&lt;Product[] | <span class="hljs-literal">null</span>&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> {
+      fetch(<span class="hljs-built_in">this</span>.searchUrl)
+        .then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
+          <span class="hljs-keyword">return</span> res.json();
+        })
+        .then(<span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> {
+          <span class="hljs-comment">// 検索キーワードに一致するデータを取得</span>
+          <span class="hljs-keyword">const</span> filteredData = data.filter(<span class="hljs-function">(<span class="hljs-params">item: Product</span>) =&gt;</span> {
+            <span class="hljs-comment">// 型番が一致するかの判定（完全一致）</span>
+            <span class="hljs-keyword">if</span> (item.uid === keyword) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+            <span class="hljs-comment">// 商品名が一致するかの判定（部分一致）</span>
+            <span class="hljs-keyword">if</span> (item.name.indexOf(keyword) !== -<span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+            <span class="hljs-comment">// タグが一致するかの判定（部分一致）</span>
+            <span class="hljs-keyword">if</span> (item.tags.length) {
+              <span class="hljs-keyword">const</span> filteredTags = item.tags.filter(<span class="hljs-function"><span class="hljs-params">tag</span> =&gt;</span> {
+                <span class="hljs-keyword">return</span> tag.indexOf(keyword) !== -<span class="hljs-number">1</span>;
+              });
+              <span class="hljs-keyword">if</span> (filteredTags.length) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+            }
+            <span class="hljs-comment">// 検索に一致しない場合</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+          });
+          resolve(filteredData);
+        })
+        .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> {
+          <span class="hljs-built_in">console</span>.log(error);
+          resolve(<span class="hljs-literal">null</span>);
+        });
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * 検索結果の表示
+   * <span class="hljs-doctag">@param </span>data 表示する商品データ
+   */</span>
+  showSearchResult(data: Product[]): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// 検索結果の初期化</span>
+    <span class="hljs-built_in">this</span>.itemsEl.innerHTML = <span class="hljs-string">&#x27;&#x27;</span>;
+    <span class="hljs-keyword">if</span> (data.length) {
+      <span class="hljs-comment">// 検索結果がある場合</span>
+      data.forEach(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> {
+        <span class="hljs-keyword">const</span> imgUrl = item.thumbUrl || <span class="hljs-string">&#x27;https://bulma.io/images/placeholders/128x128.png&#x27;</span>;
+        <span class="hljs-keyword">const</span> markup = <span class="hljs-string">`
+          &lt;a class=&quot;box utility-10__item&quot; data-uid=&quot;<span class="hljs-subst">${item.uid}</span>&quot;&gt;
+            &lt;article class=&quot;media&quot;&gt;
+              &lt;div class=&quot;media-left&quot;&gt;
+                &lt;figure class=&quot;image is-64x64&quot;&gt;
+                  &lt;img src=&quot;<span class="hljs-subst">${imgUrl}</span>&quot; alt=&quot;<span class="hljs-subst">${item.name}</span> サムネイル画像&quot;&gt;
+                &lt;/figure&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;media-content&quot;&gt;
+                &lt;p class=&quot;is-size-4&quot;&gt;<span class="hljs-subst">${item.name}</span>&lt;/p&gt;
+                &lt;p&gt;<span class="hljs-subst">${item.price}</span>円&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/article&gt;
+          &lt;/a&gt;
+        `</span>;
+        <span class="hljs-built_in">this</span>.itemsEl.insertAdjacentHTML(<span class="hljs-string">&#x27;beforeend&#x27;</span>, markup);
+      });
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// 検索結果がない場合</span>
+      <span class="hljs-built_in">this</span>.itemsEl.textContent = <span class="hljs-string">&#x27;キーワードに対応する商品が見つかりませんでした。&#x27;</span>;
+    }
+  }
+
+  <span class="hljs-comment">/**
+   * 商品詳細の表示
+   * <span class="hljs-doctag">@param </span>uid 商品UID
+   */</span>
+  showItemDetail(uid: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> 詳細表示の実装</span>
+    <span class="hljs-built_in">console</span>.log(uid);
+  }
+
+  <span class="hljs-comment">/**
+   * フォームボタンクリック時のイベント設定
+   */</span>
+  onClickFormBtn(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.formBtnEl.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+      <span class="hljs-keyword">const</span> formVal = <span class="hljs-built_in">this</span>.formEl.value;
+      <span class="hljs-keyword">const</span> searchResult: Product[] = <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.getSearchResult(formVal);
+      <span class="hljs-built_in">this</span>.showSearchResult(searchResult);
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * 商品クリック時のイベント設定
+   */</span>
+  onClickItems(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.itemsEl.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+      e.preventDefault();
+      <span class="hljs-keyword">const</span> target = &lt;HTMLElement&gt;e.target;
+      <span class="hljs-keyword">const</span> targetItem = &lt;HTMLElement&gt;target.closest(<span class="hljs-string">&#x27;.utility-10__item&#x27;</span>);
+      <span class="hljs-comment">// 商品以外の要素がクリックされた場合、処理を終了</span>
+      <span class="hljs-keyword">if</span> (!targetItem) <span class="hljs-keyword">return</span>;
+      <span class="hljs-comment">// 商品UIDを取得</span>
+      <span class="hljs-keyword">const</span> uid = targetItem.dataset.uid;
+      <span class="hljs-comment">// 商品詳細を表示</span>
+      <span class="hljs-built_in">this</span>.showItemDetail(uid);
+    });
+  }
+
+  <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span></span>
+  <span class="hljs-comment">// 商品をカートに入れる処理</span>
+  <span class="hljs-comment">// 現在選択している商品のデータ保持と表示</span>
 }
 </pre>
                             </code>
@@ -294,7 +443,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">348 Bytes</span>
+                    <span class="Meta-value">4.8 KB</span>
                 </li>
             </ul>
         </div>
@@ -308,8 +457,8 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-57df671b319062885ccff537955aefa8-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <h2 id="参考">参考</h2>
-<p><a href="" target="_blank"></a></p>
+        <p>検索フォームに入力されたキーワードに対応するデータを JSON データ（ <a href="https://zakzakst.github.io/parts/data/utility10.json">https://zakzakst.github.io/parts/data/utility10.json</a> ）から取得して<br>
+ショッピングカートを表示するスクリプト。</p>
 
         
     </div>

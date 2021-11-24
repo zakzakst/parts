@@ -49,6 +49,7 @@ http://a-dot.co.jp/
 
 ### カルーセル
 
+https://e-office.inc/
 https://careers.denso.com/
 https://www.napla.co.jp/recruit/newgrads/
 https://schoo.jp/
@@ -62,6 +63,7 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
+https://www.webcreatorbox.com/tech/intersection-observer
 https://www.mcplas.co.jp/
 https://pogg-sweetpotatopie.com/
 https://www.napla.co.jp/recruit/newgrads/ （見出し、カード）
@@ -92,6 +94,7 @@ https://factfashion.jp/
 
 ### 開始アニメーション
 
+https://rdc.ricoh.co.jp/?utm=wewantwebs
 https://s-y-n.jp/
 https://enjin-dash.com/about/index.html
 

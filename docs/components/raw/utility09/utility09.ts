@@ -53,7 +53,7 @@ class Utility09 {
   /**
    * 初期化
    */
-   async init(): Promise<void> {
+  async init(): Promise<void> {
     if (!this.el) return;
     // データを取得して初期表示
     const data = await this.loadData();
