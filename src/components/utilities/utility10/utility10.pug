@@ -1,7 +1,28 @@
 #js-utility-10.utility-10.p-2
   .field.has-addons
     .control
-      input#js-utility-10-form.input(type='text', placeholder='例：')
+      input#js-utility-10-form.input(type='text', placeholder='例：タオル')
     .control
       button#js-utility-10-form-btn.button.is-primary 検索
   #js-utility-10-items
+
+// 商品詳細モーダル
+#js-utility-10-modal.modal
+  .modal-background.js-utility-10-modal-close
+  .modal-card
+    header.modal-card-head
+      p#js-utility-10-modal-title.modal-card-title
+      button.js-utility-10-modal-close.delete(aria-label='close')
+    section.modal-card-body.content.mb-0
+      figure.image.is-2by1
+        img#js-utility-10-modal-img
+      p#js-utility-10-modal-detail
+      p
+        span#js-utility-10-modal-price.is-size-3
+        | 円
+    footer.modal-card-foot
+      .field.has-addons
+        .control
+          input#js-utility-10-modal-input.input(type='number', value='0', step='1', min='0')
+        .control
+          button#js-utility-10-modal-btn.button.is-primary カートに入れる
