@@ -15,17 +15,39 @@ type Product = {
   thumbUrl: string,
 }
 
+type CartItem = {
+  uid: string,
+  number: number,
+}
+
 class Utility10 {
   el: HTMLElement;
   formEl: HTMLInputElement;
   formBtnEl: HTMLElement;
   itemsEl: HTMLElement;
+  modalEl: HTMLElement;
+  modalImgEl: HTMLElement;
+  modalTitleEl: HTMLElement;
+  modalDetailEl: HTMLElement;
+  modalPriceEl: HTMLElement;
+  modalInputEl: HTMLInputElement;
+  modalBtnEl: HTMLElement;
+  modalCloseEls: HTMLCollection;
   searchUrl: string;
+  cartItems: CartItem[];
   constructor() {
     this.el = document.getElementById('js-utility-10');
     this.formEl = <HTMLInputElement>document.getElementById('js-utility-10-form');
     this.formBtnEl = document.getElementById('js-utility-10-form-btn');
     this.itemsEl = document.getElementById('js-utility-10-items');
+    this.modalEl = document.getElementById('js-utility-10-modal');
+    this.modalImgEl = document.getElementById('js-utility-10-modal-img');
+    this.modalTitleEl = document.getElementById('js-utility-10-modal-title');
+    this.modalDetailEl = document.getElementById('js-utility-10-modal-detail');
+    this.modalPriceEl = document.getElementById('js-utility-10-modal-price');
+    this.modalInputEl = <HTMLInputElement>document.getElementById('js-utility-10-modal-input');
+    this.modalBtnEl = document.getElementById('js-utility-10-modal-btn');
+    this.modalCloseEls = document.getElementsByClassName('js-utility-10-modal-close');
     if (location.origin === 'https://zakzakst.github.io') {
       // GitHubの場合
       this.searchUrl = '/parts/data/utility10.json';
@@ -33,6 +55,7 @@ class Utility10 {
       // ローカル環境の場合
       this.searchUrl = '/data/utility10.json';
     }
+    this.cartItems = [];
   }
 
   /**
@@ -42,6 +65,8 @@ class Utility10 {
     if (!this.el) return;
     this.onClickFormBtn();
     this.onClickItems();
+    this.onClickModalBtn();
+    this.onClickModalClose();
   }
 
   /**
@@ -119,9 +144,63 @@ class Utility10 {
    * 商品詳細の表示
    * @param uid 商品UID
    */
-  showItemDetail(uid: string): void {
-    // TODO: 詳細表示の実装
-    console.log(uid);
+  async showItemDetail(uid: string): Promise<void> {
+    // 商品データを反映
+    const data = await this.getItemDetail(uid);
+    const imgUrl = data.imgUrl || 'https://bulma.io/images/placeholders/640x320.png';
+    this.modalEl.dataset.uid = data.uid;
+    this.modalImgEl.setAttribute('src', imgUrl);
+    this.modalTitleEl.textContent = data.name;
+    this.modalDetailEl.textContent = data.detail || '詳細情報は登録されていません。';
+    this.modalPriceEl.textContent = String(data.price);
+    // 既にカートに入っている商品の場合、商品数を反映
+    const cartTarget = this.cartItems.find(item => {
+      return item.uid === data.uid;
+    });
+    const targetCartNumber = cartTarget ? cartTarget.number : 0;
+    this.modalInputEl.value = String(targetCartNumber);
+    // モーダルを表示
+    this.modalEl.classList.add('is-active');
+  }
+
+  /**
+   * 商品詳細の非表示
+   */
+  hideItemDetail(): void {
+    // モーダルを非表示
+    this.modalEl.classList.remove('is-active');
+    // 商品データを初期化
+    this.modalEl.dataset.uid = null;
+    this.modalImgEl.removeAttribute('src');
+    this.modalTitleEl.textContent = '';
+    this.modalDetailEl.textContent = '';
+    this.modalPriceEl.textContent = '';
+    this.modalInputEl.value = String(0);
+  }
+
+  /**
+   * 商品詳細データの取得
+   * @param uid 商品UID
+   * @returns 対象商品の詳細データ
+   */
+  getItemDetail(uid: string): Promise<Product | null> {
+    return new Promise(resolve => {
+      fetch(this.searchUrl)
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          // 検索キーワードに一致するデータを取得
+          const targetData = data.find((item: Product) => {
+            return item.uid === uid;
+          });
+          resolve(targetData);
+        })
+        .catch(error => {
+          console.log(error);
+          resolve(null);
+        });
+    });
   }
 
   /**
@@ -152,7 +231,32 @@ class Utility10 {
     });
   }
 
-  // TODO:
-  // 商品をカートに入れる処理
-  // 現在選択している商品のデータ保持と表示
+  /**
+   * カートに入れるボタンクリック時のイベント設定
+   */
+  onClickModalBtn(): void {
+    this.modalBtnEl.addEventListener('click', () => {
+      const number = Number(this.modalInputEl.value);
+      const uid = this.modalEl.dataset.uid;
+      this.cartItems.push({
+        uid,
+        number,
+      });
+      this.hideItemDetail();
+    });
+  }
+
+  /**
+   * モーダルを閉じる要素クリック時のイベント設定
+   */
+  onClickModalClose(): void {
+    [...this.modalCloseEls].forEach(el => {
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        this.hideItemDetail();
+      });
+    });
+  }
+
+  // カートの表示
 }
