@@ -2,11 +2,10 @@ title: 入力制限
 label: 入力制限
 variants:
   - name: default
-    label: 汎用パーツ05
-    status: ready
-    # status: prototype
-    # status: wip
-    # hidden: true
 preview: '@preview-utilities'
+# status: ready
+# status: prototype
+status: wip
+hidden: true
 # context:
 #   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
