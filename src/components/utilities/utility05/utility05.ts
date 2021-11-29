@@ -98,8 +98,11 @@ class Utility05 {
    */
   setDistrict(): void {
     const districtData = this.data[this.prefectureId]?.dists || null;
-    // データが空のオブジェクトの場合、処理を終了
-    if (!Object.keys(districtData).length) return;
+    // データが空のオブジェクトの場合、区をクリアして処理を終了
+    if (!Object.keys(districtData).length) {
+      this.clearDistrict();
+      return;
+    }
     const selectItems = [
       {
         id: '',
@@ -130,8 +133,11 @@ class Utility05 {
    */
   setTown(): void {
     const townData = this.data[this.prefectureId]?.dists[this.districtId]?.towns || null;
-    // データが空のオブジェクトの場合、処理を終了
-    if (!Object.keys(townData).length) return;
+    // データが空のオブジェクトの場合、町をクリアして処理を終了
+    if (!Object.keys(townData).length) {
+      this.clearTown();
+      return;
+    }
     const selectItems = [
       {
         id: '',
