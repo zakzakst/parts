@@ -85,7 +85,7 @@
 
 <div class="Status Status--tag">
 
-<label class="Status-label" style="background-color: #FF9233; border-color: #FF9233;">WIP</label>
+<label class="Status-label" style="background-color: #29CC29; border-color: #29CC29;">Ready</label>
 
 </div>
 
@@ -196,7 +196,17 @@
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-comment">&lt;!-- 商品カート--&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-comment">&lt;!-- 商品カートボタン--&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;utility-10__cart-btn button is-medium&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-10-cart-btn&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;icon&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fas fa-shopping-cart fa-lg&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-comment">&lt;!-- 商品カートモーダル--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-10-cart-modal&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-background js-utility-10-cart-modal-close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-card&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-card-head&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-card-title&quot;</span>&gt;</span>商品カート<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;js-utility-10-cart-modal-close delete&quot;</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-card-body content mb-0&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-10-cart-modal-body&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-card-foot&quot;</span>&gt;</span>合計料金<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;pl-4&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-utility-10-cart-modal-total&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>円<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -233,7 +243,23 @@
         <span class="hljs-selector-class">.control</span>
           <span class="hljs-selector-tag">button</span><span class="hljs-selector-id">#js-utility-10-modal-btn</span><span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.is-primary</span> カートに入れる
 
-<span class="hljs-comment">// 商品カート</span></pre>
+<span class="hljs-comment">// 商品カートボタン</span>
+<span class="hljs-selector-tag">button</span><span class="hljs-selector-id">#js-utility-10-cart-btn</span><span class="hljs-selector-class">.utility-10__cart-btn</span><span class="hljs-selector-class">.button</span><span class="hljs-selector-class">.is-medium</span>
+  <span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.icon</span>
+    <span class="hljs-selector-tag">i</span><span class="hljs-selector-class">.fas</span><span class="hljs-selector-class">.fa-shopping-cart</span><span class="hljs-selector-class">.fa-lg</span>
+
+<span class="hljs-comment">// 商品カートモーダル</span>
+<span class="hljs-selector-id">#js-utility-10-cart-modal</span><span class="hljs-selector-class">.modal</span>
+  <span class="hljs-selector-class">.modal-background</span><span class="hljs-selector-class">.js-utility-10-cart-modal-close</span>
+  <span class="hljs-selector-class">.modal-card</span>
+    <span class="hljs-selector-tag">header</span><span class="hljs-selector-class">.modal-card-head</span>
+        <span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.modal-card-title</span> 商品カート
+        <span class="hljs-selector-tag">button</span><span class="hljs-selector-class">.js-utility-10-cart-modal-close</span><span class="hljs-selector-class">.delete</span>(aria-label=<span class="hljs-string">&#x27;close&#x27;</span>)
+    <span class="hljs-selector-tag">section</span><span class="hljs-selector-id">#js-utility-10-cart-modal-body</span><span class="hljs-selector-class">.modal-card-body</span><span class="hljs-selector-class">.content</span><span class="hljs-selector-class">.mb-0</span>
+    <span class="hljs-selector-tag">footer</span><span class="hljs-selector-class">.modal-card-foot</span>
+      | 合計料金
+      <span class="hljs-selector-tag">span</span><span class="hljs-selector-id">#js-utility-10-cart-modal-total</span><span class="hljs-selector-class">.pl-4</span>
+      | 円</pre>
     </code>
 </div>
 
@@ -280,7 +306,12 @@
 <span class="hljs-comment">// 変数</span>
 
 #{ <span class="hljs-variable">$BLOCK_NAME</span> } {
-  <span class="hljs-comment">//</span>
+  &amp;__cart-btn {
+    <span class="hljs-attribute">position</span>: fixed;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">8px</span>;
+    <span class="hljs-attribute">right</span>: <span class="hljs-number">8px</span>;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">10</span>;
+  }
 }
 </pre>
                             </code>
@@ -298,7 +329,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">73 Bytes</span>
+                    <span class="Meta-value">164 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -330,7 +361,9 @@
 
 <span class="hljs-keyword">type</span> CartItem = {
   <span class="hljs-attr">uid</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>,
   <span class="hljs-attr">number</span>: <span class="hljs-built_in">number</span>,
+  <span class="hljs-attr">price</span>: <span class="hljs-built_in">number</span>,
 }
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Utility10</span> </span>{
@@ -346,6 +379,11 @@
   modalInputEl: HTMLInputElement;
   modalBtnEl: HTMLElement;
   modalCloseEls: HTMLCollection;
+  cartBtnEl: HTMLElement;
+  cartModalEl: HTMLElement;
+  cartModalBodyEl: HTMLElement;
+  cartModalTotalEl: HTMLElement;
+  cartModalCloseEls: HTMLCollection;
   searchUrl: <span class="hljs-built_in">string</span>;
   cartItems: CartItem[];
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
@@ -361,6 +399,11 @@
     <span class="hljs-built_in">this</span>.modalInputEl = &lt;HTMLInputElement&gt;<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-10-modal-input&#x27;</span>);
     <span class="hljs-built_in">this</span>.modalBtnEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-10-modal-btn&#x27;</span>);
     <span class="hljs-built_in">this</span>.modalCloseEls = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">&#x27;js-utility-10-modal-close&#x27;</span>);
+    <span class="hljs-built_in">this</span>.cartBtnEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-10-cart-btn&#x27;</span>);
+    <span class="hljs-built_in">this</span>.cartModalEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-10-cart-modal&#x27;</span>);
+    <span class="hljs-built_in">this</span>.cartModalBodyEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-10-cart-modal-body&#x27;</span>);
+    <span class="hljs-built_in">this</span>.cartModalTotalEl = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-10-cart-modal-total&#x27;</span>);
+    <span class="hljs-built_in">this</span>.cartModalCloseEls = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">&#x27;js-utility-10-cart-modal-close&#x27;</span>);
     <span class="hljs-keyword">if</span> (location.origin === <span class="hljs-string">&#x27;https://zakzakst.github.io&#x27;</span>) {
       <span class="hljs-comment">// GitHubの場合</span>
       <span class="hljs-built_in">this</span>.searchUrl = <span class="hljs-string">&#x27;/parts/data/utility10.json&#x27;</span>;
@@ -380,6 +423,8 @@
     <span class="hljs-built_in">this</span>.onClickItems();
     <span class="hljs-built_in">this</span>.onClickModalBtn();
     <span class="hljs-built_in">this</span>.onClickModalClose();
+    <span class="hljs-built_in">this</span>.onClickCartBtn();
+    <span class="hljs-built_in">this</span>.onClickCartModalClose();
   }
 
   <span class="hljs-comment">/**
@@ -462,6 +507,8 @@
     <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.getItemDetail(uid);
     <span class="hljs-keyword">const</span> imgUrl = data.imgUrl || <span class="hljs-string">&#x27;https://bulma.io/images/placeholders/640x320.png&#x27;</span>;
     <span class="hljs-built_in">this</span>.modalEl.dataset.uid = data.uid;
+    <span class="hljs-built_in">this</span>.modalEl.dataset.name = data.name;
+    <span class="hljs-built_in">this</span>.modalEl.dataset.price = <span class="hljs-built_in">String</span>(data.price);
     <span class="hljs-built_in">this</span>.modalImgEl.setAttribute(<span class="hljs-string">&#x27;src&#x27;</span>, imgUrl);
     <span class="hljs-built_in">this</span>.modalTitleEl.textContent = data.name;
     <span class="hljs-built_in">this</span>.modalDetailEl.textContent = data.detail || <span class="hljs-string">&#x27;詳細情報は登録されていません。&#x27;</span>;
@@ -484,6 +531,8 @@
     <span class="hljs-built_in">this</span>.modalEl.classList.remove(<span class="hljs-string">&#x27;is-active&#x27;</span>);
     <span class="hljs-comment">// 商品データを初期化</span>
     <span class="hljs-built_in">this</span>.modalEl.dataset.uid = <span class="hljs-literal">null</span>;
+    <span class="hljs-built_in">this</span>.modalEl.dataset.name = <span class="hljs-literal">null</span>;
+    <span class="hljs-built_in">this</span>.modalEl.dataset.price = <span class="hljs-literal">null</span>;
     <span class="hljs-built_in">this</span>.modalImgEl.removeAttribute(<span class="hljs-string">&#x27;src&#x27;</span>);
     <span class="hljs-built_in">this</span>.modalTitleEl.textContent = <span class="hljs-string">&#x27;&#x27;</span>;
     <span class="hljs-built_in">this</span>.modalDetailEl.textContent = <span class="hljs-string">&#x27;&#x27;</span>;
@@ -514,6 +563,49 @@
           resolve(<span class="hljs-literal">null</span>);
         });
     });
+  }
+
+  <span class="hljs-comment">/**
+   * カートの表示
+   */</span>
+  showCart(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.cartItems.length) {
+      <span class="hljs-comment">// カートに商品が登録されている場合</span>
+      <span class="hljs-keyword">let</span> tableBodyMarkup = <span class="hljs-string">&#x27;&#x27;</span>;
+      <span class="hljs-keyword">let</span> total = <span class="hljs-number">0</span>;
+      <span class="hljs-built_in">this</span>.cartItems.forEach(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> {
+        tableBodyMarkup += <span class="hljs-string">`
+          &lt;tr&gt;
+            &lt;th&gt;<span class="hljs-subst">${item.name}</span>&lt;/th&gt;
+            &lt;td class=&quot;has-text-right&quot;&gt;× <span class="hljs-subst">${item.<span class="hljs-built_in">number</span>}</span>&lt;/td&gt;
+          &lt;/tr&gt;
+        `</span>;
+        total += item.price * item.number;
+      });
+      <span class="hljs-keyword">const</span> markup = <span class="hljs-string">`
+        &lt;table class=&quot;table is-striped&quot;&gt;
+          &lt;tbody&gt;
+            <span class="hljs-subst">${tableBodyMarkup}</span>
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      `</span>;
+      <span class="hljs-built_in">this</span>.cartModalBodyEl.insertAdjacentHTML(<span class="hljs-string">&#x27;beforeend&#x27;</span>, markup);
+      <span class="hljs-built_in">this</span>.cartModalTotalEl.innerHTML = <span class="hljs-built_in">String</span>(total);
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// カートに商品が登録されていない場合</span>
+      <span class="hljs-built_in">this</span>.cartModalBodyEl.innerHTML = <span class="hljs-string">&#x27;カートに登録した商品はありません。&#x27;</span>;
+      <span class="hljs-built_in">this</span>.cartModalTotalEl.innerHTML = <span class="hljs-string">&#x27;---&#x27;</span>;
+    }
+    <span class="hljs-built_in">this</span>.cartModalEl.classList.add(<span class="hljs-string">&#x27;is-active&#x27;</span>);
+  }
+
+  <span class="hljs-comment">/**
+   * カートの非表示
+   */</span>
+  hideCart(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.cartModalEl.classList.remove(<span class="hljs-string">&#x27;is-active&#x27;</span>);
+    <span class="hljs-built_in">this</span>.cartModalBodyEl.innerHTML = <span class="hljs-string">&#x27;&#x27;</span>;
+    <span class="hljs-built_in">this</span>.cartModalTotalEl.innerHTML = <span class="hljs-string">&#x27;&#x27;</span>;
   }
 
   <span class="hljs-comment">/**
@@ -551,10 +643,23 @@
     <span class="hljs-built_in">this</span>.modalBtnEl.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">() =&gt;</span> {
       <span class="hljs-keyword">const</span> <span class="hljs-built_in">number</span> = <span class="hljs-built_in">Number</span>(<span class="hljs-built_in">this</span>.modalInputEl.value);
       <span class="hljs-keyword">const</span> uid = <span class="hljs-built_in">this</span>.modalEl.dataset.uid;
-      <span class="hljs-built_in">this</span>.cartItems.push({
-        uid,
-        <span class="hljs-built_in">number</span>,
-      });
+      <span class="hljs-keyword">const</span> name = <span class="hljs-built_in">this</span>.modalEl.dataset.name;
+      <span class="hljs-keyword">const</span> price = <span class="hljs-built_in">Number</span>(<span class="hljs-built_in">this</span>.modalEl.dataset.price);
+      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">number</span> &gt; <span class="hljs-number">0</span>) {
+        <span class="hljs-comment">// 商品数が0より大きい場合、対応する商品をカートに追加</span>
+        <span class="hljs-built_in">this</span>.cartItems.push({
+          uid,
+          name,
+          <span class="hljs-built_in">number</span>,
+          price,
+        });
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// 商品数が0以下の場合、対応する商品をカートから削除</span>
+        <span class="hljs-keyword">const</span> targetCartItem = <span class="hljs-built_in">this</span>.cartItems.find(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> {
+          <span class="hljs-keyword">return</span> item.uid === uid;
+        });
+        <span class="hljs-built_in">this</span>.cartItems.splice(<span class="hljs-built_in">this</span>.cartItems.indexOf(targetCartItem), <span class="hljs-number">1</span>);
+      }
       <span class="hljs-built_in">this</span>.hideItemDetail();
     });
   }
@@ -571,7 +676,27 @@
     });
   }
 
-  <span class="hljs-comment">// カートの表示</span>
+  <span class="hljs-comment">/**
+   * カートを表示ボタンクリック時のイベント設定
+   */</span>
+  onClickCartBtn(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.cartBtnEl.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+      e.preventDefault();
+      <span class="hljs-built_in">this</span>.showCart();
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * カートを閉じる要素クリック時のイベント設定
+   */</span>
+  onClickCartModalClose(): <span class="hljs-built_in">void</span> {
+    [...this.cartModalCloseEls].forEach(<span class="hljs-function"><span class="hljs-params">el</span> =&gt;</span> {
+      el.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> {
+        e.preventDefault();
+        <span class="hljs-built_in">this</span>.hideCart();
+      });
+    });
+  }
 }
 </pre>
                             </code>
@@ -589,7 +714,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">8.4 KB</span>
+                    <span class="Meta-value">11.6 KB</span>
                 </li>
             </ul>
         </div>
@@ -4640,6 +4765,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="utility09.html" data-role="tree-link" data-pjax data-handle="utility09">
                 <span>表組データ並び替え</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="utility10">
+                <span>ショッピングカート</span>
                 
 
 <div class="Status Status--unlabelled">

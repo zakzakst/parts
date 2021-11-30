@@ -3,9 +3,9 @@ label: ショッピングカート
 variants:
   - name: default
 preview: '@preview-utilities'
-# status: ready
+status: ready
 # status: prototype
-status: wip
-hidden: true
+# status: wip
+# hidden: true
 # context:
 #   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'

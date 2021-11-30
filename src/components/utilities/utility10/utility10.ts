@@ -17,7 +17,9 @@ type Product = {
 
 type CartItem = {
   uid: string,
+  name: string,
   number: number,
+  price: number,
 }
 
 class Utility10 {
@@ -33,6 +35,11 @@ class Utility10 {
   modalInputEl: HTMLInputElement;
   modalBtnEl: HTMLElement;
   modalCloseEls: HTMLCollection;
+  cartBtnEl: HTMLElement;
+  cartModalEl: HTMLElement;
+  cartModalBodyEl: HTMLElement;
+  cartModalTotalEl: HTMLElement;
+  cartModalCloseEls: HTMLCollection;
   searchUrl: string;
   cartItems: CartItem[];
   constructor() {
@@ -48,6 +55,11 @@ class Utility10 {
     this.modalInputEl = <HTMLInputElement>document.getElementById('js-utility-10-modal-input');
     this.modalBtnEl = document.getElementById('js-utility-10-modal-btn');
     this.modalCloseEls = document.getElementsByClassName('js-utility-10-modal-close');
+    this.cartBtnEl = document.getElementById('js-utility-10-cart-btn');
+    this.cartModalEl = document.getElementById('js-utility-10-cart-modal');
+    this.cartModalBodyEl = document.getElementById('js-utility-10-cart-modal-body');
+    this.cartModalTotalEl = document.getElementById('js-utility-10-cart-modal-total');
+    this.cartModalCloseEls = document.getElementsByClassName('js-utility-10-cart-modal-close');
     if (location.origin === 'https://zakzakst.github.io') {
       // GitHubの場合
       this.searchUrl = '/parts/data/utility10.json';
@@ -67,6 +79,8 @@ class Utility10 {
     this.onClickItems();
     this.onClickModalBtn();
     this.onClickModalClose();
+    this.onClickCartBtn();
+    this.onClickCartModalClose();
   }
 
   /**
@@ -149,6 +163,8 @@ class Utility10 {
     const data = await this.getItemDetail(uid);
     const imgUrl = data.imgUrl || 'https://bulma.io/images/placeholders/640x320.png';
     this.modalEl.dataset.uid = data.uid;
+    this.modalEl.dataset.name = data.name;
+    this.modalEl.dataset.price = String(data.price);
     this.modalImgEl.setAttribute('src', imgUrl);
     this.modalTitleEl.textContent = data.name;
     this.modalDetailEl.textContent = data.detail || '詳細情報は登録されていません。';
@@ -171,6 +187,8 @@ class Utility10 {
     this.modalEl.classList.remove('is-active');
     // 商品データを初期化
     this.modalEl.dataset.uid = null;
+    this.modalEl.dataset.name = null;
+    this.modalEl.dataset.price = null;
     this.modalImgEl.removeAttribute('src');
     this.modalTitleEl.textContent = '';
     this.modalDetailEl.textContent = '';
@@ -201,6 +219,49 @@ class Utility10 {
           resolve(null);
         });
     });
+  }
+
+  /**
+   * カートの表示
+   */
+  showCart(): void {
+    if (this.cartItems.length) {
+      // カートに商品が登録されている場合
+      let tableBodyMarkup = '';
+      let total = 0;
+      this.cartItems.forEach(item => {
+        tableBodyMarkup += `
+          <tr>
+            <th>${item.name}</th>
+            <td class="has-text-right">× ${item.number}</td>
+          </tr>
+        `;
+        total += item.price * item.number;
+      });
+      const markup = `
+        <table class="table is-striped">
+          <tbody>
+            ${tableBodyMarkup}
+          </tbody>
+        </table>
+      `;
+      this.cartModalBodyEl.insertAdjacentHTML('beforeend', markup);
+      this.cartModalTotalEl.innerHTML = String(total);
+    } else {
+      // カートに商品が登録されていない場合
+      this.cartModalBodyEl.innerHTML = 'カートに登録した商品はありません。';
+      this.cartModalTotalEl.innerHTML = '---';
+    }
+    this.cartModalEl.classList.add('is-active');
+  }
+
+  /**
+   * カートの非表示
+   */
+  hideCart(): void {
+    this.cartModalEl.classList.remove('is-active');
+    this.cartModalBodyEl.innerHTML = '';
+    this.cartModalTotalEl.innerHTML = '';
   }
 
   /**
@@ -238,10 +299,23 @@ class Utility10 {
     this.modalBtnEl.addEventListener('click', () => {
       const number = Number(this.modalInputEl.value);
       const uid = this.modalEl.dataset.uid;
-      this.cartItems.push({
-        uid,
-        number,
-      });
+      const name = this.modalEl.dataset.name;
+      const price = Number(this.modalEl.dataset.price);
+      if (number > 0) {
+        // 商品数が0より大きい場合、対応する商品をカートに追加
+        this.cartItems.push({
+          uid,
+          name,
+          number,
+          price,
+        });
+      } else {
+        // 商品数が0以下の場合、対応する商品をカートから削除
+        const targetCartItem = this.cartItems.find(item => {
+          return item.uid === uid;
+        });
+        this.cartItems.splice(this.cartItems.indexOf(targetCartItem), 1);
+      }
       this.hideItemDetail();
     });
   }
@@ -258,5 +332,25 @@ class Utility10 {
     });
   }
 
-  // カートの表示
+  /**
+   * カートを表示ボタンクリック時のイベント設定
+   */
+  onClickCartBtn(): void {
+    this.cartBtnEl.addEventListener('click', e => {
+      e.preventDefault();
+      this.showCart();
+    });
+  }
+
+  /**
+   * カートを閉じる要素クリック時のイベント設定
+   */
+  onClickCartModalClose(): void {
+    [...this.cartModalCloseEls].forEach(el => {
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        this.hideCart();
+      });
+    });
+  }
 }
