@@ -27,4 +27,20 @@
         .control
           button#js-utility-10-modal-btn.button.is-primary カートに入れる
 
-// 商品カート
+// 商品カートボタン
+button#js-utility-10-cart-btn.utility-10__cart-btn.button.is-medium
+  span.icon
+    i.fas.fa-shopping-cart.fa-lg
+
+// 商品カートモーダル
+#js-utility-10-cart-modal.modal
+  .modal-background.js-utility-10-cart-modal-close
+  .modal-card
+    header.modal-card-head
+        p.modal-card-title 商品カート
+        button.js-utility-10-cart-modal-close.delete(aria-label='close')
+    section#js-utility-10-cart-modal-body.modal-card-body.content.mb-0
+    footer.modal-card-foot
+      | 合計料金
+      span#js-utility-10-cart-modal-total.pl-4
+      | 円
