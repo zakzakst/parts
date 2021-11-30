@@ -3,5 +3,10 @@ $BLOCK_NAME: '.utility-10';
 // 変数
 
 #{ $BLOCK_NAME } {
-  //
+  &__cart-btn {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    z-index: 10;
+  }
 }
