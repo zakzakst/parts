@@ -34,6 +34,7 @@ https://www.e-heyaspace.com/about/
 
 ### フッター
 
+https://www.itoki.jp/special/act/
 https://oromo.co.jp/
 http://a-dot.co.jp/
 
