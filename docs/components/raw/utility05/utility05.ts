@@ -74,7 +74,7 @@ class Utility05 {
         label: '選択してください',
       },
     ];
-    for(let item in this.data) {
+    for (let item in this.data) {
       const { id, label } = this.data[item];
       selectItems.push({
         id,
@@ -98,9 +98,10 @@ class Utility05 {
    */
   setDistrict(): void {
     const districtData = this.data[this.prefectureId]?.dists || null;
-    // データが空のオブジェクトの場合、区をクリアして処理を終了
+    this.clearDistrict();
+    // データが空のオブジェクトの場合、選択肢がないことを表示して処理を終了
     if (!Object.keys(districtData).length) {
-      this.clearDistrict();
+      this.districtEl.insertAdjacentHTML('beforeend', '<option value="">区の選択肢はありません</option>');
       return;
     }
     const selectItems = [
@@ -109,7 +110,7 @@ class Utility05 {
         label: '選択してください',
       },
     ];
-    for(let item in districtData) {
+    for (let item in districtData) {
       const { id, label } = districtData[item];
       selectItems.push({
         id,
@@ -133,9 +134,10 @@ class Utility05 {
    */
   setTown(): void {
     const townData = this.data[this.prefectureId]?.dists[this.districtId]?.towns || null;
-    // データが空のオブジェクトの場合、町をクリアして処理を終了
+    // データが空のオブジェクトの場合、選択肢がないことを表示して処理を終了
+    this.clearTown();
     if (!Object.keys(townData).length) {
-      this.clearTown();
+      this.townEl.insertAdjacentHTML('beforeend', '<option value="">町の選択肢はありません</option>');
       return;
     }
     const selectItems = [
@@ -144,7 +146,7 @@ class Utility05 {
         label: '選択してください',
       },
     ];
-    for(let item in townData) {
+    for (let item in townData) {
       const { id, label } = townData[item];
       selectItems.push({
         id,

@@ -361,7 +361,7 @@
         <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;選択してください&#x27;</span>,
       },
     ];
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> item <span class="hljs-keyword">in</span> <span class="hljs-built_in">this</span>.data) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> item <span class="hljs-keyword">in</span> <span class="hljs-built_in">this</span>.data) {
       <span class="hljs-keyword">const</span> { id, label } = <span class="hljs-built_in">this</span>.data[item];
       selectItems.push({
         id,
@@ -385,9 +385,10 @@
    */</span>
   setDistrict(): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">const</span> districtData = <span class="hljs-built_in">this</span>.data[<span class="hljs-built_in">this</span>.prefectureId]?.dists || <span class="hljs-literal">null</span>;
-    <span class="hljs-comment">// データが空のオブジェクトの場合、区をクリアして処理を終了</span>
+    <span class="hljs-built_in">this</span>.clearDistrict();
+    <span class="hljs-comment">// データが空のオブジェクトの場合、選択肢がないことを表示して処理を終了</span>
     <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">Object</span>.keys(districtData).length) {
-      <span class="hljs-built_in">this</span>.clearDistrict();
+      <span class="hljs-built_in">this</span>.districtEl.insertAdjacentHTML(<span class="hljs-string">&#x27;beforeend&#x27;</span>, <span class="hljs-string">&#x27;&lt;option value=&quot;&quot;&gt;区の選択肢はありません&lt;/option&gt;&#x27;</span>);
       <span class="hljs-keyword">return</span>;
     }
     <span class="hljs-keyword">const</span> selectItems = [
@@ -396,7 +397,7 @@
         <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;選択してください&#x27;</span>,
       },
     ];
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> item <span class="hljs-keyword">in</span> districtData) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> item <span class="hljs-keyword">in</span> districtData) {
       <span class="hljs-keyword">const</span> { id, label } = districtData[item];
       selectItems.push({
         id,
@@ -420,9 +421,10 @@
    */</span>
   setTown(): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">const</span> townData = <span class="hljs-built_in">this</span>.data[<span class="hljs-built_in">this</span>.prefectureId]?.dists[<span class="hljs-built_in">this</span>.districtId]?.towns || <span class="hljs-literal">null</span>;
-    <span class="hljs-comment">// データが空のオブジェクトの場合、町をクリアして処理を終了</span>
+    <span class="hljs-comment">// データが空のオブジェクトの場合、選択肢がないことを表示して処理を終了</span>
+    <span class="hljs-built_in">this</span>.clearTown();
     <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">Object</span>.keys(townData).length) {
-      <span class="hljs-built_in">this</span>.clearTown();
+      <span class="hljs-built_in">this</span>.townEl.insertAdjacentHTML(<span class="hljs-string">&#x27;beforeend&#x27;</span>, <span class="hljs-string">&#x27;&lt;option value=&quot;&quot;&gt;町の選択肢はありません&lt;/option&gt;&#x27;</span>);
       <span class="hljs-keyword">return</span>;
     }
     <span class="hljs-keyword">const</span> selectItems = [
@@ -431,7 +433,7 @@
         <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;選択してください&#x27;</span>,
       },
     ];
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> item <span class="hljs-keyword">in</span> townData) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> item <span class="hljs-keyword">in</span> townData) {
       <span class="hljs-keyword">const</span> { id, label } = townData[item];
       selectItems.push({
         id,
@@ -524,7 +526,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">5.9 KB</span>
+                    <span class="Meta-value">6.1 KB</span>
                 </li>
             </ul>
         </div>
