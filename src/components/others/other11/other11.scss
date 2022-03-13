@@ -1,0 +1,36 @@
+$BLOCK_NAME: '.other-11';
+
+#{ $BLOCK_NAME } {
+  width: 120px;
+  height: 120px;
+  background: url(/parts/img/components/others/other11/anim.svg);
+  background-size: 360px 120px;
+  cursor: pointer;
+  &:hover {
+    animation: other11Anim 3s infinite;
+  }
+}
+
+@keyframes other11Anim {
+  0% {
+    background-position: 0 0;
+  }
+  15% {
+    background-position: 0 0;
+  }
+  15.1% {
+    background-position: -120px 0;
+  }
+  45% {
+    background-position: -120px 0;
+  }
+  45.1% {
+    background-position: -240px 0;
+  }
+  75% {
+    background-position: -240px 0;
+  }
+  75.1% {
+    background-position: 0 0;
+  }
+}
