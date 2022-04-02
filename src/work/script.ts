@@ -98,6 +98,12 @@ import { startAnim02 } from '../components/start-anims/start-anim02/start-anim02
 startAnim02();
 
 /**
+ * スクロールアニメーション
+ */
+import { scrollAnim18 } from '../components/scroll-anims/1_20/scroll-anim18/scroll-anim18';
+scrollAnim18();
+
+/**
  * その他
  */
 import { other08 } from '../components/others/other08/other08';

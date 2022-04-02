@@ -42,6 +42,8 @@ http://a-dot.co.jp/
 
 ### 見出し
 
+https://www.gyu36.jp/
+
 ### カード
 
 ### ニュース一覧
