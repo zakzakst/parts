@@ -49,8 +49,8 @@ scrollAnim16();
 import { scrollAnim17 } from '../components/scroll-anims/1_20/scroll-anim17/scroll-anim17';
 scrollAnim17();
 
-import { scrollAnim18 } from '../components/scroll-anims/1_20/scroll-anim18/scroll-anim18';
-scrollAnim18();
+// import { scrollAnim18 } from '../components/scroll-anims/1_20/scroll-anim18/scroll-anim18';
+// scrollAnim18();
 
 import { scrollAnim19 } from '../components/scroll-anims/1_20/scroll-anim19/scroll-anim19';
 scrollAnim19();
