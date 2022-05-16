@@ -1,5 +1,5 @@
-title: QRコード生成
-label: QRコード生成
+title: QRコード変換
+label: QRコード変換
 variants:
   - name: default
 preview: '@preview-utilities'
