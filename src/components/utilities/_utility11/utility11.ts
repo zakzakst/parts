@@ -1,7 +1,7 @@
 'use strict';
 
 // @ts-ignore
-import QRCode from 'qrcodejs/qrcode.js';
+import QRCode from 'qrcode';
 
 export const utility11 = () => {
   const utility = new Utility11();
@@ -9,23 +9,37 @@ export const utility11 = () => {
 }
 
 class Utility11 {
-  el: HTMLElement;
+  canvasEl: HTMLElement;
+  options: Object;
   constructor() {
-    this.el = document.getElementById('js-utility-11');
+    this.canvasEl = document.getElementById('js-utility-11');
+    this.options = {
+      errorCorrectionLevel: 'H',
+      margin: 0,
+      color: {
+        dark: "#010599FF",
+        light: "#FFBF60FF"
+      },
+    };
   }
 
   /**
    * 初期化
    */
-  init(): void {
-    if (!this.el) return;
-    const qrcode = new QRCode(this.el, {
-      text: "QRコードの生成",
-      width: 128,
-      height: 128,
-      colorDark: "#000000",
-      colorLight: "#ffffff",
-      correctLevel: QRCode.CorrectLevel.H,
+  async init(): Promise<void> {
+    if (!this.canvasEl) return;
+    await this.makeQRCode('test QRコード');
+  }
+
+  /**
+   * QRコード生成
+   * @param text QRコードにする文字列
+   */
+  makeQRCode(text: string) {
+    return new Promise((resolve, reject) => {
+      QRCode.toCanvas(this.canvasEl, text, this.options, (error: Error) => {
+        if (error) console.error(error);
+      });
     });
   }
 }
