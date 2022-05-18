@@ -40,6 +40,8 @@ http://a-dot.co.jp/
 
 ### ボタン
 
+https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」のリンクホバー時の下線「background-blend-mode: color-dodge;」）
+
 ### 見出し
 
 https://www.gyu36.jp/
