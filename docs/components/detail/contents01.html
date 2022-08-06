@@ -173,6 +173,9 @@
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;contents-01&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading&quot;</span>&gt;</span>見出し<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading-sub&quot;</span>&gt;</span>小見出し<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box&quot;</span>&gt;</span> テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;blockquote&quot;</span>&gt;</span>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -182,7 +185,14 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-b18cb9b62c479310e2d0b9b971e7ce78-panel-view">
     <code class="Code Code--lang-jade hljs">
         <pre><span class="hljs-selector-class">.contents-01</span>
-  <span class="hljs-selector-tag">h2</span><span class="hljs-selector-class">.heading</span> 見出し</pre>
+  <span class="hljs-selector-tag">h2</span><span class="hljs-selector-class">.heading</span> 見出し
+  <span class="hljs-selector-tag">h3</span><span class="hljs-selector-class">.heading-sub</span> 小見出し
+  
+  <span class="hljs-comment">//- 囲み</span>
+  <span class="hljs-selector-class">.box</span>  #{ text }
+
+  <span class="hljs-comment">//- 引用</span>
+  <span class="hljs-selector-tag">blockquote</span><span class="hljs-selector-class">.blockquote</span> #{ text }</pre>
     </code>
 </div>
 
@@ -192,7 +202,7 @@
         
             
             <pre>{
-  <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;テキストが入ります。テキストが入ります。テキストが入ります。&quot;</span>
+  <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。&quot;</span>
 }</pre>
             
         
@@ -227,10 +237,29 @@
                                 <pre><span class="hljs-variable">$BLOCK_NAME</span>: <span class="hljs-string">&#x27;.contents-01&#x27;</span>;
 
 <span class="hljs-comment">// 変数</span>
+<span class="hljs-variable">$c_border</span>: <span class="hljs-number">#ddd</span>;
+<span class="hljs-variable">$c_bg_gray</span>: <span class="hljs-number">#eee</span>;
 
 #{ <span class="hljs-variable">$BLOCK_NAME</span> } {
   <span class="hljs-selector-class">.heading</span> {
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+  }
+
+  <span class="hljs-selector-class">.heading-sub</span> {
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+    <span class="hljs-attribute">font-weight</span>: bold;
+  }
+
+  <span class="hljs-selector-class">.box</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">24px</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$c_bg_gray</span>;
+  }
+
+  <span class="hljs-selector-class">.blockquote</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">16px</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">16px</span>;
+    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">4px</span> solid <span class="hljs-variable">$c_border</span>;
+    <span class="hljs-attribute">font-style</span>: italic;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
   }
 }
 </pre>
@@ -249,7 +278,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">100 Bytes</span>
+                    <span class="Meta-value">397 Bytes</span>
                 </li>
             </ul>
         </div>
