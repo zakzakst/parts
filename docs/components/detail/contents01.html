@@ -176,6 +176,11 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading-sub&quot;</span>&gt;</span>小見出し<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box&quot;</span>&gt;</span> テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;blockquote&quot;</span>&gt;</span>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>項目1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>項目2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>項目3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -192,7 +197,12 @@
   <span class="hljs-selector-class">.box</span>  #{ text }
 
   <span class="hljs-comment">//- 引用</span>
-  <span class="hljs-selector-tag">blockquote</span><span class="hljs-selector-class">.blockquote</span> #{ text }</pre>
+  <span class="hljs-selector-tag">blockquote</span><span class="hljs-selector-class">.blockquote</span> #{ text }
+
+  <span class="hljs-comment">//- リスト</span>
+  <span class="hljs-selector-tag">ul</span><span class="hljs-selector-class">.list</span>
+    each listItem <span class="hljs-keyword">in</span> list
+      <span class="hljs-selector-tag">li</span> #{ listItem }</pre>
     </code>
 </div>
 
@@ -202,7 +212,12 @@
         
             
             <pre>{
-  <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。&quot;</span>
+  <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。&quot;</span>,
+  <span class="hljs-attr">&quot;list&quot;</span>: [
+    <span class="hljs-string">&quot;項目1&quot;</span>,
+    <span class="hljs-string">&quot;項目2&quot;</span>,
+    <span class="hljs-string">&quot;項目3&quot;</span>
+  ]
 }</pre>
             
         
@@ -261,6 +276,12 @@
     <span class="hljs-attribute">font-style</span>: italic;
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
   }
+
+  <span class="hljs-selector-class">.list</span> {
+    <span class="hljs-selector-tag">li</span> {
+      <span class="hljs-attribute">list-style</span>: none;
+    }
+  }
 }
 </pre>
                             </code>
@@ -278,7 +299,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">397 Bytes</span>
+                    <span class="Meta-value">451 Bytes</span>
                 </li>
             </ul>
         </div>

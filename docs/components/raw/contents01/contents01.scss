@@ -25,4 +25,10 @@ $c_bg_gray: #eee;
     font-style: italic;
     font-size: 12px;
   }
+
+  .list {
+    li {
+      list-style: none;
+    }
+  }
 }
