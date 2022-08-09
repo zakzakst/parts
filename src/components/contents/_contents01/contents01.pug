@@ -12,3 +12,11 @@
   ul.list
     each listItem in list
       li #{ listItem }
+
+  //- テーブル
+  table.table
+    tbody
+      each row in tableRows
+        tr
+          each col in row
+            td #{ col }
