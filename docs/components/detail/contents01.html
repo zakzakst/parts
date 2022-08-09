@@ -181,6 +181,20 @@
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>項目2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>項目3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;table&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>テーブル項目1-1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>テーブル項目1-2<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>テーブル項目1-3<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>テーブル項目2-1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>テーブル項目2-2<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>テーブル項目2-3<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
@@ -202,7 +216,15 @@
   <span class="hljs-comment">//- リスト</span>
   <span class="hljs-selector-tag">ul</span><span class="hljs-selector-class">.list</span>
     each listItem <span class="hljs-keyword">in</span> list
-      <span class="hljs-selector-tag">li</span> #{ listItem }</pre>
+      <span class="hljs-selector-tag">li</span> #{ listItem }
+
+  <span class="hljs-comment">//- テーブル</span>
+  <span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.table</span>
+    <span class="hljs-selector-tag">tbody</span>
+      each row <span class="hljs-keyword">in</span> tableRows
+        <span class="hljs-selector-tag">tr</span>
+          each col <span class="hljs-keyword">in</span> row
+            <span class="hljs-selector-tag">td</span> #{ col }</pre>
     </code>
 </div>
 
@@ -217,6 +239,18 @@
     <span class="hljs-string">&quot;項目1&quot;</span>,
     <span class="hljs-string">&quot;項目2&quot;</span>,
     <span class="hljs-string">&quot;項目3&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;tableRows&quot;</span>: [
+    [
+      <span class="hljs-string">&quot;テーブル項目1-1&quot;</span>,
+      <span class="hljs-string">&quot;テーブル項目1-2&quot;</span>,
+      <span class="hljs-string">&quot;テーブル項目1-3&quot;</span>
+    ],
+    [
+      <span class="hljs-string">&quot;テーブル項目2-1&quot;</span>,
+      <span class="hljs-string">&quot;テーブル項目2-2&quot;</span>,
+      <span class="hljs-string">&quot;テーブル項目2-3&quot;</span>
+    ]
   ]
 }</pre>
             
@@ -282,6 +316,10 @@
       <span class="hljs-attribute">list-style</span>: none;
     }
   }
+
+  <span class="hljs-selector-class">.table</span> {
+    <span class="hljs-selector-tag">table</span>-layout: fixed;
+  }
 }
 </pre>
                             </code>
@@ -299,7 +337,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">451 Bytes</span>
+                    <span class="Meta-value">492 Bytes</span>
                 </li>
             </ul>
         </div>
