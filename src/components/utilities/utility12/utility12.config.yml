@@ -1,0 +1,12 @@
+title: 簡易ページネーション
+label: 簡易ページネーション
+variants:
+  - name: default
+preview: '@preview-utilities'
+status: ready
+# status: prototype
+# status: wip
+hidden: true
+# http://localhost:3000/components/preview/utility12?page=1
+# context:
+#   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
