@@ -33,3 +33,6 @@ utility10();
 
 import { utility11 } from '../components/utilities/utility11/utility11';
 utility11();
+
+import { utility12 } from '../components/utilities/utility12/utility12';
+utility12();
