@@ -1,5 +1,7 @@
 'use strict';
 
+import { newsItem, categoryItem, categoryItems } from './utility12-data'
+
 export const utility12 = () => {
   const utility = new Utility12();
   utility.init();
@@ -8,9 +10,12 @@ export const utility12 = () => {
 class Utility12 {
   el: HTMLElement;
   page: number;
+  newsItems: newsItem[];
+  categoryItems: categoryItem[];
   constructor() {
     this.el = document.getElementById('js-utility-12');
     this.page = 0;
+    this.categoryItems = categoryItems;
   }
 
   /**
@@ -19,7 +24,8 @@ class Utility12 {
   init(): void {
     if (!this.el) return;
     const page = this.getPageQuery();
-    console.log(page);
+    this.getNewsItems();
+    console.log(this.newsItems);
   }
 
   /**
@@ -34,5 +40,22 @@ class Utility12 {
     const page = Number(params.get('page'));
     // ページ番号を返す
     return page ? page : 1;
+  }
+
+  /**
+   * ニュース項目取得
+   */
+  getNewsItems(): void {
+    this.newsItems = [
+      {
+        date: {
+          year: 2022,
+          month: 1,
+          day: 1,
+        },
+        categoryId: 'news',
+        title: 'タイトルが入ります',
+      },
+    ];
   }
 }
