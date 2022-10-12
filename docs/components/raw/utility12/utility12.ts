@@ -54,21 +54,18 @@ class Utility12 {
    * ニュース項目設定
    */
   async setNewsItems(): Promise<void> {
-    return new Promise(async resolve => {
-      const data = await this.getNewsItems();
-      this.newsItems = [
-        {
-          date: {
-            year: 2022,
-            month: 1,
-            day: 1,
-          },
-          categoryId: 'news',
-          title: 'タイトルが入ります',
+    const data = await this.getNewsItems();
+    this.newsItems = [
+      {
+        date: {
+          year: 2022,
+          month: 1,
+          day: 1,
         },
-      ];
-      resolve();
-    });
+        categoryId: 'news',
+        title: 'タイトルが入ります',
+      },
+    ];
   }
 
   /**
