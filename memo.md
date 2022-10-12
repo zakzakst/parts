@@ -26,6 +26,10 @@ https://stackoverflow.com/questions/36304565/snapsvg-and-requirejs-cannot-read-p
 ・Chart.js Integration
 https://www.chartjs.org/docs/latest/getting-started/integration.html
 
+・Async / Awaitを使う時、Asyncファンクションは必ずPromiseが返る
+https://zenn.dev/nana/articles/ff65486fcd0e34
+
+
 ## 未作成
 
 ### ヒーロー
