@@ -111,3 +111,6 @@ other08();
 
 import { other09 } from '../components/others/other09/other09';
 other09();
+
+import { other13 } from '../components/others/other13/other13';
+other13();
