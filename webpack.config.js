@@ -4,9 +4,9 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
-    // 'script': './src/work/script.ts',
+    'script': './src/work/script.ts',
     // 'scroll-anim': './src/work/scroll-anim.ts',
-    'utilities': './src/work/utilities.ts',
+    // 'utilities': './src/work/utilities.ts',
   },
   resolve: {
     extensions: [
