@@ -10,12 +10,14 @@ export const utility12 = () => {
 class Utility12 {
   el: HTMLElement;
   page: number;
+  itemNumPerPage: number;
   newsItems: newsItem[];
   categoryItems: categoryItem[];
   newsItemsUrl: string;
   constructor() {
     this.el = document.getElementById('js-utility-12');
     this.page = 0;
+    this.itemNumPerPage = 20;
     this.categoryItems = categoryItems;
     if (location.origin === 'https://zakzakst.github.io') {
       // GitHubの場合
@@ -31,7 +33,7 @@ class Utility12 {
    */
   async init(): Promise<void> {
     if (!this.el) return;
-    // const page = this.getPageQuery();
+    this.page = this.getPageQuery();
     await this.setNewsItems();
     console.log(this.newsItems);
   }
@@ -55,6 +57,7 @@ class Utility12 {
    */
   async setNewsItems(): Promise<void> {
     const data = await this.getNewsItems();
+    console.log(data.length);
     this.newsItems = [
       {
         date: {
