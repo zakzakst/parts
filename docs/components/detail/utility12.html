@@ -205,17 +205,17 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-55f5288bc13dfe68556806c2612ae413">utility12-data.ts</option>
+                <option value="file-f460340a90668cc0e2e5b0ca6ed30e08">utility12-data.ts</option>
                 
-                <option value="file-e5452b389934ce97a73babc994ee95d9">utility12.scss</option>
+                <option value="file-6de4c8544f03aa8ae54867b1e480df51">utility12.scss</option>
                 
-                <option value="file-11c255723a314996d25baaf54acfafb0">utility12.ts</option>
+                <option value="file-905bdf328dbf5c760292e10455bdf577">utility12.ts</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-55f5288bc13dfe68556806c2612ae413" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-f460340a90668cc0e2e5b0ca6ed30e08" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -265,7 +265,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/utilities/utility12/utility12-data.ts</span>
+                    <span class="Meta-value">src/components/utilities/_utility12/utility12-data.ts</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -274,7 +274,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-e5452b389934ce97a73babc994ee95d9" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-6de4c8544f03aa8ae54867b1e480df51" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -301,7 +301,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/utilities/utility12/utility12.scss</span>
+                    <span class="Meta-value">src/components/utilities/_utility12/utility12.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -310,7 +310,7 @@
             </ul>
         </div>
         
-        <div class="FileBrowser-item" id="file-11c255723a314996d25baaf54acfafb0" data-role="resource-preview">
+        <div class="FileBrowser-item" id="file-905bdf328dbf5c760292e10455bdf577" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -334,9 +334,10 @@
   newsItems: newsItem[];
   categoryItems: categoryItem[];
   newsItemsUrl: <span class="hljs-built_in">string</span>;
+  newsItemsAll: newsItem[];
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-utility-12&#x27;</span>);
-    <span class="hljs-built_in">this</span>.page = <span class="hljs-number">0</span>;
+    <span class="hljs-built_in">this</span>.page = <span class="hljs-number">1</span>;
     <span class="hljs-built_in">this</span>.itemNumPerPage = <span class="hljs-number">20</span>;
     <span class="hljs-built_in">this</span>.categoryItems = categoryItems;
     <span class="hljs-keyword">if</span> (location.origin === <span class="hljs-string">&#x27;https://zakzakst.github.io&#x27;</span>) {
@@ -377,8 +378,32 @@
    */</span>
   <span class="hljs-keyword">async</span> setNewsItems(): <span class="hljs-built_in">Promise</span>&lt;<span class="hljs-built_in">void</span>&gt; {
     <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.getNewsItems();
-    <span class="hljs-built_in">console</span>.log(data.length);
-    <span class="hljs-built_in">this</span>.newsItems = [
+    <span class="hljs-keyword">const</span> startItemNum = <span class="hljs-built_in">this</span>.page * <span class="hljs-built_in">this</span>.itemNumPerPage;
+    <span class="hljs-comment">// this.newsItems = [</span>
+    <span class="hljs-comment">//   {</span>
+    <span class="hljs-comment">//     date: {</span>
+    <span class="hljs-comment">//       year: 2022,</span>
+    <span class="hljs-comment">//       month: 1,</span>
+    <span class="hljs-comment">//       day: 1,</span>
+    <span class="hljs-comment">//     },</span>
+    <span class="hljs-comment">//     categoryId: &#x27;news&#x27;,</span>
+    <span class="hljs-comment">//     title: &#x27;タイトルが入ります&#x27;,</span>
+    <span class="hljs-comment">//   },</span>
+    <span class="hljs-comment">// ];</span>
+  }
+
+  <span class="hljs-comment">/**
+   * 指定ページ数に対応する項目を取得
+   */</span>
+  getPageItems(pageNum: <span class="hljs-built_in">number</span>): newsItem[] {
+    <span class="hljs-keyword">const</span> startItemNum = pageNum * <span class="hljs-built_in">this</span>.itemNumPerPage;
+    <span class="hljs-comment">// 開始アイテム番号がアイテム総数よりも少ない場合</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.newsItemsAll.length &lt; startItemNum) {
+      <span class="hljs-comment">// データの先頭からページ当たりのアイテム数を取得する</span>
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// 開始アイテム番号からページ当たりのアイテム数を取得する</span>
+    }
+    <span class="hljs-keyword">return</span> [
       {
         <span class="hljs-attr">date</span>: {
           <span class="hljs-attr">year</span>: <span class="hljs-number">2022</span>,
@@ -439,11 +464,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/utilities/utility12/utility12.ts</span>
+                    <span class="Meta-value">src/components/utilities/_utility12/utility12.ts</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2.9 KB</span>
+                    <span class="Meta-value">3.7 KB</span>
                 </li>
             </ul>
         </div>
