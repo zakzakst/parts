@@ -3,10 +3,10 @@ label: その他14
 variants:
   - name: default
     label: その他14
-    # status: ready
+    status: ready
     # status: prototype
-    status: wip
-hidden: true
+    # status: wip
+# hidden: true
 context:
   controls:
     - name: 'play'
