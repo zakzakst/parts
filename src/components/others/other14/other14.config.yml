@@ -6,6 +6,14 @@ variants:
     status: ready
     # status: prototype
     # status: wip
-    hidden: true
+# hidden: true
 context:
-  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
+  controls:
+    - name: 'play'
+      label: '再生'
+    - name: 'stop'
+      label: '停止'
+    - name: 'pause'
+      label: '一時停止'
+    # - name: 'goToAndPlay'
+    #   label: '指定位置から開始'

@@ -171,7 +171,14 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-152068b5cb4c767531feeed9581854bf-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;other-14&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;other-14&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;js-other-14-button&quot;</span> <span class="hljs-attr">data-control</span>=<span class="hljs-string">&quot;play&quot;</span>&gt;</span>再生<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;js-other-14-button&quot;</span> <span class="hljs-attr">data-control</span>=<span class="hljs-string">&quot;stop&quot;</span>&gt;</span>停止<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;js-other-14-button&quot;</span> <span class="hljs-attr">data-control</span>=<span class="hljs-string">&quot;pause&quot;</span>&gt;</span>一時停止<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-other-14&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -179,7 +186,12 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-152068b5cb4c767531feeed9581854bf-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre><span class="hljs-title">.other-14</span></pre>
+        <pre>.other<span class="hljs-number">-14</span>
+  ul
+    each <span class="hljs-keyword">control</span> <span class="hljs-keyword">in</span> controls
+      li
+        <span class="hljs-keyword">button</span>.js-other<span class="hljs-number">-14</span>-<span class="hljs-keyword">button</span>(data-<span class="hljs-keyword">control</span>=<span class="hljs-keyword">control</span>.name) #{ <span class="hljs-keyword">control</span>.label }
+  #js-other<span class="hljs-number">-14</span></pre>
     </code>
 </div>
 
@@ -189,7 +201,20 @@
         
             
             <pre>{
-  <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;テキストが入ります。テキストが入ります。テキストが入ります。&quot;</span>
+  <span class="hljs-attr">&quot;controls&quot;</span>: [
+    {
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;play&quot;</span>,
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;再生&quot;</span>
+    },
+    {
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;stop&quot;</span>,
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;停止&quot;</span>
+    },
+    {
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;pause&quot;</span>,
+      <span class="hljs-attr">&quot;label&quot;</span>: <span class="hljs-string">&quot;一時停止&quot;</span>
+    }
+  ]
 }</pre>
             
         
@@ -260,6 +285,7 @@
                             
                             <code class="Code Code--lang-TypeScript FileBrowser-code hljs">
                                 <pre><span class="hljs-meta">&#x27;use strict&#x27;</span>;
+<span class="hljs-keyword">import</span> lottie <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;lottie-web&#x27;</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> other14 = <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">const</span> other = <span class="hljs-keyword">new</span> Other14();
@@ -267,17 +293,100 @@
 }
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Other14</span> </span>{
+  <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> ちゃんと型の指定する</span>
   <span class="hljs-attr">el</span>: HTMLElement;
+  controlEls: <span class="hljs-built_in">any</span>;
+  lottieDataUrl: <span class="hljs-built_in">string</span>;
+  lottie: <span class="hljs-built_in">any</span>;
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-other-14&#x27;</span>);
+    <span class="hljs-built_in">this</span>.controlEls = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">&#x27;.js-other-14-button&#x27;</span>);
+    <span class="hljs-built_in">this</span>.lottieDataUrl = <span class="hljs-string">&#x27;https://assets10.lottiefiles.com/packages/lf20_gSMVZV7ZdZ.json&#x27;</span>;
   }
 
   <span class="hljs-comment">/**
    * 初期化
    */</span>
-  init(): <span class="hljs-built_in">void</span> {
+  <span class="hljs-keyword">async</span> init(): <span class="hljs-built_in">Promise</span>&lt;<span class="hljs-built_in">void</span>&gt; {
     <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.el) <span class="hljs-keyword">return</span>;
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;other 14 init&#x27;</span>);
+    <span class="hljs-built_in">this</span>.lottieInit();
+    <span class="hljs-built_in">this</span>.onClickControlButton();
+    <span class="hljs-comment">// const data = await this.lottieGetData();</span>
+    <span class="hljs-comment">// console.log(data);</span>
+  }
+
+  <span class="hljs-comment">/**
+   * lottie データ読み込み（不要）
+   */</span>
+  lottieGetData(): <span class="hljs-built_in">Promise</span>&lt;<span class="hljs-built_in">Object</span> | <span class="hljs-literal">null</span>&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> {
+      fetch(<span class="hljs-built_in">this</span>.lottieDataUrl)
+        .then(<span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
+          <span class="hljs-keyword">return</span> res.json();
+        })
+        .then(<span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> {
+          resolve(data);
+        })
+        .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> {
+          <span class="hljs-built_in">console</span>.log(error);
+          resolve(<span class="hljs-literal">null</span>);
+        });
+    });
+  }
+
+  <span class="hljs-comment">/**
+   * lottie 初期化
+   */</span>
+  lottieInit(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.lottie = lottie.loadAnimation({
+      <span class="hljs-attr">container</span>: <span class="hljs-built_in">this</span>.el, <span class="hljs-comment">// the dom element that will contain the animation</span>
+      <span class="hljs-attr">renderer</span>: <span class="hljs-string">&#x27;svg&#x27;</span>,
+      <span class="hljs-attr">loop</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-comment">// loop: true,</span>
+      <span class="hljs-attr">autoplay</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">path</span>: <span class="hljs-built_in">this</span>.lottieDataUrl <span class="hljs-comment">// the path to the animation json</span>
+    });
+    <span class="hljs-comment">// loop: falseの時動くっぽい</span>
+    <span class="hljs-built_in">this</span>.lottie.onComplete = <span class="hljs-function">(<span class="hljs-params">e: <span class="hljs-built_in">any</span></span>) =&gt;</span> {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;onComplete&#x27;</span>, e);
+      alert(<span class="hljs-string">&#x27;アニメーション完了&#x27;</span>);
+    };
+    <span class="hljs-comment">// loop: trueの時動くっぽい</span>
+    <span class="hljs-built_in">this</span>.lottie.onLoopComplete = <span class="hljs-function">(<span class="hljs-params">e: <span class="hljs-built_in">any</span></span>) =&gt;</span> {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;onLoopComplete&#x27;</span>, e);
+    };
+  }
+
+  <span class="hljs-comment">/**
+   * 操作ボタンクリック時の挙動
+   */</span>
+  onClickControlButton(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> ちゃんと型の指定する</span>
+    <span class="hljs-built_in">this</span>.controlEls.forEach(<span class="hljs-function">(<span class="hljs-params">el: <span class="hljs-built_in">any</span></span>) =&gt;</span> {
+      el.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function">(<span class="hljs-params">e: <span class="hljs-built_in">any</span></span>) =&gt;</span> {
+        e.preventDefault();
+        <span class="hljs-keyword">const</span> controlName = el.dataset[<span class="hljs-string">&#x27;control&#x27;</span>];
+        <span class="hljs-keyword">switch</span> (controlName) {
+          <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;play&#x27;</span>:
+            <span class="hljs-built_in">this</span>.lottie.play();
+            <span class="hljs-keyword">break</span>;
+          <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;stop&#x27;</span>:
+            <span class="hljs-built_in">this</span>.lottie.stop();
+            <span class="hljs-keyword">break</span>;
+          <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;pause&#x27;</span>:
+            <span class="hljs-built_in">this</span>.lottie.pause();
+            <span class="hljs-keyword">break</span>;
+          <span class="hljs-comment">// マーカーを設定すれば指定位置から開始も可能っぽい</span>
+          <span class="hljs-comment">// https://lottiefiles.com/blog/tips-and-tutorials/how-to-setup-named-markers-in-lottie-animations</span>
+          <span class="hljs-comment">// case &#x27;goToAndPlay&#x27;:</span>
+          <span class="hljs-comment">//   this.lottie.goToAndPlay();</span>
+          <span class="hljs-comment">//   break;</span>
+
+          <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">break</span>;
+        }
+      });
+    });
   }
 }
 </pre>
@@ -296,7 +405,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">318 Bytes</span>
+                    <span class="Meta-value">2.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -311,7 +420,8 @@
     <div class="Prose Prose--condensed">
         
         <h2 id="参考">参考</h2>
-<p><a href="" target="_blank"></a></p>
+<p>下記無料素材を利用させていただきました。</p>
+<iframe src="https://embed.lottiefiles.com/animation/124092"></iframe>
 
         
     </div>
