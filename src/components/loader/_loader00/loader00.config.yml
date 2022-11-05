@@ -1,0 +1,11 @@
+title: ローダー00
+label: ローダー00
+variants:
+  - name: default
+    label: ローダー00
+    status: ready
+    # status: prototype
+    # status: wip
+# hidden: true
+context:
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
