@@ -2,7 +2,7 @@ $BLOCK_NAME: '.loader-01';
 
 // 変数
 $size-loader: 60px;
-$duration-loader: 4s;
+$duration-loader: 2s;
 $c-loader: #000;
 
 // ベース
@@ -39,12 +39,12 @@ $c-loader: #000;
 
   &__left-wrapper {
     transform-origin: center right;
-    animation: loader01Left $duration-loader linear ($duration-loader / 4) infinite;
+    animation: loader01Left $duration-loader ease-out ($duration-loader / 4) infinite;
   }
 
   &__right-wrapper {
     transform-origin: center left;
-    animation: loader01Left $duration-loader linear infinite;
+    animation: loader01Left $duration-loader ease-in infinite;
   }
 
   &__left,
@@ -73,13 +73,13 @@ $c-loader: #000;
     transform: rotate(0);
   }
   25% {
-    transform: rotate(0);
+    transform: rotate(180deg);
   }
   50% {
     transform: rotate(180deg);
   }
   75% {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
   }
   100% {
     transform: rotate(360deg);
@@ -93,6 +93,56 @@ $c-loader: #000;
     &__right {
       background: none;
       border: 4px solid $c-loader;
+    }
+  }
+}
+
+// 拡大縮小
+#{ $BLOCK_NAME }.--scale {
+  animation: loader01Scale $duration-loader linear infinite;
+}
+
+@keyframes loader01Scale {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  50% {
+    transform: scale(0.5) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+// 二重
+.layout-loader-01-double {
+  position: relative;
+  width: $size-loader;
+  height: $size-loader;
+
+  .loader-01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .loader-01:nth-child(2) {
+    width: $size-loader * 2 / 3;
+    height: $size-loader * 2 / 3;
+    #{ $BLOCK_NAME } {
+      &__left-wrapper {
+        animation-delay: $duration-loader / 4 + $duration-loader * 0.1;
+      }
+      &__right-wrapper {
+        animation-delay: $duration-loader * 0.1;
+      }
+      &__left,
+      &__right {
+        border-color: #888;
+      }
     }
   }
 }
