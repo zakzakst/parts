@@ -1,0 +1,98 @@
+$BLOCK_NAME: '.loader-01';
+
+// 変数
+$size-loader: 60px;
+$duration-loader: 4s;
+$c-loader: #000;
+
+// ベース
+#{ $BLOCK_NAME } {
+  position: relative;
+  width: $size-loader;
+  height: $size-loader;
+
+  &__left-container,
+  &__right-container {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  &__left-container {
+    left: 0;
+    right: 50%;
+  }
+
+  &__right-container {
+    left: 50%;
+    right: 0;
+  }
+
+  &__left-wrapper,
+  &__right-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__left-wrapper {
+    transform-origin: center right;
+    animation: loader01Left $duration-loader linear ($duration-loader / 4) infinite;
+  }
+
+  &__right-wrapper {
+    transform-origin: center left;
+    animation: loader01Left $duration-loader linear infinite;
+  }
+
+  &__left,
+  &__right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 9999px;
+  }
+
+  &__left {
+    background: $c-loader;
+    right: -100%;
+  }
+
+  &__right {
+    background: $c-loader;
+    left: -100%;
+  }
+}
+
+@keyframes loader01Left {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// ボーダー
+#{ $BLOCK_NAME }.--border {
+  #{ $BLOCK_NAME } {
+    &__left,
+    &__right {
+      background: none;
+      border: 4px solid $c-loader;
+    }
+  }
+}
