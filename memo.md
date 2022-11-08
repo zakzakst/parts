@@ -44,6 +44,7 @@ http://a-dot.co.jp/
 
 ### ボタン
 
+https://dyschroniaca.com/
 https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」のリンクホバー時の下線「background-blend-mode: color-dodge;」）
 
 ### 見出し
@@ -112,6 +113,7 @@ https://enjin-dash.com/about/index.html
 
 https://zenn.dev/ixkaito/articles/css-image-glitch
 https://codepen.io/z-/pen/XNQaym
+https://www.nintendo.co.jp/switch/av5ja/index.html
 https://school.dhw.co.jp/p/cgvfx-lp/1708dhw/ （履修科目）
 https://www.otemon-jh.ed.jp/o-drive/ （バズキーワード）
 https://shunbin.jp/ （グラフ）
