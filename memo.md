@@ -48,6 +48,7 @@ https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」�
 
 ### 見出し
 
+https://conference.pixiv.co.jp/2020/tech-fes
 https://www.gyu36.jp/
 
 ### カード
@@ -109,6 +110,8 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://zenn.dev/ixkaito/articles/css-image-glitch
+https://codepen.io/z-/pen/XNQaym
 https://school.dhw.co.jp/p/cgvfx-lp/1708dhw/ （履修科目）
 https://www.otemon-jh.ed.jp/o-drive/ （バズキーワード）
 https://shunbin.jp/ （グラフ）
