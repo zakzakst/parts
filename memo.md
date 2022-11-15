@@ -44,12 +44,10 @@ http://a-dot.co.jp/
 
 ### ボタン
 
-https://dyschroniaca.com/
 https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」のリンクホバー時の下線「background-blend-mode: color-dodge;」）
 
 ### 見出し
 
-https://conference.pixiv.co.jp/2020/tech-fes
 https://www.gyu36.jp/
 
 ### カード
