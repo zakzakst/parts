@@ -1,0 +1,54 @@
+$BLOCK_NAME: '.button-46';
+
+// 変数
+
+#{ $BLOCK_NAME } {
+  &__bg {
+    height: 300px;
+    // background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 62px;
+  line-height: 1;
+  background: #F1F4F9;
+  border-radius: 9999px;
+  border: 3px solid #fff;
+  margin: 10px;
+  box-shadow: 0 3px 0 #ABB2D7;
+  &::before {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    margin: auto;
+    box-sizing: content-box;
+    border: 8px solid;
+    border-top-color: #BEC7FD;
+    border-left-color: #6F78DA;
+    border-bottom-color: #4B529B;
+    border-right-color: #5D65C0;
+    transform: scaleY(1.5) rotate(45deg);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(.42,0,0,.99);
+  }
+  &:hover {
+    color: #4958F7;
+    &::before {
+      top: -10px;
+      opacity: 1;
+    }
+  }
+}
