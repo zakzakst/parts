@@ -118,7 +118,6 @@ https://shunbin.jp/ （グラフ）
 https://www2.mejiro.ac.jp/univ/mejinavi2021/ （両サイドのスライド）
 https://book.mynavi.jp/webpro-free/ （背景のアニメーション）
 https://season.a2care-anatc.com/kahun/ （スクロールを促すバー）
-https://www.otemae.ac.jp/opencampus/university/ （トップの人物が流れる部分）
 https://sencraneservice.com/ （ななめのスライド画像）
 https://www.atamisekaie.jp/
 http://www.ney.co.jp/ （ページ遷移）

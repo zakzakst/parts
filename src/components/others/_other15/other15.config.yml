@@ -1,0 +1,11 @@
+title: その他15
+label: その他15
+variants:
+  - name: default
+    label: その他15
+    status: ready
+    # status: prototype
+    # status: wip
+hidden: true
+context:
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
