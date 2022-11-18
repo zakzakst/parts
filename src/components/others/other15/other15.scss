@@ -1,0 +1,43 @@
+$BLOCK_NAME: '.other-15';
+
+// 変数
+
+#{ $BLOCK_NAME } {
+  &__wrapper {
+    overflow: hidden;
+  }
+
+  width: calc(max(200vw, 1296px));
+  height: 140px;
+  animation: other15SlideAnim 4s infinite linear;
+  will-change: transform;
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    background: url(/parts/img/components/others/other15/sprite.svg) repeat;
+    background-size: 432px 420px;
+    animation: other15ImgAnim 3s infinite steps(1, start);
+  }
+}
+
+@keyframes other15SlideAnim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-432px);
+  }
+}
+
+@keyframes other15ImgAnim {
+  0% {
+    background-position-y: 0;
+  }
+  33% {
+    background-position-y: -140px;
+  }
+  66% {
+    background-position-y: -280px;
+  }
+}

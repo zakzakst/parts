@@ -6,6 +6,6 @@ variants:
     status: ready
     # status: prototype
     # status: wip
-hidden: true
+# hidden: true
 context:
   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
