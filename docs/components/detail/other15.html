@@ -171,7 +171,11 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-dcf9583a50d5ff013b9bd8eecf934ede-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;other-15&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;other-15__wrapper&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;other-15&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;other-15__img&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -179,7 +183,9 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-dcf9583a50d5ff013b9bd8eecf934ede-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre><span class="hljs-title">.other-15</span></pre>
+        <pre>.<span class="hljs-literal">other</span><span class="hljs-number">-15</span>__wrapper
+  .<span class="hljs-literal">other</span><span class="hljs-number">-15</span>
+    .<span class="hljs-literal">other</span><span class="hljs-number">-15</span>__img</pre>
     </code>
 </div>
 
@@ -207,13 +213,13 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-be8e7d493919200a285cd3e2ee1fabc4">other15.scss</option>
+                <option value="file-47900b3d3feaed2a2f735659fa8b1aeb">other15.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-be8e7d493919200a285cd3e2ee1fabc4" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-47900b3d3feaed2a2f735659fa8b1aeb" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -226,7 +232,43 @@
 <span class="hljs-comment">// 変数</span>
 
 #{ <span class="hljs-variable">$BLOCK_NAME</span> } {
-  <span class="hljs-comment">//</span>
+  &amp;__wrapper {
+    <span class="hljs-attribute">overflow</span>: hidden;
+  }
+
+  <span class="hljs-attribute">width</span>: calc(max(<span class="hljs-number">200vw</span>, <span class="hljs-number">1296px</span>));
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">140px</span>;
+  <span class="hljs-attribute">animation</span>: other15SlideAnim <span class="hljs-number">4s</span> infinite linear;
+  will-change: transform;
+
+  &amp;__img {
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">background</span>: url(/parts/img/components/others/other15/sprite.svg) repeat;
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">432px</span> <span class="hljs-number">420px</span>;
+    <span class="hljs-attribute">animation</span>: other15ImgAnim <span class="hljs-number">3s</span> infinite steps(<span class="hljs-number">1</span>, start);
+  }
+}
+
+<span class="hljs-keyword">@keyframes</span> other15SlideAnim {
+  0% {
+    <span class="hljs-attribute">transform</span>: translateX(<span class="hljs-number">0</span>);
+  }
+  100% {
+    <span class="hljs-attribute">transform</span>: translateX(-<span class="hljs-number">432px</span>);
+  }
+}
+
+<span class="hljs-keyword">@keyframes</span> other15ImgAnim {
+  0% {
+    <span class="hljs-attribute">background-position</span>-y: <span class="hljs-number">0</span>;
+  }
+  33% {
+    <span class="hljs-attribute">background-position</span>-y: -<span class="hljs-number">140px</span>;
+  }
+  66% {
+    <span class="hljs-attribute">background-position</span>-y: -<span class="hljs-number">280px</span>;
+  }
 }
 </pre>
                             </code>
@@ -240,11 +282,11 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/others/_other15/other15.scss</span>
+                    <span class="Meta-value">src/components/others/other15/other15.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">64 Bytes</span>
+                    <span class="Meta-value">738 Bytes</span>
                 </li>
             </ul>
         </div>
@@ -260,7 +302,8 @@
         
         <h2 id="参考">参考</h2>
 <p><a href="https://www.otemae.ac.jp/opencampus/university/" target="_blank">https://www.otemae.ac.jp/opencampus/university/</a>
-<a href="https://www.otemae.ac.jp/opencampus/common/css/img/university_main_slide.png" target="_blank">https://www.otemae.ac.jp/opencampus/common/css/img/university_main_slide.png</a></p>
+<a href="https://www.otemae.ac.jp/opencampus/common/css/img/university_main_slide.png" target="_blank">https://www.otemae.ac.jp/opencampus/common/css/img/university_main_slide.png</a>
+<a href="https://icon-z.com/index.html" target="_blank">https://icon-z.com/index.html</a></p>
 
         
     </div>
@@ -3245,6 +3288,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="other14.html" data-role="tree-link" data-pjax data-handle="other14">
                 <span>その他14</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="other15">
+                <span>その他15</span>
                 
 
 <div class="Status Status--unlabelled">
