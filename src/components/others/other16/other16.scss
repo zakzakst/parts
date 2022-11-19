@@ -1,0 +1,113 @@
+$BLOCK_NAME: '.other-16';
+
+// 変数
+
+#{ $BLOCK_NAME } {
+  &-colors {
+    width: 210px;
+    height: 260px;
+    background: url(/parts/img/components/others/other16/colors.svg) no-repeat;
+    background-size: 210px 1040px;
+    background-position-y: 0px;
+    cursor: pointer;
+    &:hover {
+      animation: other16ColorAnim 3s infinite steps(1, start);
+    }
+  }
+
+  &-dance {
+    width: 170px;
+    height: 260px;
+    background: url(/parts/img/components/others/other16/dance.svg) no-repeat;
+    background-size: 170px 1040px;
+    background-position-y: 0px;
+    cursor: pointer;
+    &:hover {
+      animation: other16DanceAnim 4s infinite steps(1, start);
+    }
+  }
+
+  &-rotate {
+    width: 230px;
+    height: 260px;
+    background: url(/parts/img/components/others/other16/rotate.svg) no-repeat;
+    background-size: 230px 1040px;
+    background-position-y: 0px;
+    cursor: pointer;
+    &:hover {
+      animation: other16ColorAnim 2s infinite steps(1, start);
+    }
+  }
+
+  &-time {
+    width: 300px;
+    height: 190px;
+    background: url(/parts/img/components/others/other16/time.jpg) no-repeat;
+    background-size: 300px 570px;
+    background-position-y: 0px;
+    cursor: pointer;
+    &:hover {
+      animation: other16TimeAnim 2s infinite steps(1, start);
+    }
+  }
+}
+
+@keyframes other16ColorAnim {
+  0% {
+    background-position-y: 0;
+  }
+  25% {
+    background-position-y: -260px;
+  }
+  50% {
+    background-position-y: -520px;
+  }
+  75% {
+    background-position-y: -780px;
+  }
+}
+
+@keyframes other16DanceAnim {
+  0% {
+    background-position-y: 0;
+  }
+  10% {
+    background-position-y: -260px;
+  }
+  20% {
+    background-position-y: 0;
+  }
+  30% {
+    background-position-y: -260px;
+  }
+  40% {
+    background-position-y: 0;
+  }
+  50% {
+    background-position-y: -780px;
+  }
+  60% {
+    background-position-y: -520px;
+  }
+  70% {
+    background-position-y: -780px;
+  }
+  80% {
+    background-position-y: -520px;
+  }
+  90% {
+    background-position-y: -780px;
+  }
+}
+
+@keyframes other16TimeAnim {
+  0% {
+    background-position-y: 0;
+  }
+  33% {
+    background-position-y: -190px;
+  }
+  66% {
+    background-position-y: -380px;
+  }
+}
