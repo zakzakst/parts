@@ -109,6 +109,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://mikuland.com/ （https://fonts.google.com/specimen/DotGothic16 でタイピングのアニメーションやってみる）
 https://zenn.dev/ixkaito/articles/css-image-glitch
 https://codepen.io/z-/pen/XNQaym
 https://www.nintendo.co.jp/switch/av5ja/index.html
