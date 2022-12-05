@@ -1,0 +1,33 @@
+$BLOCK_NAME: '.other-17';
+
+// 変数
+$c_text: #000;
+
+#{ $BLOCK_NAME } {
+  font-family: 'DotGothic16', sans-serif;
+  line-height: 1;
+  font-size: 48px;
+  color: $c_text;
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 1em;
+    border-right: 3px solid $c_text;
+    vertical-align: bottom;
+    transform: translateY(1px);
+    animation: other17BarAnim 2s infinite steps(1, start);
+  }
+  > span > span {
+    display: none;
+  }
+}
+
+@keyframes other17BarAnim {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+}
