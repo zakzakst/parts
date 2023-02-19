@@ -1,0 +1,37 @@
+$BLOCK_NAME: '.other-18';
+
+// 変数
+$w_tablet:
+
+#{ $BLOCK_NAME } {
+  &__layout-container {
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+
+  &__layout-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 20px;
+    @container (min-width: 400px) {
+      grid-template-columns: 1fr 280px;
+    }
+  }
+
+  // &__layout-sidebar {
+  //   display: flex;
+  //   gap: 20px;
+  //   flex-wrap: wrap;
+  // }
+
+  &__content-container {
+    // flex-grow: 1;
+    background: #f00;
+  }
+
+  &__sidebar {
+    // width: 280px;
+    // flex-shrink: 0;
+    background: #0f0;
+  }
+}
