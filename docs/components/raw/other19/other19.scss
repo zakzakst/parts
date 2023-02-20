@@ -1,0 +1,53 @@
+$BLOCK_NAME: '.other-19';
+
+// 変数
+
+#{ $BLOCK_NAME } {
+  &__loading {
+    position: relative;
+    height: 60px;
+    width: 60px;
+  }
+
+  &__loading-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 9999px;
+
+    --angle: calc(360deg / 8 * var(--index));
+    --x: calc(cos(var(--angle)) * 30px);
+    --y: calc(sin(var(--angle)) * 30px);
+    translate: calc(var(--x) - 50%) calc(var(--y) - 50%);
+
+    --duration: 1.8s;
+    --delay: calc(var(--duration) * var(--index) / 8);
+    animation: other19Loading var(--duration) var(--delay) infinite ease-in-out;
+  }
+
+  &__line {
+    margin-top: 40px;
+    white-space: nowrap;
+    letter-spacing: 1px;
+  }
+
+  &__line-item {
+    display: inline-block;
+    /** 0°から360°の間で角度を計算 */
+    --angle: calc(360deg / 18 * var(--index));
+    /** カーブの振れ幅を10pxにする */
+    --y: calc(sin(var(--angle)) * 20px);
+    translate: 0 var(--y);
+  }
+}
+
+@keyframes other19Loading {
+  50% {
+    opacity: 1;
+    transform: scale(1.6);
+  }
+}
