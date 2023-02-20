@@ -1,0 +1,7 @@
+.other-19
+  .other-19__loading
+    - for (var i = 0; i < 8; i++)
+      .other-19__loading-item(style='--index:' + (i + 1))
+  .other-19__line
+    - for (var j = 0; j < text.length; j++)
+      span.other-19__line-item(style='--index:' + (j + 1)) #{ text[j] }
