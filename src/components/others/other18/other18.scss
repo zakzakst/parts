@@ -1,37 +1,93 @@
 $BLOCK_NAME: '.other-18';
+$GRID_BLOCK_NAME: '.grid';
+$CARD_BLOCK_NAME: '.card';
 
 // 変数
-$w_tablet:
+$w_tablet: 769px;
 
 #{ $BLOCK_NAME } {
+  position: relative;
+  container-type: inline-size;
+
+  &__heading {
+    font-weight: bold;
+    font-size: 2em;
+  }
+
   &__layout-container {
     max-width: 1020px;
     margin: 0 auto;
+    & + & {
+      margin-top: 90px;
+    }
   }
 
   &__layout-sidebar {
     display: grid;
-    grid-template-columns: 1fr 280px;
+    grid-template-columns: repeat(1, 100%);
     gap: 20px;
-    @container (min-width: 400px) {
+    // ページレイアウトのほうはcontainerよりもmediaを使った方が、ターゲットデバイスが明確になって分かりやすい？
+    @container (min-width: #{ ($w_tablet + 1px) }) {
       grid-template-columns: 1fr 280px;
     }
   }
 
-  // &__layout-sidebar {
-  //   display: flex;
-  //   gap: 20px;
-  //   flex-wrap: wrap;
-  // }
-
   &__content-container {
-    // flex-grow: 1;
-    background: #f00;
+    container-type: inline-size;
+  }
+
+  &__sidebar-container {
+    container-type: inline-size;
   }
 
   &__sidebar {
-    // width: 280px;
-    // flex-shrink: 0;
     background: #0f0;
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+    // @container (min-width: 768px) {
+    // }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    gap: 20px;
+    @container (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @container (min-width: 900px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .card {
+    &__container {
+      container-type: inline-size;
+    }
+
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background: #eee;
+    padding: 20px;
+    @container (min-width: 480px) {
+      flex-direction: row;
+    }
+
+    &__thumb {
+      max-width: 200px;
+      aspect-ratio: 1 / 1;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  }
+
+  &__layout-single {
+    container-type: inline-size;
   }
 }

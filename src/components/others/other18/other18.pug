@@ -1,7 +1,29 @@
 .other-18
-  .other-18__layout-container
+  section.other-18__layout-container
+    h2.other-18__heading サイドバーあり
     .other-18__layout-sidebar
       .other-18__content-container
-        div 内容
-      .other-18__sidebar
-        div サイドバー
+        .grid
+          - for (var i = 0; i < 5; i++)
+            .card__container
+              .card
+                .card__thumb
+                  img(src='https://picsum.photos/id/237/400/400')
+                .card__body
+                  .card__title 項目#{i + 1}
+                  .card__text テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+      .other-18__sidebar-container
+        .other-18__sidebar サイドバー
+
+  section.other-18__layout-container
+    h2.other-18__heading サイドバーなし
+    .other-18__layout-single
+      .grid
+        - for (var i = 0; i < 5; i++)
+          .card__container
+            .card
+              .card__thumb
+                img(src='https://picsum.photos/id/237/400/400')
+              .card__body
+                .card__title 項目#{i + 1}
+                .card__text テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
