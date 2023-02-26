@@ -1,11 +1,11 @@
-title: 見出し00
-label: 見出し00
+title: 見出し10
+label: 見出し10
 variants:
   - name: default
-    label: 見出し00
+    label: 見出し10
     status: ready
     # status: prototype
     # status: wip
     # hidden: true
 context:
-  text: '見出し00'
+  text: '見出し10'
