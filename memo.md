@@ -48,7 +48,6 @@ https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」�
 
 ### 見出し
 
-https://tsukuruba.com/
 https://www.miwa-dental.jp/
 https://www.gyu36.jp/
 
@@ -74,6 +73,7 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
+https://www.remain-in.com/ （見出し）
 https://www.webcreatorbox.com/tech/intersection-observer
 https://www.mcplas.co.jp/
 https://pogg-sweetpotatopie.com/
@@ -91,6 +91,8 @@ https://saga-hirakawaya.jp/brand/contact/
 
 ### モーダル
 
+https://enjintokyo.com/
+
 ### 問い合わせ
 
 ### メニュー
@@ -105,12 +107,16 @@ https://factfashion.jp/
 
 ### 開始アニメーション
 
+https://corp.penmark.jp/
 https://rdc.ricoh.co.jp/?utm=wewantwebs
 https://s-y-n.jp/
 https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://www.pacificleague.jp/
+http://www.sankei-denki.jp/
+https://deltaclinic.jp/
 https://zenn.dev/ixkaito/articles/css-image-glitch
 https://codepen.io/z-/pen/XNQaym
 https://www.nintendo.co.jp/switch/av5ja/index.html
