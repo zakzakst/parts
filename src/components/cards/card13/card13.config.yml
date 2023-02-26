@@ -1,0 +1,11 @@
+title: カード13
+label: カード13
+variants:
+  - name: default
+    label: カード13
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  img: '/parts/img/components/card/card13/thumb.jpg'
