@@ -44,14 +44,20 @@ http://a-dot.co.jp/
 
 ### ボタン
 
+https://recruit.d-pops.co.jp/
 https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」のリンクホバー時の下線「background-blend-mode: color-dodge;」）
 
 ### 見出し
 
+https://recruit.kokuyo.co.jp/
+https://corp.telecy.tv/
 https://www.miwa-dental.jp/
 https://www.gyu36.jp/
 
 ### カード
+
+https://www.tricle-llc.co.jp/
+https://www.tambien.studio/ （サムネイルがホバーした時にパラパラ重なる）
 
 ### ニュース一覧
 
@@ -73,6 +79,8 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
+https://www.gonshiro.co.jp/ （画像が外から収まる）
+https://synflux.io/ （QRコード表示）
 https://www.remain-in.com/ （見出し）
 https://www.webcreatorbox.com/tech/intersection-observer
 https://www.mcplas.co.jp/
@@ -97,6 +105,7 @@ https://enjintokyo.com/
 
 ### メニュー
 
+https://www.welzo.co.jp/ （事業紹介のところ）
 https://savilerowprojects.com/
 https://www.qlip.co.jp/
 https://www.snowsand.jp/
@@ -114,7 +123,14 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
-https://www.pacificleague.jp/
+https://service.kateinoigaku.jp/index.html （ローディングのマウスストーカー）
+https://autoro.io/ （マウスストーカーのmix blend）
+https://dhnn.com/ （言語切替）
+https://www.featuredprojects.jp/ （カーソルカスタマイズ）
+https://www.kirameki.cc/ （ホバーインタラクション）
+https://gokagn.com/ （LET'S TALK のホバーインタラクション）
+https://www.tokuyama-dental.co.jp/recruit/ （リンクのティッカー）
+https://www.pacificleague.jp/ （立体画像）
 http://www.sankei-denki.jp/
 https://deltaclinic.jp/
 https://zenn.dev/ixkaito/articles/css-image-glitch
