@@ -1,0 +1,49 @@
+$BLOCK_NAME: '.other-20';
+
+// 変数
+
+#{ $BLOCK_NAME } {
+  .modal {
+    container-type: inline-size;
+    container-name: modal;
+    border: 1px solid #000;
+    padding: 24px;
+    margin-bottom: 24px;
+    background: color-mix(in srgb, black, white);
+  }
+
+  .card {
+    container-type: inline-size;
+    container-name: card;
+    border: 1px solid #000;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+
+  .button {
+    &::before {
+      content: '[通常]';
+    }
+    @container style(--type: disabled) {
+      opacity: 0.5;
+      &::before {
+        content: '[無効状態]';
+      }
+    }
+    @container modal (min-width: 800px) {
+      &::before {
+        content: '[modalが800px以上]';
+      }
+    }
+    @container card (min-width: 400px) {
+      &::before {
+        content: '[modalが400px以上]';
+      }
+    }
+    @container card (min-width: 900px) {
+      &::before {
+        content: '[modalが900px以上]';
+      }
+    }
+  }
+}
