@@ -1,0 +1,11 @@
+title: その他20
+label: その他20
+variants:
+  - name: default
+    label: その他20
+    status: ready
+    # status: prototype
+    # status: wip
+# hidden: true
+# context:
+  # text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
