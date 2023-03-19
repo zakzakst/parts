@@ -26,9 +26,8 @@ https://stackoverflow.com/questions/36304565/snapsvg-and-requirejs-cannot-read-p
 ・Chart.js Integration
 https://www.chartjs.org/docs/latest/getting-started/integration.html
 
-・Async / Awaitを使う時、Asyncファンクションは必ずPromiseが返る
+・Async / Await を使う時、Async ファンクションは必ず Promise が返る
 https://zenn.dev/nana/articles/ff65486fcd0e34
-
 
 ## 未作成
 
@@ -80,7 +79,7 @@ https://wrl.co.jp/about/ （沿革部分）
 ### スクロールアニメーション
 
 https://www.gonshiro.co.jp/ （画像が外から収まる）
-https://synflux.io/ （QRコード表示）
+https://synflux.io/ （QR コード表示）
 https://www.remain-in.com/ （見出し）
 https://www.webcreatorbox.com/tech/intersection-observer
 https://www.mcplas.co.jp/
@@ -123,8 +122,9 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://photoshopvip.net/144594 （クリック時にホワッとなるインタラクション）
 https://service.kateinoigaku.jp/index.html （ローディングのマウスストーカー）
-https://autoro.io/ （マウスストーカーのmix blend）
+https://autoro.io/ （マウスストーカーの mix blend）
 https://dhnn.com/ （言語切替）
 https://www.featuredprojects.jp/ （カーソルカスタマイズ）
 https://www.kirameki.cc/ （ホバーインタラクション）
