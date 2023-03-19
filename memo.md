@@ -43,6 +43,7 @@ http://a-dot.co.jp/
 
 ### ボタン
 
+https://www.spaceforce.com/
 https://recruit.d-pops.co.jp/
 https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」のリンクホバー時の下線「background-blend-mode: color-dodge;」）
 
@@ -122,6 +123,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://thesingularity.squarespace.com/ （右下のボタン）
 https://photoshopvip.net/144594 （クリック時にホワッとなるインタラクション）
 https://service.kateinoigaku.jp/index.html （ローディングのマウスストーカー）
 https://autoro.io/ （マウスストーカーの mix blend）
