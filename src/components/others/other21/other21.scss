@@ -1,0 +1,22 @@
+$BLOCK_NAME: '.other-21';
+
+// 変数
+
+#{ $BLOCK_NAME } {
+  &__box {
+    width: 200px;
+    height: 200px;
+    background: #000;
+  }
+
+  &__buttons {
+    margin-top: 40px;
+  }
+
+  &__button {
+    cursor: pointer;
+    &:hover {
+      color: #f00;
+    }
+  }
+}
