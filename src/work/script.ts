@@ -120,3 +120,6 @@ other14();
 
 import { other17 } from '../components/others/other17/other17';
 other17();
+
+import { other21 } from '../components/others/other21/other21';
+other21();
