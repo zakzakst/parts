@@ -123,6 +123,14 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://recruit.dac.co.jp/ （各種ホバーインタラクション）
+https://recruit.dac.co.jp/people/jin-ichinomiya （画像のモザイクアニメーション）
+
+```
+https://recruit.dac.co.jp/assets/js/body.js
+waveEffect 関数
+```
+
 https://thesingularity.squarespace.com/ （右下のボタン）
 https://photoshopvip.net/144594 （クリック時にホワッとなるインタラクション）
 https://service.kateinoigaku.jp/index.html （ローディングのマウスストーカー）
