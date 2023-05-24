@@ -4,19 +4,16 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
-    'script': './src/work/script.ts',
-    // 'scroll-anim': './src/work/scroll-anim.ts',
+    // 'script': './src/work/script.ts',
+    'scroll-anim': './src/work/scroll-anim.ts',
     // 'utilities': './src/work/utilities.ts',
   },
   resolve: {
-    extensions: [
-      '.js',
-      '.ts',
-    ],
+    extensions: ['.js', '.ts'],
   },
   output: {
     path: `${__dirname}/dist/js`,
-    filename: '[name].js'
+    filename: '[name].js',
   },
   mode: 'production', // production development
   module: {
@@ -27,20 +24,18 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: [
-                '@babel/preset-env',
-              ]
-            }
-          }
-        ]
+              presets: ['@babel/preset-env'],
+            },
+          },
+        ],
       },
       {
         test: /\.ts$/,
         use: [
           {
             loader: 'ts-loader',
-          }
-        ]
+          },
+        ],
       },
     ],
   },
