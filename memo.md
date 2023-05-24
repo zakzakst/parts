@@ -68,7 +68,6 @@ https://www.tambien.studio/ （サムネイルがホバーした時にパラパ�
 https://www.sorenrose.com/ （swiper と clip-path のアニメーション ※f-header-swiper-items-holder）
 https://e-office.inc/
 https://careers.denso.com/
-https://www.napla.co.jp/recruit/newgrads/
 https://schoo.jp/
 https://goodpatch.com/careers （スライド）
 https://ion-e-air.jp/
