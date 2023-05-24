@@ -1,0 +1,84 @@
+$BLOCK_NAME: '.scroll-anim-28';
+
+// 変数
+
+#{ $BLOCK_NAME } {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  color: #454545;
+  visibility: hidden;
+  &.--anim-start {
+    visibility: visible;
+  }
+
+  &__main {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+
+    > span {
+      // display: inline-block;
+      display: none;
+      line-height: 1;
+    }
+
+    &::after {
+      content: '';
+      background: #454545;
+      width: 4px;
+      height: 28px;
+      margin-left: 3px;
+      display: inline-block;
+      vertical-align: top;
+      animation: blink 1s linear infinite both;
+    }
+  }
+
+  &__sub {
+    display: block;
+    font-size: 20px;
+    line-height: 1;
+    background: #fef6b5;
+    border: 1px solid #454545;
+    padding: 3px 3px 1px;
+    font-weight: bold;
+
+    > span {
+      // display: inline-block;
+      display: none;
+      line-height: 1;
+    }
+
+    &::after {
+      content: '';
+      background: #454545;
+      width: 3px;
+      height: 18px;
+      margin-left: 2px;
+      display: inline-block;
+      vertical-align: top;
+      animation: blink 1s linear infinite both;
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

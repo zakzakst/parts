@@ -49,7 +49,6 @@ https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」�
 
 ### 見出し
 
-https://recruit.kokuyo.co.jp/
 https://corp.telecy.tv/
 https://www.miwa-dental.jp/
 https://www.gyu36.jp/

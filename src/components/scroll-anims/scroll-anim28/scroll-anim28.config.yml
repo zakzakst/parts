@@ -1,0 +1,13 @@
+title: スクロールアニメーション28
+label: スクロールアニメーション28
+variants:
+  - name: default
+    label: スクロールアニメーション28
+    status: ready
+    # status: prototype
+    # status: wip
+# hidden: true
+preview: '@preview-scroll'
+context:
+  main: 'HEADING28'
+  sub: 'サブ見出し'
