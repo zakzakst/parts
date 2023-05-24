@@ -171,7 +171,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-fbf189ea386f8fa2a44186a1bb51d2c7-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading-10&quot;</span>&gt;</span>見出し10<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heading-10&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>H<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>E<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>A<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>D<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>I<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>N<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>G<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -179,7 +179,10 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-fbf189ea386f8fa2a44186a1bb51d2c7-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre><span class="hljs-selector-tag">h3</span><span class="hljs-selector-class">.heading-10</span> #{ text }</pre>
+        <pre>h3.heading-10
+  - for (var <span class="hljs-meta">x</span> = 0; <span class="hljs-meta">x</span> &lt; text.<span class="hljs-meta">length</span>; <span class="hljs-meta">x</span>++)
+    //- sp<span class="hljs-meta">an(</span>class=`-${ <span class="hljs-meta">x</span> }`) #{ text[<span class="hljs-meta">x</span>] }
+    span #{ text[<span class="hljs-meta">x</span>] }</pre>
     </code>
 </div>
 
@@ -189,7 +192,7 @@
         
             
             <pre>{
-  <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;見出し10&quot;</span>
+  <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">&quot;HEADING10&quot;</span>
 }</pre>
             
         
@@ -226,7 +229,35 @@
 <span class="hljs-comment">// 変数</span>
 
 #{ <span class="hljs-variable">$BLOCK_NAME</span> } {
-  <span class="hljs-comment">//</span>
+  <span class="hljs-attribute">font-weight</span>: bold;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">24px</span>;
+  &gt; <span class="hljs-selector-tag">span</span> {
+    will-change: color;
+    <span class="hljs-attribute">animation</span>: colorChange <span class="hljs-number">0.3s</span> <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">@for</span> <span class="hljs-variable">$i</span> from <span class="hljs-number">0</span> through <span class="hljs-number">20</span> {
+      &amp;<span class="hljs-selector-pseudo">:nth-child</span>(#{$i}) {
+        <span class="hljs-attribute">animation-delay</span>: <span class="hljs-number">0.04s</span> * <span class="hljs-variable">$i</span>;
+      }
+    }
+  }
+}
+
+<span class="hljs-keyword">@keyframes</span> colorChange {
+  0% {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#001136</span>;
+  }
+  25% {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#005bb3</span>;
+  }
+  50% {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#d10c22</span>;
+  }
+  75% {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#f21e36</span>;
+  }
+  100% {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#003466</span>;
+  }
 }
 </pre>
                             </code>
@@ -244,7 +275,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">66 Bytes</span>
+                    <span class="Meta-value">473 Bytes</span>
                 </li>
             </ul>
         </div>

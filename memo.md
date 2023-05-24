@@ -83,10 +83,8 @@ https://wrl.co.jp/about/ （沿革部分）
 https://tympanus.net/Development/TextRepetitionEffect/index4.html
 https://www.gonshiro.co.jp/ （画像が外から収まる）
 https://synflux.io/ （QR コード表示）
-https://www.remain-in.com/ （見出し）
-https://www.webcreatorbox.com/tech/intersection-observer
+https://www.remain-in.com/ （見出し）mask-image
 https://www.mcplas.co.jp/
-https://pogg-sweetpotatopie.com/
 https://www.napla.co.jp/recruit/newgrads/ （見出し、カード）
 https://hotaru-personalized.com/
 https://brand.studysapuri.jp/

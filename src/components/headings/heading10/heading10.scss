@@ -3,5 +3,33 @@ $BLOCK_NAME: '.heading-10';
 // 変数
 
 #{ $BLOCK_NAME } {
-  //
+  font-weight: bold;
+  font-size: 24px;
+  > span {
+    will-change: color;
+    animation: colorChange 0.3s 2;
+    @for $i from 0 through 20 {
+      &:nth-child(#{$i}) {
+        animation-delay: 0.04s * $i;
+      }
+    }
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #001136;
+  }
+  25% {
+    color: #005bb3;
+  }
+  50% {
+    color: #d10c22;
+  }
+  75% {
+    color: #f21e36;
+  }
+  100% {
+    color: #003466;
+  }
 }
