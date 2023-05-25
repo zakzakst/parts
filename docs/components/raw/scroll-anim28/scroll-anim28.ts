@@ -15,6 +15,7 @@ class Anim28 {
   subEls: NodeListOf<HTMLElement>;
   constructor(elId: string) {
     this.el = document.getElementById(elId);
+    if (!this.el) return;
     this.mainEls = this.el.querySelectorAll('.scroll-anim-28__main span');
     this.subEls = this.el.querySelectorAll('.scroll-anim-28__sub span');
   }

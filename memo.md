@@ -77,7 +77,6 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
-https://www.remain-in.com/ （見出し）mask-image
 https://tympanus.net/Development/TextRepetitionEffect/index4.html
 https://www.gonshiro.co.jp/ （画像が外から収まる）
 https://synflux.io/ （QR コード表示）
