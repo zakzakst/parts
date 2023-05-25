@@ -77,10 +77,10 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
+https://www.remain-in.com/ （見出し）mask-image
 https://tympanus.net/Development/TextRepetitionEffect/index4.html
 https://www.gonshiro.co.jp/ （画像が外から収まる）
 https://synflux.io/ （QR コード表示）
-https://www.remain-in.com/ （見出し）mask-image
 https://www.mcplas.co.jp/
 https://www.napla.co.jp/recruit/newgrads/ （見出し、カード）
 https://hotaru-personalized.com/
@@ -120,7 +120,6 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
-https://recruit.dac.co.jp/ （各種ホバーインタラクション）
 https://recruit.dac.co.jp/people/jin-ichinomiya （画像のモザイクアニメーション、背景から人物だけ浮き出してくるようなスクロールアニメーション）
 
 ```

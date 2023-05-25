@@ -1,0 +1,104 @@
+$BLOCK_NAME: '.other-22';
+
+// 変数
+
+#{ $BLOCK_NAME } {
+  &__wrapper {
+    // ラインが重なる部分の表示用
+    padding-top: 200px;
+    overflow: hidden;
+  }
+
+  position: relative;
+  background: #c2ccd4;
+
+  &__link {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: flex-end;
+    padding: 0 20px 12px;
+    color: #000;
+  }
+
+  &__text-en {
+    flex-shrink: 0;
+    width: 40%;
+    font-size: 36px;
+    line-height: 1;
+    font-weight: bold;
+  }
+
+  &__text-ja {
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: bold;
+  }
+
+  &__text-link {
+    flex-shrink: 0;
+    width: 30%;
+    font-size: 10px;
+    line-height: 1;
+    text-decoration: underline;
+    text-align: right;
+  }
+
+  &__line {
+    position: absolute;
+    pointer-events: none;
+    top: -50px;
+    right: 0;
+    transform-origin: right top;
+    background: #adb8c1;
+    transform: rotate(-5deg);
+    width: calc(100% / cos(5deg) + 100px * sin(5deg));
+    height: 100px;
+    z-index: 1;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: clip-path 0.4s;
+    @at-root #{ $BLOCK_NAME }__link:hover + & {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  &__line-items {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  &__line-item {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    padding: 10px 10px;
+    align-items: center;
+    animation: repeatLine 2.5s linear infinite;
+    will-change: transform;
+  }
+
+  &__line-text {
+    font-size: 72px;
+    line-height: 1;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px #c2ccd4;
+    text-stroke: 2px #c2ccd4;
+  }
+
+  &__line-img {
+    aspect-ratio: 16 / 9;
+    height: 100%;
+  }
+}
+
+@keyframes repeatLine {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

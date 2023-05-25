@@ -1,0 +1,14 @@
+title: その他22
+label: その他22
+variants:
+  - name: default
+    label: その他22
+    status: ready
+    # status: prototype
+    # status: wip
+# hidden: true
+context:
+  link: '#'
+  textEn: TEXT
+  textJa: テキスト
+  textLink: VIEW DETAIL

@@ -1,0 +1,13 @@
+.other-22__wrapper
+  .other-22
+    a.other-22__link(href=link)
+      .other-22__text-en #{ textEn }
+      .other-22__text-ja #{ textJa }
+      .other-22__text-link #{ textLink }
+    .other-22__line
+      ul.other-22__line-items
+        - for (var i = 0; i < 5; i++)
+          li.other-22__line-item
+            .other-22__line-text #{ textEn }
+            .other-22__line-img
+              img(src='https://picsum.photos/id/237/320/180')
