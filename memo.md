@@ -56,7 +56,6 @@ https://www.gyu36.jp/
 ### カード
 
 https://www.tricle-llc.co.jp/
-https://www.tambien.studio/ （サムネイルがホバーした時にパラパラ重なる）
 
 ### ニュース一覧
 
@@ -122,7 +121,7 @@ https://enjin-dash.com/about/index.html
 ### その他
 
 https://recruit.dac.co.jp/ （各種ホバーインタラクション）
-https://recruit.dac.co.jp/people/jin-ichinomiya （画像のモザイクアニメーション）
+https://recruit.dac.co.jp/people/jin-ichinomiya （画像のモザイクアニメーション、背景から人物だけ浮き出してくるようなスクロールアニメーション）
 
 ```
 https://recruit.dac.co.jp/assets/js/body.js

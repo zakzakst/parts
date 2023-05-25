@@ -1,0 +1,125 @@
+$BLOCK_NAME: '.card-20';
+
+// 変数
+$c_primary: #ead2ab;
+
+#{ $BLOCK_NAME } {
+  display: block;
+  background-color: #0e0d0d;
+  border: 1px solid $c_primary;
+  color: $c_primary;
+  padding: 80px 20px 30px;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  &:hover {
+    color: $c_primary;
+  }
+
+  &__heading {
+    text-align: center;
+    line-height: 1;
+    font-size: 28px;
+    @at-root #{ $BLOCK_NAME }:hover & {
+      text-decoration: underline;
+    }
+  }
+
+  &__img-wrapper {
+    aspect-ratio: 16 / 9;
+    width: 200px;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(2, start);
+    animation-fill-mode: both;
+    &:nth-child(1) {
+      transform-origin: 0 0;
+    }
+    &:nth-child(2) {
+      transform-origin: 100% 0;
+      opacity: 0;
+      transform: rotate(-2deg);
+    }
+    &:nth-child(3) {
+      transform-origin: 100% 100%;
+      opacity: 0;
+    }
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @at-root #{ $BLOCK_NAME }:hover & {
+      &:nth-child(1) {
+        animation-name: imgRotate01;
+      }
+      &:nth-child(2) {
+        animation-name: imgRotate02;
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-name: imgRotate03;
+        animation-delay: 0.4s;
+      }
+    }
+  }
+
+  &__sub-heading {
+    line-height: 1.2;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
+@keyframes imgRotate01 {
+  0% {
+    transform: rotate(0);
+  }
+  1% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes imgRotate02 {
+  0% {
+    opacity: 0;
+    transform: rotate(0);
+  }
+  1% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes imgRotate03 {
+  0% {
+    opacity: 0;
+    transform: rotate(-2deg);
+  }
+  1% {
+    opacity: 1;
+    transform: rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-3deg);
+  }
+}
