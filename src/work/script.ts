@@ -123,3 +123,6 @@ other17();
 
 import { other21 } from '../components/others/other21/other21';
 other21();
+
+import { other23 } from '../components/others/other23/other23';
+other23();
