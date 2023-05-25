@@ -1,0 +1,13 @@
+title: カード20
+label: カード20
+variants:
+  - name: default
+    label: カード20
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  heading: 'CARD 20 HEADING TEXT'
+  sub: 'SUB TEXT'
