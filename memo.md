@@ -119,7 +119,8 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
-https://recruit.dac.co.jp/people/jin-ichinomiya （画像のモザイクアニメーション、背景から人物だけ浮き出してくるようなスクロールアニメーション）
+https://css-tricks.com/clipping-masking-css/
+https://recruit.dac.co.jp/people/jin-ichinomiya （画像のモザイクアニメーション）
 
 ```
 https://recruit.dac.co.jp/assets/js/body.js
