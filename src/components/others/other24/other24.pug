@@ -1,0 +1,20 @@
+.other-24
+  svg.other-24__svg(
+    viewBox='0 0 800 600',
+    version='1.1',
+    xmlns='http://www.w3.org/2000/svg'
+  )
+    defs
+      mask#other-24__svg-mask.other-24__svg-mask
+        path(d=path1)
+        path(d=path2)
+    g.other-24__svg-base
+      path(d=path1)
+      path(d=path2)
+    foreignObject.other-24__svg-image(
+      mask='url(#other-24__svg-mask)',
+      width='800',
+      height='600'
+    )
+      img(src='https://picsum.photos/id/237/700/600')
+  .other-24__char ？
