@@ -3,5 +3,26 @@ $BLOCK_NAME: '.scroll-anim-29';
 // 変数
 
 #{ $BLOCK_NAME } {
-  //
+  width: 100%;
+  height: 500px;
+  position: relative;
+
+  &__bg {
+    width: 100%;
+    height: 100%;
+    background: #000;
+  }
+
+  &__main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 300px;
+    height: 100%;
+    background: #f00;
+    transform: scale(0.5);
+  }
 }
