@@ -119,7 +119,6 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
-https://ics.media/entry/230519/#%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%82%92%E7%94%A8%E3%81%84%E3%81%A63d%E3%82%92%E8%A1%A8%E7%8F%BE%E3%81%99%E3%82%8B （雪降ってるやつ）
 https://css-tricks.com/clipping-masking-css/
 https://recruit.dac.co.jp/people/jin-ichinomiya （画像のモザイクアニメーション）
 
