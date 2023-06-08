@@ -126,3 +126,6 @@ other21();
 
 import { other23 } from '../components/others/other23/other23';
 other23();
+
+import { other25 } from '../components/others/other25/other25';
+other25();
