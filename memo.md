@@ -43,6 +43,7 @@ http://a-dot.co.jp/
 
 ### ボタン
 
+https://qu.ai/
 https://www.spaceforce.com/
 https://recruit.d-pops.co.jp/
 https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」のリンクホバー時の下線「background-blend-mode: color-dodge;」）
@@ -119,6 +120,8 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://www.torebentsen.com/ （文字が重なる）
+https://trendbook.marketing/deepfake （ビデオ部分ホバー時のマウスストーカー）
 https://css-tricks.com/clipping-masking-css/
 https://recruit.dac.co.jp/people/jin-ichinomiya （画像のモザイクアニメーション）
 

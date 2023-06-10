@@ -1,0 +1,19 @@
+title: その他26
+label: その他26
+variants:
+  - name: default
+    label: その他26
+    status: ready
+    # status: prototype
+    # status: wip
+# hidden: true
+context:
+  items:
+    - 'https://picsum.photos/id/237/1700/900'
+    - 'https://picsum.photos/id/247/1700/900'
+    - 'https://picsum.photos/id/239/1700/900'
+    - 'https://picsum.photos/id/248/1700/900'
+    - 'https://picsum.photos/id/249/1700/900'
+    - 'https://picsum.photos/id/242/1700/900'
+    - 'https://picsum.photos/id/243/1700/900'
+    - 'https://picsum.photos/id/244/1700/900'
