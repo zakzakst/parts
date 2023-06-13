@@ -6,7 +6,19 @@ variants:
     status: ready
     # status: prototype
     # status: wip
-hidden: true
+# hidden: true
 preview: '@preview-scroll'
 context:
-  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
+  items:
+    - 'https://picsum.photos/id/237/240/480'
+    - 'https://picsum.photos/id/247/240/480'
+    - 'https://picsum.photos/id/239/240/480'
+    - 'https://picsum.photos/id/248/240/480'
+    - 'https://picsum.photos/id/249/240/480'
+    - 'https://picsum.photos/id/242/240/480'
+    - 'https://picsum.photos/id/243/240/480'
+    - 'https://picsum.photos/id/244/240/480'
+    - 'https://picsum.photos/id/250/240/480'
+    - 'https://picsum.photos/id/251/240/480'
+    - 'https://picsum.photos/id/252/240/480'
+    - 'https://picsum.photos/id/253/240/480'

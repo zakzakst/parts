@@ -1,7 +1,146 @@
 $BLOCK_NAME: '.scroll-anim-30';
 
 // 変数
+$item_skew_deg: -10deg;
+$item_offset: 16px;
 
 #{ $BLOCK_NAME } {
-  //
+  background: #000;
+  padding: 144px 24px;
+
+  &__items {
+    width: 800px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+  }
+
+  &__item {
+    position: relative;
+    height: 240px;
+    &:nth-child(4n + 1) {
+      transform: skewY($item_skew_deg) translateY(-$item_offset * 2);
+    }
+    &:nth-child(4n + 2) {
+      transform: skewY($item_skew_deg) translateY(-$item_offset);
+    }
+    &:nth-child(4n + 3) {
+      transform: skewY($item_skew_deg) translateY($item_offset);
+    }
+    &:nth-child(4n) {
+      transform: skewY($item_skew_deg) translateY($item_offset * 2);
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      border: 1px solid #fff;
+      opacity: 0;
+    }
+    &::before {
+      transform: scaleY(2) translate(-8px, -8px);
+    }
+    &::after {
+      transform: scaleY(2) translate(8px, 8px);
+    }
+    &.--animated {
+      &::before {
+        animation: scrollAnim30TopBorder 0.3s forwards;
+      }
+      &::after {
+        animation: scrollAnim30BottomBorder 0.3s forwards;
+      }
+    }
+  }
+
+  &__item-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(#fff, 0.5);
+    overflow: hidden;
+    &::after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      background-color: #333;
+      z-index: 1;
+    }
+    @at-root #{ $BLOCK_NAME }__item.--animated & {
+      &::after {
+        animation: scrollAnim30ItemCover 0.3s 0.2s forwards;
+      }
+    }
+  }
+
+  &__item-img {
+    position: absolute;
+    top: -24px;
+    bottom: -24px;
+    left: 0;
+    right: 0;
+    transform: skewY(-$item_skew_deg);
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@keyframes scrollAnim30TopBorder {
+  0% {
+    opacity: 0;
+    transform: scaleY(2) translate(-8px, -8px);
+  }
+  30% {
+    opacity: 1;
+    transform: scaleY(2) translate(-8px, -8px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(1) translate(0, 0);
+  }
+}
+
+@keyframes scrollAnim30BottomBorder {
+  0% {
+    opacity: 0;
+    transform: scaleY(2) translate(8px, 8px);
+  }
+  30% {
+    opacity: 1;
+    transform: scaleY(2) translate(8px, 8px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(1) translate(0, 0);
+  }
+}
+
+@keyframes scrollAnim30ItemCover {
+  0% {
+    background-color: #333;
+  }
+  50% {
+    background-color: #ccc;
+  }
+  100% {
+    background-color: transparent;
+  }
 }
