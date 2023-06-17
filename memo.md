@@ -120,7 +120,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
-https://www.torebentsen.com/ （文字が重なる）
+https://note.com/goando/n/n9346aea1b0ea （view transitions 使ってアプリライクな動き Nuxt で試す。Apple Books みたいにカルーセルから詳細に移動 SPA と SSR 使い分けられるやつ使って）
 https://trendbook.marketing/deepfake （ビデオ部分ホバー時のマウスストーカー）
 https://css-tricks.com/clipping-masking-css/
 https://recruit.dac.co.jp/people/jin-ichinomiya （画像のモザイクアニメーション）

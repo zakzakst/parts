@@ -132,3 +132,6 @@ other25();
 
 import { other26 } from '../components/others/other26/other26';
 other26();
+
+import { other27 } from '../components/others/other27/other27';
+other27();
