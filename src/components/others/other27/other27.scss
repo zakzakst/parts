@@ -64,7 +64,7 @@ $offset_bg: -20px;
     aspect-ratio: 9 / 16;
     height: 400px;
     margin: 0 auto;
-    // transform-origin: 0 -1200px;
+    transform-origin: 0 -1200px;
     // transform: rotate(-20deg);
     clip-path: polygon(
       0% 98%,
@@ -155,7 +155,7 @@ $offset_bg: -20px;
     left: $offset_bg;
     right: $offset_bg;
     bottom: $offset_bg;
-    background: url(/img/components/others/other27/noise.jpg);
+    background: url(/parts/img/components/others/other27/noise.jpg);
     mix-blend-mode: screen;
     background-size: 100px 100px;
     opacity: 0.7;
