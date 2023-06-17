@@ -1,0 +1,109 @@
+$BLOCK_NAME: '.other-02';
+
+// 変数
+$color_primary: #043b8e;
+$color_black: #15171b;
+$color_arrow: #aaa;
+$duration_default: 0.2s;
+$duration_arrow: 0.5s;
+$duration_bg: 0.5s;
+$easing_arrow: cubic-bezier(0.08, 0.92, 0.35, 1);
+$easing_bg: cubic-bezier(0.19, 0.82, 0.27, 1);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  padding: 100px 0;
+  padding-left: 10px; // 背景画像切り取り範囲指定用
+  margin-left: -10px; // 背景画像切り取り範囲指定用
+  overflow: hidden; // 背景画像切り取り範囲指定用
+  color: $color_black;
+  transition: color $duration_default;
+  &:hover {
+    color: $color_primary;
+  }
+  &__shoulder {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    & > span {
+      position: relative;
+      left: -6px;
+      display: block;
+      font-size: 70px;
+      line-height: 1;
+      letter-spacing: 0.3px;
+    }
+  }
+  &__heading {
+    margin-top: 13px;
+    font-size: 15px;
+    letter-spacing: 1.6px;
+  }
+  &__arrow {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-top: 48px;
+    color: $color_arrow;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      transition: all $duration_arrow $easing_arrow;
+      @at-root #{ $BLOCK_NAME }:hover & {
+        background: $color_primary;
+        border-color: transparent;
+        opacity: 0.7;
+        transform: scale(1.58);
+      }
+    }
+    & > svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin: auto;
+      fill: $color_arrow;
+      transition: transform $duration_arrow $easing_arrow;
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: translateX(13px);
+      }
+    }
+  }
+  &__bg-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    width: 82.8%;
+    overflow: hidden;
+    transition: transform $duration_bg $easing_bg;
+    transform: translateX(40px);
+    @at-root #{ $BLOCK_NAME }:hover & {
+      transform: translateX(0);
+    }
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% + 40px);
+    height: 100%;
+    background: url(https://www.grust.co.jp/assets/grust/img/index/recruit2.jpg)
+      center center no-repeat;
+    background-size: cover;
+    transition: transform $duration_bg $easing_bg;
+    transform: translateX(-40px);
+    @at-root #{ $BLOCK_NAME }:hover & {
+      transform: translateX(0) scale(1.05);
+    }
+  }
+}
