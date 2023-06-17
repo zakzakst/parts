@@ -106,19 +106,19 @@ scrollAnim18();
 /**
  * その他
  */
-import { other08 } from '../components/others/other08/other08';
+import { other08 } from '../components/others/1_20/other08/other08';
 other08();
 
-import { other09 } from '../components/others/other09/other09';
+import { other09 } from '../components/others/1_20/other09/other09';
 other09();
 
-import { other13 } from '../components/others/other13/other13';
+import { other13 } from '../components/others/1_20/other13/other13';
 other13();
 
-import { other14 } from '../components/others/other14/other14';
+import { other14 } from '../components/others/1_20/other14/other14';
 other14();
 
-import { other17 } from '../components/others/other17/other17';
+import { other17 } from '../components/others/1_20/other17/other17';
 other17();
 
 import { other21 } from '../components/others/other21/other21';
@@ -135,3 +135,6 @@ other26();
 
 import { other27 } from '../components/others/other27/other27';
 other27();
+
+import { other28 } from '../components/others/other28/other28';
+other28();

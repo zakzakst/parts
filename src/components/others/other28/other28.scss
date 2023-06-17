@@ -1,0 +1,133 @@
+$BLOCK_NAME: '.other-28';
+
+// 変数
+$offset_decoration: -8px;
+$transition: 0.5s;
+$c_icon: #f00;
+$c_decoration: #ff9cf0;
+
+#{$BLOCK_NAME} {
+  cursor: pointer;
+  position: relative;
+  width: 24px;
+  height: 24px;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    > svg {
+      // transition: all 0s;
+      @at-root #{$BLOCK_NAME}.--checked & {
+        // fill: $c_icon;
+        // transition: all $transition;
+        animation: other28Icon $transition forwards;
+      }
+    }
+  }
+
+  &__decoration {
+    position: absolute;
+    top: $offset_decoration;
+    bottom: $offset_decoration;
+    left: $offset_decoration;
+    right: $offset_decoration;
+    z-index: 1;
+  }
+
+  &__particles {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__particle {
+    position: absolute;
+    top: 0;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    width: 4px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 9999px;
+    transform-origin: bottom;
+    &:nth-child(1) {
+      transform: rotate(0);
+    }
+    &:nth-child(2) {
+      transform: rotate(60deg);
+    }
+    &:nth-child(3) {
+      transform: rotate(120deg);
+    }
+    &:nth-child(4) {
+      transform: rotate(180deg);
+    }
+    &:nth-child(5) {
+      transform: rotate(240deg);
+    }
+    &:nth-child(6) {
+      transform: rotate(300deg);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $c_decoration;
+      border-radius: 9999px;
+      transform: translateY(100%);
+      opacity: 0;
+      transition: all 0s;
+      @at-root #{$BLOCK_NAME}.--checked & {
+        opacity: 1;
+        transform: translateY(-100%);
+        transition: all $transition;
+      }
+    }
+  }
+
+  // &__ring {
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   margin: auto;
+  //   width: 0;
+  //   height: 0;
+  //   border-radius: 50%;
+  //   border: 1px solid $c_decoration;
+  //   opacity: 1;
+  //   transform: all $transition;
+  //   @at-root #{$BLOCK_NAME}.--checked & {
+  //     width: 100%;
+  //     height: 100%;
+  //     opacity: 0;
+  //   }
+  // }
+}
+
+@keyframes other28Icon {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    fill: $c_icon;
+  }
+}
