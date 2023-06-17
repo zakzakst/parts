@@ -1,0 +1,11 @@
+title: その他27
+label: その他27
+variants:
+  - name: default
+    label: その他27
+    status: ready
+    # status: prototype
+    # status: wip
+# hidden: true
+context:
+  img: 'https://picsum.photos/id/238/450/800'

@@ -1,0 +1,179 @@
+$BLOCK_NAME: '.other-27';
+
+// 変数
+$offset_bg: -20px;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  padding: 32px;
+  overflow: hidden;
+  background: rgb(75, 34, 19);
+
+  &__main {
+    position: relative;
+    z-index: 1;
+    min-height: 200vh;
+    background: #fff;
+    padding: 32px;
+    clip-path: polygon(
+      100% 100%,
+      74% 100%,
+      0 100%,
+      0% 97%,
+      0% 88%,
+      1% 81%,
+      0% 77%,
+      2% 68%,
+      1% 58%,
+      1% 51%,
+      2% 42%,
+      1% 37%,
+      1% 30%,
+      2% 23%,
+      1% 14%,
+      0% 7%,
+      0% 2%,
+      0% 0%,
+      100% 0%,
+      100% 4%,
+      99% 9%,
+      98% 17%,
+      98% 27%,
+      100% 32%,
+      99% 40%,
+      100% 50%,
+      98% 63%,
+      99% 72%,
+      100% 79%,
+      99% 92%
+    );
+  }
+
+  &__spacer {
+    height: 100vh;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  // TODO: 参考にしたサイトのCSSの付け方のほうがレスポンシブ対応にいい？transform 3d上手く使えないので一旦このまま
+  &__img {
+    position: relative;
+    z-index: 2;
+    aspect-ratio: 9 / 16;
+    height: 400px;
+    margin: 0 auto;
+    // transform-origin: 0 -1200px;
+    // transform: rotate(-20deg);
+    clip-path: polygon(
+      0% 98%,
+      3% 100%,
+      12% 100%,
+      16% 99%,
+      22% 99%,
+      29% 100%,
+      37% 98%,
+      48% 98%,
+      56% 100%,
+      69% 98%,
+      75% 100%,
+      84% 99%,
+      92% 99%,
+      98% 99%,
+      100% 94%,
+      100% 88%,
+      99% 85%,
+      100% 78%,
+      99% 73%,
+      100% 67%,
+      98% 61%,
+      99% 54%,
+      98% 46%,
+      99% 37%,
+      97% 29%,
+      100% 18%,
+      99% 5%,
+      95% 0%,
+      86% 1%,
+      79% 0%,
+      68% 0%,
+      64% 4%,
+      58% 0%,
+      51% 1%,
+      46% 3%,
+      37% 1%,
+      29% 0%,
+      17% 1%,
+      13% 0%,
+      6% 0%,
+      1% 0%,
+      0% 4%,
+      0% 13%,
+      1% 20%,
+      1% 27%,
+      0% 33%,
+      0% 44%,
+      1% 53%,
+      0% 63%,
+      1% 69%,
+      0% 79%,
+      2% 83%,
+      0% 90%
+    );
+  }
+
+  &__text {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > span {
+      font-size: 200px;
+      line-height: 1;
+      font-weight: bold;
+    }
+
+    &.--front {
+      z-index: 2;
+      -webkit-text-stroke-color: #000;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: $offset_bg;
+    left: $offset_bg;
+    right: $offset_bg;
+    bottom: $offset_bg;
+    background: url(/img/components/others/other27/noise.jpg);
+    mix-blend-mode: screen;
+    background-size: 100px 100px;
+    opacity: 0.7;
+    animation: other27Noise 0.5s steps(2) infinite;
+  }
+}
+
+@keyframes other27Noise {
+  0% {
+    transform: translate(0, 0);
+  }
+  33.333% {
+    transform: translate(20px, 20px);
+  }
+  66.666% {
+    transform: translate(-20px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
