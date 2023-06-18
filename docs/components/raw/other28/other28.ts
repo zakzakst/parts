@@ -1,26 +1,24 @@
 'use strict';
 
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 
 export const other28 = () => {
-  const other = new Other28('js-other-28');
+  const other = new Other28('.js-other-28');
   other.init();
 };
 
 class Other28 {
-  el: HTMLElement;
-  checked: boolean;
-  constructor(id: string) {
-    this.el = document.getElementById(id);
-    this.checked = false;
-    if (!this.el) return;
+  els: NodeListOf<HTMLElement>;
+  constructor(selector: string) {
+    this.els = document.querySelectorAll(selector);
+    if (!this.els.length) return;
   }
 
   /**
    * 初期化
    */
   init(): void {
-    if (!this.el) return;
+    if (!this.els.length) return;
     this.clickHandler();
   }
 
@@ -28,15 +26,16 @@ class Other28 {
    * クリックイベント設定
    */
   clickHandler(): void {
-    this.el.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (this.checked) {
-        this.checked = false;
-        this.el.classList.remove('--checked');
-      } else {
-        this.checked = true;
-        this.el.classList.add('--checked');
-      }
+    [...this.els].forEach((el) => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isChecked = el.classList.contains('--checked');
+        if (isChecked) {
+          el.classList.remove('--checked', '--anim');
+        } else {
+          el.classList.add('--checked', '--anim');
+        }
+      });
     });
   }
 }
