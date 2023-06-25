@@ -1,0 +1,55 @@
+$BLOCK_NAME: '.other-30';
+
+// 変数
+$c_base: #eee;
+$c_border: #333;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  width: 300px;
+  padding: 24px;
+  border: 3px solid $c_border;
+  border-radius: 16px;
+  background: $c_base;
+  margin-bottom: 60px;
+
+  &::before,
+  &::after {
+    width: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: '';
+    display: block;
+    aspect-ratio: 1 / 1;
+    clip-path: polygon(50% 100%, 100% 0, 0 0);
+  }
+
+  &::before {
+    top: calc(100% - 1px);
+    z-index: -1;
+    background: $c_border;
+  }
+
+  &::after {
+    top: calc(100% - 7px);
+    z-index: 1;
+    background: $c_base;
+  }
+
+  // タイプ2
+  &.--type-2 {
+    &::before,
+    &::after {
+      left: 24px;
+      right: auto;
+      clip-path: polygon(0 100%, 100% 0, 50% 0);
+    }
+
+    &::after {
+      left: 34px;
+      top: calc(100% - 15px);
+    }
+  }
+}
