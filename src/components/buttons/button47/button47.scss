@@ -1,0 +1,48 @@
+$BLOCK_NAME: '.button-47';
+
+// 変数
+$grad: linear-gradient(135deg, #6fa24a, #15a1cc);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  width: 320px;
+  height: 64px;
+  padding: 2px;
+  text-align: center;
+  border-radius: 9999px;
+  background: $grad;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    display: block;
+    content: '';
+    filter: blur(8px);
+    background: $grad;
+    border-radius: 9999px;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 9999px;
+  }
+
+  @media (any-hover: hover) {
+    &::before {
+      transition: opacity 0.3s;
+      will-change: filter;
+    }
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
