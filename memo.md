@@ -43,7 +43,6 @@ http://a-dot.co.jp/
 
 ### ボタン
 
-https://ics.media/entry/230629/
 https://qu.ai/
 https://www.spaceforce.com/
 https://recruit.d-pops.co.jp/
