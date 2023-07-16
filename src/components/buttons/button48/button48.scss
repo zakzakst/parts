@@ -1,31 +1,41 @@
-$BLOCK_NAME: '.button-47';
+$BLOCK_NAME: '.button-48';
 
 // 変数
-$grad: linear-gradient(135deg, #6fa24a, #15a1cc);
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
 
 #{ $BLOCK_NAME } {
   position: relative;
   display: block;
   width: 320px;
   height: 64px;
-  padding: 2px;
+  padding: 4px;
   border-radius: 9999px;
-  background: $grad;
-  z-index: 1;
+  background: #222;
 
   &::before {
     position: absolute;
     inset: 0;
     display: block;
     content: '';
-    filter: blur(8px);
-    background: $grad;
     border-radius: 9999px;
-    z-index: -1;
+    z-index: 1;
     opacity: 0;
+    background: conic-gradient(
+      from var(--angle),
+      #222,
+      #939393,
+      #222,
+      #939393,
+      #222
+    );
   }
 
   &__inner {
+    position: relative;
     display: flex;
     width: 100%;
     height: 100%;
@@ -33,15 +43,26 @@ $grad: linear-gradient(135deg, #6fa24a, #15a1cc);
     justify-content: center;
     background: #fff;
     border-radius: 9999px;
+    z-index: 2;
   }
 
   @media (any-hover: hover) {
     &::before {
       transition: opacity 0.3s;
-      will-change: filter;
     }
     &:hover::before {
       opacity: 1;
+      animation: gradient-spin 3s linear 0s infinite;
     }
+  }
+}
+
+@keyframes gradient-spin {
+  0% {
+    --angle: 0deg;
+  }
+
+  100% {
+    --angle: 360deg;
   }
 }
