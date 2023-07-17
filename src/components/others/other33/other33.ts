@@ -33,6 +33,19 @@ class Other33 {
   setupToast(data: toastData) {
     const toastEl = this.createToastEl(data);
     this.el.appendChild(toastEl);
+    // @ts-ignore
+    toastEl.showPopover();
+    // setTimeoutで一定時間経ったら自動的にポップオーバーを消す
+    const timer = setTimeout(() => this.removeToast(toastEl), 3000);
+    // timeoutを解除するためのtimerをdataset要素として設定する
+    // @ts-ignore
+    toastEl.dataset.timer = timer;
+
+    // トーストの表示時と非表示時に並び替える
+    toastEl.addEventListener('toggle', (event) => {
+      // @ts-ignore
+      this.alignToast(event.newState === 'closed');
+    });
   }
 
   /**
@@ -42,6 +55,8 @@ class Other33 {
    */
   createToastEl(data: toastData): HTMLDivElement {
     const toastEl = document.createElement('div');
+    // @ts-ignore
+    toastEl.popover = 'manual';
 
     // クラスの付与
     toastEl.classList.add('notification');
@@ -68,7 +83,28 @@ class Other33 {
    * @param {HTMLDivElement}
    */
   removeToast(el: HTMLDivElement) {
-    console.log(el);
+    // @ts-ignore
+    el.hidePopover();
+    el.remove();
+    // @ts-ignore
+    clearTimeout(el.dataset.timer);
+  }
+
+  /**
+   * トーストを並べる
+   * @param withMoveAnim {boolean}
+   */
+  alignToast(withMoveAnim: boolean) {
+    const toastEls = document.querySelectorAll(
+      '.notification'
+    ) as NodeListOf<HTMLDivElement>;
+    toastEls.forEach((el, index) => {
+      el.style.transition = withMoveAnim
+        ? 'translate 0.2s linear, opacity 0.2s linear'
+        : 'opacity 0.2s linear';
+      el.style.translate = `0px ${(56 + 10) * index}px`;
+      el.style.opacity = String(1);
+    });
   }
 
   /**
