@@ -1,0 +1,26 @@
+.other-32
+  .container
+    .section
+      .buttons
+        button.button.is-primary(popovertarget="modal1") モーダル1
+        button.button.is-primary(popovertarget="modal2") モーダル2
+
+  <div class="popover-content" id="modal1" popover>
+      <p>JavaScriptを使わずに最低限の機能が実現できます。</p>
+  </div>
+
+  <div class="popover-content" id="modal2" popover>
+      <p>2つめのポップオーバーを開くと、1つめは自動的に閉じます。</p>
+  </div>
+
+  //- NOTE: pugを使うと「popover="popover"」として出力されてしまう。多分これが原因でモーダルの切替が上手くいかなかった
+  //- .popover-content(id="modal1", popover=true)
+  //-   p JavaScriptを使わずに最低限の機能が実現できます。
+  //- .popover-content(id="modal2", popover=true)
+  //-   p 2つめのポップオーバーを開くと、1つめは自動的に閉じます。
+
+  //- NOTE: bulmaのmodalとは合わせにくい気がした
+  //- //- モーダル1
+  //- .modal(id="modal1", popover)
+  //-   .modal-background
+  //-   .modal-content #{ text }
