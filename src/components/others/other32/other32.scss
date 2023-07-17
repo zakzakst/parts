@@ -3,16 +3,22 @@ $BLOCK_NAME: '.other-32';
 // 変数
 
 #{ $BLOCK_NAME } {
-  .popover-content:popover-open {
-    width: 300px;
-    height: 120px;
-    border-radius: 8px;
-    border: none;
-    padding: 24px;
-    box-shadow: 8px 8px 10px #c9c9c9;
-    background: #ffffff;
-    // normalizeでmargin消されていたので追記（chromeのユーザーエージェントスタイルにはデフォルトで設定）
-    margin: auto;
+  .popover-content {
+    &:popover-open {
+      width: 300px;
+      height: 120px;
+      border-radius: 8px;
+      border: none;
+      padding: 24px;
+      box-shadow: 8px 8px 10px #c9c9c9;
+      background: #ffffff;
+      // normalizeでmargin消されていたので追記（chromeのユーザーエージェントスタイルにはデフォルトで設定）
+      margin: auto;
+    }
+    &::backdrop {
+      background-color: #505050;
+      opacity: 0.5;
+    }
   }
 
   // bulmaのmodalとは合わせにくい気がした

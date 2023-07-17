@@ -138,3 +138,6 @@ other27();
 
 import { other28 } from '../components/others/other28/other28';
 other28();
+
+import { other33 } from '../components/others/other33/other33';
+other33();
