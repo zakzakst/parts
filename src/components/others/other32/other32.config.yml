@@ -1,0 +1,12 @@
+title: その他32
+label: その他32
+variants:
+  - name: default
+    label: その他32
+    status: ready
+    # status: prototype
+    # status: wip
+# hidden: true
+preview: '@preview-utilities'
+context:
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
