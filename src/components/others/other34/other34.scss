@@ -1,0 +1,50 @@
+$BLOCK_NAME: '.other-34';
+
+// 変数
+
+#{ $BLOCK_NAME } {
+  &__scroll {
+    position: relative;
+    height: 200vh;
+  }
+
+  &__scroll-anim {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: #000;
+    transform-origin: left;
+    // animation: other34Scroll linear;
+    animation: other34Scroll ease-out;
+    animation-timeline: scroll();
+  }
+
+  &__view {
+    position: relative;
+    height: 200vh;
+  }
+
+  &__view-anim {
+    // position: sticky;
+    // top: 0;
+    // left: 0;
+    width: 200px;
+    height: 200px;
+    background: #000;
+    transform-origin: left;
+    animation: other34Scroll linear both;
+    animation-timeline: view();
+    animation-range: contain 0% contain 50%;
+  }
+}
+
+@keyframes other34Scroll {
+  from {
+    scale: 0 1;
+  }
+  to {
+    scale: 1 1;
+  }
+}
