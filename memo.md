@@ -33,6 +33,7 @@ https://zenn.dev/nana/articles/ff65486fcd0e34
 
 ### ヒーロー
 
+https://www.interoffice.co.jp/ （canvas をマスクのように利用している）
 https://www.e-heyaspace.com/about/
 
 ### フッター
@@ -43,6 +44,7 @@ http://a-dot.co.jp/
 
 ### ボタン
 
+https://mimiguri.co.jp/ （画像が浮かび上がってゆっくりスライド）
 https://qu.ai/
 https://www.spaceforce.com/
 https://recruit.d-pops.co.jp/
@@ -50,12 +52,16 @@ https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」�
 
 ### 見出し
 
+https://aguije.jp/ （filter: url(#textNoise) で <svg id="filters">の中の filter を参照している）
 https://corp.telecy.tv/
 https://www.miwa-dental.jp/
 https://www.gyu36.jp/
 
 ### カード
 
+https://aguije.jp/ （.p-work-item**scan**contaiener を scaleX(200)にしてかぶせている、ホバー時のアンカーとライン）
+https://bnn.co.jp/
+https://www.recruit.torikizoku.co.jp/fresh/ （gif 画像のアニメーション枠をかぶせている）
 https://www.tricle-llc.co.jp/
 
 ### ニュース一覧
@@ -120,6 +126,10 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://uomi.jp/ （フッター部分の波アニメーシション css 変数利用してるのも参考にしたい）
+https://www.yaohiko.co.jp/obento/ （clip-path の round）
+https://styleport.co.jp/ （背景ノイズ、Careers 部分の画面固定のしかた（画像上下に動く・オフセットついたボックス））
+https://universe.kaonavi.jp/ （円グラフのアニメーション、）
 https://photoshopvip.net/144594 （トップへ戻るボタン、focus のスタイル）
 https://www.daytona-park.com/news/16thcp/ （チケット切れるアニメーション）
 https://note.com/goando/n/n9346aea1b0ea （view transitions 使ってアプリライクな動き Nuxt で試す。Apple Books みたいにカルーセルから詳細に移動 SPA と SSR 使い分けられるやつ使って）
