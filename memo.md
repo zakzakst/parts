@@ -70,6 +70,7 @@ https://www.tricle-llc.co.jp/
 
 ### カルーセル
 
+https://www.ga-tech.co.jp/recruit/newgraduate/ （swiper のドラッグ時にサムネイルにインタラクション入れてる）
 https://www.sorenrose.com/ （swiper と clip-path のアニメーション ※f-header-swiper-items-holder）
 https://e-office.inc/
 https://careers.denso.com/
