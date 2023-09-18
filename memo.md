@@ -128,6 +128,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://githubnext.com/projects/code-brushes （切替のインタラクションで星の装飾が表示される）
 https://onejapan.jp/ojc2023/
 https://uomi.jp/ （フッター部分の波アニメーシション css 変数利用してるのも参考にしたい）
 https://www.yaohiko.co.jp/obento/ （clip-path の round）
