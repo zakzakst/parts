@@ -181,7 +181,7 @@
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;other-35__modal-loader&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-other-35-loader&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;other-35__modal-close&quot;</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content has-text-centered&quot;</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>ロードが完了しました<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>取得が完了しました<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;js-other-35-close&quot;</span>&gt;</span>閉じる<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -208,7 +208,7 @@
       .other-<span class="hljs-number">35</span>__modal-loader<span class="hljs-selector-id">#js-other-35-loader</span>
       <span class="hljs-selector-class">.other-35__modal-close</span>
         <span class="hljs-selector-class">.content</span><span class="hljs-selector-class">.has-text-centered</span>
-          <span class="hljs-selector-tag">p</span> ロードが完了しました
+          <span class="hljs-selector-tag">p</span> 取得が完了しました
           <span class="hljs-selector-tag">p</span>
             <span class="hljs-selector-tag">button</span>.button<span class="hljs-selector-id">#js-other-35-close</span> 閉じる
 
@@ -330,6 +330,7 @@
   lottie: <span class="hljs-built_in">any</span>;
   loaderInstanceName: <span class="hljs-built_in">string</span>;
   isLoading: <span class="hljs-built_in">boolean</span>;
+  isLoadingAnim: <span class="hljs-built_in">boolean</span>;
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-built_in">this</span>.el = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&#x27;js-other-35&#x27;</span>);
@@ -346,6 +347,7 @@
     }
     <span class="hljs-built_in">this</span>.loaderInstanceName = <span class="hljs-string">&#x27;other-35-loader&#x27;</span>;
     <span class="hljs-built_in">this</span>.isLoading = <span class="hljs-literal">false</span>;
+    <span class="hljs-built_in">this</span>.isLoadingAnim = <span class="hljs-literal">true</span>;
   }
   <span class="hljs-comment">/**
    * 初期化
@@ -364,24 +366,47 @@
     <span class="hljs-built_in">this</span>.lottie = lottie.loadAnimation({
       <span class="hljs-attr">container</span>: <span class="hljs-built_in">this</span>.loaderEl,
       <span class="hljs-attr">renderer</span>: <span class="hljs-string">&#x27;svg&#x27;</span>,
-      <span class="hljs-attr">loop</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">loop</span>: <span class="hljs-literal">false</span>,
       <span class="hljs-attr">autoplay</span>: <span class="hljs-literal">false</span>,
       <span class="hljs-attr">path</span>: <span class="hljs-built_in">this</span>.lottieDataUrl,
       <span class="hljs-comment">// アニメーションインスタンスに名前を渡して、後でlottieコマンドで参照することができる</span>
       <span class="hljs-attr">name</span>: <span class="hljs-built_in">this</span>.loaderInstanceName,
+      <span class="hljs-attr">initialSegment</span>: [<span class="hljs-number">0</span>, <span class="hljs-number">100</span>],
     });
     <span class="hljs-comment">// 何倍かの数値を設定。1は通常の速度</span>
     <span class="hljs-built_in">this</span>.lottie.setSpeed(<span class="hljs-number">2.5</span>, <span class="hljs-built_in">this</span>.loaderInstanceName);
     <span class="hljs-comment">// ループ完了時の処理</span>
-    <span class="hljs-built_in">this</span>.lottie.onLoopComplete = <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-built_in">this</span>.lottie.onComplete = <span class="hljs-keyword">async</span> () =&gt; {
       <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">this</span>.isLoading) {
         <span class="hljs-comment">// ロード完了している場合</span>
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;ループアニメーション終了&#x27;</span>);
-        <span class="hljs-built_in">this</span>.lottie.stop();
-        <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.delay(<span class="hljs-number">300</span>);
-        <span class="hljs-built_in">this</span>.setModalLoading(<span class="hljs-literal">false</span>);
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.isLoadingAnim) {
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;ループアニメーション終了&#x27;</span>);
+          <span class="hljs-comment">// 一度完了アニメーションを表示</span>
+          <span class="hljs-built_in">this</span>.lottieFinishAnim();
+          <span class="hljs-built_in">this</span>.isLoadingAnim = <span class="hljs-literal">false</span>;
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;完了アニメーション終了&#x27;</span>);
+          <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.delay(<span class="hljs-number">300</span>);
+          <span class="hljs-built_in">this</span>.setModalLoading(<span class="hljs-literal">false</span>);
+        }
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">this</span>.lottieLoopAnim();
       }
     };
+  }
+
+  <span class="hljs-comment">/**
+   * ループアニメーション表示
+   */</span>
+  <span class="hljs-function"><span class="hljs-title">lottieLoopAnim</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.lottie.playSegments([<span class="hljs-number">0</span>, <span class="hljs-number">100</span>], <span class="hljs-literal">true</span>);
+  }
+
+  <span class="hljs-comment">/**
+   * ループアニメーション表示
+   */</span>
+  <span class="hljs-function"><span class="hljs-title">lottieFinishAnim</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.lottie.playSegments([<span class="hljs-number">101</span>, <span class="hljs-number">186</span>], <span class="hljs-literal">true</span>);
   }
 
   <span class="hljs-comment">/**
@@ -391,9 +416,10 @@
     <span class="hljs-built_in">this</span>.buttonEl.addEventListener(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-keyword">async</span> () =&gt; {
       <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.isLoading) <span class="hljs-keyword">return</span>;
       <span class="hljs-built_in">this</span>.isLoading = <span class="hljs-literal">true</span>;
+      <span class="hljs-built_in">this</span>.isLoadingAnim = <span class="hljs-literal">true</span>;
       <span class="hljs-built_in">this</span>.setModalLoading(<span class="hljs-literal">true</span>);
       <span class="hljs-built_in">this</span>.showModal();
-      <span class="hljs-built_in">this</span>.lottie.play();
+      <span class="hljs-built_in">this</span>.lottieLoopAnim();
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;ロード開始&#x27;</span>);
       <span class="hljs-keyword">await</span> <span class="hljs-built_in">this</span>.randomDelay(<span class="hljs-number">5000</span>, <span class="hljs-number">10000</span>);
       <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;ロード完了&#x27;</span>);
@@ -481,7 +507,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">4 KB</span>
+                    <span class="Meta-value">4.6 KB</span>
                 </li>
             </ul>
         </div>

@@ -16,6 +16,7 @@ class Other35 {
   lottie: any;
   loaderInstanceName: string;
   isLoading: boolean;
+  isLoadingAnim: boolean;
 
   constructor() {
     this.el = document.getElementById('js-other-35');
@@ -32,6 +33,7 @@ class Other35 {
     }
     this.loaderInstanceName = 'other-35-loader';
     this.isLoading = false;
+    this.isLoadingAnim = true;
   }
   /**
    * 初期化
@@ -50,24 +52,47 @@ class Other35 {
     this.lottie = lottie.loadAnimation({
       container: this.loaderEl,
       renderer: 'svg',
-      loop: true,
+      loop: false,
       autoplay: false,
       path: this.lottieDataUrl,
       // アニメーションインスタンスに名前を渡して、後でlottieコマンドで参照することができる
       name: this.loaderInstanceName,
+      initialSegment: [0, 100],
     });
     // 何倍かの数値を設定。1は通常の速度
     this.lottie.setSpeed(2.5, this.loaderInstanceName);
     // ループ完了時の処理
-    this.lottie.onLoopComplete = async () => {
+    this.lottie.onComplete = async () => {
       if (!this.isLoading) {
         // ロード完了している場合
-        console.log('ループアニメーション終了');
-        this.lottie.stop();
-        await this.delay(300);
-        this.setModalLoading(false);
+        if (this.isLoadingAnim) {
+          console.log('ループアニメーション終了');
+          // 一度完了アニメーションを表示
+          this.lottieFinishAnim();
+          this.isLoadingAnim = false;
+        } else {
+          console.log('完了アニメーション終了');
+          await this.delay(300);
+          this.setModalLoading(false);
+        }
+      } else {
+        this.lottieLoopAnim();
       }
     };
+  }
+
+  /**
+   * ループアニメーション表示
+   */
+  lottieLoopAnim() {
+    this.lottie.playSegments([0, 100], true);
+  }
+
+  /**
+   * ループアニメーション表示
+   */
+  lottieFinishAnim() {
+    this.lottie.playSegments([101, 186], true);
   }
 
   /**
@@ -77,9 +102,10 @@ class Other35 {
     this.buttonEl.addEventListener('click', async () => {
       if (this.isLoading) return;
       this.isLoading = true;
+      this.isLoadingAnim = true;
       this.setModalLoading(true);
       this.showModal();
-      this.lottie.play();
+      this.lottieLoopAnim();
       console.log('ロード開始');
       await this.randomDelay(5000, 10000);
       console.log('ロード完了');
