@@ -1,0 +1,27 @@
+$BLOCK_NAME: '.other-35';
+
+// 変数
+
+#{ $BLOCK_NAME } {
+  &__modal-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 240px;
+    margin: auto;
+  }
+
+  &__modal-loader {
+    display: none;
+    @at-root #{ $BLOCK_NAME }__modal.is-loading & {
+      display: block;
+    }
+  }
+
+  &__modal-close {
+    @at-root #{ $BLOCK_NAME }__modal.is-loading & {
+      display: none;
+    }
+  }
+}
