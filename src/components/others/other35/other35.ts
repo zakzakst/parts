@@ -35,6 +35,7 @@ class Other35 {
     this.isLoading = false;
     this.isLoadingAnim = true;
   }
+
   /**
    * 初期化
    */
