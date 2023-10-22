@@ -55,7 +55,6 @@ class Other35 {
       loop: false,
       autoplay: false,
       path: this.lottieDataUrl,
-      initialSegment: [0, 100],
     });
     // 何倍かの数値を設定。1は通常の速度
 
