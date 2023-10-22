@@ -89,7 +89,7 @@ class Other35 {
   }
 
   /**
-   * ループアニメーション表示
+   * 完了アニメーション表示
    */
   lottieFinishAnim() {
     this.lottie.playSegments([101, 186], true);

@@ -142,5 +142,6 @@ other28();
 import { other33 } from '../components/others/other33/other33';
 other33();
 
-import { other35 } from '../components/others/other35/other35';
+// import { other35 } from '../components/others/other35/other35';
+import { other35 } from '../components/others/other35/other35-2';
 other35();

@@ -1,5 +1,5 @@
 'use strict';
-import lottie from 'lottie-web';
+import lottie, { AnimationItem } from 'lottie-web';
 
 export const other35 = () => {
   const other = new Other35();
@@ -13,8 +13,8 @@ class Other35 {
   modalEl: HTMLElement;
   closeEl: HTMLElement;
   lottieDataUrl: string;
-  lottie: any;
-  loaderInstanceName: string;
+  lottie: AnimationItem;
+  // lottie: any;
   isLoading: boolean;
   isLoadingAnim: boolean;
 
@@ -26,12 +26,12 @@ class Other35 {
     this.closeEl = document.getElementById('js-other-35-close');
     if (location.origin === 'https://zakzakst.github.io') {
       // GitHubの場合
-      this.lottieDataUrl = '/parts/img/components/others/other35/present.json';
+      this.lottieDataUrl =
+        '/parts/img/components/others/other35/present-2.json';
     } else {
       // ローカル環境の場合
-      this.lottieDataUrl = '/img/components/others/other35/present.json';
+      this.lottieDataUrl = '/img/components/others/other35/present-2.json';
     }
-    this.loaderInstanceName = 'other-35-loader';
     this.isLoading = false;
     this.isLoadingAnim = true;
   }
@@ -55,13 +55,11 @@ class Other35 {
       loop: false,
       autoplay: false,
       path: this.lottieDataUrl,
-      // アニメーションインスタンスに名前を渡して、後でlottieコマンドで参照することができる
-      name: this.loaderInstanceName,
-      initialSegment: [0, 100],
     });
     // 何倍かの数値を設定。1は通常の速度
-    this.lottie.setSpeed(2.5, this.loaderInstanceName);
+    this.lottie.setSpeed(1.5);
     // ループ完了時の処理
+    // @ts-ignore
     this.lottie.onComplete = async () => {
       if (!this.isLoading) {
         // ロード完了している場合
@@ -82,17 +80,24 @@ class Other35 {
   }
 
   /**
+   * 開始アニメーション表示
+   */
+  lottieStartAnim() {
+    this.lottie.playSegments([0, 20], true);
+  }
+
+  /**
    * ループアニメーション表示
    */
   lottieLoopAnim() {
-    this.lottie.playSegments([0, 100], true);
+    this.lottie.playSegments([21, 90], false);
   }
 
   /**
    * 完了アニメーション表示
    */
   lottieFinishAnim() {
-    this.lottie.playSegments([101, 186], true);
+    this.lottie.playSegments([91, 150], false);
   }
 
   /**
@@ -105,7 +110,7 @@ class Other35 {
       this.isLoadingAnim = true;
       this.setModalLoading(true);
       this.showModal();
-      this.lottieLoopAnim();
+      this.lottieStartAnim();
       console.log('ロード開始');
       await this.randomDelay(5000, 10000);
       console.log('ロード完了');
