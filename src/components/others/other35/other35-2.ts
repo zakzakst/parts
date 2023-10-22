@@ -57,7 +57,6 @@ class Other35 {
       path: this.lottieDataUrl,
     });
     // 何倍かの数値を設定。1は通常の速度
-
     this.lottie.setSpeed(1.5);
     // ループ完了時の処理
     // @ts-ignore
