@@ -112,7 +112,7 @@ class Other35 {
       this.showModal();
       this.lottieStartAnim();
       console.log('ロード開始');
-      await this.randomDelay(5000, 10000);
+      await this.randomDelay(1000, 6000);
       console.log('ロード完了');
       this.isLoading = false;
     });
