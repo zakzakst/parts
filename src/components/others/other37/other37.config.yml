@@ -1,0 +1,31 @@
+title: その他37
+label: その他37
+variants:
+  - name: default
+    label: その他37
+    status: ready
+    # status: prototype
+    # status: wip
+# hidden: true
+context:
+  dates:
+    - 月
+    - 火
+    - 水
+    - 木
+    - 金
+    - 土
+    - 日
+  times:
+    - 10:00
+    - 10:30
+    - 11:00
+    - 11:30
+    - 12:00
+    - 12:30
+    - 13:00
+    - 13:30
+    - 14:00
+    - 14:30
+    - 15:00
+    - 15:30

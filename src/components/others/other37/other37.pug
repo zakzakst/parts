@@ -1,0 +1,12 @@
+.other-37
+  table
+    tr
+      th
+      - for (var i = 0; i < dates.length; i++)
+        th #{dates[i]}
+
+    - for (var n = 0; n < times.length; n++)
+      tr
+        th #{times[n]}
+        - for (var m = 0; m < dates.length; m++)
+          td -
