@@ -1,7 +1,40 @@
 $BLOCK_NAME: '.button-49';
 
 // 変数
+$bg_offset: 30px;
 
 #{ $BLOCK_NAME } {
-  //
+  position: relative;
+  display: inline-block;
+  padding: 16px;
+  text-align: center;
+  background: #000;
+  border-radius: 9999px;
+  color: #fff;
+  min-width: 240px;
+  overflow: hidden;
+  &::before {
+    top: 0;
+    bottom: 0;
+    left: -$bg_offset;
+    right: 0;
+    position: absolute;
+    content: '';
+    background: url(https://picsum.photos/id/29/400/200);
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  &:hover {
+    color: #fff;
+    &::before {
+      opacity: 0.5;
+      transform: translateX($bg_offset);
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+  }
 }

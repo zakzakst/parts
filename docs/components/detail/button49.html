@@ -171,7 +171,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-9ae62ac539061bb8d31c045a7706d211-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button-49&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>ボタン49<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button-49&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button-49__text&quot;</span>&gt;</span>ボタン49<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -179,7 +179,8 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-9ae62ac539061bb8d31c045a7706d211-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre>a.button-49<span class="hljs-params">(<span class="hljs-attr">href</span>=link)</span> <span class="hljs-comment">#{ text }</span></pre>
+        <pre><span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.button-49</span>(href=link)
+  <span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.button-49__text</span> #{ text }</pre>
     </code>
 </div>
 
@@ -225,9 +226,42 @@
                                 <pre><span class="hljs-variable">$BLOCK_NAME</span>: <span class="hljs-string">&#x27;.button-49&#x27;</span>;
 
 <span class="hljs-comment">// 変数</span>
+<span class="hljs-variable">$bg_offset</span>: <span class="hljs-number">30px</span>;
 
 #{ <span class="hljs-variable">$BLOCK_NAME</span> } {
-  <span class="hljs-comment">//</span>
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">text-align</span>: center;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#000</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">9999px</span>;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">min-width</span>: <span class="hljs-number">240px</span>;
+  <span class="hljs-attribute">overflow</span>: hidden;
+  &amp;<span class="hljs-selector-pseudo">::before</span> {
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">left</span>: -<span class="hljs-variable">$bg_offset</span>;
+    <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&#x27;&#x27;</span>;
+    <span class="hljs-attribute">background</span>: url(https://picsum.photos/id/<span class="hljs-number">29</span>/<span class="hljs-number">400</span>/<span class="hljs-number">200</span>);
+    <span class="hljs-attribute">background-size</span>: cover;
+    <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">0.5s</span>, transform <span class="hljs-number">0.5s</span>;
+  }
+  &amp;<span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+    &amp;<span class="hljs-selector-pseudo">::before</span> {
+      <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.5</span>;
+      <span class="hljs-attribute">transform</span>: translateX(<span class="hljs-variable">$bg_offset</span>);
+    }
+  }
+
+  &amp;__text {
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1</span>;
+  }
 }
 </pre>
                             </code>
@@ -245,7 +279,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">65 Bytes</span>
+                    <span class="Meta-value">708 Bytes</span>
                 </li>
             </ul>
         </div>
