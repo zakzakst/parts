@@ -44,8 +44,6 @@ http://a-dot.co.jp/
 
 ### ボタン
 
-https://mimiguri.co.jp/ （画像が浮かび上がってゆっくりスライド）
-https://qu.ai/
 https://www.spaceforce.com/
 https://recruit.d-pops.co.jp/
 https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」のリンクホバー時の下線「background-blend-mode: color-dodge;」）
@@ -60,6 +58,7 @@ https://www.gyu36.jp/
 
 ### カード
 
+https://qu.ai/ （背景画像がスライスされて表示）
 https://aguije.jp/ （.p-work-item**scan**contaiener を scaleX(200)にしてかぶせている、ホバー時のアンカーとライン）
 https://bnn.co.jp/
 https://www.recruit.torikizoku.co.jp/fresh/ （gif 画像のアニメーション枠をかぶせている）
@@ -86,6 +85,7 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
+https://qu.ai/ （文字が少しだけ左にスライドして文字がランダム変化）
 https://tympanus.net/Development/TextRepetitionEffect/index4.html
 https://www.gonshiro.co.jp/ （画像が外から収まる）
 https://synflux.io/ （QR コード表示）
