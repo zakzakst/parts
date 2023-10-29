@@ -85,7 +85,6 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
-https://qu.ai/ （文字が少しだけ左にスライドして文字がランダム変化）
 https://tympanus.net/Development/TextRepetitionEffect/index4.html
 https://www.gonshiro.co.jp/ （画像が外から収まる）
 https://synflux.io/ （QR コード表示）
