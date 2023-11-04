@@ -1,0 +1,11 @@
+title: その他38
+label: その他38
+variants:
+  - name: default
+    label: その他38
+    status: ready
+    # status: prototype
+    # status: wip
+# hidden: true
+context:
+  text: 'https://jp.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_16482584.htm'
