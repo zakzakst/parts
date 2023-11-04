@@ -148,3 +148,6 @@ other35();
 
 import { other36 } from '../components/others/other36/other36';
 other36();
+
+import { other38 } from '../components/others/other38/other38';
+other38();

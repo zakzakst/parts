@@ -1,0 +1,18 @@
+$BLOCK_NAME: '.other-38';
+
+// 変数
+
+#{ $BLOCK_NAME } {
+  --filter-transition-duration: 16s;
+  --hus-value: 0deg;
+  --grayscale: 0;
+  aspect-ratio: 16 / 9;
+  max-width: 900px;
+  transition: filter var(--filter-transition-duration) ease-out;
+  filter: unquote('hue-rotate(var(--hus-value)) grayscale(var(--grayscale))');
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
