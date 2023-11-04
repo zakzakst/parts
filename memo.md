@@ -130,7 +130,6 @@ https://enjin-dash.com/about/index.html
 Youtube の PC 表示で検索 BOX のアイコンホバー時にツールチップが表示されるのよかった
 https://githubnext.com/projects/code-brushes （切替のインタラクションで星の装飾が表示される）
 https://styleport.co.jp/ （Careers 部分の画面固定のしかた（画像上下に動く・オフセットついたボックス））
-https://universe.kaonavi.jp/ （円グラフのアニメーション）
 https://photoshopvip.net/144594 （トップへ戻るボタン、focus のスタイル）
 https://www.daytona-park.com/news/16thcp/ （チケット切れるアニメーション）
 https://note.com/goando/n/n9346aea1b0ea （view transitions 使ってアプリライクな動き Nuxt で試す。Apple Books みたいにカルーセルから詳細に移動 SPA と SSR 使い分けられるやつ使って）
