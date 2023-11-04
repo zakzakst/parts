@@ -1,22 +1,45 @@
 $BLOCK_NAME: '.other-40';
 
 // 変数
-$color_bg: #888;
+$color_bg: #222;
 $color_border: #555;
 $border_width: 8px;
+$radius: 24px;
+$radius_inner: $radius - $border_width;
 
 #{ $BLOCK_NAME } {
   background: $color_border;
-  height: unquote('min(300px, calc(100vh - 60px))');
-  border-radius: 24px;
+  border-radius: $radius;
   overflow: hidden;
-  padding: $border_width;
+  height: unquote('min(300px, calc(100vh - 60px))');
   &__inner {
-    background: $color_bg;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
   }
   &__content {
+    height: 100%;
+    overflow: auto;
+    padding: $border_width;
+    padding-right: 0;
+    &::-webkit-scrollbar {
+      width: $border_width;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      border: none;
+      margin-top: $radius;
+      margin-bottom: $radius;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(#fff, 0.3);
+      border-radius: $border_width / 2;
+    }
+  }
+  &__content-inner {
+    background: $color_bg;
+    padding: 24px;
+    color: #fff;
     height: 500px;
+    border-radius: $radius_inner;
   }
 }
