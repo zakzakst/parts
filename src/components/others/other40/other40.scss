@@ -1,0 +1,22 @@
+$BLOCK_NAME: '.other-40';
+
+// 変数
+$color_bg: #888;
+$color_border: #555;
+$border_width: 8px;
+
+#{ $BLOCK_NAME } {
+  background: $color_border;
+  height: unquote('min(300px, calc(100vh - 60px))');
+  border-radius: 24px;
+  overflow: hidden;
+  padding: $border_width;
+  &__inner {
+    background: $color_bg;
+    height: 100%;
+    overflow: auto;
+  }
+  &__content {
+    height: 500px;
+  }
+}
