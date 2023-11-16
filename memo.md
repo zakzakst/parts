@@ -58,6 +58,7 @@ https://www.gyu36.jp/
 
 ### カード
 
+https://www.spatial.io/ （サムネイルホバー時にカーソル移動で 3D 表示になる）
 https://qu.ai/ （背景画像がスライスされて表示）
 https://aguije.jp/ （.p-work-item**scan**contaiener を scaleX(200)にしてかぶせている、ホバー時のアンカーとライン）
 https://bnn.co.jp/
