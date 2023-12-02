@@ -29,6 +29,9 @@ https://www.chartjs.org/docs/latest/getting-started/integration.html
 ・Async / Await を使う時、Async ファンクションは必ず Promise が返る
 https://zenn.dev/nana/articles/ff65486fcd0e34
 
+・Hygen でコンポーネントと storybook 作成を楽しよう
+https://qiita.com/yutteee/items/5f54729b4d723f72b710
+
 ## 未作成
 
 ### ヒーロー

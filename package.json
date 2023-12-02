@@ -7,7 +7,8 @@
     "scssBuild": "gulp scssBuild",
     "jsBuild": "gulp jsBuild",
     "fractalStart": "fractal start --sync",
-    "fractalBuild": "fractal build"
+    "fractalBuild": "fractal build",
+    "hg:component": "hygen component with-prompt"
   },
   "repository": {
     "type": "git",
