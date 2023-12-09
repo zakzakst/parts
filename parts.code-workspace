@@ -19,7 +19,7 @@
       ".babelrc": true,
       ".github": true,
       "tsconfig.json": true,
-      "package-lock.json": true,
+      "package-lock.json": true
     },
     // 設定：TODO Highlight
     "todohighlight.keywords": [
@@ -78,8 +78,8 @@
     // 自動保存を有効化
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll.stylelint": true,
-      "source.fixAll.eslint": true
+      "source.fixAll.stylelint": "explicit",
+      "source.fixAll.eslint": "explicit"
     }
   }
 }
