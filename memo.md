@@ -36,6 +36,7 @@ https://qiita.com/yutteee/items/5f54729b4d723f72b710
 
 ### ヒーロー
 
+https://adg.org/ （傾けた正方形と入れ替え時の拡縮）
 https://www.interoffice.co.jp/ （canvas をマスクのように利用している）
 https://www.e-heyaspace.com/about/
 
