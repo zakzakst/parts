@@ -54,6 +54,7 @@ https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」�
 
 ### 見出し
 
+https://www.hello.ai/ （音波の揺れ）
 https://aqm2.ai/ja/
 https://aguije.jp/ （filter: url(#textNoise) で <svg id="filters">の中の filter を参照している）
 https://corp.telecy.tv/
@@ -91,6 +92,7 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
+https://www.shiki.jp/special/70th/
 https://tympanus.net/Development/TextRepetitionEffect/index4.html
 https://www.gonshiro.co.jp/ （画像が外から収まる）
 https://synflux.io/ （QR コード表示）
