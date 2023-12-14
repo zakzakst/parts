@@ -135,6 +135,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://matsumoto-seikeigeka.com/ （診療のご案内の図）
 Youtube の PC 表示で検索 BOX のアイコンホバー時にツールチップが表示されるのよかった
 https://githubnext.com/projects/code-brushes （切替のインタラクションで星の装飾が表示される）
 https://styleport.co.jp/ （Careers 部分の画面固定のしかた（画像上下に動く・オフセットついたボックス））
