@@ -54,6 +54,7 @@ https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」�
 
 ### 見出し
 
+https://okivfes.jp/
 https://www.hello.ai/ （音波の揺れ）
 https://aqm2.ai/ja/
 https://aguije.jp/ （filter: url(#textNoise) で <svg id="filters">の中の filter を参照している）
