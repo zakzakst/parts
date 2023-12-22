@@ -6,7 +6,7 @@ module.exports = [
     type: 'select',
     name: 'component_type',
     message: 'Select component type',
-    choices: ['button', 'other', 'scroll-anim'],
+    choices: ['button', 'other', 'scroll-anim', 'heading'],
   },
   {
     type: 'input',
