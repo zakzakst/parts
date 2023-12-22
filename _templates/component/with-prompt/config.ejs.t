@@ -13,6 +13,9 @@ switch ( component_type ) {
   case 'scroll-anim':
     title = 'スクロールアニメーション'
     break
+  case 'heading':
+    title = '見出し'
+    break
   default:
     title = 'コンポーネント';
 }
