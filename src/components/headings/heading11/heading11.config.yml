@@ -1,0 +1,14 @@
+
+title: 見出し11
+label: 見出し11
+variants:
+  - name: default
+    label: 見出し11
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  text: '見出し11'
+
