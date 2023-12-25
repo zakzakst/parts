@@ -48,6 +48,7 @@ http://a-dot.co.jp/
 
 ### ボタン
 
+https://morght.com/
 https://www.spaceforce.com/
 https://recruit.d-pops.co.jp/
 https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」のリンクホバー時の下線「background-blend-mode: color-dodge;」）
@@ -135,6 +136,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://morght.com/ （png アニメーションの装飾）
 https://matsumoto-seikeigeka.com/ （診療のご案内の図）
 Youtube の PC 表示で検索 BOX のアイコンホバー時にツールチップが表示されるのよかった
 https://githubnext.com/projects/code-brushes （切替のインタラクションで星の装飾が表示される）
