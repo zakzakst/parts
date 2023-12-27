@@ -136,6 +136,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://anri.vc （canvasと文字の重なり）
 https://morght.com/ （png アニメーションの装飾）
 https://matsumoto-seikeigeka.com/ （診療のご案内の図）
 Youtube の PC 表示で検索 BOX のアイコンホバー時にツールチップが表示されるのよかった
