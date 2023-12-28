@@ -136,6 +136,10 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://materials.8card.net/product/888/ 
+https://www.asiankung-fu.com/s/n80/page/25th （セクションの背景見出しの切り替わり）
+https://www.obunsha.co.jp/pr/change/process/ （スクロール連動で工程のフォーカス）
+https://www.pola.co.jp/special/o/wecaremore/ （lottieの表現参考になる、transition scale, translate 両方利用して弾力感？出してるのも面白い）
 https://anri.vc （canvasと文字の重なり）
 https://morght.com/ （png アニメーションの装飾）
 https://matsumoto-seikeigeka.com/ （診療のご案内の図）
