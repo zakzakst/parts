@@ -47,7 +47,7 @@ https://oromo.co.jp/
 http://a-dot.co.jp/
 
 ### ボタン
-
+https://lab.lifull.com/lifewill/valuesmap/
 https://global.brother/ja/digest
 https://morght.com/
 https://www.spaceforce.com/
@@ -137,6 +137,9 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://www.hamatatsu-lab.com （吹き出し揺れる）
+https://www.hamadasyuzou.co.jp/kakushigura_brand/ （見出しとリード文辺りの扱い）
+https://www.haagen-dazs.co.jp/brand/special/why-haagen-dazs/ （ホバー時の数字アニメーション）
 https://culturenext.byspotify.com/ja-JP
 https://innovation.tbs.co.jp/akasaka_report/ （トップに戻るボタン）
 https://innovation.tbs.co.jp/ （アンカーの付け方も参考にする）
