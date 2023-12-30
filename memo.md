@@ -48,6 +48,7 @@ http://a-dot.co.jp/
 
 ### ボタン
 
+https://global.brother/ja/digest
 https://morght.com/
 https://www.spaceforce.com/
 https://recruit.d-pops.co.jp/
@@ -136,6 +137,10 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://culturenext.byspotify.com/ja-JP
+https://innovation.tbs.co.jp/akasaka_report/ （トップに戻るボタン）
+https://innovation.tbs.co.jp/ （アンカーの付け方も参考にする）
+https://sirup.online/5th/ （CDケースが積み上がっているの）
 https://materials.8card.net/product/888/ 
 https://www.asiankung-fu.com/s/n80/page/25th （セクションの背景見出しの切り替わり）
 https://www.obunsha.co.jp/pr/change/process/ （スクロール連動で工程のフォーカス）
