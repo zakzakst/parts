@@ -64,7 +64,7 @@ https://www.miwa-dental.jp/
 https://www.gyu36.jp/
 
 ### カード
-
+https://sgsjapan-career.jp/
 https://www.pokemon.co.jp/ex/sv_dlc/ja/ （clip-path の使い方面白い）
 https://www.spatial.io/ （サムネイルホバー時にカーソル移動で 3D 表示になる）
 https://qu.ai/ （背景画像がスライスされて表示）
@@ -136,7 +136,8 @@ https://s-y-n.jp/
 https://enjin-dash.com/about/index.html
 
 ### その他
-
+https://www.ai-model.jp/ （スクロールで画像が切り替わる）
+https://www.porters.jp/recruit/ （セクション区切りのシャッとしたライン）
 https://www.hamatatsu-lab.com （吹き出し揺れる）
 https://www.hamadasyuzou.co.jp/kakushigura_brand/ （見出しとリード文辺りの扱い）
 https://www.haagen-dazs.co.jp/brand/special/why-haagen-dazs/ （ホバー時の数字アニメーション）
