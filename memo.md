@@ -55,7 +55,7 @@ https://recruit.d-pops.co.jp/
 https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」のリンクホバー時の下線「background-blend-mode: color-dodge;」）
 
 ### 見出し
-
+https://ambr.co.jp/
 https://www.hello.ai/ （音波の揺れ）
 https://aqm2.ai/ja/
 https://aguije.jp/ （filter: url(#textNoise) で <svg id="filters">の中の filter を参照している）
@@ -93,7 +93,8 @@ https://wrl.co.jp/about/ （沿革部分）
 ### アコーディオン
 
 ### スクロールアニメーション
-
+https://overa.jp/ （スクロール連動の固定が外れる時に文字が隠れるアニメーション）
+https://redandgreen.jp/ （サービス説明の「開発からブランディングまで」をアニメーションで上手く表現できていると思う）
 https://www.shiki.jp/special/70th/
 https://tympanus.net/Development/TextRepetitionEffect/index4.html
 https://www.gonshiro.co.jp/ （画像が外から収まる）
