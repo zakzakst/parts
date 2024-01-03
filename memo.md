@@ -76,9 +76,11 @@ https://www.tricle-llc.co.jp/
 ### ニュース一覧
 
 ### サービス一覧
+https://nution.persol-career.co.jp/
+https://bird-and-insect.com/ （タイポグラフィ全面に出て、ホバーすると背景全体が切り替わる）
 
 ### カルーセル
-
+https://www.h-products.co.jp/
 https://www.ga-tech.co.jp/recruit/newgraduate/ （swiper のドラッグ時にサムネイルにインタラクション入れてる）
 https://www.sorenrose.com/ （swiper と clip-path のアニメーション ※f-header-swiper-items-holder）
 https://e-office.inc/
@@ -93,6 +95,7 @@ https://wrl.co.jp/about/ （沿革部分）
 ### アコーディオン
 
 ### スクロールアニメーション
+https://shapefarm.net/ja/ （view all games の背景のところの罫線が引かれていくアニメーション、transform scaleの表示のタイミングを線毎にずらしてるっぽい）
 https://overa.jp/ （スクロール連動の固定が外れる時に文字が隠れるアニメーション）
 https://redandgreen.jp/ （サービス説明の「開発からブランディングまで」をアニメーションで上手く表現できていると思う）
 https://www.shiki.jp/special/70th/
@@ -137,6 +140,12 @@ https://s-y-n.jp/
 https://enjin-dash.com/about/index.html
 
 ### その他
+https://www.spade-co.jp/ （our workのサムネイルの螺旋、all worksのリンクのインタラクション）
+https://exitfilm.jp/ （serviceの背景画像の角版の影おしゃれ）
+https://tyo.co.jp/ （canvasで文字の切り抜きがスクロール連動）
+https://www.aig-japan.jp/ （ヒーローエリアの積み木的なインタラクション）
+https://punchred.xyz/projects/
+https://www.depot-yamanashi.jp/ （clip-pathのsvgアニメーション）
 https://www.ai-model.jp/ （スクロールで画像が切り替わる）
 https://www.porters.jp/recruit/ （セクション区切りのシャッとしたライン）
 https://www.hamatatsu-lab.com （吹き出し揺れる）
