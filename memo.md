@@ -47,6 +47,9 @@ https://oromo.co.jp/
 http://a-dot.co.jp/
 
 ### ボタン
+https://richka.co.jp/
+https://realation.jp/ （お問い合わせボタンのこういう目立たせ方なるほど、横幅埋めてホバーインタラクション発生するようにしているのも上手いと思う）
+https://www.onecruise.co.jp/
 https://lab.lifull.com/lifewill/valuesmap/
 https://global.brother/ja/digest
 https://morght.com/
@@ -81,6 +84,7 @@ https://nution.persol-career.co.jp/
 https://bird-and-insect.com/ （タイポグラフィ全面に出て、ホバーすると背景全体が切り替わる）
 
 ### カルーセル
+https://info.freedom.co.jp/
 https://www.h-products.co.jp/
 https://www.ga-tech.co.jp/recruit/newgraduate/ （swiper のドラッグ時にサムネイルにインタラクション入れてる）
 https://www.sorenrose.com/ （swiper と clip-path のアニメーション ※f-header-swiper-items-holder）
@@ -96,6 +100,9 @@ https://wrl.co.jp/about/ （沿革部分）
 ### アコーディオン
 
 ### スクロールアニメーション
+https://tamagaway.jp/ （画像にノイズがかかって消えていく、ノイズ画像を重ねてis-outクラスで表現している）
+https://realation.jp/ （PC表示のヘッダーの表示変化）
+https://www.31ventures.jp/ （文字がカラオケの歌詞みたいに表示される）
 https://shapefarm.net/ja/ （view all games の背景のところの罫線が引かれていくアニメーション、transform scaleの表示のタイミングを線毎にずらしてるっぽい）
 https://overa.jp/ （スクロール連動の固定が外れる時に文字が隠れるアニメーション）
 https://redandgreen.jp/ （サービス説明の「開発からブランディングまで」をアニメーションで上手く表現できていると思う）
@@ -141,6 +148,9 @@ https://s-y-n.jp/
 https://enjin-dash.com/about/index.html
 
 ### その他
+https://www.prismpartner.co.jp/ （valueのところの表示アニメーション）
+https://richka.co.jp/ （フッターの表示の仕方 ※bodyを「overflow: hidden;」にしてページコンテンツのスクロール処理でやっている）
+https://sbro.co.jp/ （ヒーローエリア固定の方法参考にする htmlに「overflow-x: hidden;」bodyに「width: calc(100% + 15px); ※多分jsでスクロールバーの幅取得している」）
 https://toridori.co.jp/ （ラインアニメーションの表現）
 https://www.pkshatech.com/ （ヒーローエリアの下の画像がスクロール始めると伸びる ※スクロールを促す表示との視線誘導がいいと感じた）
 https://www.spade-co.jp/ （our workのサムネイルの螺旋、all worksのリンクのインタラクション）
