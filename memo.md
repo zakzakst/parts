@@ -64,6 +64,7 @@ https://www.miwa-dental.jp/
 https://www.gyu36.jp/
 
 ### カード
+https://asobisystem.com/ （ホバー時に画像が傾く）
 https://sgsjapan-career.jp/
 https://www.pokemon.co.jp/ex/sv_dlc/ja/ （clip-path の使い方面白い）
 https://www.spatial.io/ （サムネイルホバー時にカーソル移動で 3D 表示になる）
@@ -140,6 +141,8 @@ https://s-y-n.jp/
 https://enjin-dash.com/about/index.html
 
 ### その他
+https://toridori.co.jp/ （ラインアニメーションの表現）
+https://www.pkshatech.com/ （ヒーローエリアの下の画像がスクロール始めると伸びる ※スクロールを促す表示との視線誘導がいいと感じた）
 https://www.spade-co.jp/ （our workのサムネイルの螺旋、all worksのリンクのインタラクション）
 https://exitfilm.jp/ （serviceの背景画像の角版の影おしゃれ）
 https://tyo.co.jp/ （canvasで文字の切り抜きがスクロール連動）
