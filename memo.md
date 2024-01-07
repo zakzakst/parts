@@ -70,6 +70,8 @@ https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」�
 
 ### 見出し
 
+https://wtfc.jp/wherever/
+https://logosland.jp/ （スクロール連動のぼよよんとした感じ）
 https://3bl.jp/ （コンセプトの「自分よ、その調子だ。」のところ）
 https://ambr.co.jp/
 https://www.hello.ai/ （音波の揺れ）
@@ -81,6 +83,8 @@ https://www.gyu36.jp/
 
 ### カード
 
+https://postfake.com/
+https://droptokyo.com/ （WeDrop のところホバーすると点線の枠が出てアニメーションする、画像と文字の配置面白い）
 https://earcouture.jp/ （Collection の切り抜き画像と背景グレーのデザインがおしゃれ。実際のコーディングを真似するのは多分できないが、ホバー時のインタラクションも CSS で似たようなの作れないか試す）
 https://cloud-dental-clinic.com/ （ぼかし画像を影に使う）
 https://waffleinc.co.jp/ （ホバーで下地も変化する）
@@ -180,6 +184,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://virtualmuseum.fukuoka-kenbi.jp/takara/
 https://sitte.page/ （ロゴを柄にした背景）
 https://mezamee.com/ （ハッシュタグのキーワード背景）
 https://www.acsl.co.jp/drone-soten/ （ギャラリーのところの回転している文字）
