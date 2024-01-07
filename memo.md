@@ -42,11 +42,15 @@ https://www.e-heyaspace.com/about/
 
 ### フッター
 
+https://loof-inn.com/ （ご予約リンクのホバーインタラクション ※他でもコンバージョンリンクに応用できそう）
+https://has-story.jp/ （フッターの高さ固定して、inner を position: fixed）
 https://www.itoki.jp/special/act/
 https://oromo.co.jp/
 http://a-dot.co.jp/
 
 ### ボタン
+
+https://coten.co.jp/ （await 利用して animate メソッド完了後にドットを削除している ※js の「c-button\_\_dot-box」あたりを追ってみる）
 https://richka.co.jp/
 https://realation.jp/ （お問い合わせボタンのこういう目立たせ方なるほど、横幅埋めてホバーインタラクション発生するようにしているのも上手いと思う）
 https://www.onecruise.co.jp/
@@ -58,6 +62,7 @@ https://recruit.d-pops.co.jp/
 https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」のリンクホバー時の下線「background-blend-mode: color-dodge;」）
 
 ### 見出し
+
 https://ambr.co.jp/
 https://www.hello.ai/ （音波の揺れ）
 https://aqm2.ai/ja/
@@ -67,6 +72,9 @@ https://www.miwa-dental.jp/
 https://www.gyu36.jp/
 
 ### カード
+
+https://cloud-dental-clinic.com/ （ぼかし画像を影に使う）
+https://waffleinc.co.jp/ （ホバーで下地も変化する）
 https://asobisystem.com/ （ホバー時に画像が傾く）
 https://sgsjapan-career.jp/
 https://www.pokemon.co.jp/ex/sv_dlc/ja/ （clip-path の使い方面白い）
@@ -80,10 +88,13 @@ https://www.tricle-llc.co.jp/
 ### ニュース一覧
 
 ### サービス一覧
+
 https://nution.persol-career.co.jp/
 https://bird-and-insect.com/ （タイポグラフィ全面に出て、ホバーすると背景全体が切り替わる）
 
 ### カルーセル
+
+https://swc-aiwakai.jp/
 https://info.freedom.co.jp/
 https://www.h-products.co.jp/
 https://www.ga-tech.co.jp/recruit/newgraduate/ （swiper のドラッグ時にサムネイルにインタラクション入れてる）
@@ -100,10 +111,12 @@ https://wrl.co.jp/about/ （沿革部分）
 ### アコーディオン
 
 ### スクロールアニメーション
-https://tamagaway.jp/ （画像にノイズがかかって消えていく、ノイズ画像を重ねてis-outクラスで表現している）
-https://realation.jp/ （PC表示のヘッダーの表示変化）
+
+https://www.acsl.co.jp/ （ヒーローエリアの表示切替、gsap の delayedCall 利用している）
+https://tamagaway.jp/ （画像にノイズがかかって消えていく、ノイズ画像を重ねて is-out クラスで表現している）
+https://realation.jp/ （PC 表示のヘッダーの表示変化）
 https://www.31ventures.jp/ （文字がカラオケの歌詞みたいに表示される）
-https://shapefarm.net/ja/ （view all games の背景のところの罫線が引かれていくアニメーション、transform scaleの表示のタイミングを線毎にずらしてるっぽい）
+https://shapefarm.net/ja/ （view all games の背景のところの罫線が引かれていくアニメーション、transform scale の表示のタイミングを線毎にずらしてるっぽい）
 https://overa.jp/ （スクロール連動の固定が外れる時に文字が隠れるアニメーション）
 https://redandgreen.jp/ （サービス説明の「開発からブランディングまで」をアニメーションで上手く表現できていると思う）
 https://www.shiki.jp/special/70th/
@@ -148,17 +161,26 @@ https://s-y-n.jp/
 https://enjin-dash.com/about/index.html
 
 ### その他
-https://www.prismpartner.co.jp/ （valueのところの表示アニメーション）
-https://richka.co.jp/ （フッターの表示の仕方 ※bodyを「overflow: hidden;」にしてページコンテンツのスクロール処理でやっている）
-https://sbro.co.jp/ （ヒーローエリア固定の方法参考にする htmlに「overflow-x: hidden;」bodyに「width: calc(100% + 15px); ※多分jsでスクロールバーの幅取得している」）
+
+https://www.kabu-kitamura.com/ （ヒーローエリアの表現面白い）
+https://www.ys-dc.jp/ （ヒーローエリア離れる時に画像フェードアウトするの、次の内容へ視線誘導できていいと感じた）
+https://terada-knit.co.jp/ （スクロール連動のアニメーションの SKIP の方法をアンカーリンクでやっているのがなるほどと感じた）
+https://www.trunk-base.com/ （PC でホバーした時に画像が後ろに出る）
+https://rara.ritsumei.ac.jp/ （ヒーローエリアのアニメーション）
+https://co-lab.joshibi.net/ （スクロール連動で図形が書かれていく）
+https://www.ics.ac.jp/webopencampus/ （背景の図形アニメーション応用できそう）
+https://tokiwa-factory.com/ （幾何学模様のアニメーション、目立たせ過ぎない装飾のアクセントになっている）
+https://www.prismpartner.co.jp/ （value のところの表示アニメーション）
+https://richka.co.jp/ （フッターの表示の仕方 ※body を「overflow: hidden;」にしてページコンテンツのスクロール処理でやっている）
+https://sbro.co.jp/ （ヒーローエリア固定の方法参考にする html に「overflow-x: hidden;」body に「width: calc(100% + 15px); ※多分 js でスクロールバーの幅取得している」）
 https://toridori.co.jp/ （ラインアニメーションの表現）
 https://www.pkshatech.com/ （ヒーローエリアの下の画像がスクロール始めると伸びる ※スクロールを促す表示との視線誘導がいいと感じた）
-https://www.spade-co.jp/ （our workのサムネイルの螺旋、all worksのリンクのインタラクション）
-https://exitfilm.jp/ （serviceの背景画像の角版の影おしゃれ）
-https://tyo.co.jp/ （canvasで文字の切り抜きがスクロール連動）
+https://www.spade-co.jp/ （our work のサムネイルの螺旋、all works のリンクのインタラクション）
+https://exitfilm.jp/ （service の背景画像の角版の影おしゃれ）
+https://tyo.co.jp/ （canvas で文字の切り抜きがスクロール連動）
 https://www.aig-japan.jp/ （ヒーローエリアの積み木的なインタラクション）
 https://punchred.xyz/projects/
-https://www.depot-yamanashi.jp/ （clip-pathのsvgアニメーション）
+https://www.depot-yamanashi.jp/ （clip-path の svg アニメーション）
 https://www.ai-model.jp/ （スクロールで画像が切り替わる）
 https://www.porters.jp/recruit/ （セクション区切りのシャッとしたライン）
 https://www.hamatatsu-lab.com （吹き出し揺れる）
@@ -167,12 +189,12 @@ https://www.haagen-dazs.co.jp/brand/special/why-haagen-dazs/ （ホバー時の�
 https://culturenext.byspotify.com/ja-JP
 https://innovation.tbs.co.jp/akasaka_report/ （トップに戻るボタン）
 https://innovation.tbs.co.jp/ （アンカーの付け方も参考にする）
-https://sirup.online/5th/ （CDケースが積み上がっているの）
-https://materials.8card.net/product/888/ 
+https://sirup.online/5th/ （CD ケースが積み上がっているの）
+https://materials.8card.net/product/888/
 https://www.asiankung-fu.com/s/n80/page/25th （セクションの背景見出しの切り替わり）
 https://www.obunsha.co.jp/pr/change/process/ （スクロール連動で工程のフォーカス）
-https://www.pola.co.jp/special/o/wecaremore/ （lottieの表現参考になる、transition scale, translate 両方利用して弾力感？出してるのも面白い）
-https://anri.vc （canvasと文字の重なり）
+https://www.pola.co.jp/special/o/wecaremore/ （lottie の表現参考になる、transition scale, translate 両方利用して弾力感？出してるのも面白い）
+https://anri.vc （canvas と文字の重なり）
 https://morght.com/ （png アニメーションの装飾）
 https://matsumoto-seikeigeka.com/ （診療のご案内の図）
 Youtube の PC 表示で検索 BOX のアイコンホバー時にツールチップが表示されるのよかった
