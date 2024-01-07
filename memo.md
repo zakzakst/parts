@@ -36,12 +36,17 @@ https://qiita.com/yutteee/items/5f54729b4d723f72b710
 
 ### ヒーロー
 
+https://www.hellomobility.jp/ （ヒーローエリア離れる時に画像フェードアウトするの、次の内容へ視線誘導できていいと感じた）
+https://www.ys-dc.jp/ （ヒーローエリア離れる時に画像フェードアウトするの、次の内容へ視線誘導できていいと感じた）
+https://tojiro.net/
 https://adg.org/ （傾けた正方形と入れ替え時の拡縮）
 https://www.interoffice.co.jp/ （canvas をマスクのように利用している）
 https://www.e-heyaspace.com/about/
 
 ### フッター
 
+https://www.vitamin-i.jp/henshinbike （フッター自体は position: fixed で main の margin-bottom にフッターの高さ取得して値を設定している）
+https://www.carome.net/ （グラデーションの重ね方おしゃれ）
 https://loof-inn.com/ （ご予約リンクのホバーインタラクション ※他でもコンバージョンリンクに応用できそう）
 https://has-story.jp/ （フッターの高さ固定して、inner を position: fixed）
 https://www.itoki.jp/special/act/
@@ -50,6 +55,8 @@ http://a-dot.co.jp/
 
 ### ボタン
 
+https://marnon.jp/ （丸い VIEW MORE）
+https://valleyshell.asia/
 https://coten.co.jp/ （await 利用して animate メソッド完了後にドットを削除している ※js の「c-button\_\_dot-box」あたりを追ってみる）
 https://richka.co.jp/
 https://realation.jp/ （お問い合わせボタンのこういう目立たせ方なるほど、横幅埋めてホバーインタラクション発生するようにしているのも上手いと思う）
@@ -63,6 +70,7 @@ https://demo.tcd-theme.com/tcd090/nativie-ads/ （サイドバー「CATEGORY」�
 
 ### 見出し
 
+https://3bl.jp/ （コンセプトの「自分よ、その調子だ。」のところ）
 https://ambr.co.jp/
 https://www.hello.ai/ （音波の揺れ）
 https://aqm2.ai/ja/
@@ -73,6 +81,7 @@ https://www.gyu36.jp/
 
 ### カード
 
+https://earcouture.jp/ （Collection の切り抜き画像と背景グレーのデザインがおしゃれ。実際のコーディングを真似するのは多分できないが、ホバー時のインタラクションも CSS で似たようなの作れないか試す）
 https://cloud-dental-clinic.com/ （ぼかし画像を影に使う）
 https://waffleinc.co.jp/ （ホバーで下地も変化する）
 https://asobisystem.com/ （ホバー時に画像が傾く）
@@ -94,6 +103,10 @@ https://bird-and-insect.com/ （タイポグラフィ全面に出て、ホバー
 
 ### カルーセル
 
+https://www.hellomobility.jp/ （モビリティラインナップ）
+https://www.lebel.co.jp/products/mens/theo/theoperm/
+https://or6aew4ohfoo.salonia.jp/special/genderless/ （HAIR STYLE COLLECTION のホバー時のカーソル）
+https://www.felissimo.co.jp/marvel/marvel_cha.html （カルーセルのタイトル重なりおしゃれ。mask-image を利用）
 https://swc-aiwakai.jp/
 https://info.freedom.co.jp/
 https://www.h-products.co.jp/
@@ -112,6 +125,10 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
+https://hotaru-personalized.com/ （HOW IT WORKS のとこ）
+https://www.goldwin.co.jp/greenbaton/　（見出しの文字の表示アニメーション など）
+https://green-spoon.jp/ （リード部分の商品画像の見せ方）
+https://sudamasaki-music.com/collage/ （見出しがスプリットしているのがくっつく）
 https://www.acsl.co.jp/ （ヒーローエリアの表示切替、gsap の delayedCall 利用している）
 https://tamagaway.jp/ （画像にノイズがかかって消えていく、ノイズ画像を重ねて is-out クラスで表現している）
 https://realation.jp/ （PC 表示のヘッダーの表示変化）
@@ -155,6 +172,7 @@ https://factfashion.jp/
 
 ### 開始アニメーション
 
+https://www.hellocycling.jp/ （Cookie の「access onece ※多分制作側が once をタイポ」を削除すれば見れる）
 https://corp.penmark.jp/
 https://rdc.ricoh.co.jp/?utm=wewantwebs
 https://s-y-n.jp/
@@ -162,8 +180,15 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://sitte.page/ （ロゴを柄にした背景）
+https://mezamee.com/ （ハッシュタグのキーワード背景）
+https://www.acsl.co.jp/drone-soten/ （ギャラリーのところの回転している文字）
+https://setomaneki.jp/ （スクロール連動で商品を 360 度見せている）
+https://buttersand.com/ （コンセプトの箇所の文字が流れるアニメーションと、スクロール連動で回転していくやつ。あと装飾画像にぼかしかけて奥行出しているのなるほど）
+https://www.kai-group.com/products/kamisori/product/auger/index.html （LINE UP の swiper の使いかた試してみる。商品の詳細モーダルの一か所にパルスのアニメーション入れている）
+https://tote.design/cure/
+https://www.meiji.ac.jp/sst/riko-lab/gallery/ （縦に画像が並ぶよりも見てしまう気がする。スクロールの長さ的には横のほうが長いはずなのに。時々文章を入れているのも単調な印象を和らげている気がする）
 https://www.kabu-kitamura.com/ （ヒーローエリアの表現面白い）
-https://www.ys-dc.jp/ （ヒーローエリア離れる時に画像フェードアウトするの、次の内容へ視線誘導できていいと感じた）
 https://terada-knit.co.jp/ （スクロール連動のアニメーションの SKIP の方法をアンカーリンクでやっているのがなるほどと感じた）
 https://www.trunk-base.com/ （PC でホバーした時に画像が後ろに出る）
 https://rara.ritsumei.ac.jp/ （ヒーローエリアのアニメーション）
