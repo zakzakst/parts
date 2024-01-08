@@ -58,7 +58,6 @@ http://a-dot.co.jp/
 https://marnon.jp/ （丸い VIEW MORE）
 https://valleyshell.asia/
 https://coten.co.jp/ （await 利用して animate メソッド完了後にドットを削除している ※js の「c-button\_\_dot-box」あたりを追ってみる）
-https://richka.co.jp/
 https://realation.jp/ （お問い合わせボタンのこういう目立たせ方なるほど、横幅埋めてホバーインタラクション発生するようにしているのも上手いと思う）
 https://www.onecruise.co.jp/
 https://lab.lifull.com/lifewill/valuesmap/
