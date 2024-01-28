@@ -1,0 +1,93 @@
+$BLOCK_NAME: '.hero-01';
+
+// 変数
+$kv_height: 100vh;
+$content_padding: 24px;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  min-height: $kv_height;
+  padding-top: $kv_height;
+
+  &__kv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $kv_height;
+    overflow: hidden;
+  }
+
+  &__kv-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: $content_padding;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    line-height: 1;
+    font-weight: bold;
+    max-width: unquote('min(500px, 100%)');
+  }
+
+  &__kv-sub-title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    > span {
+      --progress: 0;
+      transition: transform 0.1s;
+      transform: translateX(calc((-550px) * var(--progress)))
+        skewX(calc(45deg * var(--progress)));
+      &:nth-child(1) {
+        --progress: max(0, min(1, calc((var(--anim-progress)) / 0.7)));
+      }
+      &:nth-child(2) {
+        --progress: max(0, min(1, calc((var(--anim-progress) - 0.1) / 0.7)));
+      }
+    }
+  }
+
+  &__kv-main-title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 32px;
+    > span {
+      --progress: 0;
+      transition: transform 0.1s;
+      transform: translateX(calc((-550px) * var(--progress)))
+        skewX(calc(45deg * var(--progress)));
+      &:nth-child(1) {
+        --progress: max(0, min(1, calc((var(--anim-progress) - 0.2) / 0.7)));
+      }
+      &:nth-child(2) {
+        --progress: max(0, min(1, calc((var(--anim-progress) - 0.3) / 0.7)));
+      }
+    }
+  }
+
+  &__kv-bg {
+    position: absolute;
+    inset: 0;
+    transform: scale(calc(1 + 0.5 * var(--anim-progress)));
+    transform-origin: top right;
+    opacity: calc(1 - var(--anim-progress));
+    transition: opacity 0.2s, transform 0.2s;
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    padding: $content_padding;
+    padding-top: 320px;
+  }
+}

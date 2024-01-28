@@ -36,7 +36,6 @@ https://qiita.com/yutteee/items/5f54729b4d723f72b710
 
 ### ヒーロー
 
-https://www.hellomobility.jp/ （ヒーローエリア離れる時に画像フェードアウトするの、次の内容へ視線誘導できていいと感じた）
 https://www.ys-dc.jp/ （ヒーローエリア離れる時に画像フェードアウトするの、次の内容へ視線誘導できていいと感じた）
 https://tojiro.net/
 https://adg.org/ （傾けた正方形と入れ替え時の拡縮）

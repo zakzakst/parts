@@ -1,0 +1,12 @@
+title: ヒーロー01
+label: ヒーロー01
+variants:
+  - name: default
+    label: ヒーロー01
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-plain'
+context:
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
