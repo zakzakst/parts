@@ -74,6 +74,12 @@ import { heading07 } from '../components/headings/heading07/heading07';
 heading07();
 
 /**
+ * ヒーロー
+ */
+import { hero01 } from '../components/heros/hero01/hero01';
+hero01();
+
+/**
  * メニュー
  */
 import { menu01 } from '../components/menus/menu01/menu01';
