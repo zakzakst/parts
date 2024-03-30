@@ -22,7 +22,7 @@ class Anim31 {
    * 初期化
    */
   init(): void {
-    if (!this.el) return;
+    if (!this.el || !this.contentEl) return;
     this.scrollHandler();
   }
 
