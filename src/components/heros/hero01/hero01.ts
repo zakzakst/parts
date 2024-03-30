@@ -15,14 +15,14 @@ class Anim31 {
 
   constructor(elId: string) {
     this.el = document.getElementById(elId);
-    this.contentEl = this.el.querySelector('.hero-01__content');
+    this.contentEl = this.el?.querySelector('.hero-01__content');
   }
 
   /**
    * 初期化
    */
   init(): void {
-    if (!this.el || !this.contentEl) return;
+    if (!this.el) return;
     this.scrollHandler();
   }
 
