@@ -128,6 +128,7 @@ https://wrl.co.jp/about/ （沿革部分）
 
 ### スクロールアニメーション
 
+https://newpeace.jp/
 https://hotaru-personalized.com/ （HOW IT WORKS のとこ）
 https://www.goldwin.co.jp/greenbaton/　（見出しの文字の表示アニメーション など）
 https://green-spoon.jp/ （リード部分の商品画像の見せ方）
