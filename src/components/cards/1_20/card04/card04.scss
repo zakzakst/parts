@@ -1,0 +1,149 @@
+$BLOCK_NAME: '.card-04';
+
+// 変数
+$color_primary: #0a3da0;
+$color_border: #d7dbe3;
+$duration_default: 0.3s;
+$duration_dot: 0.15s;
+$easing_default: cubic-bezier(0.47, 0, 0.745, 0.715);
+$dot_positions: (
+  1: (
+    bottom: 0,
+    right: 0,
+  ),
+  2: (
+    bottom: 0,
+    right: 6,
+  ),
+  3: (
+    bottom: 0,
+    right: 12,
+  ),
+  4: (
+    bottom: 6,
+    right: 0,
+  ),
+  5: (
+    bottom: 6,
+    right: 6,
+  ),
+  6: (
+    bottom: 12,
+    right: 0,
+  ),
+);
+$dot_hover_positions: (
+  1: (
+    bottom: 0,
+    right: 0,
+  ),
+  2: (
+    bottom: 0,
+    right: 0,
+  ),
+  3: (
+    bottom: 0,
+    right: 6,
+  ),
+  4: (
+    bottom: 0,
+    right: 0,
+  ),
+  5: (
+    bottom: 0,
+    right: 0,
+  ),
+  6: (
+    bottom: 6,
+    right: 0,
+  ),
+);
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  padding: 20px 0 48px;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  border-top: 1px solid $color_border;
+  @include Mq(md) {
+    max-width: 360px;
+    padding-top: 0;
+    border-top: none;
+  }
+  &:first-of-type {
+    border-top: none;
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    @include Mq(md) {
+      display: block;
+    }
+  }
+  &__img {
+    width: calc(50% - 10px);
+    overflow: hidden;
+    @include Mq(md) {
+      width: 100%;
+    }
+    & > img {
+      width: 100%;
+      transition: transform $duration_default $easing_default;
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__title {
+    width: calc(50% - 10px);
+    font-weight: bold;
+    line-height: 1.625;
+    color: $color_primary;
+    letter-spacing: 0.4px;
+    @include Mq(md) {
+      width: 100%;
+      padding: 0 20px;
+      margin-top: 15px;
+    }
+  }
+  &__text {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.78;
+    @include Mq(md) {
+      padding: 0 20px;
+      margin-top: 5px;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    display: block;
+    @include Mq(md) {
+      right: 10px;
+      bottom: 10px;
+    }
+    & > span {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 3px;
+      height: 3px;
+      background: $color_primary;
+      border-radius: 2px;
+      transition: all $duration_dot $easing_default;
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          right: #{map-get(map-get($dot_positions, $i), right)}px;
+          bottom: #{map-get(map-get($dot_positions, $i), bottom)}px;
+        }
+        @at-root #{ $BLOCK_NAME }:hover &:nth-child(#{$i}) {
+          right: #{map-get(map-get($dot_hover_positions, $i), right)}px;
+          bottom: #{map-get(map-get($dot_hover_positions, $i), bottom)}px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+$BLOCK_NAME: '.card-01';
+
+// 変数
+$shadow_hover: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
+$transition_default: 0.5s;
+$easing_default: cubic-bezier(0.22, 0.61, 0.36, 1);
+$color_primary: #e3ff00;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  max-width: 360px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: box-shadow $transition_default $easing_default;
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    height: 15px;
+    content: '';
+    background: $color_primary;
+    transition: transform $transition_default $easing_default;
+    transform: translateY(100%);
+  }
+  &__thumb {
+    padding-top: (1 / 1.414) * 100%; // 白銀比
+    background: center no-repeat;
+    background-size: cover;
+    transition: transform $transition_default $easing_default;
+  }
+  &__title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    letter-spacing: 0.35px;
+    &-en {
+      font-family: Oswald, sans-serif;
+      font-size: 50px;
+      font-weight: 400;
+      line-height: 50px;
+    }
+    &-jp {
+      margin-top: 1em;
+      font-family: 'M PLUS 1p', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+  &:hover {
+    box-shadow: $shadow_hover;
+    &::before {
+      transform: translateY(0);
+    }
+  }
+  &:hover &__thumb {
+    transform: scale(1.1);
+  }
+}

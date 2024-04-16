@@ -1,0 +1,10 @@
+ul.card-12__list
+  each item in items
+    li
+      a.card-12.js-card-12(href=item.link)
+        .card-12__circle
+        .card-12__img
+          img(src=item.img)
+        p.card-12__category #{ item.category }
+        p.card-12__text #{ item.text }
+        p.card-12__date #{ item.date }

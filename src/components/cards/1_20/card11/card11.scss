@@ -1,0 +1,68 @@
+$BLOCK_NAME: '.card-11';
+
+// 変数
+$color_text: #021212;
+$color_gray: #6c6c6c;
+$color_bg: #f1f1f1;
+$color_border: #cbcbcb;
+
+#{ $BLOCK_NAME } {
+  position: relative;
+  display: block;
+  max-width: 360px;
+  padding: 36px 0 64px 40px;
+  font-family: YakuHanJP, 'Noto Sans JP', sans-serif;
+  transition: background-color 0.35s;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    background: $color_border;
+  }
+
+  &::before {
+    right: 80px;
+    bottom: 0;
+    left: 40px;
+    height: 1px;
+  }
+
+  &::after {
+    top: 0;
+    right: -1px;
+    bottom: 24px;
+    width: 1px;
+  }
+
+  &:hover {
+    background: $color_bg;
+  }
+
+  &__title {
+    font-family: YakuHanJP, 'Noto Serif JP', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__img {
+    margin-top: 24px;
+  }
+
+  &__text {
+    padding-right: 16px;
+    margin-top: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    color: $color_gray;
+  }
+
+  &__date {
+    position: absolute;
+    right: 0;
+    bottom: -4px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+}

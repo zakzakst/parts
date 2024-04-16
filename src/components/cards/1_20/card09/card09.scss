@@ -1,0 +1,58 @@
+$BLOCK_NAME: '.card-09';
+
+// 変数
+$color_primary: #0dcc51;
+$color_white: #fff;
+$color_black: #222;
+$duration_default: 0.3s;
+$easing_tag: cubic-bezier(0.5, -2, 0.5, 2);
+$easing_img: cubic-bezier(0.5, 0, 0, 1);
+
+#{ $BLOCK_NAME } {
+  display: block;
+  max-width: 360px;
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+
+  &__tag {
+    display: inline-block;
+    padding: 5px 50px 30px;
+    font-size: 16px;
+    font-weight: 900;
+    color: $color_white;
+    background-color: $color_primary;
+    border-radius: 20px 20px 0 0;
+    transition: transform $duration_default $easing_tag;
+    @at-root #{ $BLOCK_NAME }:hover & {
+      transform: translateY(-5px);
+    }
+  }
+
+  &__img {
+    margin-top: -30px;
+    overflow: hidden;
+    background-color: #eee;
+    border-radius: 20px;
+    & > img {
+      transition: transform $duration_default $easing_img;
+      @at-root #{ $BLOCK_NAME }:hover & {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__body {
+    margin-top: 20px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 900;
+    color: $color_primary;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $color_black;
+  }
+}

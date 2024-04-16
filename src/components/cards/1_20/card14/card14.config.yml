@@ -1,0 +1,15 @@
+title: カード14
+label: カード14
+variants:
+  - name: default
+    label: カード14
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  img: 'https://picsum.photos/id/1000/400/300'
+  subHeading: 'SUB HEADING'
+  heading: '見出しが入ります'
+  text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'
