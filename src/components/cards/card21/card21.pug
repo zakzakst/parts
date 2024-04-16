@@ -1,0 +1,9 @@
+ul.card-21__wrapper
+  - for (var x = 0; x < 10; x++)
+    li.card-21
+      h3.card-21__head #{ heads[x] }
+      .card-21__body #{ texts[x] }
+      .card-21__foot
+        span number #{x}
+      a.card-21__link(href='https://github.com/zakzakst/parts', target='_blank')
+        span 詳細を見る

@@ -1,0 +1,16 @@
+title: カード07
+label: カード07
+variants:
+  - name: default
+    label: カード07
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+context:
+  link: '#'
+  img: 'https://picsum.photos/400/200'
+  width: 400
+  height: 200
+  date: '2021.01.01'
+  title: 'タイトルが入ります。タイトルが入ります。'
