@@ -184,6 +184,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://designaward2023.studio.design/vote/valuescard （口がうごく顔アイコン）
 https://virtualmuseum.fukuoka-kenbi.jp/takara/
 https://sitte.page/ （ロゴを柄にした背景）
 https://mezamee.com/ （ハッシュタグのキーワード背景）
