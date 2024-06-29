@@ -1,0 +1,12 @@
+title: アクセシビリティ00
+label: アクセシビリティ00
+variants:
+  - name: default
+    label: アクセシビリティ00
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-accessibility'
+# context:
+#   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
