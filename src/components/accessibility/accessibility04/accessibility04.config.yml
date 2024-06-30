@@ -1,0 +1,12 @@
+title: スクリーンリーダー調査（テキストレベルセマンティックス）
+label: スクリーンリーダー調査（テキストレベルセマンティックス）
+variants:
+  - name: default
+    label: スクリーンリーダー調査（テキストレベルセマンティックス）
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-accessibility'
+# context:
+#   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
