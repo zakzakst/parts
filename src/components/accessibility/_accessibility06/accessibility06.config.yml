@@ -1,0 +1,12 @@
+title: スクリーンリーダー調査（埋め込みコンテンツ）
+label: スクリーンリーダー調査（埋め込みコンテンツ）
+variants:
+  - name: default
+    label: スクリーンリーダー調査（埋め込みコンテンツ）
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-accessibility'
+# context:
+#   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
