@@ -1,12 +1,12 @@
-title: アクセシビリティ01
-label: アクセシビリティ01
+title: ランドマーク読み上げ調査
+label: ランドマーク読み上げ調査
 variants:
   - name: default
-    label: アクセシビリティ01
+    label: ランドマーク読み上げ調査
     status: ready
     # status: prototype
     # status: wip
-    hidden: true
+    # hidden: true
 preview: '@preview-accessibility'
 # context:
 #   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
