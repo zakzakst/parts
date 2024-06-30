@@ -1,0 +1,12 @@
+title: スクリーンリーダー調査（編集・対話的な要素）
+label: スクリーンリーダー調査（編集・対話的な要素）
+variants:
+  - name: default
+    label: スクリーンリーダー調査（編集・対話的な要素）
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-accessibility'
+# context:
+#   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
