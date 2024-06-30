@@ -175,7 +175,6 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;description&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;アクセシビリティ練習&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">media</span>=<span class="hljs-string">&quot;all&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">media</span>=<span class="hljs-string">&quot;all&quot;</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;../../css/style.css&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
@@ -191,16 +190,16 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-71139cc6851a0b1fb4627ac5b0205222-panel-view">
     <code class="Code Code--lang-jade hljs">
         <pre>doctype html
-html(<span class="hljs-attribute">lang</span>=<span class="hljs-string">&#x27;ja&#x27;</span>)
-  head
-    meta(<span class="hljs-attribute">charset</span>=<span class="hljs-string">&#x27;utf-8&#x27;</span>)
-    meta(<span class="hljs-attribute">name</span>=<span class="hljs-string">&#x27;description&#x27;</span>, <span class="hljs-attribute">content</span>=<span class="hljs-string">&#x27;アクセシビリティ練習&#x27;</span>)
-    meta(<span class="hljs-attribute">name</span>=<span class="hljs-string">&#x27;viewport&#x27;</span> <span class="hljs-attribute">content</span>=<span class="hljs-string">&#x27;width=device-width, initial-scale=1&#x27;</span>)
-    link(<span class="hljs-attribute">media</span>=<span class="hljs-string">&#x27;all&#x27;</span>, <span class="hljs-attribute">rel</span>=<span class="hljs-string">&#x27;stylesheet&#x27;</span>, <span class="hljs-attribute">href</span>=<span class="hljs-string">&#x27;https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css&#x27;</span>)
-    link(<span class="hljs-attribute">media</span>=<span class="hljs-string">&#x27;all&#x27;</span>, <span class="hljs-attribute">rel</span>=<span class="hljs-string">&#x27;stylesheet&#x27;</span>, <span class="hljs-attribute">href</span>=path(&#x27;/css/style.css&#x27;))
+html<span class="hljs-built_in">(lang</span>=<span class="hljs-string">&#x27;ja&#x27;</span>)
+ <span class="hljs-built_in"> head</span>
+    meta(charset=<span class="hljs-string">&#x27;utf-8&#x27;</span>)
+    meta<span class="hljs-built_in">(name</span>=<span class="hljs-string">&#x27;description&#x27;</span>, content=<span class="hljs-string">&#x27;アクセシビリティ練習&#x27;</span>)
+    meta<span class="hljs-built_in">(name</span>=<span class="hljs-string">&#x27;viewport&#x27;</span> content=<span class="hljs-string">&#x27;width=device-width, initial-scale=1&#x27;</span>)
+    link(media=<span class="hljs-string">&#x27;all&#x27;</span>, rel=<span class="hljs-string">&#x27;stylesheet&#x27;</span>, href=<span class="hljs-string">&#x27;https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css&#x27;</span>)
+    //- link(media=<span class="hljs-string">&#x27;all&#x27;</span>, rel=<span class="hljs-string">&#x27;stylesheet&#x27;</span>, href<span class="hljs-built_in">=path</span>(<span class="hljs-string">&#x27;/css/style.css&#x27;</span>))
   body
     != yield
-    script(<span class="hljs-attribute">src</span>=path(&#x27;/js/accessibility.js&#x27;))</pre>
+    script(src<span class="hljs-built_in">=path</span>(<span class="hljs-string">&#x27;/js/accessibility.js&#x27;</span>))</pre>
     </code>
 </div>
 
