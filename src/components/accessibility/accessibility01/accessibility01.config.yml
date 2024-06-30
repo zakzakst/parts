@@ -1,8 +1,8 @@
-title: ランドマーク読み上げ調査
-label: ランドマーク読み上げ調査
+title: スクリーンリーダー調査（ランドマーク）
+label: スクリーンリーダー調査（ランドマーク）
 variants:
   - name: default
-    label: ランドマーク読み上げ調査
+    label: スクリーンリーダー調査（ランドマーク）
     status: ready
     # status: prototype
     # status: wip
