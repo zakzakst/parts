@@ -1,0 +1,12 @@
+title: スクリーンリーダー調査（セクション）
+label: スクリーンリーダー調査（セクション）
+variants:
+  - name: default
+    label: スクリーンリーダー調査（セクション）
+    status: ready
+    # status: prototype
+    # status: wip
+    # hidden: true
+preview: '@preview-accessibility'
+# context:
+#   text: 'テキストが入ります。テキストが入ります。テキストが入ります。'
