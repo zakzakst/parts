@@ -171,7 +171,34 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-e177d796d188113c258ac7d163f8895d-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;accessibility-07&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">caption</span>&gt;</span>キャプション<span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">colgroup</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">col</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-1&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">col</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-2&quot;</span> <span class="hljs-attr">span</span>=<span class="hljs-string">&quot;2&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">colgroup</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>ヘッダー見出し<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>ヘッダー見出し<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>ヘッダー見出し<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>本体見出し<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>本体セル<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>本体セル<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tfoot</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>フッター見出し<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>フッターセル<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>フッターセル<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tfoot</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></pre>
         
     </code>
 </div>
@@ -179,7 +206,26 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-e177d796d188113c258ac7d163f8895d-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre><span class="hljs-title">.accessibility-07</span></pre>
+        <pre><span class="hljs-selector-tag">table</span>
+  <span class="hljs-selector-tag">caption</span> キャプション
+  colgroup
+    col<span class="hljs-selector-class">.col-1</span>
+    col<span class="hljs-selector-class">.col-2</span>(span=<span class="hljs-string">&#x27;2&#x27;</span>)
+  <span class="hljs-selector-tag">thead</span>
+    <span class="hljs-selector-tag">tr</span>
+      <span class="hljs-selector-tag">th</span> ヘッダー見出し
+      <span class="hljs-selector-tag">th</span> ヘッダー見出し
+      <span class="hljs-selector-tag">th</span> ヘッダー見出し
+  <span class="hljs-selector-tag">tbody</span>
+    <span class="hljs-selector-tag">tr</span>
+      <span class="hljs-selector-tag">th</span> 本体見出し
+      <span class="hljs-selector-tag">td</span> 本体セル
+      <span class="hljs-selector-tag">td</span> 本体セル
+  <span class="hljs-selector-tag">tfoot</span>
+    <span class="hljs-selector-tag">tr</span>
+      <span class="hljs-selector-tag">th</span> フッター見出し
+      <span class="hljs-selector-tag">td</span> フッターセル
+      <span class="hljs-selector-tag">td</span> フッターセル</pre>
     </code>
 </div>
 
@@ -205,13 +251,13 @@
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-c2d8982d17de04a545f8df650457e5f8">accessibility07.scss</option>
+                <option value="file-f59d880d9f3f576d22242b6e78c17f88">accessibility07.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-c2d8982d17de04a545f8df650457e5f8" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-f59d880d9f3f576d22242b6e78c17f88" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -238,7 +284,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/accessibility/_accessibility07/accessibility07.scss</span>
+                    <span class="Meta-value">src/components/accessibility/accessibility07/accessibility07.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -440,6 +486,32 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="accessibility04.html" data-role="tree-link" data-pjax data-handle="accessibility04">
                 <span>スクリーンリーダー調査（テキストレベルセマンティックス）</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="accessibility07">
+                <span>スクリーンリーダー調査（テーブルデータ）</span>
                 
 
 <div class="Status Status--unlabelled">
