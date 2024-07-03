@@ -1,0 +1,15 @@
+$BLOCK_NAME: '.other-41';
+
+// 変数
+
+#{ $BLOCK_NAME } {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 16px;
+
+  > div {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: span 2;
+  }
+}
