@@ -3,16 +3,15 @@ picture
   img(src='https://picsum.photos/id/237/200/300', alt='こちらを見上げる犬')
 
 iframe(
-  id='inlineFrameExample'
   title='Inline Frame Example'
   width='300'
   height='200'
-  src='https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik'
+  src='https://s-ishizaki.sakura.ne.jp/sample/01/'
 )
 
 embed(
-  type='video/webm'
-  src='/media/cc0-videos/flower.mp4'
+  type='video/mp4'
+  src='https://s-ishizaki.sakura.ne.jp/works/lp-05/img/hero/kv-video.mp4'
   width='250'
   height='200'
 )
@@ -25,18 +24,18 @@ object(
 )
 
 video(controls, width='250')
+  //- source(
+  //-   src='/media/cc0-videos/flower.webm'
+  //-   type='video/webm'
+  //- )
   source(
-    src='/media/cc0-videos/flower.webm'
-    type='video/webm'
-  )
-  source(
-    src='/media/cc0-videos/flower.mp4'
+    src='https://s-ishizaki.sakura.ne.jp/works/lp-05/img/hero/kv-video.mp4'
     type='video/mp4'
   )
   | Download the
-  a(href='/media/cc0-videos/flower.webm') WEBM
-  | or
-  a(href='/media/cc0-videos/flower.mp4') MP4
+  //- a(href='/media/cc0-videos/flower.webm') WEBM
+  //- | or
+  a(href='https://s-ishizaki.sakura.ne.jp/works/lp-05/img/hero/kv-video.mp4') MP4
   | video.
 
 figure
@@ -44,7 +43,7 @@ figure
   audio(controls, src='/media/cc0-audio/t-rex-roar.mp3')
   a(href='/media/cc0-audio/t-rex-roar.mp3') Download audio
 
-video(controls, src='/media/cc0-videos/friday.mp4')
+video(controls, src='https://s-ishizaki.sakura.ne.jp/works/lp-05/img/hero/kv-video.mp4')
   track(
     default
     kind='captions'
@@ -52,7 +51,7 @@ video(controls, src='/media/cc0-videos/friday.mp4')
     src='/media/examples/friday.vtt'
   )
   | Download the
-  a(href='/media/cc0-videos/friday.mp4') MP4
+  a(href='https://s-ishizaki.sakura.ne.jp/works/lp-05/img/hero/kv-video.mp4') MP4
   | video, and
   a(href='/media/examples/friday.vtt') subtitles
   | .
