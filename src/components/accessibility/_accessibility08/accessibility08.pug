@@ -44,8 +44,10 @@ label(for='story') Tell us your story:
 textarea(id='story' name='story' rows='5' cols='33') It was a dark and stormy night...
 
 form(oninput='result.value=parseInt(a.value)+parseInt(b.value)')
-  input(type='range' id='b' name='b' value='50') +
-  input(type='number' id='a' name='a' value='10') =
+  input(type='range' id='b' name='b' value='50')
+  | +
+  input(type='number' id='a' name='a' value='10')
+  | =
   output(name='result' for='a b') 60
 
 label(for='file') File progress:
