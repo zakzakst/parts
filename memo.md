@@ -42,6 +42,7 @@ https://qiita.com/yutteee/items/5f54729b4d723f72b710
 - アニメーションさせる要素（aria-hidden など使った方がいい？）
 - 地図や会場案内図のアクセシビリティ
 - 動画のアクセシビリティ
+- 英語の場合の読み上げも調べる
 - https://yhk.minibird.jp/honttoni/samples/sample62set/track.html
 
 ### ヒーロー
