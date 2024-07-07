@@ -11,14 +11,14 @@ iframe(
 
 embed(
   type='video/mp4'
-  src='https://s-ishizaki.sakura.ne.jp/works/lp-05/img/hero/kv-video.mp4'
+  src=path('/sample/video.mp4')
   width='250'
   height='200'
 )
 
 object(
   type='application/pdf'
-  data='/media/examples/In-CC0.pdf'
+  data=path('/sample/document.pdf')
   width='250'
   height='200'
 )
@@ -29,58 +29,58 @@ video(controls, width='250')
   //-   type='video/webm'
   //- )
   source(
-    src='https://s-ishizaki.sakura.ne.jp/works/lp-05/img/hero/kv-video.mp4'
+    src=path('/sample/video.mp4')
     type='video/mp4'
   )
   | Download the
   //- a(href='/media/cc0-videos/flower.webm') WEBM
   //- | or
-  a(href='https://s-ishizaki.sakura.ne.jp/works/lp-05/img/hero/kv-video.mp4') MP4
+  a(href=path('/sample/video.mp4')) MP4
   | video.
 
 figure
-  figcaption Listen to the T-Rex:
-  audio(controls, src='/media/cc0-audio/t-rex-roar.mp3')
-  a(href='/media/cc0-audio/t-rex-roar.mp3') Download audio
+  figcaption Listen to the Music:
+  audio(controls, src=path('/sample/audio.mp3'))
+  a(href=path('/sample/audio.mp3')) Download audio
 
-video(controls, src='https://s-ishizaki.sakura.ne.jp/works/lp-05/img/hero/kv-video.mp4')
+video(controls, src=path('/sample/video.mp4'))
   track(
     default
     kind='captions'
     srclang='en'
-    src='/media/examples/friday.vtt'
+    src=path('/sample/track.vtt')
   )
   | Download the
-  a(href='https://s-ishizaki.sakura.ne.jp/works/lp-05/img/hero/kv-video.mp4') MP4
+  a(href=path('/sample/video.mp4')) MP4
   | video, and
-  a(href='/media/examples/friday.vtt') subtitles
+  a(href=path('/sample/track.vtt')) subtitles
   | .
 
-map(name='infographic')
-  area(
-    shape='poly'
-    coords='130,147,200,107,254,219,130,228'
-    href='https://developer.mozilla.org/docs/Web/HTML'
-    target='_blank'
-    alt='HTML'
-  )
-  area(
-    shape='poly'
-    coords='130,147,130,228,6,219,59,107'
-    href='https://developer.mozilla.org/docs/Web/CSS'
-    target='_blank'
-    alt='CSS'
-  )
-  area(
-    shape='poly'
-    coords='130,147,200,107,130,4,59,107'
-    href='https://developer.mozilla.org/docs/Web/JavaScript'
-    target='_blank'
-    alt='JavaScript'
-  )
-img(
-  usemap='#infographic'
-  src='/media/examples/mdn-info2.png'
-  alt='MDN infographic'
-)
+//- map(name='infographic')
+//-   area(
+//-     shape='poly'
+//-     coords='130,147,200,107,254,219,130,228'
+//-     href='https://developer.mozilla.org/docs/Web/HTML'
+//-     target='_blank'
+//-     alt='HTML'
+//-   )
+//-   area(
+//-     shape='poly'
+//-     coords='130,147,130,228,6,219,59,107'
+//-     href='https://developer.mozilla.org/docs/Web/CSS'
+//-     target='_blank'
+//-     alt='CSS'
+//-   )
+//-   area(
+//-     shape='poly'
+//-     coords='130,147,200,107,130,4,59,107'
+//-     href='https://developer.mozilla.org/docs/Web/JavaScript'
+//-     target='_blank'
+//-     alt='JavaScript'
+//-   )
+//- img(
+//-   usemap='#infographic'
+//-   src='/media/examples/mdn-info2.png'
+//-   alt='MDN infographic'
+//- )
 
