@@ -180,7 +180,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span>&gt;</span>Listen to the Music:<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">controls</span>=<span class="hljs-string">&quot;controls&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../sample/audio.mp3&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;../../sample/audio.mp3&quot;</span>&gt;</span>Download audio<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">controls</span>=<span class="hljs-string">&quot;controls&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../sample/video.mp4&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">track</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;default&quot;</span> <span class="hljs-attr">kind</span>=<span class="hljs-string">&quot;captions&quot;</span> <span class="hljs-attr">srclang</span>=<span class="hljs-string">&quot;en&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../sample/track.vtt&quot;</span> /&gt;</span>Download the<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;../../sample/video.mp4&quot;</span>&gt;</span>MP4<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;<span class="hljs-name">video</span></span>, and<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;../../sample/track.vtt&quot;</span>&gt;</span>subtitles<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
-<span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span></pre>
+<span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">map</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;mapImage&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">area</span> <span class="hljs-attr">shape</span>=<span class="hljs-string">&quot;poly&quot;</span> <span class="hljs-attr">coords</span>=<span class="hljs-string">&quot;0,0,600,0,600,300,0,300&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://s-ishizaki.sakura.ne.jp/sample/01/&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;上部&quot;</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">area</span> <span class="hljs-attr">shape</span>=<span class="hljs-string">&quot;poly&quot;</span> <span class="hljs-attr">coords</span>=<span class="hljs-string">&quot;0,300,600,300,600,600,0,600&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://s-ishizaki.sakura.ne.jp/sample/02/&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;下部&quot;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">map</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">usemap</span>=<span class="hljs-string">&quot;#mapImage&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../../sample/image.png&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;画像&quot;</span> /&gt;</span></pre>
         
     </code>
 </div>
@@ -188,91 +188,84 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-a3cd760a92c9a78ac43c35b4d74023ba-panel-view">
     <code class="Code Code--lang-jade hljs">
-        <pre>picture
-  source(srcset=<span class="hljs-string">&#x27;https://picsum.photos/id/237/500/300&#x27;</span>, media=<span class="hljs-string">&#x27;(orientation: portrait)&#x27;</span>)
-  img(src=<span class="hljs-string">&#x27;https://picsum.photos/id/237/200/300&#x27;</span>, alt=<span class="hljs-string">&#x27;こちらを見上げる犬&#x27;</span>)
+        <pre><span class="hljs-selector-tag">picture</span>
+  <span class="hljs-selector-tag">source</span>(srcset=<span class="hljs-string">&#x27;https://picsum.photos/id/237/500/300&#x27;</span>, media=<span class="hljs-string">&#x27;(orientation: portrait)&#x27;</span>)
+  <span class="hljs-selector-tag">img</span>(src=<span class="hljs-string">&#x27;https://picsum.photos/id/237/200/300&#x27;</span>, alt=<span class="hljs-string">&#x27;こちらを見上げる犬&#x27;</span>)
 
-iframe(
+<span class="hljs-selector-tag">iframe</span>(
   title=<span class="hljs-string">&#x27;Inline Frame Example&#x27;</span>
   width=<span class="hljs-string">&#x27;300&#x27;</span>
   height=<span class="hljs-string">&#x27;200&#x27;</span>
   src=<span class="hljs-string">&#x27;https://s-ishizaki.sakura.ne.jp/sample/01/&#x27;</span>
 )
 
-embed(
+<span class="hljs-selector-tag">embed</span>(
   type=<span class="hljs-string">&#x27;video/mp4&#x27;</span>
   src=path(<span class="hljs-string">&#x27;/sample/video.mp4&#x27;</span>)
   width=<span class="hljs-string">&#x27;250&#x27;</span>
   height=<span class="hljs-string">&#x27;200&#x27;</span>
 )
 
-object(
+<span class="hljs-selector-tag">object</span>(
   type=<span class="hljs-string">&#x27;application/pdf&#x27;</span>
   data=path(<span class="hljs-string">&#x27;/sample/document.pdf&#x27;</span>)
   width=<span class="hljs-string">&#x27;250&#x27;</span>
   height=<span class="hljs-string">&#x27;200&#x27;</span>
 )
 
-video(controls, width=<span class="hljs-string">&#x27;250&#x27;</span>)
-  <span class="hljs-regexp">//</span>- source(
-  <span class="hljs-regexp">//</span>-   src=<span class="hljs-string">&#x27;/media/cc0-videos/flower.webm&#x27;</span>
-  <span class="hljs-regexp">//</span>-   type=<span class="hljs-string">&#x27;video/webm&#x27;</span>
-  <span class="hljs-regexp">//</span>- )
-  source(
+<span class="hljs-selector-tag">video</span>(controls, width=<span class="hljs-string">&#x27;250&#x27;</span>)
+  <span class="hljs-comment">//- source(</span>
+  <span class="hljs-comment">//-   src=&#x27;/media/cc0-videos/flower.webm&#x27;</span>
+  <span class="hljs-comment">//-   type=&#x27;video/webm&#x27;</span>
+  <span class="hljs-comment">//- )</span>
+  <span class="hljs-selector-tag">source</span>(
     src=path(<span class="hljs-string">&#x27;/sample/video.mp4&#x27;</span>)
     type=<span class="hljs-string">&#x27;video/mp4&#x27;</span>
   )
-  | Download the
-  <span class="hljs-regexp">//</span>- a(href=<span class="hljs-string">&#x27;/media/cc0-videos/flower.webm&#x27;</span>) WEBM
-  <span class="hljs-regexp">//</span>- | or
-  a(href=path(<span class="hljs-string">&#x27;/sample/video.mp4&#x27;</span>)) MP4
-  | video.
+  | <span class="hljs-selector-tag">Download</span> <span class="hljs-selector-tag">the</span>
+  <span class="hljs-comment">//- a(href=&#x27;/media/cc0-videos/flower.webm&#x27;) WEBM</span>
+  <span class="hljs-comment">//- | or</span>
+  <span class="hljs-selector-tag">a</span>(href=path(<span class="hljs-string">&#x27;/sample/video.mp4&#x27;</span>)) <span class="hljs-selector-tag">MP4</span>
+  | <span class="hljs-selector-tag">video</span>.
 
-figure
-  figcaption Listen to the Music:
-  audio(controls, src=path(<span class="hljs-string">&#x27;/sample/audio.mp3&#x27;</span>))
-  a(href=path(<span class="hljs-string">&#x27;/sample/audio.mp3&#x27;</span>)) Download audio
+<span class="hljs-selector-tag">figure</span>
+  <span class="hljs-selector-tag">figcaption</span> <span class="hljs-selector-tag">Listen</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">the</span> <span class="hljs-selector-tag">Music</span>:
+  <span class="hljs-selector-tag">audio</span>(controls, src=path(<span class="hljs-string">&#x27;/sample/audio.mp3&#x27;</span>))
+  <span class="hljs-selector-tag">a</span>(href=path(<span class="hljs-string">&#x27;/sample/audio.mp3&#x27;</span>)) <span class="hljs-selector-tag">Download</span> <span class="hljs-selector-tag">audio</span>
 
-video(controls, src=path(<span class="hljs-string">&#x27;/sample/video.mp4&#x27;</span>))
-  track(
+<span class="hljs-selector-tag">video</span>(controls, src=path(<span class="hljs-string">&#x27;/sample/video.mp4&#x27;</span>))
+  <span class="hljs-selector-tag">track</span>(
     default
     kind=<span class="hljs-string">&#x27;captions&#x27;</span>
     srclang=<span class="hljs-string">&#x27;en&#x27;</span>
     src=path(<span class="hljs-string">&#x27;/sample/track.vtt&#x27;</span>)
   )
-  | Download the
-  a(href=path(<span class="hljs-string">&#x27;/sample/video.mp4&#x27;</span>)) MP4
-  | video, and
-  a(href=path(<span class="hljs-string">&#x27;/sample/track.vtt&#x27;</span>)) subtitles
+  | <span class="hljs-selector-tag">Download</span> <span class="hljs-selector-tag">the</span>
+  <span class="hljs-selector-tag">a</span>(href=path(<span class="hljs-string">&#x27;/sample/video.mp4&#x27;</span>)) <span class="hljs-selector-tag">MP4</span>
+  | <span class="hljs-selector-tag">video</span>, <span class="hljs-selector-tag">and</span>
+  <span class="hljs-selector-tag">a</span>(href=path(<span class="hljs-string">&#x27;/sample/track.vtt&#x27;</span>)) <span class="hljs-selector-tag">subtitles</span>
   | .
 
-<span class="hljs-regexp">//</span>- map(name=<span class="hljs-string">&#x27;infographic&#x27;</span>)
-<span class="hljs-regexp">//</span>-   area(
-<span class="hljs-regexp">//</span>-     shape=<span class="hljs-string">&#x27;poly&#x27;</span>
-<span class="hljs-regexp">//</span>-     coords=<span class="hljs-string">&#x27;130,147,200,107,254,219,130,228&#x27;</span>
-<span class="hljs-regexp">//</span>-     href=<span class="hljs-string">&#x27;https://developer.mozilla.org/docs/Web/HTML&#x27;</span>
-<span class="hljs-regexp">//</span>-     target=<span class="hljs-string">&#x27;_blank&#x27;</span>
-<span class="hljs-regexp">//</span>-     alt=<span class="hljs-string">&#x27;HTML&#x27;</span>
-<span class="hljs-regexp">//</span>-   )
-<span class="hljs-regexp">//</span>-   area(
-<span class="hljs-regexp">//</span>-     shape=<span class="hljs-string">&#x27;poly&#x27;</span>
-<span class="hljs-regexp">//</span>-     coords=<span class="hljs-string">&#x27;130,147,130,228,6,219,59,107&#x27;</span>
-<span class="hljs-regexp">//</span>-     href=<span class="hljs-string">&#x27;https://developer.mozilla.org/docs/Web/CSS&#x27;</span>
-<span class="hljs-regexp">//</span>-     target=<span class="hljs-string">&#x27;_blank&#x27;</span>
-<span class="hljs-regexp">//</span>-     alt=<span class="hljs-string">&#x27;CSS&#x27;</span>
-<span class="hljs-regexp">//</span>-   )
-<span class="hljs-regexp">//</span>-   area(
-<span class="hljs-regexp">//</span>-     shape=<span class="hljs-string">&#x27;poly&#x27;</span>
-<span class="hljs-regexp">//</span>-     coords=<span class="hljs-string">&#x27;130,147,200,107,130,4,59,107&#x27;</span>
-<span class="hljs-regexp">//</span>-     href=<span class="hljs-string">&#x27;https://developer.mozilla.org/docs/Web/JavaScript&#x27;</span>
-<span class="hljs-regexp">//</span>-     target=<span class="hljs-string">&#x27;_blank&#x27;</span>
-<span class="hljs-regexp">//</span>-     alt=<span class="hljs-string">&#x27;JavaScript&#x27;</span>
-<span class="hljs-regexp">//</span>-   )
-<span class="hljs-regexp">//</span>- img(
-<span class="hljs-regexp">//</span>-   usemap=<span class="hljs-string">&#x27;#infographic&#x27;</span>
-<span class="hljs-regexp">//</span>-   src=<span class="hljs-string">&#x27;/media/examples/mdn-info2.png&#x27;</span>
-<span class="hljs-regexp">//</span>-   alt=<span class="hljs-string">&#x27;MDN infographic&#x27;</span>
-<span class="hljs-regexp">//</span>- )</pre>
+<span class="hljs-selector-tag">map</span>(name=<span class="hljs-string">&#x27;mapImage&#x27;</span>)
+  <span class="hljs-selector-tag">area</span>(
+    shape=<span class="hljs-string">&#x27;poly&#x27;</span>
+    coords=<span class="hljs-string">&#x27;0,0,600,0,600,300,0,300&#x27;</span>
+    href=<span class="hljs-string">&#x27;https://s-ishizaki.sakura.ne.jp/sample/01/&#x27;</span>
+    target=<span class="hljs-string">&#x27;_blank&#x27;</span>
+    alt=<span class="hljs-string">&#x27;上部&#x27;</span>
+  )
+  <span class="hljs-selector-tag">area</span>(
+    shape=<span class="hljs-string">&#x27;poly&#x27;</span>
+    coords=<span class="hljs-string">&#x27;0,300,600,300,600,600,0,600&#x27;</span>
+    href=<span class="hljs-string">&#x27;https://s-ishizaki.sakura.ne.jp/sample/02/&#x27;</span>
+    target=<span class="hljs-string">&#x27;_blank&#x27;</span>
+    alt=<span class="hljs-string">&#x27;下部&#x27;</span>
+  )
+<span class="hljs-selector-tag">img</span>(
+  usemap=<span class="hljs-string">&#x27;#mapImage&#x27;</span>
+  src=path(<span class="hljs-string">&#x27;/sample/image.png&#x27;</span>)
+  alt=<span class="hljs-string">&#x27;画像&#x27;</span>
+)</pre>
     </code>
 </div>
 
@@ -298,13 +291,13 @@ video(controls, src=path(<span class="hljs-string">&#x27;/sample/video.mp4&#x27;
             <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
             <select class="FileBrowser-select" id="filebrowser-select">
                 
-                <option value="file-13f01bfc29c4e59cc2b4324a672433e6">accessibility06.scss</option>
+                <option value="file-91679be927902e363e88dd38defcd988">accessibility06.scss</option>
                 
             </select>
         </div>
 
         
-        <div class="FileBrowser-item is-active" id="file-13f01bfc29c4e59cc2b4324a672433e6" data-role="resource-preview">
+        <div class="FileBrowser-item is-active" id="file-91679be927902e363e88dd38defcd988" data-role="resource-preview">
             <ul class="Meta">
                 <li class="Meta-item">
                     <strong class="Meta-key">Content:</strong>
@@ -331,7 +324,7 @@ video(controls, src=path(<span class="hljs-string">&#x27;/sample/video.mp4&#x27;
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Filesystem Path:</strong>
-                    <span class="Meta-value">src/components/accessibility/_accessibility06/accessibility06.scss</span>
+                    <span class="Meta-value">src/components/accessibility/accessibility06/accessibility06.scss</span>
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
@@ -557,8 +550,86 @@ video(controls, src=path(<span class="hljs-string">&#x27;/sample/video.mp4&#x27;
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accessibility05.html" data-role="tree-link" data-pjax data-handle="accessibility05">
+                <span>スクリーンリーダー調査（編集・対話的な要素）</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-role="tree-link" data-pjax data-handle="accessibility06">
+                <span>スクリーンリーダー調査（埋め込みコンテンツ）</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="accessibility07.html" data-role="tree-link" data-pjax data-handle="accessibility07">
                 <span>スクリーンリーダー調査（テーブルデータ）</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="accessibility08.html" data-role="tree-link" data-pjax data-handle="accessibility08">
+                <span>スクリーンリーダー調査（フォーム）</span>
                 
 
 <div class="Status Status--unlabelled">

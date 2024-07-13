@@ -56,31 +56,24 @@ video(controls, src=path('/sample/video.mp4'))
   a(href=path('/sample/track.vtt')) subtitles
   | .
 
-//- map(name='infographic')
-//-   area(
-//-     shape='poly'
-//-     coords='130,147,200,107,254,219,130,228'
-//-     href='https://developer.mozilla.org/docs/Web/HTML'
-//-     target='_blank'
-//-     alt='HTML'
-//-   )
-//-   area(
-//-     shape='poly'
-//-     coords='130,147,130,228,6,219,59,107'
-//-     href='https://developer.mozilla.org/docs/Web/CSS'
-//-     target='_blank'
-//-     alt='CSS'
-//-   )
-//-   area(
-//-     shape='poly'
-//-     coords='130,147,200,107,130,4,59,107'
-//-     href='https://developer.mozilla.org/docs/Web/JavaScript'
-//-     target='_blank'
-//-     alt='JavaScript'
-//-   )
-//- img(
-//-   usemap='#infographic'
-//-   src='/media/examples/mdn-info2.png'
-//-   alt='MDN infographic'
-//- )
+map(name='mapImage')
+  area(
+    shape='poly'
+    coords='0,0,600,0,600,300,0,300'
+    href='https://s-ishizaki.sakura.ne.jp/sample/01/'
+    target='_blank'
+    alt='上部'
+  )
+  area(
+    shape='poly'
+    coords='0,300,600,300,600,600,0,600'
+    href='https://s-ishizaki.sakura.ne.jp/sample/02/'
+    target='_blank'
+    alt='下部'
+  )
+img(
+  usemap='#mapImage'
+  src=path('/sample/image.png')
+  alt='画像'
+)
 
