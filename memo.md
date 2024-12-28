@@ -197,6 +197,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://codateru.com/
 https://www.ayana.com/ja/bali/
 https://www.bram.us/2024/06/06/css-only-custom-range-slider-with-motion/
 https://azukiazusa.dev/blog/scrollbar-gutter-css-property-to-prevent-screen-jitter-due-to-scroll-bar-switching/
