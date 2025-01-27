@@ -197,6 +197,8 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://www.minacolor.jp/
+https://www.jfe-systems.com/about/40th/
 https://codateru.com/
 https://www.ayana.com/ja/bali/
 https://www.bram.us/2024/06/06/css-only-custom-range-slider-with-motion/
