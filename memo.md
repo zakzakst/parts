@@ -197,6 +197,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://www.uemura-shigyo.co.jp/
 https://www.minacolor.jp/
 https://www.jfe-systems.com/about/40th/
 https://codateru.com/
