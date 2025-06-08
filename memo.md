@@ -197,6 +197,7 @@ https://enjin-dash.com/about/index.html
 
 ### その他
 
+https://soratoumi-shop.com/
 https://onecareer.co.jp/
 https://www.uemura-shigyo.co.jp/
 https://www.minacolor.jp/
